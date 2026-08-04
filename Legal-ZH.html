@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>法律条款 — 政策与条款 | 加西中医</title>
+<meta name="description" content="加西中医的隐私政策、服务条款、取消与爽约政策及 Cookie 政策——大温哥华四家注册中医诊所。" />
+<link rel="alternate" hreflang="en" href="Legal.html" />
+<link rel="alternate" hreflang="zh" href="Legal-ZH.html" />
+<link rel="stylesheet" href="tokens.css" />
+<meta name="ext-resource-dependency" content="assets/brand/logo-tight.avif" data-resource-id="r_brand_logo_tight_avif" />
+<meta name="ext-resource-dependency" content="assets/brand/wechat-qr.png" data-resource-id="r_brand_wechat_qr_png" />
+<style>
+  html, body { font-family: var(--font-sans-zh); }
+  .legal-body h3 { font-family: var(--font-serif-zh); font-size: 19px; font-weight: 600; color: var(--sepia-700); margin: 28px 0 10px; line-height: 1.4; }
+  .legal-body p { font-family: var(--font-sans-zh); font-size: 16px; line-height: 1.85; color: var(--sepia-600); margin: 0 0 14px; max-width: 760px; }
+  .legal-body ul { margin: 0 0 16px; padding-left: 22px; max-width: 760px; }
+  .legal-body li { font-family: var(--font-sans-zh); font-size: 16px; line-height: 1.8; color: var(--sepia-600); margin-bottom: 7px; }
+  .legal-body strong { color: var(--sepia-700); font-weight: 600; }
+  .legal-toc a:hover { color: var(--vermilion) !important; }
+
+  @media (max-width: 900px) {
+    .legal-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+    .legal-toc { position: static !important; top: auto !important; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 15px; }
+    .container { padding: 0 20px !important; }
+    .section { padding: 56px 0 !important; }
+    nav { padding: 16px 18px !important; flex-wrap: wrap !important; }
+    nav ul { display: none !important; }
+    nav img { height: 64px !important; }
+    nav > div:last-child > span { display: none !important; }
+    nav > div:last-child > a { padding: 10px 16px !important; font-size: 11px !important; }
+    section[data-screen-label="01 Hero"] .container { padding-top: 120px !important; }
+    section[data-screen-label="01 Hero"] h1 { font-size: 34px !important; }
+  }
+</style>
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#F2EAD8"/>
+  <g transform="translate(100,96)" stroke="#B23A2E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-30 -44 h48 l12 12 v76 h-60 z"/>
+    <path d="M18 -44 v12 h12"/>
+    <path d="M-18 -14 h36 M-18 2 h36 M-18 18 h24"/>
+  </g>
+  <text x="100" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#3A2C18" letter-spacing="2">法律</text>
+</svg>
+</template>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="copy-zh.js"></script>
+<script type="text/babel" src="atoms.jsx"></script>
+<script type="text/babel" src="sections-1-4.jsx"></script>
+<script type="text/babel" src="sections-9-12.jsx"></script>
+<script type="text/babel" src="legal-page.jsx"></script>
+
+<script type="text/babel">
+ReactDOM.createRoot(document.getElementById('root')).render(<LegalPage />);
+</script>
+
+</body>
+</html>

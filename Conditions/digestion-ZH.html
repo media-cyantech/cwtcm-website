@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<!-- <base href="../"> resolves all bare paths (tokens.css, copy.js, etc.)
+     and STRINGS-borne project links (Homepage-ZH.html, Locations.html)
+     to project root. The static link-checker reports a false-positive
+     404 for these scripts because it doesn't interpret <base> — they
+     load correctly at runtime. -->
+<base href="../" />
+<title>消化调理 · 中医调理 | 加西中医</title>
+<meta name="description" content="加西中医的消化调理——针灸、艾灸与因人配伍的中药常用于支持消化舒适与规律，并兼顾与肠胃密切相关的压力与睡眠。我们是对消化症状常规医学检查的补充，而非替代。" />
+<link rel="alternate" hreflang="en" href="Conditions/digestion.html" />
+<link rel="alternate" hreflang="zh" href="Conditions/digestion-ZH.html" />
+<link rel="stylesheet" href="tokens.css" />
+
+<style>
+  /* ZH default — sans Chinese for body */
+  html, body { font-family: var(--font-sans-zh); }
+
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .cdd-treatments-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  }
+  @media (max-width: 768px) {
+    .container { padding: 0 20px !important; }
+    nav { padding: 16px 18px !important; flex-wrap: wrap !important; }
+    nav ul { display: none !important; }
+    nav img { height: 64px !important; }
+    nav > div:first-child > a > div {
+      font-size: 13px !important; padding-left: 14px !important;
+    }
+    nav > div:last-child { gap: 10px !important; }
+    nav > div:last-child > a {
+      padding: 10px 16px !important; font-size: 11px !important;
+    }
+
+    section[data-screen-label] { padding: 64px 0 !important; }
+    section[data-screen-label="07 Book"] { padding: 72px 0 !important; }
+
+    .cdd-hero-grid {
+      grid-template-columns: 1fr !important; gap: 36px !important;
+    }
+    .cdd-hero-image { max-width: 420px !important; }
+
+    .cdd-text-grid {
+      grid-template-columns: 1fr !important; gap: 24px !important;
+    }
+
+    .cdd-treatments-grid {
+      display: flex !important;
+      grid-template-columns: none !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      scroll-snap-type: x mandatory;
+      margin: 0 -20px !important;
+      padding: 4px 20px 14px !important;
+      gap: 12px !important;
+    }
+    .cdd-treatments-grid > a {
+      flex: 0 0 78% !important; min-width: 260px !important;
+      scroll-snap-align: start;
+    }
+
+    /* footer collapse — mirror homepage */
+    footer { padding: 56px 0 28px !important; }
+    footer > div > div:first-child {
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      padding-bottom: 32px !important;
+      margin-bottom: 36px !important;
+    }
+    footer > div > div:first-child img { height: 64px !important; }
+    footer > div > div:first-child > div:nth-child(2) {
+      font-size: 14px !important; padding-left: 14px !important;
+    }
+    footer > div > div:first-child > div:last-child {
+      margin-left: 0 !important; flex-basis: 100% !important;
+      text-align: left !important; font-size: 16px !important;
+      max-width: none !important; padding-top: 8px !important;
+      border-top: 1px solid rgba(184,148,96,0.25) !important;
+    }
+    footer > div > div:nth-child(2) {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 32px !important; margin-bottom: 40px !important;
+    }
+    footer > div > div:nth-child(2) > div:first-child { grid-column: 1 / -1; }
+    footer > div > div:nth-child(2) > div:last-child { grid-column: 1 / -1; }
+    footer > div > div:last-child {
+      flex-direction: column !important; align-items: flex-start !important;
+      gap: 12px !important;
+    }
+    footer > div > div:last-child > div:last-child {
+      flex-wrap: wrap !important; gap: 14px 18px !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#F2EAD8"/>
+  <g stroke="#9A6E45" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M52 96 q0 -42 48 -42 q48 0 48 42 v22
+             q0 42 -48 42 q-48 0 -48 -42 z" />
+    <path d="M72 102 q22 -22 44 -8 q22 14 22 36" stroke-opacity="0.45" />
+    <path d="M100 38 q-14 -14 -28 -14 q14 0 28 14 q14 -14 28 -14 q-14 0 -28 14" />
+  </g>
+  <text x="100" y="184" text-anchor="middle" font-family="Songti SC, Noto Serif SC, serif" font-size="20" fill="#3A2C18" letter-spacing="4">消化调理</text>
+</svg>
+</template>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="copy-zh.js"></script>
+<script type="text/babel" src="atoms.jsx"></script>
+<script type="text/babel" src="sections-1-4.jsx"></script>
+<script type="text/babel" src="sections-9-12.jsx"></script>
+<script type="text/babel" src="treatments-page.jsx"></script>
+<script type="text/babel" src="conditions-page.jsx"></script>
+<script type="text/babel" src="condition-detail.jsx"></script>
+
+<script type="text/babel">
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <ConditionDetailPage slug="digestion" />
+);
+</script>
+
+</body>
+</html>

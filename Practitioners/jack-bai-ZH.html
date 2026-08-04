@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<!-- All asset paths and project links resolve to project root via <base>.
+     The static link-checker reports false-positive 404s for these scripts
+     because it doesn't interpret <base>; they load correctly in-browser. -->
+<base href="../" />
+<title>Jake Bai — 资深中医专家 | 加西中医</title>
+<meta name="description" content="加西中医资深中医师 Jake Bai——36 年临床经验，北京中医药大学针灸推拿系临床医学硕士，曾任职于北京三甲医院，出诊于列治文。" />
+<link rel="alternate" hreflang="en" href="Practitioners/jack-bai.html" />
+<link rel="alternate" hreflang="zh" href="Practitioners/jack-bai-ZH.html" />
+<link rel="stylesheet" href="tokens.css" />
+<meta name="ext-resource-dependency" content="assets/brand/logo-tight.avif" data-resource-id="r_brand_logo_tight_avif" />
+<style>
+  /* ZH default — sans Chinese for body */
+  html, body { font-family: var(--font-sans-zh); }
+
+  @media (max-width: 900px) {
+    .pd-hero-grid { grid-template-columns: 1fr !important; justify-items: center; text-align: center; gap: 40px !important; }
+    .pd-hero-grid > div:last-child { text-align: left; width: 100%; max-width: 520px; }
+    .pd-link-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+  @media (max-width: 768px) {
+    .container { padding: 0 20px !important; }
+    nav { padding: 16px 18px !important; flex-wrap: wrap !important; }
+    nav ul { display: none !important; }
+    nav img { height: 64px !important; }
+    nav > div:first-child > a > div { font-size: 13px !important; padding-left: 14px !important; }
+    nav > div:last-child { gap: 10px !important; }
+    nav > div:last-child > a { padding: 10px 16px !important; font-size: 11px !important; }
+
+    section[data-screen-label] { padding: 56px 0 !important; }
+    section[data-screen-label="01 Hero"] .container { padding: 56px 0 84px !important; }
+    section[data-screen-label="10 Book"] { padding: 72px 0 !important; }
+
+    .pd-link-grid { grid-template-columns: 1fr !important; }
+    .pd-clinic-grid { grid-template-columns: 1fr !important; }
+
+    footer { padding: 56px 0 28px !important; }
+    footer > div > div:first-child {
+      flex-wrap: wrap !important; gap: 14px !important;
+      padding-bottom: 32px !important; margin-bottom: 36px !important;
+    }
+    footer > div > div:first-child img { height: 64px !important; }
+    footer > div > div:first-child > div:nth-child(2) { font-size: 14px !important; padding-left: 14px !important; }
+    footer > div > div:first-child > div:last-child {
+      margin-left: 0 !important; flex-basis: 100% !important; text-align: left !important;
+      font-size: 16px !important; max-width: none !important; padding-top: 8px !important;
+      border-top: 1px solid rgba(184,148,96,0.25) !important;
+    }
+    footer > div > div:nth-child(2) {
+      grid-template-columns: 1fr 1fr !important; gap: 32px !important; margin-bottom: 40px !important;
+    }
+    footer > div > div:nth-child(2) > div:first-child { grid-column: 1 / -1; }
+    footer > div > div:nth-child(2) > div:last-child { grid-column: 1 / -1; }
+    footer > div > div:last-child { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+    footer > div > div:last-child > div:last-child { flex-wrap: wrap !important; gap: 14px 18px !important; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Jake Bai",
+  "jobTitle": "Senior TCM Practitioner · R.TCM.P, R.Ac",
+  "medicalSpecialty": "Traditional Chinese Medicine",
+  "knowsLanguage": ["zh", "en"],
+  "url": "Practitioners/jack-bai-ZH.html",
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Beijing University of Chinese Medicine" },
+  "affiliation": {
+    "@type": "MedicalOrganization",
+    "name": "Canadian Western TCM Clinic",
+    "alternateName": "加西中医",
+    "url": "About-ZH.html",
+    "medicalSpecialty": "Traditional Chinese Medicine"
+  },
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Canadian Western TCM Clinic",
+    "url": "Practitioners-ZH.html"
+  }
+}
+</script>
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#F2EAD8"/>
+  <g transform="translate(100,90)" fill="none" stroke="#B89460" stroke-width="3"><circle r="42"/></g>
+  <g transform="translate(100,90)" fill="#8E7244">
+    <circle cx="0" cy="-12" r="15"/>
+    <path d="M-26 30 q0 -22 26 -22 q26 0 26 22 z"/>
+  </g>
+  <text x="100" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#3A2C18" letter-spacing="1">JAKE BAI</text>
+</svg>
+</template>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="copy-zh.js"></script>
+<script type="text/babel" src="atoms.jsx"></script>
+<script type="text/babel" src="sections-1-4.jsx"></script>
+<script type="text/babel" src="sections-9-12.jsx"></script>
+<script type="text/babel" src="practitioner-detail.jsx"></script>
+
+<script type="text/babel">
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <PractitionerDetailPage slug="jack-bai" />
+);
+</script>
+
+</body>
+</html>

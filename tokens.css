@@ -1,0 +1,333 @@
+/* =============================================================
+   CWTCM Heritage Design System — Tokens
+   Canadian Western TCM Clinic / 加西中医
+   Palette: Cream + Sepia + Vermilion (strict)
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ---------- CREAM (page + surface) -------------------- */
+  --cream-50:  #FBF7EF;
+  --cream-100: #F7F1E5;
+  --cream-200: #F2EAD8;   /* PAGE BG */
+  --cream-300: #ECE0C7;
+  --cream-400: #E2D2B0;
+  --cream-500: #D4BE93;
+
+  /* ---------- SEPIA (ink, type, hairlines) -------------- */
+  --sepia-50:  #EDE3D2;
+  --sepia-100: #D9C7A8;
+  --sepia-200: #B89E73;
+  --sepia-300: #8E7244;
+  --sepia-400: #6B5430;
+  --sepia-500: #4F3D22;
+  --sepia-600: #3A2C18;
+  --sepia-700: #281E10;
+  --sepia-800: #1A1308;
+  --sepia-900: #0F0A04;
+
+  /* ---------- VERMILION (strict — max 3 instances) ------ */
+  --vermilion: #B23A2E;
+  --vermilion-hover: #8E2C22;
+
+  /* ---------- COPPER (1px dividers only) ---------------- */
+  --copper: #B89460;
+
+  /* ---------- TYPE families ----------------------------- */
+  --font-display: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+  --font-serif-zh: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans-zh: 'Noto Sans SC', 'PingFang SC', sans-serif;
+
+  /* ---------- TRACKING ---------------------------------- */
+  --track-eyebrow: 0.12em;       /* +120 */
+  --track-caption: 0.08em;       /* +80 */
+  --track-bilingual: 0.15em;
+
+  /* ---------- LAYOUT ------------------------------------ */
+  --content-width: 1280px;
+  --gutter: 32px;
+  --gutter-lg: 64px;
+
+  /* ---------- MOTION ------------------------------------ */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur: 220ms;
+  --dur-slow: 420ms;
+}
+
+/* =============================================================
+   Base
+   ============================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream-200);
+  color: var(--sepia-700);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; display: block; }
+
+/* =============================================================
+   Type primitives
+   ============================================================= */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  color: var(--sepia-300);
+}
+
+.caption {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: var(--track-caption);
+  text-transform: uppercase;
+  color: var(--sepia-400);
+}
+
+.h-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: var(--sepia-700);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.h-section {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+  color: var(--sepia-700);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.h-card {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.15;
+  color: var(--sepia-700);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.lede {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--sepia-500);
+  text-wrap: balance;
+}
+
+.zh {
+  font-family: var(--font-serif-zh);
+  font-weight: 500;
+  letter-spacing: var(--track-bilingual);
+  color: var(--sepia-400);
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--sepia-500);
+  font-weight: 400;
+  text-wrap: pretty;
+}
+
+.body-sm {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--sepia-400);
+}
+
+/* =============================================================
+   Headings — semantic line balancing (all pages).
+   Modern browsers (Chrome 114+ / Safari 17.4+ / Firefox 121+)
+   balance line lengths and favour breaking at natural pauses;
+   the Clauses helper enforces comma/em-dash breaks where the
+   exact split matters. hyphens:none keeps words whole.
+   ============================================================= */
+h1, h2, h3, .h-display, .h-section, .h-card,
+.hero-title, .hero-subtitle, .lede {
+  text-wrap: balance;
+  hyphens: none;
+  word-spacing: normal;
+}
+
+/* =============================================================
+   Hero top scrim — full-width gradient that darkens only the
+   top band of photo heroes so the white nav (logo + links + CTA)
+   stays legible over bright slides. Sits above the hero image /
+   existing overlays (by DOM order) but below the nav (z-index:10)
+   and the hero title block. Only used where the nav is white over
+   a photo — never on cream/light-ink heroes.
+   ============================================================= */
+.hero-top-scrim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(to bottom,
+    rgba(0,0,0,0.40) 0%,
+    rgba(0,0,0,0.18) 55%,
+    transparent 100%);
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .hero-top-scrim { height: 120px; }
+}
+
+/* =============================================================
+   CJK line-breaking — ZH pages only.
+   • Body & subtitles: keep-all so multi-character words
+     (温哥华 / 浮针 / 加西中医) and proper nouns never split mid-word.
+   • Headings: natural wrapping + strict punctuation rules so a
+     full-width 。、，never orphans onto its own line, with
+     balanced line lengths.
+   ============================================================= */
+html[lang="zh"] p, html[lang="zh"] li,
+html[lang="zh"] .lede, html[lang="zh"] .body, html[lang="zh"] .body-sm,
+html[lang="zh"] .zh-text {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+html[lang="zh"] h1, html[lang="zh"] h2, html[lang="zh"] h3, html[lang="zh"] h4,
+html[lang="zh"] .h-display, html[lang="zh"] .h-section, html[lang="zh"] .h-card {
+  line-break: strict;
+  text-wrap: balance;
+}
+
+/* =============================================================
+   Buttons
+   ============================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  padding: 16px 28px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--dur) var(--ease);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--vermilion);
+  color: var(--cream-50);
+  border-color: var(--vermilion);
+}
+.btn-primary:hover { background: var(--vermilion-hover); border-color: var(--vermilion-hover); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--sepia-600);
+  border-color: var(--sepia-300);
+}
+.btn-outline:hover { background: var(--sepia-700); color: var(--cream-50); border-color: var(--sepia-700); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--sepia-600);
+  border: none;
+  padding: 8px 0;
+  letter-spacing: 0.04em;
+}
+.btn-ghost:hover { color: var(--sepia-700); }
+
+/* =============================================================
+   Layout
+   ============================================================= */
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-tight {
+  padding: 64px 0;
+}
+
+/* hairline */
+.hr-copper {
+  height: 1px;
+  background: var(--copper);
+  border: 0;
+  margin: 0;
+}
+
+/* placeholder pill (TBD) */
+.tbd-pill {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(245, 239, 230, 0.92);
+  color: var(--sepia-400);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border: 1px solid var(--sepia-200);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* bilingual lockup */
+.bilingual {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* image with subtle warm grade */
+.warm-image {
+  filter: saturate(0.92) contrast(1.02);
+}
+
+/* small reset */
+ul { list-style: none; padding: 0; margin: 0; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+/* mobile */
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+  .section-tight { padding: 48px 0; }
+  :root { --gutter: 20px; }
+}

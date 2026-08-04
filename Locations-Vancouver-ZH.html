@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>温哥华中医诊所（Kitsilano）— 针灸、中药与推拿 | 加西中医</title>
+<meta name="description" content="加西中医温哥华店，位于 Kitsilano 的 West Broadway 3652 号。注册中医师，提供针灸、推拿、艾灸、中药，擅长肌骨与运动康复。接受 ICBC。" />
+<link rel="alternate" hreflang="en" href="Locations-Vancouver.html" />
+<link rel="alternate" hreflang="zh" href="Locations-Vancouver-ZH.html" />
+<link rel="stylesheet" href="tokens.css" />
+<style>
+  /* ZH-page font overrides: prefer Noto Sans SC for body, Noto Serif SC for display */
+  :root {
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-display: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+  }
+  body { font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+</style>
+
+<!-- NAP: must match the clinic's Google Business Profile verbatim -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Canadian Western TCM Clinic — Vancouver",
+  "image": "assets/locations/vancouver/hero-vancouver-exterior-day.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3652 West Broadway",
+    "addressLocality": "Vancouver",
+    "addressRegion": "BC",
+    "postalCode": "V6R 2B7",
+    "addressCountry": "CA"
+  },
+  "telephone": "+1-778-323-6356",
+  "url": "Locations-Vancouver.html",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "18:30"
+    }
+  ],
+  "medicalSpecialty": "TraditionalChineseMedicine",
+  "branchOf": {
+    "@type": "MedicalOrganization",
+    "name": "Canadian Western TCM Clinic"
+  }
+}
+</script>
+
+<style>
+  /* Mobile + responsive */
+  @media (max-width: 768px) {
+    .container { padding: 0 20px !important; }
+    nav { padding: 16px 18px !important; flex-wrap: wrap !important; }
+    nav ul { display: none !important; }
+    nav img { height: 64px !important; }
+    nav > div:first-child > a > div {
+      font-size: 13px !important; padding-left: 14px !important;
+    }
+    nav > div:last-child { gap: 10px !important; }
+    nav > div:last-child > a {
+      padding: 10px 16px !important; font-size: 11px !important;
+    }
+
+    section[data-screen-label="01 Hero"] { height: auto !important; min-height: 72vh !important; }
+    section[data-screen-label="01 Hero"] > div:nth-child(4) {
+      bottom: 64px !important;
+    }
+    section[data-screen-label="01 Hero"] h1 { font-size: 64px !important; }
+
+    section[data-screen-label="02 Story"] { padding: 72px 0 !important; }
+    .rc-story-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .rc-story-grid p { font-size: 19px !important; }
+
+    section[data-screen-label="03 Info"] { padding: 56px 0 64px !important; }
+    .rc-info-grid {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+      padding: 28px 24px 28px !important;
+    }
+    .rc-info-grid > div:last-child > div:first-child {
+      height: 280px !important;
+    }
+
+    section[data-screen-label="04 Gallery"] { padding: 72px 0 64px !important; }
+    .rc-gallery-grid {
+      grid-template-columns: 1fr !important;
+      grid-template-rows: repeat(5, 240px) !important;
+      gap: 12px !important;
+    }
+    .rc-gallery-grid > div {
+      grid-column: 1 / -1 !important;
+      grid-row: auto !important;
+    }
+
+    section[data-screen-label="05 Find"] { padding: 72px 0 64px !important; }
+    .rc-pract-grid { gap: 18px !important; }
+    .rc-pract-grid > article, .rc-pract-grid > a { flex: 1 1 100% !important; width: 100% !important; }
+
+    section[data-screen-label="06 Neighbourhood"] { padding: 64px 0 120px !important; }
+
+    /* Sticky bar appears on mobile only */
+    .rc-sticky-bar { display: flex !important; }
+    /* Add bottom padding so footer/content isn't covered */
+    body { padding-bottom: 72px !important; }
+
+    /* footer collapse — mirror homepage */
+    footer { padding: 56px 0 28px !important; }
+    footer > div > div:first-child {
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      padding-bottom: 32px !important;
+      margin-bottom: 36px !important;
+    }
+    footer > div > div:first-child img { height: 64px !important; }
+    footer > div > div:first-child > div:nth-child(2) {
+      font-size: 14px !important; padding-left: 14px !important;
+    }
+    footer > div > div:first-child > div:last-child {
+      margin-left: 0 !important; flex-basis: 100% !important;
+      text-align: left !important; font-size: 16px !important;
+      max-width: none !important; padding-top: 8px !important;
+      border-top: 1px solid rgba(184,148,96,0.25) !important;
+    }
+    footer > div > div:nth-child(2) {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 32px !important; margin-bottom: 40px !important;
+    }
+    footer > div > div:nth-child(2) > div:first-child { grid-column: 1 / -1; }
+    footer > div > div:nth-child(2) > div:last-child { grid-column: 1 / -1; }
+    footer > div > div:last-child {
+      flex-direction: column !important; align-items: flex-start !important;
+      gap: 12px !important;
+    }
+    footer > div > div:last-child > div:last-child {
+      flex-wrap: wrap !important; gap: 14px 18px !important;
+    }
+  }
+
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .rc-gallery-grid {
+      grid-template-rows: repeat(2, 240px) !important;
+    }
+  }
+  @media (max-width: 760px) {
+    .rc-price-grid { grid-template-columns: 1fr !important; }
+    section[data-screen-label="05b Pricing"] { padding: 64px 0 !important; }
+  }
+</style>
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#F2EAD8"/>
+  <g stroke="#9A6E45" stroke-width="1.4" fill="none">
+    <rect x="42" y="40" width="116" height="120" />
+    <line x1="68" y1="40" x2="68" y2="160" />
+    <line x1="94" y1="40" x2="94" y2="160" />
+    <line x1="120" y1="40" x2="120" y2="160" />
+    <line x1="146" y1="40" x2="146" y2="160" />
+    <line x1="42" y1="70" x2="158" y2="70" />
+    <line x1="42" y1="100" x2="158" y2="100" />
+    <line x1="42" y1="130" x2="158" y2="130" />
+  </g>
+  <text x="100" y="184" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#3A2C18" letter-spacing="2">VANCOUVER</text>
+</svg>
+</template>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="copy-zh.js"></script>
+<script type="text/babel" src="atoms.jsx"></script>
+<script type="text/babel" src="sections-1-4.jsx"></script>
+<script type="text/babel" src="sections-9-12.jsx"></script>
+<script type="text/babel" src="clinic-page.jsx"></script>
+
+<script type="text/babel">
+ReactDOM.createRoot(document.getElementById('root')).render(<VancouverPage />);
+</script>
+
+</body>
+</html>

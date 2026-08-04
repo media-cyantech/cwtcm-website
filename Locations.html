@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Our Clinics — Four TCM Locations in Greater Vancouver | Canadian Western TCM</title>
+<meta name="description" content="Visit Canadian Western TCM at four Greater Vancouver clinics — Richmond, Burnaby, Vancouver (West Broadway) and White Rock. Registered practitioners, ICBC accepted, Telus direct bill, bilingual care." />
+<link rel="alternate" hreflang="en" href="Locations.html" />
+<link rel="alternate" hreflang="zh" href="Locations-ZH.html" />
+<link rel="stylesheet" href="tokens.css" />
+<meta name="ext-resource-dependency" content="assets/brand/logo-tight.avif" data-resource-id="r_brand_logo_tight_avif" />
+<meta name="ext-resource-dependency" content="assets/brand/wechat-qr.png" data-resource-id="r_brand_wechat_qr_png" />
+<style>
+  /* Tablet: shrink map */
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .loc-map-frame { height: 380px !important; }
+  }
+  /* Mobile: stack cards, trust row to 2x2 */
+  @media (max-width: 768px) {
+    .container { padding: 0 20px !important; }
+    nav { padding: 16px 18px !important; flex-wrap: wrap !important; }
+    nav ul { display: none !important; }
+    nav img { height: 64px !important; }
+    nav > div:first-child > a > div {
+      font-size: 13px !important; padding-left: 14px !important;
+    }
+    nav > div:last-child { gap: 10px !important; }
+    nav > div:last-child > a {
+      padding: 10px 16px !important; font-size: 11px !important;
+    }
+
+    section[data-screen-label="01 Header"] { padding: 56px 0 40px !important; }
+    section[data-screen-label="01 Header"] h1 { font-size: 36px !important; }
+
+    section[data-screen-label="02 Map"] { padding: 24px 0 16px !important; }
+    .loc-map-frame { height: 300px !important; }
+    section[data-screen-label="03 Cards"] { padding: 24px 0 64px !important; }
+    .loc-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+
+    section[data-screen-label="04 Standards"] { padding: 40px 0 !important; }
+    .trust-row {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 20px 16px !important;
+    }
+    .trust-row > div {
+      border-left: none !important;
+      border-top: 1px solid rgba(184,148,96,0.35);
+      padding: 16px 8px 0 !important;
+      font-size: 15px !important;
+    }
+    .trust-row > div:nth-child(1),
+    .trust-row > div:nth-child(2) { border-top: none !important; padding-top: 0 !important; }
+
+    section[data-screen-label="05 CTA"] { padding: 56px 0 64px !important; }
+    section[data-screen-label="05 CTA"] p { font-size: 24px !important; }
+
+    /* footer mirrors the homepage rules */
+    footer { padding: 56px 0 28px !important; }
+    footer > div > div:first-child {
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      padding-bottom: 32px !important;
+      margin-bottom: 36px !important;
+    }
+    footer > div > div:first-child img { height: 64px !important; }
+    footer > div > div:first-child > div:nth-child(2) {
+      font-size: 14px !important; padding-left: 14px !important;
+    }
+    footer > div > div:first-child > div:last-child {
+      margin-left: 0 !important;
+      flex-basis: 100% !important;
+      text-align: left !important;
+      font-size: 16px !important;
+      max-width: none !important;
+      padding-top: 8px !important;
+      border-top: 1px solid rgba(184,148,96,0.25) !important;
+    }
+    footer > div > div:nth-child(2) {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 32px !important;
+      margin-bottom: 40px !important;
+    }
+    footer > div > div:nth-child(2) > div:first-child { grid-column: 1 / -1; }
+    footer > div > div:nth-child(2) > div:last-child { grid-column: 1 / -1; }
+    footer > div > div:last-child {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+    }
+    footer > div > div:last-child > div:last-child {
+      flex-wrap: wrap !important;
+      gap: 14px 18px !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#F2EAD8"/>
+  <g stroke="#9A6E45" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M30 70 Q 70 50 110 70 T 175 70" />
+    <path d="M25 120 Q 80 100 145 125 T 175 130" />
+  </g>
+  <g fill="#B23A2E">
+    <circle cx="70"  cy="80"  r="6" />
+    <circle cx="120" cy="80"  r="6" />
+    <circle cx="85"  cy="135" r="6" />
+    <circle cx="145" cy="150" r="6" />
+  </g>
+  <text x="100" y="180" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#3A2C18" letter-spacing="2">CLINICS</text>
+</svg>
+</template>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="copy.js"></script>
+<script type="text/babel" src="atoms.jsx"></script>
+<script type="text/babel" src="sections-1-4.jsx"></script>
+<script type="text/babel" src="sections-9-12.jsx"></script>
+<script type="text/babel" src="locations-page.jsx"></script>
+
+<script type="text/babel">
+ReactDOM.createRoot(document.getElementById('root')).render(<LocationsPage />);
+</script>
+
+</body>
+</html>

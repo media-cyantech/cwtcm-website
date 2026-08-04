@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>加西中医 · Canadian Western TCM</title>
+<link rel="alternate" hreflang="en" href="Homepage.html" />
+<link rel="alternate" hreflang="zh" href="Homepage-ZH.html" />
+<link rel="stylesheet" href="tokens.css" />
+<style>
+  /* ZH-page font overrides: prefer Noto Sans SC for body, Noto Serif SC for display */
+  :root {
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-display: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+  }
+  body { font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+</style>
+<meta name="ext-resource-dependency" content="assets/brand/logo-tight.avif" data-resource-id="r_brand_logo_tight_avif" />
+<meta name="ext-resource-dependency" content="assets/brand/logo.avif" data-resource-id="r_brand_logo_avif" />
+<meta name="ext-resource-dependency" content="assets/brand/wechat-qr.png" data-resource-id="r_brand_wechat_qr_png" />
+<meta name="ext-resource-dependency" content="assets/hero-candidates/02-apothecary-jars.jpg" data-resource-id="r_hero_candidates_02_apothecary_jars_jpg" />
+<meta name="ext-resource-dependency" content="assets/hero-candidates/01-black-teapot-steam.jpg" data-resource-id="r_hero_candidates_01_black_teapot_steam_jpg" />
+<meta name="ext-resource-dependency" content="assets/hero-candidates/03-herbal-warm-pack.jpg" data-resource-id="r_hero_candidates_03_herbal_warm_pack_jpg" />
+<meta name="ext-resource-dependency" content="assets/hero-candidates/04-herbal-jars-shelf-warm.jpg" data-resource-id="r_hero_candidates_04_herbal_jars_shelf_warm_jpg" />
+<meta name="ext-resource-dependency" content="assets/hero-candidates/05-acupuncture-back-warm.jpg" data-resource-id="r_hero_candidates_05_acupuncture_back_warm_jpg" />
+<meta name="ext-resource-dependency" content="assets/practitioners/01-Hu-Xianyi-Senior-Burnaby.png" data-resource-id="r_practitioners_01_Hu_Xianyi_Senior_Burnaby_png" />
+<meta name="ext-resource-dependency" content="assets/practitioners/04-Taylor-Wang-Founder-Richmond.png" data-resource-id="r_practitioners_04_Taylor_Wang_Founder_Richmond_png" />
+<meta name="ext-resource-dependency" content="assets/practitioners/05-Shirley-Zhu-Burnaby.png" data-resource-id="r_practitioners_05_Shirley_Zhu_Burnaby_png" />
+<meta name="ext-resource-dependency" content="assets/practitioners/06-Yufang-Chen-Richmond.png" data-resource-id="r_practitioners_06_Yufang_Chen_Richmond_png" />
+<meta name="ext-resource-dependency" content="assets/treatments/01-tuina-massage.jpg" data-resource-id="r_treatments_01_tuina_massage_jpg" />
+<meta name="ext-resource-dependency" content="assets/treatments/02-moxibustion.jpg" data-resource-id="r_treatments_02_moxibustion_jpg" />
+<meta name="ext-resource-dependency" content="assets/treatments/03-herbal-medicine.jpg" data-resource-id="r_treatments_03_herbal_medicine_jpg" />
+<meta name="ext-resource-dependency" content="assets/treatments/04-acupuncture-session.jpg" data-resource-id="r_treatments_04_acupuncture_session_jpg" />
+<meta name="ext-resource-dependency" content="assets/treatments/05-bone-setting.jpg" data-resource-id="r_treatments_05_bone_setting_jpg" />
+<meta name="ext-resource-dependency" content="assets/treatments/06-cupping.jpg" data-resource-id="r_treatments_06_cupping_jpg" />
+<meta name="ext-resource-dependency" content="assets/treatments/07-head-therapy.jpg" data-resource-id="r_treatments_07_head_therapy_jpg" />
+<meta name="ext-resource-dependency" content="assets/treatments/08-acupuncture-facial.jpg" data-resource-id="r_treatments_08_acupuncture_facial_jpg" />
+<style>
+  /* Mobile breakpoint annotations */
+  .mobile-frame {
+    width: 390px;
+    margin: 40px auto;
+    border: 1px solid var(--sepia-200);
+    box-shadow: 0 30px 80px rgba(40,30,16,0.18);
+    overflow: hidden;
+    background: var(--cream-200);
+  }
+  .mobile-frame [data-screen-label] { font-size: 14px; }
+  .mobile-frame .container {
+    padding: 0 20px;
+  }
+  .mobile-frame nav { padding: 18px 20px !important; }
+  .mobile-frame nav ul { display: none !important; }
+  .mobile-frame nav > div:first-child { font-size: 14px !important; }
+  .mobile-frame nav > div:last-child > a { padding: 8px 14px !important; font-size: 10px !important; }
+  .mobile-frame nav > div:last-child > span { display: none; }
+
+  .mobile-frame section[data-screen-label="01 Hero"] { height: 80vh !important; min-height: 560px !important; }
+  .mobile-frame section[data-screen-label="01 Hero"] > div:nth-child(3) {
+    bottom: 48px !important;
+  }
+  .mobile-frame section[data-screen-label="01 Hero"] h1 { font-size: 42px !important; }
+  .mobile-frame section[data-screen-label="01 Hero"] > div:last-child { display: none; }
+
+  .mobile-frame section[data-screen-label="02 Trust"] .container {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+    row-gap: 24px !important;
+  }
+  .mobile-frame section[data-screen-label="02 Trust"] .container > div {
+    border-left: none !important;
+    border-bottom: 1px solid rgba(184,148,96,0.35);
+    padding: 0 0 16px 0 !important;
+    text-align: left !important;
+    font-size: 10px !important;
+  }
+
+  .mobile-frame section[data-screen-label="03 Practitioners"] > div:first-child > div {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .mobile-frame section[data-screen-label="03 Practitioners"] > div:last-child {
+    padding: 0 20px !important;
+  }
+  .mobile-frame section[data-screen-label="03 Practitioners"] article {
+    flex: 0 0 240px !important;
+  }
+
+  .mobile-frame section[data-screen-label="04 Approach"] > div > div:last-child {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+  .mobile-frame section[data-screen-label="05 Treatments"] > div > div:nth-child(2) {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    row-gap: 36px !important;
+  }
+  .mobile-frame section[data-screen-label="06 Conditions"] > div > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+  .mobile-frame section[data-screen-label="07 Locations"] > div > div:last-child {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .mobile-frame section[data-screen-label="08 Heritage"] > div {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+  .mobile-frame section[data-screen-label="08 Heritage"] > div > div:last-child {
+    padding: 56px 24px !important;
+  }
+  .mobile-frame section[data-screen-label="08 Heritage"] h2 { font-size: 32px !important; }
+  .mobile-frame section[data-screen-label="08 Heritage"] > div > div:first-child {
+    aspect-ratio: 4/3;
+  }
+
+  .mobile-frame section[data-screen-label="09 Testimonials"] > div > div:last-child {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+  .mobile-frame section[data-screen-label="10 Journal"] > div > div:nth-child(2) {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+  .mobile-frame section[data-screen-label="11 Newsletter"] .container {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .mobile-frame section[data-screen-label="11 Newsletter"] form {
+    flex-direction: column !important;
+  }
+
+  .mobile-frame footer > div > div:first-child {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .mobile-frame footer > div > div:last-child {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  /* mobile header */
+  .breakpoint-label {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--sepia-400);
+    padding: 24px 0 12px;
+    background: var(--cream-200);
+  }
+  .breakpoint-label strong {
+    color: var(--sepia-700);
+    font-weight: 600;
+  }
+  .section-divider {
+    height: 64px;
+    background: var(--cream-300);
+    border-top: 1px solid var(--sepia-200);
+    border-bottom: 1px solid var(--sepia-200);
+  }
+
+  /* ===========================================================
+     Real mobile breakpoint — applies to actual phones / narrow viewports
+     Mirrors the .mobile-frame preview rules at the document level.
+     =========================================================== */
+  @media (max-width: 768px) {
+    body { font-size: 15px; }
+    .container { padding: 0 20px !important; }
+
+    /* NAV — collapse desktop ul, shrink logo + brand mark */
+    nav { padding: 16px 18px !important; flex-wrap: wrap !important; }
+    nav ul { display: none !important; }
+    nav img { height: 64px !important; }
+    nav > div:first-child > div {
+      font-size: 13px !important; padding-left: 14px !important;
+    }
+    nav > div:last-child { gap: 10px !important; }
+    nav > div:last-child > span { display: none !important; }
+    nav > div:last-child > a {
+      padding: 10px 16px !important; font-size: 11px !important;
+    }
+
+    /* HERO */
+    section[data-screen-label="01 Hero"] {
+      height: auto !important; min-height: 78vh !important;
+    }
+    section[data-screen-label="01 Hero"] > div:nth-child(3) {
+      bottom: 56px !important;
+    }
+    section[data-screen-label="01 Hero"] h1 { font-size: 38px !important; }
+    section[data-screen-label="01 Hero"] > div:nth-child(3) > div:nth-child(2) {
+      font-size: 22px !important;
+    }
+    section[data-screen-label="01 Hero"] > div:nth-child(3) > div:nth-child(3) {
+      font-size: 17px !important; margin-bottom: 28px !important;
+    }
+    /* hide carousel side arrows on mobile (rely on dots / autoplay) */
+    section[data-screen-label="01 Hero"] > button { display: none !important; }
+
+    /* TRUST */
+    section[data-screen-label="02 Trust"] .container {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 14px !important;
+      row-gap: 18px !important;
+    }
+    section[data-screen-label="02 Trust"] .container > div {
+      border-left: none !important;
+      padding: 4px 0 !important;
+      text-align: left !important;
+      font-size: 11px !important;
+      letter-spacing: 0.06em !important;
+    }
+
+    /* SECTIONS — base padding */
+    .section { padding: 64px 0 !important; }
+
+    /* PRACTITIONERS — keep horizontal scroll, smaller cards + peek */
+    section[data-screen-label="03 Practitioners"] {
+      padding: 72px 0 64px !important;
+    }
+    section[data-screen-label="03 Practitioners"] > div:first-child > div {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important; margin-bottom: 32px !important;
+    }
+    section[data-screen-label="03 Practitioners"] > div:first-child p {
+      font-size: 17px !important;
+    }
+    section[data-screen-label="03 Practitioners"] > div:last-child {
+      padding: 0 20px !important; gap: 16px !important;
+      scroll-snap-type: x mandatory !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+    section[data-screen-label="03 Practitioners"] article {
+      flex: 0 0 78% !important;
+      max-width: 280px !important;
+      scroll-snap-align: start !important;
+    }
+
+    /* APPROACH */
+    section[data-screen-label="04 Approach"] {
+      padding: 56px 0 64px !important;
+    }
+    section[data-screen-label="04 Approach"] > div > div:last-child {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+
+    /* TREATMENTS — 2 columns on phone */
+    section[data-screen-label="05 Treatments"] > div > div:nth-child(2) {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 16px !important;
+      row-gap: 32px !important;
+    }
+    section[data-screen-label="05 Treatments"] h2 { font-size: 32px !important; }
+
+    /* CONDITIONS — single column */
+    section[data-screen-label="06 Conditions"] > div > div:last-child {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+    section[data-screen-label="06 Conditions"] h2 { font-size: 32px !important; }
+
+    /* LOCATIONS — single column */
+    section[data-screen-label="07 Locations"] > div > div:last-child {
+      grid-template-columns: 1fr !important;
+      gap: 18px !important;
+    }
+    section[data-screen-label="07 Locations"] h2 { font-size: 32px !important; }
+
+    /* HERITAGE split */
+    section[data-screen-label="08 Heritage"] > div {
+      grid-template-columns: 1fr !important;
+      min-height: auto !important;
+    }
+    section[data-screen-label="08 Heritage"] > div > div:first-child {
+      aspect-ratio: 4/3 !important;
+    }
+    section[data-screen-label="08 Heritage"] > div > div:last-child {
+      padding: 56px 24px !important;
+    }
+    section[data-screen-label="08 Heritage"] h2 { font-size: 30px !important; }
+
+    /* TESTIMONIALS */
+    section[data-screen-label="09 Testimonials"] > div > div:last-child {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    section[data-screen-label="09 Testimonials"] h2 { font-size: 30px !important; }
+
+    /* JOURNAL */
+    section[data-screen-label="10 Journal"] > div > div:nth-child(2) {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    section[data-screen-label="10 Journal"] h2 { font-size: 30px !important; }
+
+    /* NEWSLETTER */
+    section[data-screen-label="11 Newsletter"] .container {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+    }
+    section[data-screen-label="11 Newsletter"] form {
+      flex-direction: column !important;
+    }
+    section[data-screen-label="11 Newsletter"] p { font-size: 19px !important; }
+
+    /* FOOTER — stack columns, brand row stacks, tagline wraps */
+    footer { padding: 56px 0 28px !important; }
+    /* brand row */
+    footer > div > div:first-child {
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      padding-bottom: 32px !important;
+      margin-bottom: 36px !important;
+    }
+    footer > div > div:first-child img { height: 64px !important; }
+    footer > div > div:first-child > div:nth-child(2) {
+      font-size: 14px !important; padding-left: 14px !important;
+    }
+    footer > div > div:first-child > div:last-child {
+      margin-left: 0 !important;
+      flex-basis: 100% !important;
+      text-align: left !important;
+      font-size: 16px !important;
+      max-width: none !important;
+      padding-top: 8px !important;
+      border-top: 1px solid rgba(184,148,96,0.25) !important;
+    }
+    /* columns grid */
+    footer > div > div:nth-child(2) {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 32px !important;
+      margin-bottom: 40px !important;
+    }
+    footer > div > div:nth-child(2) > div:first-child { grid-column: 1 / -1; }
+    footer > div > div:nth-child(2) > div:last-child { grid-column: 1 / -1; }
+    /* legal row stacks */
+    footer > div > div:last-child {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+    }
+    footer > div > div:last-child > div:last-child {
+      flex-wrap: wrap !important;
+      gap: 14px 18px !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#F2EAD8"/>
+  <g transform="translate(100,100)" stroke="#B23A2E" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle r="44"/>
+    <path d="M-22 -8 q22 -28 44 0" />
+    <path d="M-22 8 q22 28 44 0" />
+    <line x1="0" y1="-44" x2="0" y2="44"/>
+  </g>
+  <text x="100" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#3A2C18" letter-spacing="2">CWTCM</text>
+</svg>
+</template>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="copy-zh.js"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="atoms.jsx"></script>
+<script type="text/babel" src="sections-1-4.jsx"></script>
+<script type="text/babel" src="sections-5-8.jsx"></script>
+<script type="text/babel" src="sections-9-12.jsx"></script>
+<script type="text/babel" src="tweaks-config.jsx"></script>
+
+<script type="text/babel">
+const { useState } = React;
+
+const Page = ({ heroIndex }) => (
+  <>
+    <Hero heroIndex={heroIndex} />
+    <TrustStrip />
+    <Practitioners />
+    <Approach />
+    <Treatments />
+    <Conditions />
+    <Locations />
+    <Heritage />
+    <Testimonials />
+    <Journal />
+    <Newsletter />
+    <Footer />
+  </>
+);
+
+const App = () => {
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  return (
+    <>
+      <Page heroIndex={tweaks.hero} />
+      {tweaks.view === 'mobile' && (
+        <>
+          <div className="breakpoint-label" style={{ marginTop: 96 }}>
+            <strong>Mobile breakpoint · 390px</strong>
+          </div>
+          <div className="mobile-frame">
+            <Page heroIndex={tweaks.hero} />
+          </div>
+        </>
+      )}
+      <Tweaks tweaks={tweaks} setTweak={setTweak} />
+    </>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+
+</body>
+</html>

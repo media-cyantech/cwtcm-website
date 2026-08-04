@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>常见问题 | 加西中医</title>
+<meta name="description" content="加西中医的常见问题——关于针灸、ICBC 与附加健康保险、首次就诊体验、孕期与用药下的中药安全、双语服务与预约方式的简明回答。" />
+<link rel="alternate" hreflang="en" href="FAQ.html" />
+<link rel="alternate" hreflang="zh" href="FAQ-ZH.html" />
+<link rel="stylesheet" href="tokens.css" />
+<meta name="ext-resource-dependency" content="assets/brand/logo-tight.avif" data-resource-id="r_brand_logo_tight_avif" />
+<meta name="ext-resource-dependency" content="assets/brand/wechat-qr.png" data-resource-id="r_brand_wechat_qr_png" />
+<style>
+  /* ZH default — sans Chinese for body */
+  html, body { font-family: var(--font-sans-zh); }
+
+  @media (max-width: 1024px) {
+    section[data-screen-label="03 Details"] .container > div:last-child,
+    section[data-screen-label="02 NAP"] .container > div:last-child,
+    section[data-screen-label="03 Write to us"] .container {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 15px; }
+    .container { padding: 0 20px !important; }
+    .section { padding: 64px 0 !important; }
+    nav { padding: 16px 18px !important; flex-wrap: wrap !important; }
+    nav ul { display: none !important; }
+    nav img { height: 64px !important; }
+    nav > div:first-child > div {
+      font-size: 13px !important; padding-left: 14px !important;
+    }
+    nav > div:last-child { gap: 10px !important; }
+    nav > div:last-child > span { display: none !important; }
+    nav > div:last-child > a {
+      padding: 10px 16px !important; font-size: 11px !important;
+    }
+    section[data-screen-label="01 Hero"] { padding-bottom: 72px !important; }
+    section[data-screen-label="01 Hero"] .container { padding-top: 120px !important; }
+    section[data-screen-label="01 Hero"] h1 { font-size: 36px !important; }
+    section[data-screen-label="02 Steps"] > div > div {
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+    }
+    section[data-screen-label="02 NAP"] .container > div:last-child {
+      grid-template-columns: 1fr !important;
+    }
+    section[data-screen-label="02 NAP"] .container > div:last-child > div {
+      grid-template-columns: 1fr !important;
+    }
+    section[data-screen-label="03 Write to us"] .container {
+      grid-template-columns: 1fr !important;
+    }
+    section[data-screen-label="03 Details"] .container > div:last-child {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+  }
+</style>
+
+<script type="application/ld+json" id="faq-jsonld">{}</script>
+<script>
+(function(){
+  function onReady(fn){ if (document.readyState!=='loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
+  onReady(function(){
+    try {
+      var src = (window.STRINGS && STRINGS.faq && STRINGS.faq.zh && STRINGS.faq.zh.items) || [];
+      var schemaItems = src.filter(function(it){ return it.schema; });
+      var data = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        'mainEntity': schemaItems.map(function(it){
+          var stripHtml = (it.plainAnswer || it.a).replace(/<[^>]*>/g,'').trim();
+          return {
+            '@type': 'Question',
+            'name': it.q,
+            'acceptedAnswer': { '@type': 'Answer', 'text': stripHtml }
+          };
+        })
+      };
+      var node = document.getElementById('faq-jsonld');
+      if (node) node.textContent = JSON.stringify(data);
+    } catch(e){ /* swallow */ }
+  });
+})();
+</script>
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#F2EAD8"/>
+  <g transform="translate(100,100)" stroke="#B23A2E" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle r="44"/>
+    <path d="M-12 -10 q12 -18 24 0 q0 12 -12 16 v6" />
+    <circle cx="0" cy="20" r="2" fill="#B23A2E"/>
+  </g>
+  <text x="100" y="172" text-anchor="middle" font-family="Songti SC, Noto Serif SC, serif" font-size="18" fill="#3A2C18" letter-spacing="4">常见问题</text>
+</svg>
+</template>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="copy-zh.js"></script>
+<script type="text/babel" src="atoms.jsx"></script>
+<script type="text/babel" src="sections-1-4.jsx"></script>
+<script type="text/babel" src="sections-9-12.jsx"></script>
+<script type="text/babel" src="info-pages.jsx"></script>
+
+<script type="text/babel">
+ReactDOM.createRoot(document.getElementById('root')).render(<FAQPage />);
+</script>
+
+</body>
+</html>
