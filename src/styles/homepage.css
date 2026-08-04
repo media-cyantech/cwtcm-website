@@ -1,0 +1,183 @@
+/* 由 scripts/extract-page-css.mjs 从 Homepage.html 的内联 <style> 抽出。
+   已剔除 33 条 .mobile-frame / .breakpoint-label 预览壳规则
+   （tweaks 调参面板不迁移，见迁移计划「不迁」一节）。 */
+
+.section-divider {
+    height: 64px;
+    background: var(--cream-300);
+    border-top: 1px solid var(--sepia-200);
+    border-bottom: 1px solid var(--sepia-200);
+  }
+
+/* ===========================================================
+     Real mobile breakpoint — applies to actual phones / narrow viewports
+     Mirrors the .mobile-frame preview rules at the document level.
+     =========================================================== */
+  @media (max-width: 768px) {
+  body { font-size: 15px; }
+  .container { padding: 0 20px !important; }
+  /* NAV — collapse desktop ul, shrink logo + brand mark */
+    nav { padding: 16px 18px !important; flex-wrap: wrap !important; }
+  nav ul { display: none !important; }
+  nav img { height: 64px !important; }
+  nav > div:first-child > div {
+      font-size: 13px !important; padding-left: 14px !important;
+    }
+  nav > div:last-child { gap: 10px !important; }
+  nav > div:last-child > span { display: none !important; }
+  nav > div:last-child > a {
+      padding: 10px 16px !important; font-size: 11px !important;
+    }
+  /* HERO */
+    section[data-screen-label="01 Hero"] {
+      height: auto !important; min-height: 78vh !important;
+    }
+  section[data-screen-label="01 Hero"] > div:nth-child(3) {
+      bottom: 56px !important;
+    }
+  section[data-screen-label="01 Hero"] h1 { font-size: 38px !important; }
+  section[data-screen-label="01 Hero"] > div:nth-child(3) > div:nth-child(2) {
+      font-size: 22px !important;
+    }
+  section[data-screen-label="01 Hero"] > div:nth-child(3) > div:nth-child(3) {
+      font-size: 17px !important; margin-bottom: 28px !important;
+    }
+  /* hide carousel side arrows on mobile (rely on dots / autoplay) */
+    section[data-screen-label="01 Hero"] > button { display: none !important; }
+  /* TRUST */
+    section[data-screen-label="02 Trust"] .container {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 14px !important;
+      row-gap: 18px !important;
+    }
+  section[data-screen-label="02 Trust"] .container > div {
+      border-left: none !important;
+      padding: 4px 0 !important;
+      text-align: left !important;
+      font-size: 11px !important;
+      letter-spacing: 0.06em !important;
+    }
+  /* SECTIONS — base padding */
+    .section { padding: 64px 0 !important; }
+  /* PRACTITIONERS — keep horizontal scroll, smaller cards + peek */
+    section[data-screen-label="03 Practitioners"] {
+      padding: 72px 0 64px !important;
+    }
+  section[data-screen-label="03 Practitioners"] > div:first-child > div {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important; margin-bottom: 32px !important;
+    }
+  section[data-screen-label="03 Practitioners"] > div:first-child p {
+      font-size: 17px !important;
+    }
+  section[data-screen-label="03 Practitioners"] > div:last-child {
+      padding: 0 20px !important; gap: 16px !important;
+      scroll-snap-type: x mandatory !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+  section[data-screen-label="03 Practitioners"] article {
+      flex: 0 0 78% !important;
+      max-width: 280px !important;
+      scroll-snap-align: start !important;
+    }
+  /* APPROACH */
+    section[data-screen-label="04 Approach"] {
+      padding: 56px 0 64px !important;
+    }
+  section[data-screen-label="04 Approach"] > div > div:last-child {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  /* TREATMENTS — 2 columns on phone */
+    section[data-screen-label="05 Treatments"] > div > div:nth-child(2) {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 16px !important;
+      row-gap: 32px !important;
+    }
+  section[data-screen-label="05 Treatments"] h2 { font-size: 32px !important; }
+  /* CONDITIONS — single column */
+    section[data-screen-label="06 Conditions"] > div > div:last-child {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+  section[data-screen-label="06 Conditions"] h2 { font-size: 32px !important; }
+  /* LOCATIONS — single column */
+    section[data-screen-label="07 Locations"] > div > div:last-child {
+      grid-template-columns: 1fr !important;
+      gap: 18px !important;
+    }
+  section[data-screen-label="07 Locations"] h2 { font-size: 32px !important; }
+  /* HERITAGE split */
+    section[data-screen-label="08 Heritage"] > div {
+      grid-template-columns: 1fr !important;
+      min-height: auto !important;
+    }
+  section[data-screen-label="08 Heritage"] > div > div:first-child {
+      aspect-ratio: 4/3 !important;
+    }
+  section[data-screen-label="08 Heritage"] > div > div:last-child {
+      padding: 56px 24px !important;
+    }
+  section[data-screen-label="08 Heritage"] h2 { font-size: 30px !important; }
+  /* TESTIMONIALS */
+    section[data-screen-label="09 Testimonials"] > div > div:last-child {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  section[data-screen-label="09 Testimonials"] h2 { font-size: 30px !important; }
+  /* JOURNAL */
+    section[data-screen-label="10 Journal"] > div > div:nth-child(2) {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  section[data-screen-label="10 Journal"] h2 { font-size: 30px !important; }
+  /* NEWSLETTER */
+    section[data-screen-label="11 Newsletter"] .container {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+    }
+  section[data-screen-label="11 Newsletter"] form {
+      flex-direction: column !important;
+    }
+  section[data-screen-label="11 Newsletter"] p { font-size: 19px !important; }
+  /* FOOTER — stack columns, brand row stacks, tagline wraps */
+    footer { padding: 56px 0 28px !important; }
+  /* brand row */
+    footer > div > div:first-child {
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      padding-bottom: 32px !important;
+      margin-bottom: 36px !important;
+    }
+  footer > div > div:first-child img { height: 64px !important; }
+  footer > div > div:first-child > div:nth-child(2) {
+      font-size: 14px !important; padding-left: 14px !important;
+    }
+  footer > div > div:first-child > div:last-child {
+      margin-left: 0 !important;
+      flex-basis: 100% !important;
+      text-align: left !important;
+      font-size: 16px !important;
+      max-width: none !important;
+      padding-top: 8px !important;
+      border-top: 1px solid rgba(184,148,96,0.25) !important;
+    }
+  /* columns grid */
+    footer > div > div:nth-child(2) {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 32px !important;
+      margin-bottom: 40px !important;
+    }
+  footer > div > div:nth-child(2) > div:first-child { grid-column: 1 / -1; }
+  footer > div > div:nth-child(2) > div:last-child { grid-column: 1 / -1; }
+  /* legal row stacks */
+    footer > div > div:last-child {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+    }
+  footer > div > div:last-child > div:last-child {
+      flex-wrap: wrap !important;
+      gap: 14px 18px !important;
+    }
+}

@@ -1,0 +1,27 @@
+# 加西中医 cwtcm.ca
+# 放到站点根目录。URL 规则：cleanUrls=false，所有页面带 .html；中文页 -ZH 后缀。
+
+User-agent: *
+Allow: /
+
+# index.html 与 Homepage.html 内容完全相同，避免重复收录
+# （更好的做法是删掉 index.html，由服务器把 / 指到 Homepage.html）
+Disallow: /index.html
+
+# AI 爬虫：明确允许（GEO 需要它们能抓）
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://cwtcm.ca/sitemap-index.xml

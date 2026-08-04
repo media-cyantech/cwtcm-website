@@ -1,0 +1,70 @@
+---
+// 全站 <head> —— title / description / canonical / hreflang / robots / OG 全部
+// 从 ../../-skill-rag-/seo/cwtcm/pages.json 注入，静态输出到 HTML。
+//
+// 为什么不沿用旧站的写法：
+//   • 旧站 165 组 hreflang 全是相对路径，Google 会**整组忽略** → 这里必须绝对 URL
+//   • 旧站只有 2 页有 canonical，且也是相对路径
+//   • 旧站 <html lang> 混用 en / zh / zh-CN，这里统一 en / zh-Hans
+//   • 旧站的 JSON-LD 有 50 页靠 React 运行时注入，AI 爬虫读不到 → 这里走 <slot name="head">
+//     由页面静态传入
+import '../styles/tokens.css';
+
+const { page, css = [], schema = [] } = Astro.props;
+if (!page) throw new Error('Base.astro 需要 page 属性（来自 seo/cwtcm/pages.json 的一条）');
+
+const isZh = page.lang === 'zh-Hans';
+const ogLocale = isZh ? 'zh_CN' : 'en_CA';
+---
+<html lang={page.lang}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  {/* 原在 tokens.css:7 的 @import，改为并行加载。字体清单与旧站完全一致。 */}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap"
+  />
+
+  <title>{page.title}</title>
+  {page.description && <meta name="description" content={page.description} />}
+  <meta name="robots" content={page.robots} />
+  <link rel="canonical" href={page.canonical} />
+
+  {Object.entries(page.hreflang).map(([hl, href]) => (
+    <link rel="alternate" hreflang={hl} href={href} />
+  ))}
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={isZh ? '加西中医' : 'Canadian Western TCM'} />
+  <meta property="og:locale" content={ogLocale} />
+  <meta property="og:title" content={page.title} />
+  {page.description && <meta property="og:description" content={page.description} />}
+  <meta property="og:url" content={page.canonical} />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  {isZh && (
+    <style>{`
+      /* 中文页字体覆盖 —— 与旧站 Homepage-ZH.html:10-17 的内联 <style> 一致 */
+      :root {
+        --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        --font-display: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+      }
+      body { font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    `}</style>
+  )}
+
+  {schema.map((block) => (
+    <script type="application/ld+json" set:html={JSON.stringify(block)} />
+  ))}
+
+  {css.map((href) => <link rel="stylesheet" href={href} />)}
+  <slot name="head" />
+</head>
+<body>
+  <div id="root"><slot /></div>
+</body>
+</html>

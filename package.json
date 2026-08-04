@@ -1,0 +1,20 @@
+{
+  "name": "cwtcm-website",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "加西中医 Canadian Western TCM Clinic 官网（Astro 静态直出）",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "audit": "python3 ../-skill-rag-/seo/audit.py --site cwtcm"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.0",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
