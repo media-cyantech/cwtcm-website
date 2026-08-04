@@ -15,6 +15,7 @@ if (!page) throw new Error('Base.astro 需要 page 属性（来自 seo/cwtcm/pag
 
 const isZh = page.lang === 'zh-Hans';
 const ogLocale = isZh ? 'zh_CN' : 'en_CA';
+const ogImage = page.ogImage || 'https://cwtcm.ca/assets/hero-candidates/05-acupuncture-back-warm.jpg';
 ---
 <html lang={page.lang}>
 <head>
@@ -44,6 +45,11 @@ const ogLocale = isZh ? 'zh_CN' : 'en_CA';
   <meta property="og:title" content={page.title} />
   {page.description && <meta property="og:description" content={page.description} />}
   <meta property="og:url" content={page.canonical} />
+  {/* ⚠️ 临时回退。旧站 165 页一张 og:image 都没有，微信/社媒分享无卡片。
+      assets/ 里也没有 1200×630（1.91:1）的品牌图 —— 最接近的是
+      hero-candidates/05-acupuncture-back-warm.jpg（1920×1279，1.50），
+      社媒会上下裁切。正式品牌图规格见 seo/cwtcm/og-image-spec.md。 */}
+  <meta property="og:image" content={ogImage} />
   <meta name="twitter:card" content="summary_large_image" />
 
   {isZh && (
