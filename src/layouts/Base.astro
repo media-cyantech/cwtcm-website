@@ -16,11 +16,22 @@ if (!page) throw new Error('Base.astro 需要 page 属性（来自 seo/cwtcm/pag
 const isZh = page.lang === 'zh-Hans';
 const ogLocale = isZh ? 'zh_CN' : 'en_CA';
 const ogImage = page.ogImage || 'https://cwtcm.ca/assets/hero-candidates/05-acupuncture-back-warm.jpg';
+
+// 页面在第几层子目录（Practitioners/xxx.html → 1，根目录 → 0）
+const depth = (page.file.match(/\//g) || []).length;
 ---
 <html lang={page.lang}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  {/* ⚠️ 子目录页面必须有 <base href="../">，与旧站一致（旧站每个子目录 HTML 里就写着这一行）。
+      copy.js 里的内链与图片路径全是相对**站点根**写的（"Conditions/pain-injury.html"、
+      "assets/practitioners/xxx.jpg"）。Practitioners/ Treatments/ Conditions/ 三个目录下的
+      134 个页面若没有 base，这些路径会被当成相对当前目录解析成
+      Practitioners/Conditions/pain-injury.html —— 内链与图片全断。
+      迁移时漏掉这一行是全站性问题，实测过：7736 条内链里 204 种指向不存在的路径。 */}
+  {depth > 0 && <base href={'../'.repeat(depth)} />}
 
   {/* 原在 tokens.css:7 的 @import，改为并行加载。字体清单与旧站完全一致。 */}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -48,7 +59,7 @@ const ogImage = page.ogImage || 'https://cwtcm.ca/assets/hero-candidates/05-acup
   {/* ⚠️ 临时回退。旧站 165 页一张 og:image 都没有，微信/社媒分享无卡片。
       assets/ 里也没有 1200×630（1.91:1）的品牌图 —— 最接近的是
       hero-candidates/05-acupuncture-back-warm.jpg（1920×1279，1.50），
-      社媒会上下裁切。正式品牌图规格见 seo/cwtcm/og-image-spec.md。 */}
+      社媒会上下裁切。正式品牌图规格见 seo/lovart-og图-提示词.md。 */}
   <meta property="og:image" content={ogImage} />
   <meta name="twitter:card" content="summary_large_image" />
 

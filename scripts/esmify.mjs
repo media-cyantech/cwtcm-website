@@ -54,7 +54,15 @@ for (const name of files) {
     exported.push(lhs);
     return '';
   });
-  if (!exported.length) throw new Error(`${base}: 没找到任何 window.X = X 导出`);
+  // 有 5 个文件（clinic-page / condition-detail / conditions-page /
+  // treatment-detail / treatments-page）压根没有 window.X = X —— 旧站所有
+  // <script type="text/babel"> 共享同一个全局作用域，顶层 const 直接就是全局，
+  // 页面内联脚本拿来就用。这里回退成「导出全部顶层 PascalCase 常量」。
+  if (!exported.length) {
+    for (const m of text.matchAll(/^const ([A-Z][A-Za-z0-9]*) = /gm)) exported.push(m[1]);
+    if (!exported.length) throw new Error(`${base}: 既无 window.X 导出，也没有顶层 PascalCase 常量`);
+    console.log(`   ℹ️  ${base} 无 window 导出，按顶层常量导出 ${exported.length} 个`);
+  }
 
   const header =
     `// ⚠️ 由 scripts/esmify.mjs 从 ../../${base} 转换而来，之后有人工改动，不要重跑覆盖。\n` +
