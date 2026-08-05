@@ -415,6 +415,7 @@ const STRINGS = {
     details: {
       acupuncture: {
         slug: 'acupuncture',
+        heroPhoto: 'assets/treatments/acupuncture-hero.jpg',
         name: '针灸', nameEn: 'Acupuncture',
         category: '传统疗法',
         kind: 'needle',
@@ -435,6 +436,7 @@ const STRINGS = {
       },
       'floating-needle': {
         slug: 'floating-needle',
+        heroPhoto: 'assets/treatments/floating-needle-hero.jpg',
         name: '浮针', nameEn: 'Floating Needle (FSN)',
         category: '加西特色',
         kind: 'fsn',
@@ -461,6 +463,7 @@ const STRINGS = {
       },
       'tui-na': {
         slug: 'tui-na',
+        heroPhoto: 'assets/treatments/tui-na-hero.jpg',
         name: '推拿', nameEn: 'Tui Na',
         category: '传统疗法',
         kind: 'tuina',
@@ -481,6 +484,7 @@ const STRINGS = {
       },
       moxibustion: {
         slug: 'moxibustion',
+        heroPhoto: 'assets/treatments/moxibustion-hero.jpg',
         name: '艾灸', nameEn: 'Moxibustion',
         category: '传统疗法',
         kind: 'moxa',
@@ -502,6 +506,7 @@ const STRINGS = {
 
       'fuyang-moxibustion': {
         slug: 'fuyang-moxibustion',
+        heroPhoto: 'assets/treatments/fuyang-moxibustion-hero.jpg',
         name: '扶阳灸', nameEn: 'Fu Yang Moxibustion',
         category: '加西特色',
         kind: 'moxa',
@@ -525,6 +530,7 @@ const STRINGS = {
 
       'fire-dragon-moxibustion': {
         slug: 'fire-dragon-moxibustion',
+        heroPhoto: 'assets/treatments/fire-dragon-moxibustion-hero.jpg',
         name: '火龙灸', nameEn: 'Fire Dragon Moxibustion',
         category: '加西特色',
         kind: 'moxa',
@@ -548,6 +554,7 @@ const STRINGS = {
 
       'thread-embedding': {
         slug: 'thread-embedding',
+        heroPhoto: 'assets/treatments/thread-embedding-hero.jpg',
         name: '埋线减肥', nameEn: 'Acupoint Thread Embedding',
         category: '加西特色',
         kind: 'needle',
@@ -569,6 +576,7 @@ const STRINGS = {
 
       'xiaoyan-facial': {
         slug: 'xiaoyan-facial',
+        heroPhoto: 'assets/treatments/xiaoyan-facial-hero.jpg',
         name: '古法小颜针', nameEn: 'Xiao Yan Facial Acupuncture',
         category: '加西特色',
         kind: 'facial',
@@ -590,6 +598,7 @@ const STRINGS = {
 
       'facial-bojin': {
         slug: 'facial-bojin',
+        heroPhoto: 'assets/treatments/facial-bojin-hero.jpg',
         name: '面部拨筋', nameEn: 'Facial Bo Jin',
         category: '加西特色',
         kind: 'tuina',
@@ -611,6 +620,7 @@ const STRINGS = {
 
       'tcm-acne': {
         slug: 'tcm-acne',
+        heroPhoto: 'assets/treatments/tcm-acne-hero.jpg',
         name: '中医暗疮治疗', nameEn: 'TCM Acne Care',
         category: '加西特色',
         kind: 'herbs',
@@ -632,6 +642,7 @@ const STRINGS = {
 
       'manual-osteopathy': {
         slug: 'manual-osteopathy',
+        heroPhoto: 'assets/treatments/manual-osteopathy-hero.jpg',
         name: '整骨疗法（MOT）', nameEn: 'Manual Osteopathic Therapy',
         category: '临床照护',
         kind: 'boneset',
@@ -655,6 +666,7 @@ const STRINGS = {
 
       counselling: {
         slug: 'counselling',
+        heroPhoto: 'assets/treatments/counselling-hero.jpg',
         name: '心理咨询', nameEn: 'Counselling',
         category: '临床照护',
         kind: 'scalp',
@@ -677,6 +689,7 @@ const STRINGS = {
       },
       'cupping-gua-sha': {
         slug: 'cupping-gua-sha',
+        heroPhoto: 'assets/treatments/cupping-gua-sha-hero.jpg',
         name: '拔罐与刮痧', nameEn: 'Cupping & Gua Sha',
         category: '传统疗法',
         kind: 'cupping',
@@ -697,6 +710,7 @@ const STRINGS = {
       },
       'manual-bone-setting': {
         slug: 'manual-bone-setting',
+        heroPhoto: 'assets/treatments/manual-bone-setting-hero.jpg',
         name: '正骨', nameEn: 'Manual Bone Setting',
         category: '传统疗法',
         kind: 'boneset',
@@ -717,6 +731,7 @@ const STRINGS = {
       },
       'head-therapy': {
         slug: 'head-therapy',
+        heroPhoto: 'assets/treatments/head-therapy-hero.jpg',
         name: '头疗', nameEn: 'Head Therapy',
         category: '传统疗法',
         kind: 'scalp',
@@ -737,6 +752,7 @@ const STRINGS = {
       },
       'aesthetic-acupuncture': {
         slug: 'aesthetic-acupuncture',
+        heroPhoto: 'assets/treatments/aesthetic-acupuncture-hero.jpg',
         name: '美容针', nameEn: 'Aesthetic Acupuncture',
         category: '加西特色',
         kind: 'facial',
@@ -757,6 +773,7 @@ const STRINGS = {
       },
       'herbal-medicine': {
         slug: 'herbal-medicine',
+        heroPhoto: 'assets/treatments/herbal-medicine-hero.jpg',
         name: '中药调理', nameEn: 'Herbal Medicine',
         category: '传统疗法',
         kind: 'herbs',
@@ -895,6 +912,7 @@ const STRINGS = {
     details: {
       'pain-injury': {
         slug: 'pain-injury',
+        heroPhoto: 'assets/conditions/pain-injury-hero.jpg',
         name: '疼痛与损伤', nameEn: 'Pain & Injury',
         category: '身体与疼痛', categoryEn: 'Body & Pain',
         kind: 'pain',
@@ -924,6 +942,7 @@ const STRINGS = {
 
       'icbc-recovery': {
         slug: 'icbc-recovery',
+        heroPhoto: 'assets/conditions/icbc-recovery-hero.jpg',
         name: '车祸康复', nameEn: 'ICBC Recovery',
         category: '身体与疼痛', categoryEn: 'Body & Pain',
         kind: 'icbc',
@@ -953,6 +972,7 @@ const STRINGS = {
 
       'headaches-migraines': {
         slug: 'headaches-migraines',
+        heroPhoto: 'assets/conditions/headaches-migraines-hero.jpg',
         name: '头痛与偏头痛', nameEn: 'Headaches & Migraines',
         category: '身体与疼痛', categoryEn: 'Body & Pain',
         kind: 'headaches',
@@ -982,6 +1002,7 @@ const STRINGS = {
 
       'sleep-stress': {
         slug: 'sleep-stress',
+        heroPhoto: 'assets/conditions/sleep-stress-hero.jpg',
         name: '睡眠与压力', nameEn: 'Sleep & Stress',
         category: '内调与养护', categoryEn: 'Internal & Wellness',
         kind: 'sleep',
@@ -1011,6 +1032,7 @@ const STRINGS = {
 
       'womens-health': {
         slug: 'womens-health',
+        heroPhoto: 'assets/conditions/womens-health-hero.jpg',
         name: '妇科健康', nameEn: "Women's Health",
         category: '女性与皮肤', categoryEn: 'Women & Skin',
         kind: 'womens',
@@ -1040,6 +1062,7 @@ const STRINGS = {
 
       'fertility-pregnancy': {
         slug: 'fertility-pregnancy',
+        heroPhoto: 'assets/conditions/fertility-pregnancy-hero.jpg',
         name: '备孕与孕产', nameEn: 'Fertility & Pregnancy',
         category: '女性与皮肤', categoryEn: 'Women & Skin',
         kind: 'fertility',
@@ -1069,6 +1092,7 @@ const STRINGS = {
 
       'skin-acne': {
         slug: 'skin-acne',
+        heroPhoto: 'assets/conditions/skin-acne-hero.jpg',
         name: '皮肤与痤疮', nameEn: 'Skin & Acne',
         category: '女性与皮肤', categoryEn: 'Women & Skin',
         kind: 'skin',
@@ -1098,6 +1122,7 @@ const STRINGS = {
 
       digestion: {
         slug: 'digestion',
+        heroPhoto: 'assets/conditions/digestion-hero.jpg',
         name: '消化调理', nameEn: 'Digestion',
         category: '内调与养护', categoryEn: 'Internal & Wellness',
         kind: 'digestion',

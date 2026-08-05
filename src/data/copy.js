@@ -1299,6 +1299,7 @@ treatments: {
     details: {
       acupuncture: {
         slug: 'acupuncture',
+        heroPhoto: 'assets/treatments/acupuncture-hero.jpg',
         name: 'Acupuncture', nameZh: '针灸',
         category: 'Traditional',
         kind: 'needle',
@@ -1320,6 +1321,7 @@ treatments: {
 
       'floating-needle': {
         slug: 'floating-needle',
+        heroPhoto: 'assets/treatments/floating-needle-hero.jpg',
         name: 'Floating Needle (FSN)', nameZh: '浮针',
         category: 'Signature',
         kind: 'fsn',
@@ -1348,6 +1350,7 @@ treatments: {
 
       'tui-na': {
         slug: 'tui-na',
+        heroPhoto: 'assets/treatments/tui-na-hero.jpg',
         name: 'Tui Na', nameZh: '推拿',
         category: 'Traditional',
         kind: 'tuina',
@@ -1369,6 +1372,7 @@ treatments: {
 
       moxibustion: {
         slug: 'moxibustion',
+        heroPhoto: 'assets/treatments/moxibustion-hero.jpg',
         name: 'Moxibustion', nameZh: '艾灸',
         category: 'Traditional',
         kind: 'moxa',
@@ -1390,6 +1394,7 @@ treatments: {
 
       'fuyang-moxibustion': {
         slug: 'fuyang-moxibustion',
+        heroPhoto: 'assets/treatments/fuyang-moxibustion-hero.jpg',
         name: 'Fu Yang Moxibustion', nameZh: '扶阳灸',
         category: 'Signature',
         kind: 'moxa',
@@ -1413,6 +1418,7 @@ treatments: {
 
       'fire-dragon-moxibustion': {
         slug: 'fire-dragon-moxibustion',
+        heroPhoto: 'assets/treatments/fire-dragon-moxibustion-hero.jpg',
         name: 'Fire Dragon Moxibustion', nameZh: '火龙灸',
         category: 'Signature',
         kind: 'moxa',
@@ -1436,6 +1442,7 @@ treatments: {
 
       'thread-embedding': {
         slug: 'thread-embedding',
+        heroPhoto: 'assets/treatments/thread-embedding-hero.jpg',
         name: 'Acupoint Thread Embedding', nameZh: '埋线减肥',
         category: 'Signature',
         kind: 'needle',
@@ -1457,6 +1464,7 @@ treatments: {
 
       'xiaoyan-facial': {
         slug: 'xiaoyan-facial',
+        heroPhoto: 'assets/treatments/xiaoyan-facial-hero.jpg',
         name: 'Xiao Yan Facial Acupuncture', nameZh: '古法小颜针',
         category: 'Signature',
         kind: 'facial',
@@ -1478,6 +1486,7 @@ treatments: {
 
       'facial-bojin': {
         slug: 'facial-bojin',
+        heroPhoto: 'assets/treatments/facial-bojin-hero.jpg',
         name: 'Facial Bo Jin', nameZh: '面部拨筋',
         category: 'Signature',
         kind: 'tuina',
@@ -1499,6 +1508,7 @@ treatments: {
 
       'tcm-acne': {
         slug: 'tcm-acne',
+        heroPhoto: 'assets/treatments/tcm-acne-hero.jpg',
         name: 'TCM Acne Care', nameZh: '中医暗疮治疗',
         category: 'Signature',
         kind: 'herbs',
@@ -1520,6 +1530,7 @@ treatments: {
 
       'manual-osteopathy': {
         slug: 'manual-osteopathy',
+        heroPhoto: 'assets/treatments/manual-osteopathy-hero.jpg',
         name: 'Manual Osteopathic Therapy (MOT)', nameZh: '整骨疗法（MOT）',
         category: 'Clinical Care',
         kind: 'boneset',
@@ -1543,6 +1554,7 @@ treatments: {
 
       counselling: {
         slug: 'counselling',
+        heroPhoto: 'assets/treatments/counselling-hero.jpg',
         name: 'Counselling', nameZh: '心理咨询',
         category: 'Clinical Care',
         kind: 'scalp',
@@ -1566,6 +1578,7 @@ treatments: {
 
       'cupping-gua-sha': {
         slug: 'cupping-gua-sha',
+        heroPhoto: 'assets/treatments/cupping-gua-sha-hero.jpg',
         name: 'Cupping & Gua Sha', nameZh: '拔罐与刮痧',
         category: 'Traditional',
         kind: 'cupping',
@@ -1587,6 +1600,7 @@ treatments: {
 
       'manual-bone-setting': {
         slug: 'manual-bone-setting',
+        heroPhoto: 'assets/treatments/manual-bone-setting-hero.jpg',
         name: 'Manual Bone Setting', nameZh: '正骨',
         category: 'Traditional',
         kind: 'boneset',
@@ -1608,6 +1622,7 @@ treatments: {
 
       'head-therapy': {
         slug: 'head-therapy',
+        heroPhoto: 'assets/treatments/head-therapy-hero.jpg',
         name: 'Head Therapy', nameZh: '头疗',
         category: 'Traditional',
         kind: 'scalp',
@@ -1629,6 +1644,7 @@ treatments: {
 
       'aesthetic-acupuncture': {
         slug: 'aesthetic-acupuncture',
+        heroPhoto: 'assets/treatments/aesthetic-acupuncture-hero.jpg',
         name: 'Aesthetic Acupuncture', nameZh: '美容针',
         category: 'Signature',
         kind: 'facial',
@@ -1650,6 +1666,7 @@ treatments: {
 
       'herbal-medicine': {
         slug: 'herbal-medicine',
+        heroPhoto: 'assets/treatments/herbal-medicine-hero.jpg',
         name: 'Herbal Medicine', nameZh: '中药调理',
         category: 'Traditional',
         kind: 'herbs',
@@ -1797,6 +1814,7 @@ treatments: {
     details: {
       'pain-injury': {
         slug: 'pain-injury',
+        heroPhoto: 'assets/conditions/pain-injury-hero.jpg',
         name: 'Pain & Injury', nameZh: '疼痛与损伤',
         category: 'Body & Pain', categoryZh: '身体与疼痛',
         kind: 'pain',
@@ -1826,6 +1844,7 @@ treatments: {
 
       'icbc-recovery': {
         slug: 'icbc-recovery',
+        heroPhoto: 'assets/conditions/icbc-recovery-hero.jpg',
         name: 'ICBC Recovery', nameZh: '车祸康复',
         category: 'Body & Pain', categoryZh: '身体与疼痛',
         kind: 'icbc',
@@ -1855,6 +1874,7 @@ treatments: {
 
       'headaches-migraines': {
         slug: 'headaches-migraines',
+        heroPhoto: 'assets/conditions/headaches-migraines-hero.jpg',
         name: 'Headaches & Migraines', nameZh: '头痛与偏头痛',
         category: 'Body & Pain', categoryZh: '身体与疼痛',
         kind: 'headaches',
@@ -1884,6 +1904,7 @@ treatments: {
 
       'sleep-stress': {
         slug: 'sleep-stress',
+        heroPhoto: 'assets/conditions/sleep-stress-hero.jpg',
         name: 'Sleep & Stress', nameZh: '睡眠与压力',
         category: 'Internal & Wellness', categoryZh: '内调与养护',
         kind: 'sleep',
@@ -1913,6 +1934,7 @@ treatments: {
 
       'womens-health': {
         slug: 'womens-health',
+        heroPhoto: 'assets/conditions/womens-health-hero.jpg',
         name: "Women's Health", nameZh: '妇科健康',
         category: 'Women & Skin', categoryZh: '女性与皮肤',
         kind: 'womens',
@@ -1942,6 +1964,7 @@ treatments: {
 
       'fertility-pregnancy': {
         slug: 'fertility-pregnancy',
+        heroPhoto: 'assets/conditions/fertility-pregnancy-hero.jpg',
         name: 'Fertility & Pregnancy', nameZh: '备孕与孕产',
         category: 'Women & Skin', categoryZh: '女性与皮肤',
         kind: 'fertility',
@@ -1971,6 +1994,7 @@ treatments: {
 
       'skin-acne': {
         slug: 'skin-acne',
+        heroPhoto: 'assets/conditions/skin-acne-hero.jpg',
         name: 'Skin & Acne', nameZh: '皮肤与痤疮',
         category: 'Women & Skin', categoryZh: '女性与皮肤',
         kind: 'skin',
@@ -2000,6 +2024,7 @@ treatments: {
 
       digestion: {
         slug: 'digestion',
+        heroPhoto: 'assets/conditions/digestion-hero.jpg',
         name: 'Digestion', nameZh: '消化调理',
         category: 'Internal & Wellness', categoryZh: '内调与养护',
         kind: 'digestion',
