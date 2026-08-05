@@ -99,6 +99,9 @@ const Nav = ({ theme = 'dark', active = null, bookHref = null }) => {
       }}>
         <span style={{
           display: 'inline-flex', gap: 10, alignItems: 'center',
+          // 语言切换器不能断行 —— 没有这两个属性时「中文」会在两个字之间折行，
+          // 在导航被挤窄的宽度区间能稳定复现。旧站同样有这个问题，不是迁移引入的。
+          whiteSpace: 'nowrap', flex: 'none',
         }}>
           <span style={{ opacity: isZh ? 0.55 : 1 }}>
             {isZh
