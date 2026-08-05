@@ -80,5 +80,21 @@ const depth = (page.file.match(/\//g) || []).length;
 </head>
 <body>
   <div id="root"><slot /></div>
+
+  {/* CytoWorld 智能体浮窗（universe 39 = 加西中医）。
+      data-lang 决定接哪个角色：en → Way，zh → 小卫。这里跟着页面语言自动填，
+      166 个页面一处覆盖。
+
+      ⚠️ 必须 is:inline —— Astro 默认会处理 <script> 并可能丢掉 data-* 属性，
+      而 widget.js 全靠 document.currentScript 读这些属性拿配置。
+
+      #B23A2E 是站点朱砂色（tokens.css 的 --vermilion），设计系统里唯一的饱和色。 */}
+  <script
+    is:inline
+    src="https://app.cytoworld.com/app/widget.js"
+    data-universe-id="39"
+    data-lang={isZh ? 'zh' : 'en'}
+    data-color="#B23A2E"
+    data-position="bottom-right"></script>
 </body>
 </html>
