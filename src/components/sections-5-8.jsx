@@ -12,14 +12,17 @@ import { Stroke, Clauses, ConditionIcon, TreatmentPlaceholder } from './atoms.js
 const TreatmentCard = ({ t }) => (
   <article style={{ display: 'flex', flexDirection: 'column' }}>
     <div style={{ width: '100%', position: 'relative', overflow: 'hidden', marginBottom: 18 }}>
+      {/* 这里原本在图片上盖一个「Photo TBD」标签 —— 设计评审期用来标记
+          「这张是选配的图，等诊所给正式照片」。判断条件其实是反的：只要图片
+          **存在**就盖标签，所以 8 张图全被盖上，中英首页共 16 处。
+          上线站不该让访客看见内部评审标记，去掉。
+          图片本身没动；诊所日后给了自己的照片，换掉 assets/treatments/ 下
+          对应的 8 个文件即可，不需要改代码。 */}
       {t.photo ? (
-        <>
-          <img src={t.photo} alt={t.name} className="warm-image" style={{
-            width: '100%', aspectRatio: '4/3', objectFit: 'cover',
-            filter: 'sepia(0.18) saturate(0.82) contrast(1.06) brightness(1.02) hue-rotate(-4deg)',
-          }} />
-          <div className="tbd-pill">Photo TBD</div>
-        </>
+        <img src={t.photo} alt={t.name} className="warm-image" style={{
+          width: '100%', aspectRatio: '4/3', objectFit: 'cover',
+          filter: 'sepia(0.18) saturate(0.82) contrast(1.06) brightness(1.02) hue-rotate(-4deg)',
+        }} />
       ) : (
         <TreatmentPlaceholder kind={t.placeholder} />
       )}

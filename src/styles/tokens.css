@@ -292,24 +292,6 @@ html[lang="zh"] .h-display, html[lang="zh"] .h-section, html[lang="zh"] .h-card 
   margin: 0;
 }
 
-/* placeholder pill (TBD) */
-.tbd-pill {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: rgba(245, 239, 230, 0.92);
-  color: var(--sepia-400);
-  font-family: var(--font-sans);
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 4px 8px;
-  border: 1px solid var(--sepia-200);
-  border-radius: 2px;
-  z-index: 2;
-}
-
 /* bilingual lockup */
 .bilingual {
   display: flex;
