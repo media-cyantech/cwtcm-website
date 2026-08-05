@@ -114,12 +114,14 @@ def audit_site(key, cfg):
                 base = parent + ".html"
         digests[hashlib.sha256(s.encode()).hexdigest()].append(rel)
 
-        # 跳转壳页（meta refresh + noindex）不参与内容检查 —— 它本来就没有正文、
-        # 没有 h1、也不该被索引。三语站的根路径 / 就是这种页面（正解是 Nginx 301，
-        # 这个壳只是漏配时的兜底）。按内容页去审它，会刷出一堆假 P0。
-        if re.search(r'<meta[^>]+http-equiv=["\']refresh["\']', head, re.I) and \
-           re.search(r'<meta[^>]+name=["\']robots["\'][^>]*noindex', head, re.I):
-            stats["redirect_stub"] += 1
+        # noindex 的页面不参与内容检查。
+        # 跳转壳（根路径 /）、404、致谢页、法务页都属此类：它们不进搜索结果，
+        # 要求它们有 description / canonical / OG / 正文长度是没有意义的，
+        # 只会刷出一堆假 P0 把真问题淹掉。title 仍然要有（浏览器标签页会显示）。
+        if re.search(r'<meta[^>]+name=["\']robots["\'][^>]*noindex', head, re.I):
+            stats["noindex_utility"] += 1
+            if not re.search(r"<title>", head, re.I):
+                findings["P0"].append((rel, "缺 <title>"))
             continue
 
         # title

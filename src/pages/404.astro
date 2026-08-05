@@ -1,0 +1,86 @@
+---
+// 404 页。旧站没有 —— Nginx 的 error_page 会指到这里，缺了就退回默认的 nginx 404 页
+// （白底黑字 + 服务器版本号，既难看也泄露信息）。
+//
+// 双语并列，因为访客可能从任一语言的链接过来。
+// 不用 Base.astro：那个要 pages.json 里的条目，而 404 不是内容页、不该有 canonical。
+//
+// ⚠️ <style> 必须带 is:global —— Astro 默认给样式加组件作用域，
+//    body / h1 这类选择器会匹配不上，页面会变成无样式的纯文本。
+import '../styles/tokens.css';
+import { seoFor } from '../data/seo.js';
+
+const home = new URL(seoFor('Homepage.html').canonical).pathname;
+const homeZh = new URL(seoFor('Homepage-ZH.html').canonical).pathname;
+---
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Page not found 页面不存在 | Canadian Western TCM 加西中医</title>
+  <meta name="robots" content="noindex,follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600&family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap"
+  />
+  <style is:global>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--cream-200);
+      color: var(--sepia-700);
+      font-family: var(--font-sans);
+      padding: 40px 24px;
+      box-sizing: border-box;
+    }
+    .nf-wrap { max-width: 560px; text-align: center; }
+    .nf-mark {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--vermilion); margin: 0 auto 28px;
+    }
+    .nf-wrap h1 {
+      font-family: var(--font-display); font-weight: 500;
+      font-size: clamp(30px, 5vw, 44px); line-height: 1.2;
+      margin: 0 0 8px; color: var(--sepia-700);
+    }
+    .nf-zh {
+      font-family: var(--font-serif-zh); font-size: clamp(19px, 3.2vw, 26px);
+      color: var(--sepia-500); margin: 0 0 26px;
+    }
+    .nf-wrap p {
+      font-size: 15px; line-height: 1.75; color: var(--sepia-500); margin: 0 0 34px;
+    }
+    .nf-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .nf-links a {
+      display: inline-block; padding: 13px 26px; text-decoration: none;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      border: 1px solid var(--sepia-300); color: var(--sepia-700);
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+    .nf-links a:first-child {
+      background: var(--vermilion); border-color: var(--vermilion); color: var(--cream-50);
+    }
+    .nf-links a:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(43,33,26,0.10); }
+  </style>
+</head>
+<body>
+  <div class="nf-wrap">
+    <div class="nf-mark"></div>
+    <h1>This page isn’t here.</h1>
+    <div class="nf-zh">这个页面不在了。</div>
+    <p>
+      The link may be out of date, or the page may have moved.<br />
+      链接可能已失效，或页面已迁移。
+    </p>
+    <div class="nf-links">
+      <a href={home}>Homepage</a>
+      <a href={homeZh}>中文首页</a>
+      <a href="/Locations.html">Find a clinic 门店</a>
+    </div>
+  </div>
+</body>
+</html>

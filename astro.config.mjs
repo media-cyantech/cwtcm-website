@@ -17,8 +17,12 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      // thank-you / 404 / 与 Homepage 重复的 index 不进 sitemap
-      filter: (page) => !/\/(404|index)(\.html)?\/?$/.test(page),
+      // 排除：404、与 Homepage 重复的 index、以及根路径本身
+      //（format:'file' 下根路径的 URL 就是裸域名，匹配不到 /index.html）
+      filter: (page) => {
+        const path = new URL(page).pathname;
+        return !(path === '/' || /\/(404|index)(\.html)?$/.test(path));
+      },
 
       // ⚠️ 必须补 .html。
       // build.format 是 'file'，产物是 Homepage.html，但 @astrojs/sitemap 按路由路径
