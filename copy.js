@@ -1662,7 +1662,7 @@ treatments: {
           'Fine needles at facial points; minimal discomfort. Single-use, sterile.',
           'Often combined with body points and lifestyle / constitutional advice. Done in a series for gradual results.',
         ],
-        conditions: ['skin-acne', 'healthy-aging', 'sleep-stress'],
+        conditions: ['skin-acne', 'sleep-stress'],  /* 移除 'healthy-aging'：Conditions/ 下从来没有这个页面（旧站同样断链），向量库与其他任何地方也都没有这项服务的表述。首页那张「健康抗衰」展示卡不可点、不受影响，故保留。将来若补了详情页，把它加回来即可。 */
         related: ['acupuncture', 'herbal-medicine'],
       },
 

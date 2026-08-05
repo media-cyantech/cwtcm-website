@@ -11,10 +11,14 @@
     "audit": "python3 ../-skill-rag-/seo/audit.py --site cwtcm"
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.0",
-    "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.2.5",
+    "@astrojs/react": "^6.0.2",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.1.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
-  }
+  },
+  "devDependencies": {
+    "cookie": "^2.0.1"
+  },
+  "$astro7Note": "cookie 是 Astro 7.1.6 的构建期变通，不是本站的业务依赖。Astro 把预渲染入口打成 bundle 后动态 import，那个 bundle 里 `import { parseCookie, stringifySetCookie } from 'cookie'` 会从 dist/ 位置解析 —— pnpm 严格布局下解析不到 astro 自己那份 cookie@2.0.1（纯 ESM），落到一个 CJS 版本上，构建直接失败。把 cookie@^2.0.1 提为顶层依赖即可让它解析到正确的 ESM 版本。Astro 修掉这个打包问题后可以删除。"
 }

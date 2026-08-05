@@ -736,7 +736,7 @@ export const STRINGS = {
           '面部穴位施以细针，不适极微。针具均为无菌一次性。',
           '常配合身体穴位与起居/体质建议。以疗程进行，效果循序渐进。',
         ],
-        conditions: ['skin-acne', 'healthy-aging', 'sleep-stress'],
+        conditions: ['skin-acne', 'sleep-stress'],  /* 移除 'healthy-aging'：Conditions/ 下从来没有这个页面（旧站同样断链），向量库与其他任何地方也都没有这项服务的表述。首页那张「健康抗衰」展示卡不可点、不受影响，故保留。将来若补了详情页，把它加回来即可。 */
         related: ['acupuncture', 'herbal-medicine'],
       },
       'herbal-medicine': {
