@@ -1,0 +1,2319 @@
+{
+  "$about": "加西中医 165 页 SEO 数据。canonical 与 hreflang 已改为**绝对 URL** —— 现有站的 165 组 hreflang 全是相对路径，Google 会整组忽略。",
+  "domain": "https://cwtcm.ca",
+  "urlRule": "cleanUrls=false，URL 必须带 .html；中文页加 -ZH 后缀",
+  "langPolicy": "EN → en；ZH → zh-Hans（现有站 zh / zh-CN 混用，统一到 zh-Hans，与 condition-detail.jsx:527 的 inLanguage 意图一致）",
+  "pages": [
+    {
+      "file": "About-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/About-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/About.html",
+        "zh-Hans": "https://cwtcm.ca/About-ZH.html",
+        "x-default": "https://cwtcm.ca/About.html"
+      },
+      "title": "关于我们 — 大温四家诊所的传承中医 | 加西中医",
+      "description": "大温四家诊所的综合性中医诊疗——传承自中医正脉，恪守加拿大标准。医师在北京、广州、辽宁、成都与香港受训，在卑诗省注册执业。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "About.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/About.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/About.html",
+        "zh-Hans": "https://cwtcm.ca/About-ZH.html",
+        "x-default": "https://cwtcm.ca/About.html"
+      },
+      "title": "About — Heritage TCM Across Greater Vancouver | Canadian Western TCM",
+      "description": "A comprehensive Traditional Chinese Medicine practice across four clinics in Greater Vancouver — Chinese in lineage, Canadian in standards. Practitioners trained in Beijing, Guangzhou, Liaoning, Chengdu and Hong Kong; registered in British Columbia.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Conditions-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions.html"
+      },
+      "title": "调理方向 — 疼痛、睡眠、消化、妇科等 | 加西中医",
+      "description": "加西中医的诊疗范围概览——疼痛与损伤、车祸康复、头痛、睡眠与压力、消化调理、妇科健康、备孕与孕产、皮肤与痤疮。从你的感受出发。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Conditions.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions.html"
+      },
+      "title": "Conditions We Help — Pain, Sleep, Digestion, Women's Health & More | Canadian Western TCM",
+      "description": "An honest overview of the conditions we commonly help with at Canadian Western TCM — pain and injury, ICBC recovery, headaches, sleep and stress, digestion, women",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/digestion-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Conditions/digestion-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/digestion.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/digestion-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/digestion.html"
+      },
+      "title": "消化调理 · 中医调理 | 加西中医",
+      "description": "加西中医的消化调理——针灸、艾灸与因人配伍的中药常用于支持消化舒适与规律，并兼顾与肠胃密切相关的压力与睡眠。我们是对消化症状常规医学检查的补充，而非替代。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/digestion.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Conditions/digestion.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/digestion.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/digestion-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/digestion.html"
+      },
+      "title": "Digestion & Traditional Chinese Medicine | Canadian Western TCM",
+      "description": "Digestion at Canadian Western TCM — acupuncture, moxibustion and tailored herbal formulas commonly used to support digestive comfort and regularity, with attention to stress and sleep. We complement, not replace, medical investigation of digestive symptoms.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/fertility-pregnancy-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Conditions/fertility-pregnancy-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/fertility-pregnancy.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/fertility-pregnancy-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/fertility-pregnancy.html"
+      },
+      "title": "备孕与孕产 · 中医调理 | 加西中医",
+      "description": "加西中医的孕前、孕期与产后调理——作为支持性的辅助照护，与你的医疗团队并行。中医不能替代生殖或产科医疗，我们也不对受孕或结果作任何承诺。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/fertility-pregnancy.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Conditions/fertility-pregnancy.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/fertility-pregnancy.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/fertility-pregnancy-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/fertility-pregnancy.html"
+      },
+      "title": "Fertility & Pregnancy — Traditional Chinese Medicine | Canadian Western TCM",
+      "description": "Fertility, pregnancy and postpartum support at Canadian Western TCM — acupuncture and TCM used as supportive, complementary care alongside your medical team. Not a substitute for fertility or obstetric care; no promises about conception or outcomes.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/headaches-migraines-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Conditions/headaches-migraines-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/headaches-migraines.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/headaches-migraines-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/headaches-migraines.html"
+      },
+      "title": "头痛与偏头痛 · 中医调理 | 加西中医",
+      "description": "加西中医的头痛与偏头痛调理——针灸、头疗与手法理疗常用于舒缓颈肩紧张、支持神经系统；许多人在一段疗程后觉得头痛发作变少或减轻。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/headaches-migraines.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Conditions/headaches-migraines.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/headaches-migraines.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/headaches-migraines-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/headaches-migraines.html"
+      },
+      "title": "Headaches & Migraines — Traditional Chinese Medicine | Canadian Western TCM",
+      "description": "Headaches and migraines at Canadian Western TCM — acupuncture, head therapy and bodywork commonly used to ease neck and shoulder tension, support the nervous system and reduce the frequency and intensity of headaches over a course of care. Educational guide.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/icbc-recovery-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Conditions/icbc-recovery-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/icbc-recovery.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/icbc-recovery-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/icbc-recovery.html"
+      },
+      "title": "车祸康复 · 中医调理 | 加西中医",
+      "description": "加西中医的车祸康复——注册针灸与相关疗法常用于缓解颈、背、肩疼痛、僵硬、头痛与睡眠困扰，支持康复与活动恢复。在卑诗省，ICBC 认可注册医师的治疗。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/icbc-recovery.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Conditions/icbc-recovery.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/icbc-recovery.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/icbc-recovery-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/icbc-recovery.html"
+      },
+      "title": "ICBC Recovery & Traditional Chinese Medicine | Canadian Western TCM",
+      "description": "Recovery after a motor-vehicle accident at Canadian Western TCM — registered acupuncture and related therapies commonly used to ease neck, back and shoulder pain, stiffness, headaches and sleep difficulties, and to support return to movement. Educational guide.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/pain-injury-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Conditions/pain-injury-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/pain-injury.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/pain-injury-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/pain-injury.html"
+      },
+      "title": "疼痛与损伤 · 中医调理 | 加西中医",
+      "description": "加西中医的疼痛与损伤调理——针灸、推拿、拔罐、正骨、浮针与艾灸，松解肌肉筋膜紧张，安抚疼痛反应，恢复活动度与循环。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/pain-injury.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Conditions/pain-injury.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/pain-injury.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/pain-injury-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/pain-injury.html"
+      },
+      "title": "Pain & Injury — Traditional Chinese Medicine | Canadian Western TCM",
+      "description": "Pain and injury at Canadian Western TCM — acupuncture, tui na, cupping, manual bone setting, floating needle and moxibustion to release muscle and fascia tension, calm the pain response and restore movement and circulation. Educational guide and what to expect.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/skin-acne-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Conditions/skin-acne-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/skin-acne.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/skin-acne-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/skin-acne.html"
+      },
+      "title": "皮肤与痤疮 · 中医调理 | 加西中医",
+      "description": "加西中医的皮肤与痤疮调理——因人配伍的中药、针灸与美容针常用于由内而外地支持更清透、更平衡的肌肤；循序渐进的整体调理，与任何皮肤科治疗并行。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/skin-acne.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Conditions/skin-acne.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/skin-acne.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/skin-acne-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/skin-acne.html"
+      },
+      "title": "Skin & Acne — Traditional Chinese Medicine | Canadian Western TCM",
+      "description": "Skin and acne at Canadian Western TCM — tailored herbal formulas, acupuncture and aesthetic acupuncture commonly used to support clearer, more balanced skin by addressing underlying patterns (digestion, sleep, stress, hormonal balance) as well as the skin itself.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/sleep-stress-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Conditions/sleep-stress-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/sleep-stress.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/sleep-stress-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/sleep-stress.html"
+      },
+      "title": "睡眠与压力 · 中医调理 | 加西中医",
+      "description": "加西中医的睡眠与压力调理——针灸与头疗常用于安抚过度活跃的压力反应、支持睡眠，中药也可依体质配方。目标是可持续的改善——而非偶尔一夜好眠。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/sleep-stress.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Conditions/sleep-stress.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/sleep-stress.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/sleep-stress-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/sleep-stress.html"
+      },
+      "title": "Sleep & Stress — Traditional Chinese Medicine | Canadian Western TCM",
+      "description": "Sleep and stress at Canadian Western TCM — acupuncture, head therapy and tailored herbal formulas commonly used to calm an over-active stress response and support sleep, with steady improvement as the aim. Educational guide and what to expect.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/womens-health-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Conditions/womens-health-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/womens-health.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/womens-health-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/womens-health.html"
+      },
+      "title": "妇科健康 · 中医调理 | 加西中医",
+      "description": "加西中医的妇科健康调理——针灸、艾灸与因人配伍的中药常用于支持月经规律、缓解不适，并在激素变化中稳定情绪与睡眠，始终与你的常规医疗并行。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Conditions/womens-health.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Conditions/womens-health.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Conditions/womens-health.html",
+        "zh-Hans": "https://cwtcm.ca/Conditions/womens-health-ZH.html",
+        "x-default": "https://cwtcm.ca/Conditions/womens-health.html"
+      },
+      "title": "Women's Health & Traditional Chinese Medicine | Canadian Western TCM",
+      "description": "Women",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Contact-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Contact-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Contact.html",
+        "zh-Hans": "https://cwtcm.ca/Contact-ZH.html",
+        "x-default": "https://cwtcm.ca/Contact.html"
+      },
+      "title": "联系我们 | 加西中医",
+      "description": "加西中医的联系方式与四家诊所地址：列治文、本拿比、温哥华与白石。电话、营业时间与联系表单。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Contact.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Contact.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Contact.html",
+        "zh-Hans": "https://cwtcm.ca/Contact-ZH.html",
+        "x-default": "https://cwtcm.ca/Contact.html"
+      },
+      "title": "Contact & Locations | Canadian Western TCM",
+      "description": "Contact and locations for Canadian Western TCM — four clinics across Greater Vancouver: Richmond, Burnaby, Vancouver and White Rock. Addresses, phone numbers, hours and a contact form.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "FAQ-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/FAQ-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/FAQ.html",
+        "zh-Hans": "https://cwtcm.ca/FAQ-ZH.html",
+        "x-default": "https://cwtcm.ca/FAQ.html"
+      },
+      "title": "常见问题 | 加西中医",
+      "description": "加西中医的常见问题——关于针灸、ICBC 与附加健康保险、首次就诊体验、孕期与用药下的中药安全、双语服务与预约方式的简明回答。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "FAQ.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/FAQ.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/FAQ.html",
+        "zh-Hans": "https://cwtcm.ca/FAQ-ZH.html",
+        "x-default": "https://cwtcm.ca/FAQ.html"
+      },
+      "title": "FAQ | Canadian Western TCM",
+      "description": "Plain-spoken answers about acupuncture, ICBC and extended health coverage, what to expect on a first visit, herbal safety in pregnancy or with medication, language of care and booking at Canadian Western TCM.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "First-Visit-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/First-Visit-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/First-Visit.html",
+        "zh-Hans": "https://cwtcm.ca/First-Visit-ZH.html",
+        "x-default": "https://cwtcm.ca/First-Visit.html"
+      },
+      "title": "首次就诊指南 | 加西中医",
+      "description": "加西中医的首次就诊指南——衣着建议、问诊与脉舌评估的流程、量身安排的诊疗与复诊安排。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "First-Visit.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/First-Visit.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/First-Visit.html",
+        "zh-Hans": "https://cwtcm.ca/First-Visit-ZH.html",
+        "x-default": "https://cwtcm.ca/First-Visit.html"
+      },
+      "title": "Your First Visit | Canadian Western TCM",
+      "description": "What to expect on your first visit at Canadian Western TCM — what to wear, how the assessment works (history, pulse and tongue), how treatment is tailored, and what follow-up usually looks like.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Homepage-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Homepage-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Homepage.html",
+        "zh-Hans": "https://cwtcm.ca/Homepage-ZH.html",
+        "x-default": "https://cwtcm.ca/Homepage.html"
+      },
+      "title": "加西中医 · Canadian Western TCM",
+      "description": "加西中医在大温哥华地区设有列治文、本拿比、温哥华、白石四家诊所，提供针灸、中药、推拿、艾灸、拔罐等中医诊疗，由卑诗省注册中医师主理，中英双语接诊，无需医生转介。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Homepage.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Homepage.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Homepage.html",
+        "zh-Hans": "https://cwtcm.ca/Homepage-ZH.html",
+        "x-default": "https://cwtcm.ca/Homepage.html"
+      },
+      "title": "Canadian Western TCM — Homepage",
+      "description": "Traditional Chinese Medicine at four Greater Vancouver clinics — acupuncture, herbal medicine and tui na from BC-registered practitioners. No referral needed.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Journal-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Journal-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Journal.html",
+        "zh-Hans": "https://cwtcm.ca/Journal-ZH.html",
+        "x-default": "https://cwtcm.ca/Journal.html"
+      },
+      "title": "资讯 — 即将上线 | 加西中医",
+      "description": "加西中医编辑专栏即将上线——中医入门、病症深度、本草、患者故事与诊所日常，覆盖大温哥华各诊所。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Journal.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Journal.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Journal.html",
+        "zh-Hans": "https://cwtcm.ca/Journal-ZH.html",
+        "x-default": "https://cwtcm.ca/Journal.html"
+      },
+      "title": "Journal — Launching Soon | Canadian Western TCM",
+      "description": "The Canadian Western TCM Journal is launching soon — TCM 101, conditions in depth, herbs, patient stories and clinic life across our Greater Vancouver clinics.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Legal-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Legal-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Legal.html",
+        "zh-Hans": "https://cwtcm.ca/Legal-ZH.html",
+        "x-default": "https://cwtcm.ca/Legal.html"
+      },
+      "title": "法律条款 — 政策与条款 | 加西中医",
+      "description": "加西中医的隐私政策、服务条款、取消与爽约政策及 Cookie 政策——大温哥华四家注册中医诊所。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Legal.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Legal.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Legal.html",
+        "zh-Hans": "https://cwtcm.ca/Legal-ZH.html",
+        "x-default": "https://cwtcm.ca/Legal.html"
+      },
+      "title": "Legal — Policies &amp; Terms | Canadian Western TCM",
+      "description": "Privacy Policy, Terms of Service, Cancellation &amp; No-Show Policy and Cookie Policy for Canadian Western TCM Clinic — a registered Traditional Chinese Medicine practice across four Greater Vancouver clinics.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Locations-Burnaby-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Locations-Burnaby-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Locations-Burnaby.html",
+        "zh-Hans": "https://cwtcm.ca/Locations-Burnaby-ZH.html",
+        "x-default": "https://cwtcm.ca/Locations-Burnaby.html"
+      },
+      "title": "本拿比中医诊所 — 针灸、中药与推拿 | 加西中医",
+      "description": "加西中医本拿比店，位于 Kingsway 沿线 5665 Kingsway #125。注册中医师（含资深中医师），提供针灸、推拿、艾灸、中药。接受 ICBC。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Locations-Burnaby.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Locations-Burnaby.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Locations-Burnaby.html",
+        "zh-Hans": "https://cwtcm.ca/Locations-Burnaby-ZH.html",
+        "x-default": "https://cwtcm.ca/Locations-Burnaby.html"
+      },
+      "title": "Burnaby TCM Clinic — Acupuncture, Herbal Medicine & Tui Na | Canadian Western TCM",
+      "description": "Canadian Western TCM on the Kingsway corridor at 5665 Kingsway #125, Burnaby. Registered practitioners including a senior TCM physician — acupuncture, tui na, moxibustion, herbal medicine. ICBC accepted.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Locations-Richmond-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Locations-Richmond-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Locations-Richmond.html",
+        "zh-Hans": "https://cwtcm.ca/Locations-Richmond-ZH.html",
+        "x-default": "https://cwtcm.ca/Locations-Richmond.html"
+      },
+      "title": "列治文中医诊所 — 针灸、中药与推拿 | 加西中医",
+      "description": "加西中医列治文旗舰店，位于 5611 Cooney Rd. #130。注册中医师、完整传统中药房，提供针灸、推拿、艾灸等。接受 ICBC。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Locations-Richmond.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Locations-Richmond.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Locations-Richmond.html",
+        "zh-Hans": "https://cwtcm.ca/Locations-Richmond-ZH.html",
+        "x-default": "https://cwtcm.ca/Locations-Richmond.html"
+      },
+      "title": "Richmond TCM Clinic — Acupuncture, Herbal Medicine & Tui Na | Canadian Western TCM",
+      "description": "Our Richmond flagship at 5611 Cooney Rd. #130. Registered TCM practitioners, full traditional herbal pharmacy, acupuncture, tui na, moxibustion and more. ICBC accepted.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Locations-Vancouver-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Locations-Vancouver-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Locations-Vancouver.html",
+        "zh-Hans": "https://cwtcm.ca/Locations-Vancouver-ZH.html",
+        "x-default": "https://cwtcm.ca/Locations-Vancouver.html"
+      },
+      "title": "温哥华中医诊所（Kitsilano）— 针灸、中药与推拿 | 加西中医",
+      "description": "加西中医温哥华店，位于 Kitsilano 的 West Broadway 3652 号。注册中医师，提供针灸、推拿、艾灸、中药，擅长肌骨与运动康复。接受 ICBC。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Locations-Vancouver.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Locations-Vancouver.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Locations-Vancouver.html",
+        "zh-Hans": "https://cwtcm.ca/Locations-Vancouver-ZH.html",
+        "x-default": "https://cwtcm.ca/Locations-Vancouver.html"
+      },
+      "title": "Vancouver TCM Clinic (Kitsilano) — Acupuncture, Herbal Medicine & Tui Na | Canadian Western TCM",
+      "description": "Canadian Western TCM in Kitsilano at 3652 West Broadway, Vancouver. Registered practitioners — acupuncture, tui na, moxibustion, herbal medicine, musculoskeletal & sports recovery. ICBC accepted.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Locations-WhiteRock-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Locations-WhiteRock-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Locations-WhiteRock.html",
+        "zh-Hans": "https://cwtcm.ca/Locations-WhiteRock-ZH.html",
+        "x-default": "https://cwtcm.ca/Locations-WhiteRock.html"
+      },
+      "title": "白石中医诊所 — 浮针、针灸与中药 | 加西中医",
+      "description": "加西中医白石店，全加首家浮针（FSN）示范诊所，坐落 Johnston Road 海滨栈桥旁 1549 号。提供浮针、针灸、中药等。接受 ICBC，全周营业。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Locations-WhiteRock.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Locations-WhiteRock.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Locations-WhiteRock.html",
+        "zh-Hans": "https://cwtcm.ca/Locations-WhiteRock-ZH.html",
+        "x-default": "https://cwtcm.ca/Locations-WhiteRock.html"
+      },
+      "title": "White Rock TCM Clinic — Floating Needle, Acupuncture & Herbal Medicine | Canadian Western TCM",
+      "description": "Canada",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Locations-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Locations-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Locations.html",
+        "zh-Hans": "https://cwtcm.ca/Locations-ZH.html",
+        "x-default": "https://cwtcm.ca/Locations.html"
+      },
+      "title": "我们的诊所 — 大温哥华四家中医诊所 | 加西中医",
+      "description": "加西中医在大温哥华设有四家诊所——列治文、本拿比、温哥华（西百老汇）与白石。注册中医师、接受 ICBC、Telus 直接结算、中英双语。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Locations.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Locations.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Locations.html",
+        "zh-Hans": "https://cwtcm.ca/Locations-ZH.html",
+        "x-default": "https://cwtcm.ca/Locations.html"
+      },
+      "title": "Our Clinics — Four TCM Locations in Greater Vancouver | Canadian Western TCM",
+      "description": "Visit Canadian Western TCM at four Greater Vancouver clinics — Richmond, Burnaby, Vancouver (West Broadway) and White Rock. Registered practitioners, ICBC accepted, Telus direct bill, bilingual care.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners.html"
+      },
+      "title": "中医师团队 — 大温的中医医师 | 加西中医",
+      "description": "认识加西中医 30+ 位 BC 省注册医师，遍布列治文、本拿比、温哥华与白石——中医师、针灸师、康复治疗师、注册按摩师与美容师，受训于北京、广州、辽宁、成都、香港与温哥华。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners.html"
+      },
+      "title": "Our Practitioners — Greater Vancouver TCM Team | Canadian Western TCM",
+      "description": "Meet the 30+ BC-registered practitioners of Canadian Western TCM across Richmond, Burnaby, Vancouver and White Rock — TCM doctors, acupuncturists, rehabilitation therapists, registered massage therapists and aestheticians trained in Beijing, Guangzhou, Liaoning, Chengdu, Hong Kong and Vancouver.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/angel-yu-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/angel-yu-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/angel-yu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/angel-yu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/angel-yu.html"
+      },
+      "title": "Angel Yu — 康复治疗师 | 加西中医",
+      "description": "八年经络推拿经验的康复治疗师，缓解肌肉疲劳、疼痛与压力。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/angel-yu.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/angel-yu.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/angel-yu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/angel-yu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/angel-yu.html"
+      },
+      "title": "Angel Yu — Rehabilitation Therapist | Canadian Western TCM",
+      "description": "Angel Yu, rehabilitation therapist at Canadian Western TCM — eight years in meridian Tuina, easing muscle fatigue, pain and stress in Richmond.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/bin-li-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/bin-li-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/bin-li.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/bin-li-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/bin-li.html"
+      },
+      "title": "Bin Li — BC省注册针灸师 | 加西中医",
+      "description": "10+ 年推拿经验的康复治疗师与注册针灸师，调理肌肉紧张、劳损与痛症。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/bin-li.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/bin-li.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/bin-li.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/bin-li-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/bin-li.html"
+      },
+      "title": "Bin Li — Rehabilitation Therapist · R.Ac | Canadian Western TCM",
+      "description": "Bin Li, rehabilitation therapist and acupuncturist at Canadian Western TCM — over 10 years in Tuina for muscle tension and pain across Richmond and Burnaby.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/cathy-luo-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/cathy-luo-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/cathy-luo.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/cathy-luo-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/cathy-luo.html"
+      },
+      "title": "Cathy Luo 罗志兰 — BC省注册中医师 | 加西中医",
+      "description": "专长针灸与中药的注册中医师——疼痛与损伤康复、慢性健康调理、中医眼科、美容针灸与化疗后乳腺健康。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/cathy-luo.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/cathy-luo.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/cathy-luo.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/cathy-luo-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/cathy-luo.html"
+      },
+      "title": "Cathy Luo (Zhi Lan Luo) — Registered TCM Practitioner · R.TCM.P | Canadian Western TCM",
+      "description": "Registered TCM practitioner in acupuncture and herbal medicine — pain and injury recovery, chronic health support, TCM eye care, facial acupuncture and post-chemotherapy breast health.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/dave-gifford-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/dave-gifford-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/dave-gifford.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/dave-gifford-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/dave-gifford.html"
+      },
+      "title": "Dave Gifford — BC省注册按摩师 | 加西中医",
+      "description": "2002年起执业的注册按摩师——运动按摩、产前产后按摩、ICBC 客户，及老年与多发性硬化症患者护理经验。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/dave-gifford.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/dave-gifford.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/dave-gifford.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/dave-gifford-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/dave-gifford.html"
+      },
+      "title": "Dave Gifford — Registered Massage Therapist · R.M.T. (since 2002) | Canadian Western TCM",
+      "description": "Registered massage therapist since 2002 — sports massage, pre/post-natal care, ICBC claimants, and experience with seniors and multiple-sclerosis clients.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/david-leung-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/david-leung-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/david-leung.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/david-leung-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/david-leung.html"
+      },
+      "title": "David Leung — BC省注册针灸师 | 加西中医",
+      "description": "擅长推拿、精油按摩与艾灸的注册针灸师，调理日常肌肉疼痛。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/david-leung.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/david-leung.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/david-leung.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/david-leung-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/david-leung.html"
+      },
+      "title": "David Leung | Canadian Western TCM",
+      "description": "David Leung, registered acupuncturist at Canadian Western TCM — Tuina, essential-oil massage and moxibustion for everyday muscular pain, in Richmond.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/di-wu-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/di-wu-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/di-wu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/di-wu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/di-wu.html"
+      },
+      "title": "Di Wu 吴笛 — 白石创办人 · 中医针灸师公会会长 · 浮针 | 加西中医",
+      "description": "中加30年临床经验的高级针灸师，卑诗省中医针灸师公会会长、加拿大浮针医学会会长，KPU中医系讲师。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/di-wu.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/di-wu.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/di-wu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/di-wu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/di-wu.html"
+      },
+      "title": "Di Wu — Senior Acupuncturist · R.TCM.P · White Rock Founder | Canadian Western TCM",
+      "description": "Senior acupuncturist with 30 years of clinical experience in China and Canada — President of the BC Association of TCM & Acupuncture Practitioners (ATCMA) and of the Canada Floating Needle Medicine Association.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/dongwei-li-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/dongwei-li-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/dongwei-li.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/dongwei-li-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/dongwei-li.html"
+      },
+      "title": "Dongwei Li 李冬巍 — BC省注册中医师 | 加西中医",
+      "description": "Oshio 中医博士，将禅修融入中医——身心调理、慢性疼痛与女性健康。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/dongwei-li.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/dongwei-li.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/dongwei-li.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/dongwei-li-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/dongwei-li.html"
+      },
+      "title": "Dongwei Li — Doctor of TCM (Oshio College) · R.TCM.P | Canadian Western TCM",
+      "description": "Doctor of TCM (Oshio College, Victoria) blending acupuncture with meditation-informed care for mind–body health, chronic pain and women",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/emmett-zhang-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/emmett-zhang-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/emmett-zhang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/emmett-zhang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/emmett-zhang.html"
+      },
+      "title": "Emmett Zhang — BC省注册按摩师 | 加西中医",
+      "description": "注册按摩师与 ACE 认证私人教练，结合治疗性按摩与运动康复。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/emmett-zhang.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/emmett-zhang.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/emmett-zhang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/emmett-zhang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/emmett-zhang.html"
+      },
+      "title": "Emmett Zhang — Registered Massage Therapist · R.M.T., ACE-CPT | Canadian Western TCM",
+      "description": "Emmett Zhang, registered massage therapist and ACE-certified trainer at Canadian Western TCM — therapeutic massage and movement rehabilitation in Richmond.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/feng-kang-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/feng-kang-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/feng-kang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/feng-kang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/feng-kang.html"
+      },
+      "title": "Feng Kang — 康复治疗师 | 加西中医",
+      "description": "30+ 年临床经验的康复治疗师，专注慢性疼痛、神经系统康复与运动损伤恢复。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/feng-kang.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/feng-kang.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/feng-kang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/feng-kang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/feng-kang.html"
+      },
+      "title": "Feng Kang — Rehabilitation Therapist | Canadian Western TCM",
+      "description": "Feng Kang, rehabilitation therapist at Canadian Western TCM — over 30 years in chronic pain, neurological rehabilitation and sports-injury recovery, in Burnaby.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/gemmie-lam-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/gemmie-lam-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/gemmie-lam.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/gemmie-lam-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/gemmie-lam.html"
+      },
+      "title": "Gemmie Lam — BC省注册中医师 | 加西中医",
+      "description": "香港大学针灸学硕士的注册中医师，融合推拿、艾灸与精油按摩。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/gemmie-lam.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/gemmie-lam.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/gemmie-lam.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/gemmie-lam-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/gemmie-lam.html"
+      },
+      "title": "Gemmie Lam — Registered TCM Practitioner · R.TCM.P | Canadian Western TCM",
+      "description": "Registered TCM practitioner with a Master",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/helen-he-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/helen-he-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/helen-he.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/helen-he-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/helen-he.html"
+      },
+      "title": "Helen He — 中国产科副主任医师 | 加西中医",
+      "description": "近四十年妇产科经验的产科副主任医师，专注产后康复与盆底功能调理。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/helen-he.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/helen-he.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/helen-he.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/helen-he-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/helen-he.html"
+      },
+      "title": "Helen He — Women's Health &amp; Postpartum Rehab | Canadian Western TCM",
+      "description": "Helen He, Associate Chief Obstetrician and rehabilitation therapist at Canadian Western TCM — nearly 40 years in women",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/hong-guan-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/hong-guan-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/hong-guan.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/hong-guan-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/hong-guan.html"
+      },
+      "title": "Hong Guan — 康复治疗师 | 加西中医",
+      "description": "专修「原始点疗法」的康复治疗师，擅长颈肩腰腿痛与坐骨神经痛。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/hong-guan.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/hong-guan.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/hong-guan.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/hong-guan-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/hong-guan.html"
+      },
+      "title": "Hong Guan — Rehabilitation Therapist | Canadian Western TCM",
+      "description": "Hong Guan, rehabilitation therapist at Canadian Western TCM — Yuan Shi Dian therapy for neck, shoulder and lower-back pain across Richmond and Burnaby.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/jack-bai-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/jack-bai-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/jack-bai.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/jack-bai-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/jack-bai.html"
+      },
+      "title": "Jake Bai — 资深中医专家 | 加西中医",
+      "description": "加西中医资深中医师 Jake Bai——36 年临床经验，北京中医药大学针灸推拿系临床医学硕士，曾任职于北京三甲医院，出诊于列治文。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/jack-bai.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/jack-bai.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/jack-bai.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/jack-bai-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/jack-bai.html"
+      },
+      "title": "Jake Bai — Senior TCM Practitioner | Canadian Western TCM",
+      "description": "Jake Bai, senior TCM practitioner at Canadian Western TCM — 36 years of clinical experience, Master’s from Beijing University of Chinese Medicine (Acupuncture & Tuina), formerly at a Beijing tertiary hospital, practising in Richmond.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/jasmine-zhang-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/jasmine-zhang-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/jasmine-zhang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/jasmine-zhang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/jasmine-zhang.html"
+      },
+      "title": "Jasmine Zhang — BC省注册针灸师 | 加西中医",
+      "description": "17 年经验的注册针灸师与艾灸师，专于妇科、内科及儿科调理。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/jasmine-zhang.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/jasmine-zhang.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/jasmine-zhang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/jasmine-zhang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/jasmine-zhang.html"
+      },
+      "title": "Jasmine Zhang | Canadian Western TCM",
+      "description": "Jasmine Zhang, registered acupuncturist and moxibustion therapist at Canadian Western TCM — 17 years in women",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/jiabin-nan-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/jiabin-nan-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/jiabin-nan.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/jiabin-nan-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/jiabin-nan.html"
+      },
+      "title": "Jiabin Nan — BC省注册针灸师 | 加西中医",
+      "description": "三十余年欧洲与北美临床经验的注册针灸师。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/jiabin-nan.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/jiabin-nan.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/jiabin-nan.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/jiabin-nan-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/jiabin-nan.html"
+      },
+      "title": "Jiabin Nan — Acupuncturist · R.Ac | Canadian Western TCM",
+      "description": "Jiabin Nan, registered acupuncturist at Canadian Western TCM — over 30 years of clinical experience across Europe and North America, graduate of Beijing University of Chinese Medicine, practising in Richmond.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/jim-yi-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/jim-yi-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/jim-yi.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/jim-yi-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/jim-yi.html"
+      },
+      "title": "Jim Yi — BC省注册中医师 | 加西中医",
+      "description": "专精中医骨伤的注册中医师与针灸师，中国中医科学院骨伤科硕士。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/jim-yi.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/jim-yi.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/jim-yi.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/jim-yi-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/jim-yi.html"
+      },
+      "title": "Jim Yi — TCM Orthopedics · R.TCM.P, R.Ac | Canadian Western TCM",
+      "description": "Jim Yi, registered TCM practitioner and acupuncturist at Canadian Western TCM — Master of TCM Orthopedics from the China Academy of Chinese Medical Sciences, specialising in musculoskeletal and spinal care in Vancouver.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/kalen-shen-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/kalen-shen-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/kalen-shen.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/kalen-shen-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/kalen-shen.html"
+      },
+      "title": "Kalen Shen — BC省注册针灸师 · 韩式美容针 | 加西中医",
+      "description": "加西中医 Kalen Shen——三十余年中医临床，融合针灸、推拿、热敏灸与韩式美容针，出诊于列治文与温哥华。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/kalen-shen.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/kalen-shen.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/kalen-shen.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/kalen-shen-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/kalen-shen.html"
+      },
+      "title": "Kalen Shen — Senior Acupuncturist & Aesthetician | Canadian Western TCM",
+      "description": "Kalen Shen at Canadian Western TCM — over 30 years of clinical TCM blending acupuncture, Tuina and heat-sensitive moxibustion with Korean-style aesthetic acupuncture, practising in Richmond and Vancouver.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/li-gao-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/li-gao-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/li-gao.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/li-gao-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/li-gao.html"
+      },
+      "title": "Lily Gao — BC省注册针灸师 | 加西中医",
+      "description": "毕业于 Calgary College of TCM &amp; Acupuncture 的注册针灸师，专于针灸与推拿。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/li-gao.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/li-gao.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/li-gao.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/li-gao-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/li-gao.html"
+      },
+      "title": "Lily Gao — Acupuncturist · R.Ac | Canadian Western TCM",
+      "description": "Lily Gao, registered acupuncturist at Canadian Western TCM — trained at Calgary College of TCM &amp; Acupuncture, in Burnaby.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/lihong-zhou-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/lihong-zhou-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/lihong-zhou.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/lihong-zhou-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/lihong-zhou.html"
+      },
+      "title": "Lihong Zhou — BC省注册按摩师 | 加西中医",
+      "description": "融合中医推拿与现代按摩的注册按摩治疗师，专于筋骨与运动损伤。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/lihong-zhou.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/lihong-zhou.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/lihong-zhou.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/lihong-zhou-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/lihong-zhou.html"
+      },
+      "title": "Lihong Zhou — Registered Massage Therapist · R.M.T. | Canadian Western TCM",
+      "description": "Lihong Zhou, registered massage therapist at Canadian Western TCM — TCM Tuina with modern massage for musculoskeletal and sports injuries in Richmond.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/lynn-liu-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/lynn-liu-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/lynn-liu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/lynn-liu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/lynn-liu.html"
+      },
+      "title": "Lynn Liu — BC省注册中医师 | 加西中医",
+      "description": "近二十年康复临床的注册中医师，融合针灸、推拿与中草药。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/lynn-liu.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/lynn-liu.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/lynn-liu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/lynn-liu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/lynn-liu.html"
+      },
+      "title": "Lynn Liu | Canadian Western TCM",
+      "description": "Lynn Liu, registered TCM practitioner at Canadian Western TCM — nearly 20 years of clinical rehabilitation, Master",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/mengli-song-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/mengli-song-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/mengli-song.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/mengli-song-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/mengli-song.html"
+      },
+      "title": "Mingli Song — BC省注册针灸师 | 加西中医",
+      "description": "辽宁中医药大学出身、25 年以上经验的注册针灸师。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/mengli-song.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/mengli-song.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/mengli-song.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/mengli-song-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/mengli-song.html"
+      },
+      "title": "Mingli Song | Canadian Western TCM",
+      "description": "Mingli Song, registered acupuncturist at Canadian Western TCM — over 25 years of acupuncture, trained at Liaoning University of TCM, across Richmond and Burnaby.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/monica-liu-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/monica-liu-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/monica-liu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/monica-liu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/monica-liu.html"
+      },
+      "title": "Monica Liu — BC省注册指压师 | 加西中医",
+      "description": "持牌指压与康复治疗师，10+ 年推拿经验，缓解颈肩腰腿疼痛。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/monica-liu.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/monica-liu.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/monica-liu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/monica-liu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/monica-liu.html"
+      },
+      "title": "Monica Liu | Canadian Western TCM",
+      "description": "Monica Liu, certified acupressure and rehabilitation therapist at Canadian Western TCM — over 10 years in Tuina, easing neck, shoulder and lower-back pain in Burnaby.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/nikka-wu-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/nikka-wu-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/nikka-wu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/nikka-wu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/nikka-wu.html"
+      },
+      "title": "Nikka Wu — 康复理疗师 | 加西中医",
+      "description": "10+ 年经验的康复理疗师，融合传统中医疗法与现代康复理念。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/nikka-wu.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/nikka-wu.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/nikka-wu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/nikka-wu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/nikka-wu.html"
+      },
+      "title": "Nikka Wu — Rehabilitation Therapist | Canadian Western TCM",
+      "description": "Nikka Wu, rehabilitation therapist at Canadian Western TCM — over 10 years blending TCM therapies with modern rehabilitation, in Burnaby.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/pearson-zhang-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/pearson-zhang-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/pearson-zhang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/pearson-zhang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/pearson-zhang.html"
+      },
+      "title": "Pearson Zhang — BC省注册中医师 | 加西中医",
+      "description": "标本兼治的注册中医师与针灸师——从颈肩腰腿痛到运动康复与日常调理。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/pearson-zhang.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/pearson-zhang.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/pearson-zhang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/pearson-zhang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/pearson-zhang.html"
+      },
+      "title": "Pearson Zhang — Registered TCM Practitioner · R.TCM.P, R.Ac | Canadian Western TCM",
+      "description": "Pearson Zhang, registered TCM practitioner and acupuncturist at Canadian Western TCM — root-cause care for neck and back pain, injury rehabilitation and everyday wellbeing across Richmond and Burnaby.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/qin-pei-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/qin-pei-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/qin-pei.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/qin-pei-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/qin-pei.html"
+      },
+      "title": "Edward Qin 秦沛 — BC省注册按摩师 | 加西中医",
+      "description": "2009年毕业于加拿大推拿及水疗学院的注册按摩师，进修肌骨整骨手法。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/qin-pei.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/qin-pei.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/qin-pei.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/qin-pei-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/qin-pei.html"
+      },
+      "title": "Edward Qin (Pei Qin) — Registered Massage Therapist · R.M.T. | Canadian Western TCM",
+      "description": "Registered massage therapist since 2009, trained at the Canadian College of Massage and Hydrotherapy, with additional osteopathy manipulative training.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/rosa-shu-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/rosa-shu-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/rosa-shu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/rosa-shu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/rosa-shu.html"
+      },
+      "title": "Rosa Shu — BC省注册中医师 | 加西中医",
+      "description": "融合针灸、推拿与 DDS 生物电疗法的注册中医师，专注疼痛调理与面部焕活。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/rosa-shu.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/rosa-shu.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/rosa-shu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/rosa-shu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/rosa-shu.html"
+      },
+      "title": "Rosa Shu — Registered TCM Practitioner · R.TCM.P | Canadian Western TCM",
+      "description": "Rosa Shu, registered TCM practitioner at Canadian Western TCM — graduate of Oshio College of Acupuncture &amp; Herbology, blending acupuncture, Tuina and DDS bioelectric therapy across Richmond and Burnaby.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/sean-zhou-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/sean-zhou-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/sean-zhou.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/sean-zhou-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/sean-zhou.html"
+      },
+      "title": "Sean Zhou 周祥 — BC省注册中医师 · 注册针灸师 | 加西中医",
+      "description": "注册中医师与针灸师——急慢性疼痛、运动损伤与车祸康复，标本兼治、恢复机体调节能力。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/sean-zhou.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/sean-zhou.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/sean-zhou.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/sean-zhou-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/sean-zhou.html"
+      },
+      "title": "Sean Zhou (Xiang Zhou) — R.TCM.P, R.Ac | Canadian Western TCM",
+      "description": "Registered TCM practitioner and acupuncturist for acute and chronic pain, sports injuries and ICBC recovery — restoring the body",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/shawn-feng-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/shawn-feng-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/shawn-feng.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/shawn-feng-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/shawn-feng.html"
+      },
+      "title": "Shawn Feng — BC省注册针灸师 | 加西中医",
+      "description": "拥有丰富中医临床经验的康复治疗师与注册针灸师，擅长针灸、艾灸、推拿及拔罐治疗颈肩腰腿痛、肌肉劳损及关节疼痛。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/shawn-feng.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/shawn-feng.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/shawn-feng.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/shawn-feng-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/shawn-feng.html"
+      },
+      "title": "Shawn Feng | Canadian Western TCM",
+      "description": "Shawn Feng, registered acupuncturist and rehabilitation therapist at Canadian Western TCM Vancouver — acupuncture, moxibustion, Tuina and cupping for pain care.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/shirley-zhu-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/shirley-zhu-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/shirley-zhu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/shirley-zhu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/shirley-zhu.html"
+      },
+      "title": "Shirley Zhu — BC省注册中医师 | 加西中医",
+      "description": "出身中医世家的注册中医师与芳疗师，融合柔性正骨、浮针与针灸。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/shirley-zhu.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/shirley-zhu.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/shirley-zhu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/shirley-zhu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/shirley-zhu.html"
+      },
+      "title": "Shirley Zhu — Registered TCM Practitioner · R.TCM.P, R.Ac | Canadian Western TCM",
+      "description": "Shirley Zhu, registered TCM practitioner and aromatherapist at Canadian Western TCM — gentle manual alignment, floating needle and acupuncture, in Vancouver.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/simon-zhang-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/simon-zhang-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/simon-zhang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/simon-zhang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/simon-zhang.html"
+      },
+      "title": "Simon Zhang — BC省注册针灸师 | 加西中医",
+      "description": "擅长推拿、艾灸与拔罐的注册针灸师与康复治疗师，调理疼痛、紧张与睡眠。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/simon-zhang.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/simon-zhang.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/simon-zhang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/simon-zhang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/simon-zhang.html"
+      },
+      "title": "Simon Zhang | Canadian Western TCM",
+      "description": "Simon Zhang, registered acupuncturist and rehabilitation therapist at Canadian Western TCM — Tuina, moxibustion and cupping for pain, tension and sleep, across Vancouver and Richmond.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/su-zhang-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/su-zhang-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/su-zhang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/su-zhang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/su-zhang.html"
+      },
+      "title": "Su Zhang 张素 — BC省注册中医师 | 加西中医",
+      "description": "以《伤寒杂病论》经方为指导的注册中医师——脉诊、疑难杂症、用药精简而专注。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/su-zhang.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/su-zhang.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/su-zhang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/su-zhang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/su-zhang.html"
+      },
+      "title": "Su Zhang — Registered TCM Practitioner · R.TCM.P | Canadian Western TCM",
+      "description": "Registered TCM practitioner guided by the classical prescriptions of the Shanghan Lun — pulse diagnosis, complex cases, and minimal, focused prescribing.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/sunny-wei-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/sunny-wei-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/sunny-wei.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/sunny-wei-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/sunny-wei.html"
+      },
+      "title": "Sunny Wei — 康复治疗师 | 加西中医",
+      "description": "十余年推拿经验的康复治疗师，缓解肌肉紧张、舒缓身心。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/sunny-wei.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/sunny-wei.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/sunny-wei.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/sunny-wei-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/sunny-wei.html"
+      },
+      "title": "Sunny Wei — Rehabilitation Therapist | Canadian Western TCM",
+      "description": "Sunny Wei, rehabilitation therapist at Canadian Western TCM — over ten years in Tuina, easing muscle tension and calming the mind.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/taylor-wang-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/taylor-wang-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/taylor-wang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/taylor-wang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/taylor-wang.html"
+      },
+      "title": "Taylor Wang — 创始人 · BC省注册高级中医师 | 加西中医",
+      "description": "加西中医创始人 Taylor Wang——BC 省注册高级中医师与针灸师，毕业于江西中医药大学（骨伤方向），融合中医骨伤传承与现代细致照护，出诊于列治文、本拿比与温哥华。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/taylor-wang.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/taylor-wang.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/taylor-wang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/taylor-wang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/taylor-wang.html"
+      },
+      "title": "Taylor Wang — Founder · Dr. TCM | Canadian Western TCM",
+      "description": "Taylor Wang, founder of Canadian Western TCM — Dr. TCM and registered acupuncturist trained at Jiangxi University of Traditional Chinese Medicine (orthopedics), blending heritage Chinese orthopedics with attentive modern care across Richmond, Burnaby and Vancouver.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/tony-liang-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/tony-liang-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/tony-liang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/tony-liang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/tony-liang.html"
+      },
+      "title": "Tony Liang — BC省注册按摩师 | 加西中医",
+      "description": "注册按摩师与 BC 省 RMT 课程授课老师，调理肌肉、筋膜、关节与神经肌肉疼痛。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/tony-liang.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/tony-liang.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/tony-liang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/tony-liang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/tony-liang.html"
+      },
+      "title": "Tony Liang — Registered Massage Therapist · R.M.T. | Canadian Western TCM",
+      "description": "Tony Liang, registered massage therapist and BC RMT-program instructor at Canadian Western TCM — muscle, fascia and joint care in Burnaby.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/vickie-xu-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/vickie-xu-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/vickie-xu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/vickie-xu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/vickie-xu.html"
+      },
+      "title": "Vickie Xu — BC省注册按摩师 | 加西中医",
+      "description": "结合按摩治疗与中医知识的注册按摩师，提供有效的疼痛缓解。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/vickie-xu.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/vickie-xu.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/vickie-xu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/vickie-xu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/vickie-xu.html"
+      },
+      "title": "Vickie Xu — Registered Massage Therapist · R.M.T. | Canadian Western TCM",
+      "description": "Vickie Xu, registered massage therapist at Canadian Western TCM — blending massage therapy with TCM for effective pain relief in Richmond.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/vivi-zhao-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/vivi-zhao-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/vivi-zhao.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/vivi-zhao-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/vivi-zhao.html"
+      },
+      "title": "Vivi Zhao 赵伟伟 — BC省注册按摩师 | 加西中医",
+      "description": "以客户为中心、定制个性化方案的注册按摩师，缓解肌肉紧张与慢性疼痛。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/vivi-zhao.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/vivi-zhao.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/vivi-zhao.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/vivi-zhao-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/vivi-zhao.html"
+      },
+      "title": "Vivi Zhao (Weiwei Zhao) — Registered Massage Therapist · R.M.T. | Canadian Western TCM",
+      "description": "Registered massage therapist offering client-centred, personalised care for muscle tension and chronic pain.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/vivian-chen-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/vivian-chen-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/vivian-chen.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/vivian-chen-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/vivian-chen.html"
+      },
+      "title": "Vivian Chen 陈垚 — BC省注册中医师 · 注册针灸师 | 加西中医",
+      "description": "出身中医世家的注册中医师与针灸师——激痛点针法、浮针、拔罐与艾灸，调理痛症、内科与更年期。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/vivian-chen.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/vivian-chen.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/vivian-chen.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/vivian-chen-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/vivian-chen.html"
+      },
+      "title": "Vivian Chen (Yao Chen) — R.TCM.P, R.Ac | Canadian Western TCM",
+      "description": "Registered TCM practitioner and acupuncturist from a TCM family — trigger-point acupuncture, FSN, cupping and moxibustion for pain, internal balance and menopause care.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/william-wang-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/william-wang-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/william-wang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/william-wang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/william-wang.html"
+      },
+      "title": "William Wang — BC省注册针灸师 | 加西中医",
+      "description": "注册针灸师与高级康复理疗师，结合手诊、面诊、腹诊提供整体调理。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/william-wang.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/william-wang.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/william-wang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/william-wang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/william-wang.html"
+      },
+      "title": "William Wang | Canadian Western TCM",
+      "description": "William Wang, registered acupuncturist and senior rehabilitation therapist at Canadian Western TCM — acupuncture, acupoint Tuina and holistic diagnosis in Vancouver.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/william-zhou-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/william-zhou-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/william-zhou.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/william-zhou-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/william-zhou.html"
+      },
+      "title": "William Zhou 周健威 — BC省注册按摩师 | 加西中医",
+      "description": "帮助人们重返所爱活动的注册按摩师——运动恢复、疼痛缓解与压力管理。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/william-zhou.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/william-zhou.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/william-zhou.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/william-zhou-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/william-zhou.html"
+      },
+      "title": "William Zhou (Jianwei Zhou) — Registered Massage Therapist · R.M.T. | Canadian Western TCM",
+      "description": "Registered massage therapist helping people return to the activities they love — sports recovery, pain relief and stress management.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/wingho-chan-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/wingho-chan-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/wingho-chan.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/wingho-chan-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/wingho-chan.html"
+      },
+      "title": "Wingho Chan — BC省注册中医师 | 加西中医",
+      "description": "加西中医 Wingho Chan——香港大学中医学硕士，针药并用，专长内科、消化、妇科与皮肤外科，出诊于本拿比。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/wingho-chan.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/wingho-chan.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/wingho-chan.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/wingho-chan-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/wingho-chan.html"
+      },
+      "title": "Wingho Chan — R.TCM.P · Hong Kong-trained | Canadian Western TCM",
+      "description": "Wingho Chan at Canadian Western TCM — Hong Kong-trained R.TCM.P integrating acupuncture, herbal medicine and gentle bone-setting for internal medicine, digestive, gynecological and skin conditions, practising in Burnaby.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/winnie-yang-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/winnie-yang-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/winnie-yang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/winnie-yang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/winnie-yang.html"
+      },
+      "title": "Winnie Yang 杨子筠 — BC省注册针灸师 | 加西中医",
+      "description": "毕业于 KPU 针灸专业的注册针灸师、普拉提教练——肌骨疾病、运动损伤与女性健康。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/winnie-yang.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/winnie-yang.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/winnie-yang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/winnie-yang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/winnie-yang.html"
+      },
+      "title": "Winnie Yang (Tzu-Yun Yang) — Registered Acupuncturist · R.Ac | Canadian Western TCM",
+      "description": "KPU-trained registered acupuncturist and Pilates instructor — musculoskeletal conditions, sports injuries, and women",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/xianyi-hu-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/xianyi-hu-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/xianyi-hu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/xianyi-hu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/xianyi-hu.html"
+      },
+      "title": "Xianyi Hu — 资深中医师 | 加西中医",
+      "description": "加西中医资深医师 Xianyi Hu——五十余年中医临床，成都中医药大学中医学硕士，专注免疫系统疾病、内科杂病与妇科调理，出诊于列治文。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/xianyi-hu.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/xianyi-hu.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/xianyi-hu.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/xianyi-hu-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/xianyi-hu.html"
+      },
+      "title": "Xianyi Hu — Senior · Dr. TCM | Canadian Western TCM",
+      "description": "Xianyi Hu, senior physician at Canadian Western TCM — over 50 years of clinical Traditional Chinese Medicine, Master’s from Chengdu University of TCM, with a focus on immune system disorders, internal medicine and women’s health in Richmond.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments.html"
+      },
+      "title": "中医诊疗项目 — 针灸、中药、推拿、浮针 | 加西中医",
+      "description": "针灸、推拿、艾灸、拔罐刮痧、正骨、头疗、中药调理、浮针、美容针与注册按摩——传统疗法，现代标准，大温哥华四家诊所。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments.html"
+      },
+      "title": "TCM Treatments — Acupuncture, Herbal Medicine, Tui Na, Floating Needle | Canadian Western TCM",
+      "description": "Acupuncture, tui na, moxibustion, cupping, manual bone setting, head therapy, herbal medicine, floating needle, aesthetic acupuncture and registered massage therapy — traditional TCM, practised to a modern standard, across four Greater Vancouver clinics.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/acupuncture-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/acupuncture-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/acupuncture.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/acupuncture-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/acupuncture.html"
+      },
+      "title": "针灸 — 是什么 · 一次诊疗是怎样的 | 加西中医",
+      "description": "加西中医的针灸——以极细的一次性针具刺激身体特定穴位，唤起自身的调节反应，调理疼痛、紧张、睡眠与循环。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/acupuncture.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/acupuncture.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/acupuncture.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/acupuncture-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/acupuncture.html"
+      },
+      "title": "Acupuncture — what it is, what to expect | Canadian Western TCM",
+      "description": "Acupuncture at Canadian Western TCM — fine, single-use needles at precise points to support pain, sleep, tension and circulation. Educational guide and what a session is like.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/aesthetic-acupuncture-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/aesthetic-acupuncture-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/aesthetic-acupuncture.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/aesthetic-acupuncture-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/aesthetic-acupuncture.html"
+      },
+      "title": "美容针 — 面部紧致、焕活、气色 | 加西中医",
+      "description": "加西中医的美容针——以极细的针作用于面部，促进局部循环与肌肉张力，令气色更显清新舒展；以疗程进行，效果循序渐进。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/aesthetic-acupuncture.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/aesthetic-acupuncture.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/aesthetic-acupuncture.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/aesthetic-acupuncture-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/aesthetic-acupuncture.html"
+      },
+      "title": "Aesthetic Acupuncture — facial tone, freshness, a rested look | Canadian Western TCM",
+      "description": "Aesthetic acupuncture at Canadian Western TCM — very fine needles on the face to support local circulation and muscle tone, grounded in our whole-body view of sleep, digestion and constitution. Educational guide and what a session is like.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/counselling-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/counselling-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/counselling.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/counselling-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/counselling.html"
+      },
+      "title": "心理咨询 — 一对一支持性谈话 | 加西中医",
+      "description": "加西中医温哥华店的心理咨询——保密的一对一谈话，面向压力、情绪低落与人生转折期，提供中英双语，可与针灸、中药相配合。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/counselling.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/counselling.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/counselling.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/counselling-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/counselling.html"
+      },
+      "title": "Counselling — supportive one-on-one sessions | Canadian Western TCM",
+      "description": "Counselling at Canadian Western TCM Vancouver — supportive, confidential one-on-one sessions for stress, low mood and life transitions, offered in English and Chinese alongside TCM care.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/cupping-gua-sha-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/cupping-gua-sha-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/cupping-gua-sha.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/cupping-gua-sha-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/cupping-gua-sha.html"
+      },
+      "title": "拔罐与刮痧 — 行气活血，松解紧张 | 加西中医",
+      "description": "加西中医的拔罐与刮痧——以温和负压与轻刮带动局部新鲜循环，常用于肌肉紧张、僵硬及外感初起。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/cupping-gua-sha.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/cupping-gua-sha.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/cupping-gua-sha.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/cupping-gua-sha-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/cupping-gua-sha.html"
+      },
+      "title": "Cupping & Gua Sha — release tension, support circulation | Canadian Western TCM",
+      "description": "Cupping and gua sha at Canadian Western TCM — gentle suction and surface scraping for muscle tension, tightness and the early stages of a cold. Educational guide and what a session is like.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/facial-bojin-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/facial-bojin-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/facial-bojin.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/facial-bojin-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/facial-bojin.html"
+      },
+      "title": "面部拨筋 — 面部经络疏通 | 加西中医",
+      "description": "加西中医的面部拨筋——以光滑拨筋工具沿面部经络与筋膜精准疏拨，松解面颊与下颌紧张，促进局部循环与淋巴流动，减轻浮肿、提亮气色。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/facial-bojin.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/facial-bojin.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/facial-bojin.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/facial-bojin-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/facial-bojin.html"
+      },
+      "title": "Facial Bo Jin (面部拨筋) — facial meridian release | Canadian Western TCM",
+      "description": "Facial Bo Jin at Canadian Western TCM — a smooth tool worked in precise strokes along the facial meridians and fascia to ease tension, support circulation and lymph flow, and reduce the look of puffiness.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/fire-dragon-moxibustion-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/fire-dragon-moxibustion-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/fire-dragon-moxibustion.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/fire-dragon-moxibustion-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/fire-dragon-moxibustion.html"
+      },
+      "title": "火龙灸 — 沿脊温通的招牌灸法 | 加西中医",
+      "description": "加西中医本拿比店的火龙灸——沿脊背铺陈药草与艾火，热力深透，常用于寒湿体质、颈腰背僵冷、疲乏与痛经。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/fire-dragon-moxibustion.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/fire-dragon-moxibustion.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/fire-dragon-moxibustion.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/fire-dragon-moxibustion-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/fire-dragon-moxibustion.html"
+      },
+      "title": "Fire Dragon Moxibustion (火龙灸) — spinal warming therapy | Canadian Western TCM",
+      "description": "Fire Dragon moxibustion at Canadian Western TCM Burnaby — a spinal moxibustion with herbal layers and penetrating warmth along the back, used for cold-damp patterns, stiffness and fatigue. Educational guide.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/floating-needle-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/floating-needle-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/floating-needle.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/floating-needle-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/floating-needle.html"
+      },
+      "title": "浮针（FSN） — 是什么 · 一次诊疗是怎样的 | 加西中医",
+      "description": "加西中医的浮针（符氏皮下针法，FSN）——作用于皮下浅层，以柔和的扫散动作替代深刺，针对紧张、疼痛的肌肉与筋膜。白石店为全加首家专设浮针示范诊所。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/floating-needle.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/floating-needle.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/floating-needle.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/floating-needle-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/floating-needle.html"
+      },
+      "title": "Floating Needle (FSN) — what it is, what to expect | Canadian Western TCM",
+      "description": "Floating Needle (Fu",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/fuyang-moxibustion-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/fuyang-moxibustion-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/fuyang-moxibustion.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/fuyang-moxibustion-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/fuyang-moxibustion.html"
+      },
+      "title": "扶阳灸 — 温阳散寒的深度艾灸 | 加西中医",
+      "description": "加西中医的扶阳灸——以持续、层层递进的艾火温养腰腹等较大区域，扶助阳气，改善畏寒怕冷、疲乏与腹部虚寒，温通气血。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/fuyang-moxibustion.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/fuyang-moxibustion.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/fuyang-moxibustion.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/fuyang-moxibustion-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/fuyang-moxibustion.html"
+      },
+      "title": "Fu Yang Moxibustion (扶阳灸) — deep warming therapy | Canadian Western TCM",
+      "description": "Fu Yang moxibustion at Canadian Western TCM — layered, sustained moxa warmth over the back and abdomen to nourish yang qi, ease cold and fatigue patterns and support circulation. Educational guide.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/head-therapy-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/head-therapy-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/head-therapy.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/head-therapy-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/head-therapy.html"
+      },
+      "title": "头疗 — 舒缓紧张、助眠提神 | 加西中医",
+      "description": "加西中医的头疗——结合头皮按摩与头颈部穴位手法，舒缓紧张，助益睡眠，化解久对屏幕与压力累积的紧绷。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/head-therapy.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/head-therapy.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/head-therapy.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/head-therapy-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/head-therapy.html"
+      },
+      "title": "Head Therapy — scalp & head work for tension and sleep | Canadian Western TCM",
+      "description": "Head therapy at Canadian Western TCM — scalp massage and point work around the head and neck to ease tension, support sleep and relieve the tightness that builds from screens and stress.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/herbal-medicine-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/herbal-medicine-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/herbal-medicine.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/herbal-medicine-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/herbal-medicine.html"
+      },
+      "title": "中药调理 — 是什么 · 一次诊疗是怎样的 | 加西中医",
+      "description": "加西中医的中药调理——以植物（及矿物）成分配伍而成，在中医辨证后依个人体质开方。常用于调理消化、睡眠、妇科、皮肤与康复。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/herbal-medicine.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/herbal-medicine.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/herbal-medicine.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/herbal-medicine-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/herbal-medicine.html"
+      },
+      "title": "Chinese Herbal Medicine — what it is, what to expect | Canadian Western TCM",
+      "description": "Chinese herbal medicine at Canadian Western TCM — combinations of plant (and mineral) ingredients formulated to your individual pattern after a TCM assessment. Educational guide and what a session is like.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/manual-bone-setting-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/manual-bone-setting-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/manual-bone-setting.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/manual-bone-setting-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/manual-bone-setting.html"
+      },
+      "title": "正骨 — 手法对位与调整 | 加西中医",
+      "description": "加西中医的正骨——以细致的体位与调整缓解关节与脊柱的活动受限，改善结构对位，减轻相关疼痛。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/manual-bone-setting.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/manual-bone-setting.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/manual-bone-setting.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/manual-bone-setting-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/manual-bone-setting.html"
+      },
+      "title": "Manual Bone Setting — hands-on realignment | Canadian Western TCM",
+      "description": "Manual bone setting at Canadian Western TCM — careful positioning and adjustment to ease joint and spinal restrictions, improve alignment and relieve related pain. Educational guide and what a session is like.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/manual-osteopathy-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/manual-osteopathy-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/manual-osteopathy.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/manual-osteopathy-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/manual-osteopathy.html"
+      },
+      "title": "整骨疗法（MOT） — 温和的全身手法照护 | 加西中医",
+      "description": "加西中医的整骨疗法（MOT）——从体态、关节、肌肉、筋膜与循环整体评估，以温和手法松动关节与软组织，改善慢性紧张、体态劳损与活动受限。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/manual-osteopathy.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/manual-osteopathy.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/manual-osteopathy.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/manual-osteopathy-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/manual-osteopathy.html"
+      },
+      "title": "Manual Osteopathic Therapy (MOT) — gentle whole-body manual care | Canadian Western TCM",
+      "description": "Manual osteopathic therapy at Canadian Western TCM — gentle, whole-body assessment and hands-on mobilization of joints, muscles and fascia for chronic tension, postural strain and restricted movement.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/moxibustion-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/moxibustion-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/moxibustion.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/moxibustion-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/moxibustion.html"
+      },
+      "title": "艾灸 — 温通调理 | 加西中医",
+      "description": "加西中医的艾灸——以点燃的艾草在皮肤上方温熏特定穴位或部位，温和透达，缓解寒凉、僵硬或酸痛，促进循环与消化舒适。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/moxibustion.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/moxibustion.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/moxibustion.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/moxibustion-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/moxibustion.html"
+      },
+      "title": "Moxibustion — gentle warming therapy with mugwort | Canadian Western TCM",
+      "description": "Moxibustion at Canadian Western TCM — warming specific points and areas with smouldering mugwort (moxa) to ease cold, stiff or achy areas and support circulation. Educational guide and what a session is like.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/tcm-acne-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/tcm-acne-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/tcm-acne.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/tcm-acne-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/tcm-acne.html"
+      },
+      "title": "中医暗疮治疗 — 整体调理反复暗疮 | 加西中医",
+      "description": "加西中医的中医暗疮治疗——辨证论治，结合面部细针、个性化中药与实用饮食指导，调理反复发作与激素相关的暗疮；与皮肤科照护协同进行。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/tcm-acne.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/tcm-acne.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/tcm-acne.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/tcm-acne-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/tcm-acne.html"
+      },
+      "title": "TCM Acne Care (中医暗疮治疗) — whole-person acne support | Canadian Western TCM",
+      "description": "TCM acne care at Canadian Western TCM — pattern diagnosis with fine facial needling, tailored herbal support and practical dietary guidance for recurring and hormone-related breakouts, working alongside dermatological care.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/thread-embedding-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/thread-embedding-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/thread-embedding.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/thread-embedding-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/thread-embedding.html"
+      },
+      "title": "埋线减肥 — 穴位埋线减重支持 | 加西中医",
+      "description": "加西中医的埋线减肥——以细针把可吸收线体植入选定穴位，在复诊间隔持续温和刺激，配合合理饮食与运动，辅助调节食欲与代谢。效果因人而异。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/thread-embedding.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/thread-embedding.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/thread-embedding.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/thread-embedding-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/thread-embedding.html"
+      },
+      "title": "Acupoint Thread Embedding (埋线减肥) — weight-management support | Canadian Western TCM",
+      "description": "Acupoint thread embedding at Canadian Western TCM — fine absorbable threads placed at selected acupoints for continuous stimulation between visits, used alongside diet and activity to support appetite regulation and weight management. Results vary.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/tui-na-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/tui-na-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/tui-na.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/tui-na-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/tui-na.html"
+      },
+      "title": "推拿 — 中医手法理疗 | 加西中医",
+      "description": "加西中医的推拿——中医的手法理疗，以揉、按、推、拉作用于肌肉与关节，松解紧张、缓解僵硬、改善活动度与循环。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/tui-na.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/tui-na.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/tui-na.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/tui-na-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/tui-na.html"
+      },
+      "title": "Tui Na — Chinese therapeutic bodywork | Canadian Western TCM",
+      "description": "Tui na at Canadian Western TCM — hands-on Chinese therapeutic bodywork that kneads, presses and stretches muscles and joints to release tension and improve mobility. Educational guide and what a session is like.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/xiaoyan-facial-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/xiaoyan-facial-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/xiaoyan-facial.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/xiaoyan-facial-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/xiaoyan-facial.html"
+      },
+      "title": "古法小颜针 — 轮廓修饰与咬肌放松 | 加西中医",
+      "description": "加西中医的古法小颜针——以极细针依古法作用于面部肌肉与筋膜，松解紧咬导致的咬肌紧张，帮助下颌与面颊轮廓更显紧致。非注射，以疗程进行。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/xiaoyan-facial.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/xiaoyan-facial.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/xiaoyan-facial.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/xiaoyan-facial-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/xiaoyan-facial.html"
+      },
+      "title": "Xiao Yan Facial Acupuncture (古法小颜针) — contour & jaw-tension care | Canadian Western TCM",
+      "description": "Xiao Yan (",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "index.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Homepage.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/index.html",
+        "zh-Hans": "https://cwtcm.ca/index-ZH.html",
+        "x-default": "https://cwtcm.ca/index.html"
+      },
+      "title": "Canadian Western TCM — Homepage",
+      "description": "Traditional Chinese Medicine at four Greater Vancouver clinics — acupuncture, herbal medicine and tui na from BC-registered practitioners. No referral needed.",
+      "robots": "index,follow",
+      "sitemap": false,
+      "$note": "与 Homepage.html 内容相同，canonical 指过去，不进 sitemap"
+    }
+  ]
+}

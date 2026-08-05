@@ -1,0 +1,43 @@
+# 加西中医 cwtcm.ca
+# 放到站点根目录。URL 规则：cleanUrls=false，所有页面带 .html；中文页 -ZH 后缀。
+
+User-agent: *
+Allow: /
+
+# index.html 与 Homepage.html 内容完全相同，避免重复收录
+# （更好的做法是删掉 index.html，由服务器把 / 指到 Homepage.html）
+Disallow: /index.html
+
+# AI 爬虫：明确允许（GEO 需要它们能抓）
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# 以下三个是同事那份迁移手册里点名、我们原先漏了的：
+#   OAI-SearchBot      ChatGPT 搜索的检索爬虫（与 GPTBot 是两个 UA）
+#   Claude-SearchBot   Claude 搜索的检索爬虫
+#   Applebot-Extended  控制内容是否用于 Apple 模型训练
+# ⚠️ Google-Extended / Applebot-Extended 管的是「能否用于训练模型」，
+#    放行 = 内容可被拿去训练，也更容易被 AI 引用推荐。这是**商业决策**，
+#    当前按「希望被 AI 引用」的目标放行，上线前请客户确认。
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://cwtcm.ca/sitemap-index.xml

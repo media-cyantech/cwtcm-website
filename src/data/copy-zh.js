@@ -1,32 +1,16 @@
+// ⚠️ 由 scripts/build-data.mjs 从 ../../copy-zh.js 生成，不要手改。
+// 改文案请改根目录的 copy-zh.js，然后重跑 node scripts/build-data.mjs
+
 // CWTCM Heritage — 中文文案 (Chinese mirror of copy.js)
 // Same shape as copy.js; loaded INSTEAD of copy.js on Homepage-ZH.html.
 
-window.__resources = window.__resources || new Proxy({}, {
-  get(_, key) {
-    const k = String(key);
-    const knownFolders = [
-      ['hero_candidates', 'hero-candidates'],
-      ['practitioners', 'practitioners'],
-      ['treatments', 'treatments'],
-      ['brand', 'brand'],
-    ];
-    for (const [prefix, folder] of knownFolders) {
-      const re = new RegExp('^r_' + prefix + '_(.+)_(jpg|jpeg|png|avif|webp|svg)$', 'i');
-      const m = k.match(re);
-      if (m) {
-        const file = m[1].replace(/_/g, '-') + '.' + m[2];
-        return `assets/${folder}/${file}`;
-      }
-    }
-    return undefined;
-  }
-});
+import { resources } from './resources.js';
 
-const COPY = {
+export const COPY = {
   hero: {
     slides: [
       {
-        photo: window.__resources.r_hero_candidates_05_acupuncture_back_warm_jpg,
+        photo: resources.r_hero_candidates_05_acupuncture_back_warm_jpg,
         crop: "50% 40%",
         eyebrow: "BC 省注册针灸 · 大温哥华",
         h1: "传承医学，用心如一。",
@@ -34,7 +18,7 @@ const COPY = {
         sub: "大温哥华四家诊所，悉心提供传统中医诊疗。",
       },
       {
-        photo: window.__resources.r_hero_candidates_04_herbal_jars_shelf_warm_jpg,
+        photo: resources.r_hero_candidates_04_herbal_jars_shelf_warm_jpg,
         crop: "75% 55%",
         eyebrow: "定制中药方",
         h1: "两千年的本草匠心。",
@@ -42,7 +26,7 @@ const COPY = {
         sub: "脉象、舌诊与病史，成就每一剂配方——由注册中医师在温哥华本地煎制。",
       },
       {
-        photo: window.__resources.r_hero_candidates_01_black_teapot_steam_jpg,
+        photo: resources.r_hero_candidates_01_black_teapot_steam_jpg,
         crop: "50% 50%",
         eyebrow: "代煎服务",
         h1: "慢工细活的耐心。",
@@ -50,7 +34,7 @@ const COPY = {
         sub: "古法代煎，如同长辈亲手熬煮的那一盅用心。",
       },
       {
-        photo: window.__resources.r_hero_candidates_03_herbal_warm_pack_jpg,
+        photo: resources.r_hero_candidates_03_herbal_warm_pack_jpg,
         crop: "50% 50%",
         eyebrow: "加西中医 · 大温哥华",
         h1: "传承医学，用心如一。",
@@ -167,14 +151,14 @@ const COPY = {
     eyebrow: "诊疗项目",
     h2: "历经世代打磨的\n八项招牌疗法。",
     cards: [
-      { photo: window.__resources.r_treatments_04_acupuncture_session_jpg, name: "针灸", zh: "", body: "以纤细无菌针具，精准取穴，安定疼痛、睡眠与压力。", meta: "50 分钟 · CAD $120 起" },
-      { photo: window.__resources.r_treatments_01_tuina_massage_jpg, name: "推拿", zh: "", body: "沿经络手法施治，缓解肌肉紧张、头痛，促进气血循环。", meta: "50 分钟 · CAD $100 起" },
-      { photo: window.__resources.r_treatments_05_bone_setting_jpg, name: "正骨", zh: "", body: "以娴熟手法调整关节与软组织，应对慢性与急性骨骼肌肉疼痛。", meta: "50 分钟 · CAD $100 起" },
-      { photo: window.__resources.r_treatments_02_moxibustion_jpg, name: "艾灸", zh: "", body: "艾草缓燃温灸特定穴位，温养气血、扶助免疫。", meta: "50 分钟 · CAD $100 起" },
-      { photo: window.__resources.r_treatments_06_cupping_jpg, name: "拔罐与刮痧", zh: "", body: "以玻璃罐与刮痧板舒缓紧张、活血行气、疏通瘀滞。", meta: "25–50 分钟 · CAD $50 起" },
-      { photo: window.__resources.r_treatments_07_head_therapy_jpg, name: "头疗", zh: "", body: "传统或香薰头部手法，舒缓紧张、疲劳与久对屏幕的头部不适。", meta: "50 分钟 · CAD $75 起" },
-      { photo: window.__resources.r_treatments_03_herbal_medicine_jpg, name: "中药调理", zh: "", body: "注册中医师经脉诊、舌诊后开具个性化配方，本地煎制。", meta: "20–30 分钟咨询" },
-      { photo: window.__resources.r_treatments_08_acupuncture_facial_jpg, name: "美容针", zh: "", body: "整体面部美容针——激发胶原、改善气色与轮廓，无需注射。", meta: "75 分钟 · CAD $200 起" },
+      { photo: resources.r_treatments_04_acupuncture_session_jpg, name: "针灸", zh: "", body: "以纤细无菌针具，精准取穴，安定疼痛、睡眠与压力。", meta: "50 分钟 · CAD $120 起" },
+      { photo: resources.r_treatments_01_tuina_massage_jpg, name: "推拿", zh: "", body: "沿经络手法施治，缓解肌肉紧张、头痛，促进气血循环。", meta: "50 分钟 · CAD $100 起" },
+      { photo: resources.r_treatments_05_bone_setting_jpg, name: "正骨", zh: "", body: "以娴熟手法调整关节与软组织，应对慢性与急性骨骼肌肉疼痛。", meta: "50 分钟 · CAD $100 起" },
+      { photo: resources.r_treatments_02_moxibustion_jpg, name: "艾灸", zh: "", body: "艾草缓燃温灸特定穴位，温养气血、扶助免疫。", meta: "50 分钟 · CAD $100 起" },
+      { photo: resources.r_treatments_06_cupping_jpg, name: "拔罐与刮痧", zh: "", body: "以玻璃罐与刮痧板舒缓紧张、活血行气、疏通瘀滞。", meta: "25–50 分钟 · CAD $50 起" },
+      { photo: resources.r_treatments_07_head_therapy_jpg, name: "头疗", zh: "", body: "传统或香薰头部手法，舒缓紧张、疲劳与久对屏幕的头部不适。", meta: "50 分钟 · CAD $75 起" },
+      { photo: resources.r_treatments_03_herbal_medicine_jpg, name: "中药调理", zh: "", body: "注册中医师经脉诊、舌诊后开具个性化配方，本地煎制。", meta: "20–30 分钟咨询" },
+      { photo: resources.r_treatments_08_acupuncture_facial_jpg, name: "美容针", zh: "", body: "整体面部美容针——激发胶原、改善气色与轮廓，无需注射。", meta: "75 分钟 · CAD $200 起" },
     ],
   },
   conditions: {
@@ -318,7 +302,7 @@ COPY.about = {
   },
 };
 
-const STRINGS = {
+export const STRINGS = {
   lang: 'zh',
   otherLang: { label: 'EN', href: 'Homepage.html' },
   bookingByClinic: { 'Richmond': 'https://canadianwesterntcmclinic.janeapp.com', 'Burnaby': 'https://canadianwesterntcmclinic.janeapp.com', 'Vancouver': 'https://canadianwesterntcmclinic.janeapp.com', 'White Rock': 'https://cwtcm.janeapp.com/' },
@@ -1780,10 +1764,8 @@ const STRINGS = {
   },
 };
 
-window.COPY = COPY;
 STRINGS.legalPage = { zh: {"hero": {"eyebrow": "法律条款", "h1": "政策与条款", "sub": "我们如何处理您的信息，以及在加西中医接受诊疗与预约的相关条款。"}, "updated": "最后更新：2026 年 7 月 9 日", "tocLabel": "本页内容", "note": "", "sections": [{"id": "privacy", "title": "隐私政策", "body": "<p>加西中医（“我们”、“本诊所”）致力于保护您在大温哥华四家诊所托付给我们的个人信息。本政策依据卑诗省《个人信息保护法》（PIPA），说明我们收集哪些信息、如何使用，以及您的权利。</p><h3>我们收集的信息</h3><ul><li><strong>联系信息</strong>——姓名、电话、电邮、地址。</li><li><strong>健康信息</strong>——病史、症状、诊断、治疗记录，以及您为便于我们提供诊疗而分享的其他信息。</li><li><strong>保险与结算</strong>——处理治疗与结算所需的延保或 ICBC 理赔信息。</li><li><strong>预约与账户信息</strong>——预约记录及您与诊所的沟通。</li><li><strong>网站信息</strong>——有限的技术与使用信息（见下方 Cookie 政策）。</li></ul><h3>我们如何使用您的信息</h3><p>我们使用您的信息以提供与协调诊疗、安排预约、配发中药、处理保险与 ICBC 结算、与您沟通、履行专业与法律义务，并改善服务。我们仅为上述目的，或在法律允许或要求的范围内，收集、使用及披露个人信息。</p><h3>披露</h3><p>我们不出售您的个人信息，仅在必要时披露——例如，为您已授权的结算向保险公司或 ICBC 披露；在保密保障下向协助我们运营的服务商（如预约系统与支付处理方）披露；或在法律或监管机构要求时披露。</p><h3>您的权利</h3><p>在法律与监管限制的前提下，您可要求查阅我们持有的您的个人信息、请求更正，或就并非诊疗或法律所必需的用途撤回同意。如需提出请求，请联系我们。</p><h3>保障措施</h3><p>我们以与信息敏感度相称的合理物理、组织及技术措施保护您的信息。</p>"}, {"id": "terms", "title": "服务条款", "body": "<p>本条款规范您对本网站及加西中医服务的使用。使用本网站或向我们预约，即表示您同意本条款。</p><h3>我们的服务</h3><p>我们提供传统中医诊疗——包括针灸、中药、推拿、艾灸、拔罐及相关疗法——由在卑诗省注册的医师提供。诊疗因人而异，疗效各有不同。</p><h3>不替代急诊或常规医疗</h3><p>我们的服务是常规医疗的补充，而非替代。<strong>遇医疗紧急情况，请拨打 911</strong> 或前往最近的急诊室。对于严重或恶化的病症，以及在停止任何处方治疗之前，请务必咨询您的医生。</p><h3>网站内容仅供参考</h3><p>本网站信息仅供一般性教育参考，不构成医疗建议、诊断或治疗，亦不建立医患关系。医患关系仅在您到诊所进行面诊与评估后方才成立。</p><h3>预约、费用与付款</h3><p>可通过线上、电话或到店预约。费用以预约时公布或告知的为准。取消须遵守下方的取消与爽约政策。</p><h3>知识产权</h3><p>本网站的内容、设计及标识归加西中医所有，未经许可不得复制或再利用。</p><h3>责任限制</h3><p>在法律允许的范围内，我们对因使用本网站而产生的间接或后果性损失不承担责任。本条款不限制任何依适用法律不可限制的责任。</p><h3>适用法律</h3><p>本条款受卑诗省法律及加拿大适用法律管辖。</p><h3>变更</h3><p>我们可能不时更新本条款；最新版本始终发布于此。</p>"}, {"id": "cancellation", "title": "取消与爽约政策", "body": "<p>我们为每次预约保留专属时间。为让所有患者都能获得诊疗，请在需要更改或取消时给予合理的提前通知。</p><h3>提前通知</h3><p>请至少在预约前 <strong>24 小时</strong> 通过电话或预约系统取消或改期。</p><h3>迟到取消与爽约</h3><p>未按要求提前通知的取消，以及未到诊的预约（“爽约”），可能收取相应费用。多次爽约者，日后预约可能需要预付。</p><h3>迟到</h3><p>若您迟到，我们会尽力在剩余时间内为您诊疗；为不耽误下一位患者，您的疗程可能相应缩短。</p><h3>ICBC 与保险预约</h3><p>错过与保险或 ICBC 相关的预约，可能不在您的理赔范围内，费用可能直接向您收取。</p><h3>例外</h3><p>我们理解突发情况在所难免。在确属紧急或患病的情况下，诊所可酌情免除费用。</p>"}, {"id": "cookies", "title": "Cookie 政策", "body": "<p>本网站使用少量 Cookie 及类似技术，以确保网站正常运作并记住您的偏好。</p><h3>我们使用哪些 Cookie</h3><ul><li><strong>必要类</strong>——网站正常运作及记住您的语言选择（English／中文）所必需。</li></ul><p>我们不将 Cookie 用于广告，也不出售您的信息。</p><h3>管理 Cookie</h3><p>您可通过浏览器设置控制或删除 Cookie。屏蔽必要类 Cookie 可能影响网站的正常使用。</p><h3>同意</h3><p>继续使用本网站，即表示您同意我们按此处所述使用 Cookie。</p>"}]} };
 
-window.STRINGS = STRINGS;
 
 // ============================================================
 // FAQ / First Visit / Contact — info pages (ZH mirrors of *.html)

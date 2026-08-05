@@ -1,0 +1,31 @@
+---
+// 除首页外的 163 个页面，统一由这一条路由生成。
+// 每页用哪个组件、传什么参数，见 src/lib/pages.js（逐条对照旧站 HTML 的内联渲染代码）。
+//
+// build.format 是 'file'，所以 path 参数 "Practitioners/taylor-wang-ZH"
+// 会产出 Practitioners/taylor-wang-ZH.html —— 与旧站 URL 逐字一致。
+// 这点不能变：copy.js 里的内链、以及**智能体知识库里的外链**都按这套规则写的。
+//
+// ⚠️ 语言注入必须在 React 内部完成（见 PageShell.jsx 的说明）——
+//    在这里写 <I18nProvider><Page/></I18nProvider> 不会报错，但 Context 不生效，
+//    中文页会整页渲染成英文。
+import Base from '../layouts/Base.astro';
+import PageShell from '../components/PageShell.jsx';
+import { seoFor, schemaFor } from '../data/seo.js';
+import { BUNDLES } from '../data/i18n.jsx';
+import { ROUTED } from '../lib/pages.js';
+
+export function getStaticPaths() {
+  return ROUTED.map((r) => ({
+    // path 不带 .html —— format:'file' 会补上
+    params: { path: r.file.replace(/\.html$/, '') },
+    props: r,
+  }));
+}
+
+const { file, lang, comp, props } = Astro.props;
+const page = seoFor(file);
+---
+<Base page={page} schema={schemaFor(file, { bundle: BUNDLES[lang] })}>
+  <PageShell comp={comp} lang={lang} props={props} />
+</Base>

@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import HomePage from '../components/HomePage.jsx';
+import { seoFor, schemaFor } from '../data/seo.js';
+import '../styles/homepage.css';
+---
+<Base page={seoFor('Homepage.html')} schema={schemaFor('Homepage.html', { withOrgGraph: true })}>
+  <HomePage lang="en" />
+</Base>

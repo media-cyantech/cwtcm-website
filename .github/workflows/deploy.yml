@@ -1,0 +1,74 @@
+name: Build & Deploy
+
+# main 分支有改动就构建 → 质量闸门 → 原子发布到宝塔服务器。
+# 只改文档不触发。也可以在 Actions 页面手动触发。
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['**.md', 'docs/**']
+  workflow_dispatch:
+
+# 同一时间只允许一个部署在跑，且不取消进行中的那个 ——
+# 部署过程中被打断会让 releases/ 里留下半截目录。
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # prebuild 会先跑，产出 src/data/copy.js 等生成物
+      - name: Build
+        run: pnpm build
+
+      # ── 质量闸门：不过就不部署 ──────────────────────────────
+      # audit.py 只看源码 HTML、不执行 JS —— 多数 AI 爬虫也不执行 JS，
+      # 源码里没有的东西对 GEO 就等于不存在。
+      - name: SEO / GEO 审计（P0 一票否决）
+        run: python3 scripts/audit.py --strict
+
+      - name: 死链与资源自检
+        run: node scripts/verify-build.mjs
+
+      # ── 部署 ────────────────────────────────────────────────
+      - name: 配置 SSH
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p "${{ secrets.SSH_PORT }}" -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: 原子发布
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          REMOTE_ROOT: ${{ secrets.REMOTE_ROOT }}
+          KEEP: 5
+        run: bash scripts/deploy.sh
+
+      - name: 健康检查
+        run: |
+          sleep 3
+          for p in / /Homepage.html /Homepage-ZH.html /robots.txt /sitemap-index.xml; do
+            code=$(curl -sS -o /dev/null -w '%{http_code}' -L --max-time 20 "https://cwtcm.ca$p" || echo 000)
+            echo "  $p → $code"
+            case "$p" in
+              /Homepage.html|/robots.txt|/sitemap-index.xml)
+                [ "$code" = "200" ] || { echo "❌ $p 返回 $code"; exit 1; } ;;
+            esac
+          done

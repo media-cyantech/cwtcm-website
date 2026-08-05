@@ -1,34 +1,16 @@
+// ⚠️ 由 scripts/build-data.mjs 从 ../../copy.js 生成，不要手改。
+// 改文案请改根目录的 copy.js，然后重跑 node scripts/build-data.mjs
+
 // CWTCM Heritage — section copy + data
 // Single source of truth for content used across sections
 
-// Fallback: when not running inside the bundled standalone (window.__resources
-// populated by inline manifest), serve image references straight from disk paths.
-window.__resources = window.__resources || new Proxy({}, {
-  get(_, key) {
-    const k = String(key);
-    const knownFolders = [
-      ['hero_candidates', 'hero-candidates'],
-      ['practitioners', 'practitioners'],
-      ['treatments', 'treatments'],
-      ['brand', 'brand'],
-    ];
-    for (const [prefix, folder] of knownFolders) {
-      const re = new RegExp('^r_' + prefix + '_(.+)_(jpg|jpeg|png|avif|webp|svg)$', 'i');
-      const m = k.match(re);
-      if (m) {
-        const file = m[1].replace(/_/g, '-') + '.' + m[2];
-        return `assets/${folder}/${file}`;
-      }
-    }
-    return undefined;
-  }
-});
+import { resources } from './resources.js';
 
-const COPY = {
+export const COPY = {
   hero: {
     slides: [
       {
-        photo: window.__resources.r_hero_candidates_05_acupuncture_back_warm_jpg,
+        photo: resources.r_hero_candidates_05_acupuncture_back_warm_jpg,
         crop: "50% 40%",
         eyebrow: "Registered Acupuncture · Greater Vancouver",
         h1: "Heritage medicine, attentively practised.",
@@ -36,7 +18,7 @@ const COPY = {
         sub: "Traditional Chinese medicine across four clinics in Greater Vancouver.",
       },
       {
-        photo: window.__resources.r_hero_candidates_04_herbal_jars_shelf_warm_jpg,
+        photo: resources.r_hero_candidates_04_herbal_jars_shelf_warm_jpg,
         crop: "75% 55%",
         eyebrow: "Custom Herbal Formulas",
         h1: "Two thousand years of herbal craft.",
@@ -44,7 +26,7 @@ const COPY = {
         sub: "Pulse, tongue and history shape every formula — decocted on site in Vancouver by registered herbalists.",
       },
       {
-        photo: window.__resources.r_hero_candidates_01_black_teapot_steam_jpg,
+        photo: resources.r_hero_candidates_01_black_teapot_steam_jpg,
         crop: "50% 50%",
         eyebrow: "Decoction Service",
         h1: "The patience of slow medicine.",
@@ -52,7 +34,7 @@ const COPY = {
         sub: "Bespoke decoctions, prepared with the same care your grandmother would recognise.",
       },
       {
-        photo: window.__resources.r_hero_candidates_03_herbal_warm_pack_jpg,
+        photo: resources.r_hero_candidates_03_herbal_warm_pack_jpg,
         crop: "50% 50%",
         eyebrow: "Canadian Western TCM · Greater Vancouver",
         h1: "Heritage medicine, attentively practised.",
@@ -169,14 +151,14 @@ const COPY = {
     eyebrow: "Treatments",
     h2: "Eight signature treatments,\nrefined over generations.",
     cards: [
-      { photo: window.__resources.r_treatments_04_acupuncture_session_jpg, name: "Acupuncture", zh: "", body: "Fine sterile needles at precisely chosen points to settle pain, sleep and stress.", meta: "50 min · from CAD $120" },
-      { photo: window.__resources.r_treatments_01_tuina_massage_jpg, name: "Tui Na", zh: "", body: "Hands-on therapy along the meridians for muscular tension, headaches and circulation.", meta: "50 min · from CAD $100" },
-      { photo: window.__resources.r_treatments_05_bone_setting_jpg, name: "Manual Bone Setting", zh: "", body: "Skilled realignment of joints and soft tissue for chronic and acute musculoskeletal pain.", meta: "50 min · from CAD $100" },
-      { photo: window.__resources.r_treatments_02_moxibustion_jpg, name: "Moxibustion", zh: "", body: "Slow-burning mugwort warms specific points to nourish circulation and the immune system.", meta: "50 min · from CAD $100" },
-      { photo: window.__resources.r_treatments_06_cupping_jpg, name: "Cupping & Gua Sha", zh: "", body: "Glass cups and bone tools to release tension, refresh blood flow and reset stagnant qi.", meta: "25–50 min · from CAD $50" },
-      { photo: window.__resources.r_treatments_07_head_therapy_jpg, name: "Head & Scalp Therapy", zh: "", body: "Traditional or aromatic scalp work for tension, fatigue and the modern screen-strained head.", meta: "50 min · from CAD $75" },
-      { photo: window.__resources.r_treatments_03_herbal_medicine_jpg, name: "Herbal Consultation", zh: "", body: "Custom formulas decocted on site, written by registered herbalists after pulse and tongue diagnosis.", meta: "20–30 min consult" },
-      { photo: window.__resources.r_treatments_08_acupuncture_facial_jpg, name: "Aesthetic Acupuncture", zh: "", body: "Whole-system facial work — collagen response, complexion, definition — without injectables.", meta: "75 min · from CAD $200" },
+      { photo: resources.r_treatments_04_acupuncture_session_jpg, name: "Acupuncture", zh: "", body: "Fine sterile needles at precisely chosen points to settle pain, sleep and stress.", meta: "50 min · from CAD $120" },
+      { photo: resources.r_treatments_01_tuina_massage_jpg, name: "Tui Na", zh: "", body: "Hands-on therapy along the meridians for muscular tension, headaches and circulation.", meta: "50 min · from CAD $100" },
+      { photo: resources.r_treatments_05_bone_setting_jpg, name: "Manual Bone Setting", zh: "", body: "Skilled realignment of joints and soft tissue for chronic and acute musculoskeletal pain.", meta: "50 min · from CAD $100" },
+      { photo: resources.r_treatments_02_moxibustion_jpg, name: "Moxibustion", zh: "", body: "Slow-burning mugwort warms specific points to nourish circulation and the immune system.", meta: "50 min · from CAD $100" },
+      { photo: resources.r_treatments_06_cupping_jpg, name: "Cupping & Gua Sha", zh: "", body: "Glass cups and bone tools to release tension, refresh blood flow and reset stagnant qi.", meta: "25–50 min · from CAD $50" },
+      { photo: resources.r_treatments_07_head_therapy_jpg, name: "Head & Scalp Therapy", zh: "", body: "Traditional or aromatic scalp work for tension, fatigue and the modern screen-strained head.", meta: "50 min · from CAD $75" },
+      { photo: resources.r_treatments_03_herbal_medicine_jpg, name: "Herbal Consultation", zh: "", body: "Custom formulas decocted on site, written by registered herbalists after pulse and tongue diagnosis.", meta: "20–30 min consult" },
+      { photo: resources.r_treatments_08_acupuncture_facial_jpg, name: "Aesthetic Acupuncture", zh: "", body: "Whole-system facial work — collagen response, complexion, definition — without injectables.", meta: "75 min · from CAD $200" },
     ],
   },
   conditions: {
@@ -234,7 +216,7 @@ const COPY = {
   },
 };
 
-const STRINGS = {
+export const STRINGS = {
   lang: 'en',
   otherLang: { label: '中文', href: 'Homepage-ZH.html' },
   bookingByClinic: { 'Richmond': 'https://canadianwesterntcmclinic.janeapp.com', 'Burnaby': 'https://canadianwesterntcmclinic.janeapp.com', 'Vancouver': 'https://canadianwesterntcmclinic.janeapp.com', 'White Rock': 'https://cwtcm.janeapp.com/' },
@@ -2721,9 +2703,7 @@ STRINGS.journalPage = {
   expected: 'Coming soon',
 };
 
-window.COPY = COPY;
 STRINGS.legalPage = { en: {"hero": {"eyebrow": "Legal", "h1": "Policies & Terms", "sub": "How we handle your information, and the terms of care and booking at Canadian Western TCM."}, "updated": "Last updated: 9 July 2026", "tocLabel": "On this page", "note": "", "sections": [{"id": "privacy", "title": "Privacy Policy", "body": "<p>Canadian Western TCM Clinic (“we”, “us”, “the Clinic”) is committed to protecting the personal information you entrust to us across our four Greater Vancouver clinics. This policy explains what we collect, how we use it, and your rights, in accordance with British Columbia’s <em>Personal Information Protection Act</em> (PIPA).</p><h3>Information we collect</h3><ul><li><strong>Contact details</strong> — name, phone, email, address.</li><li><strong>Health information</strong> — medical history, symptoms, diagnoses, treatment records, and other information you share so we can provide care.</li><li><strong>Insurance &amp; billing</strong> — extended-health or ICBC claim details needed to process your treatment and billing.</li><li><strong>Appointment &amp; account data</strong> — booking history and your communications with the Clinic.</li><li><strong>Website data</strong> — limited technical and usage information (see our Cookie Policy below).</li></ul><h3>How we use your information</h3><p>We use your information to provide and coordinate your care, schedule appointments, dispense herbal medicine, process insurance and ICBC billing, communicate with you, meet our professional and legal obligations, and improve our services. We collect, use and disclose personal information only for these purposes, or as permitted or required by law.</p><h3>Disclosure</h3><p>We do not sell your personal information. We disclose it only where necessary — for example, to your insurer or ICBC for billing you have authorised, to service providers who help us operate (such as our booking system and payment processor) under confidentiality safeguards, or where required by law or a regulatory body.</p><h3>Your rights</h3><p>Subject to legal and regulatory limits, you may request access to the personal information we hold about you, ask us to correct it, or withdraw consent for uses that are not required for your care or by law. To make a request, contact us.</p><h3>Safeguards</h3><p>We protect your information with reasonable physical, organisational and technical safeguards appropriate to its sensitivity.</p>"}, {"id": "terms", "title": "Terms of Service", "body": "<p>These Terms govern your use of this website and the services of Canadian Western TCM Clinic. By using this website or booking with us, you agree to these Terms.</p><h3>Our services</h3><p>We provide Traditional Chinese Medicine care — including acupuncture, herbal medicine, Tui Na, moxibustion, cupping and related therapies — delivered by practitioners registered in British Columbia. Care is individualised, and outcomes vary from person to person.</p><h3>Not a substitute for emergency or conventional care</h3><p>Our services complement, and do not replace, conventional medical care. <strong>In a medical emergency, call 911</strong> or go to the nearest emergency department. Always consult your physician about serious or worsening conditions and before stopping any prescribed treatment.</p><h3>Website content is educational</h3><p>Information on this website is provided for general education only. It does not constitute medical advice, diagnosis or treatment, and does not create a practitioner–patient relationship. That relationship is formed only through an in-person consultation and assessment at one of our clinics.</p><h3>Booking, fees &amp; payment</h3><p>Appointments may be booked online, by phone or in person. Fees are as posted or quoted at the time of booking. Cancellations are subject to our Cancellation &amp; No-Show Policy below.</p><h3>Intellectual property</h3><p>The content, design and marks on this website belong to Canadian Western TCM Clinic and may not be copied or reused without permission.</p><h3>Limitation of liability</h3><p>To the extent permitted by law, we are not liable for indirect or consequential losses arising from use of this website. Nothing in these Terms limits any liability that cannot be limited under applicable law.</p><h3>Governing law</h3><p>These Terms are governed by the laws of British Columbia and the applicable laws of Canada.</p><h3>Changes</h3><p>We may update these Terms from time to time; the current version is always posted here.</p>"}, {"id": "cancellation", "title": "Cancellation &amp; No-Show Policy", "body": "<p>We reserve dedicated time for every appointment. To keep care accessible to all patients, we ask for reasonable notice when you need to change or cancel.</p><h3>Notice</h3><p>Please cancel or reschedule at least <strong>24 hours</strong> before your appointment, by phone or through our booking system.</p><h3>Late cancellation &amp; no-shows</h3><p>Cancellations with less than the required notice, and missed appointments (“no-shows”), may be subject to a fee. Repeated no-shows may require prepayment for future bookings.</p><h3>Late arrivals</h3><p>If you arrive late, we will do our best to treat you within the remaining time; your session may be shortened so the next patient is not delayed.</p><h3>ICBC &amp; insurance appointments</h3><p>Missed insurer- or ICBC-related appointments may not be covered by your claim and may be billed to you directly.</p><h3>Exceptions</h3><p>We understand emergencies happen. Fees may be waived at the Clinic’s discretion in genuine emergency or illness situations.</p>"}, {"id": "cookies", "title": "Cookie Policy", "body": "<p>This website uses a small number of cookies and similar technologies to function properly and to remember your preferences.</p><h3>What cookies we use</h3><ul><li><strong>Essential</strong> — required for the site to work and to remember your language choice (English / 中文).</li></ul><p>We do not use cookies for advertising or to sell your information.</p><h3>Managing cookies</h3><p>You can control or delete cookies through your browser settings. Blocking essential cookies may affect how the site works.</p><h3>Consent</h3><p>By continuing to use this website, you consent to our use of cookies as described here.</p>"}]} };
 
-window.STRINGS = STRINGS;
 
 STRINGS.burnaby.priceList = Object.assign({}, STRINGS.richmond.priceList, { h2: 'Burnaby services & pricing.' });

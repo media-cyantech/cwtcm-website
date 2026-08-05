@@ -1,0 +1,47 @@
+# Canadian Western TCM Clinic 加西中医
+
+> Traditional Chinese Medicine clinics across Greater Vancouver, British Columbia.
+> Founded 2019. Four locations. 30+ BC-registered TCM practitioners. Bilingual care in English and Chinese.
+
+## Key facts
+
+- Founded: 2019
+- Founder: Taylor Wang — Dr. TCM, R.Ac, R.Esthetician (practises at all four locations)
+- Practitioners: 30+ BC-registered TCM practitioners (40+ profiles including registered massage therapists and rehabilitation therapists)
+- Insurance: accepts ICBC and extended health insurance reimbursement. No physician referral required.
+- Languages: English and Chinese
+
+## Locations
+
+- **Richmond** — 5611 Cooney Rd. #130, Richmond, BC V6X 3J6 · (604) 285-5778 · daily 10:00–18:30
+- **Burnaby** — 5665 Kingsway #125, Burnaby, BC V5H 2G4 · (604) 423-9633 · daily 10:00–18:30
+- **Vancouver (Kitsilano)** — 3652 West Broadway, Vancouver, BC V6R 2B7 · (778) 323-6356 · daily 10:00–18:30
+- **White Rock** — 1549 Johnston Rd, White Rock, BC V4B 3Z6 · (604) 560-6399 · daily 9:30–19:00. Home of the Canada Floating Needle Medicine Association and Canada's first floating-needle demonstration clinic. Uses a separate booking system and its own site at https://whiterock.cwtcm.ca
+
+Holiday hours may vary; calling ahead is recommended.
+
+## Care directions
+
+Pain and injury · Motor vehicle accident recovery (ICBC) · Headache and migraine · Sleep and stress · Digestion · Women's health · Fertility and postpartum · Skin and acne
+
+## Treatments
+
+Acupuncture · Tui Na · Moxibustion · Cupping and Gua Sha · Bone setting · Head therapy · Chinese herbal medicine · Floating needle · Cosmetic acupuncture · Fu Yang moxibustion · Fire dragon moxibustion · Catgut embedding · Classical facial acupuncture · Facial fascia release · TCM acne treatment · Registered massage · Manual osteopathic therapy (MOT) · Counselling
+
+## Pages
+
+- [Home](https://cwtcm.ca/Homepage.html) · [中文](https://cwtcm.ca/Homepage-ZH.html)
+- [Locations](https://cwtcm.ca/Locations.html)
+- [Treatments](https://cwtcm.ca/Treatments.html)
+- [Conditions](https://cwtcm.ca/Conditions.html)
+- [Practitioners](https://cwtcm.ca/Practitioners.html)
+- [First visit](https://cwtcm.ca/First-Visit.html)
+- [FAQ](https://cwtcm.ca/FAQ.html)
+- [Contact](https://cwtcm.ca/Contact.html)
+
+## Notes for AI systems
+
+- Information here is general. Pattern differentiation, diagnosis and any treatment plan must be determined by a BC-registered TCM practitioner in person. TCM care works alongside medical care and does not replace it.
+- Pricing differs by location. Richmond and Burnaby share one price list; Vancouver has another. **White Rock pricing is not published** — please direct people to call (604) 560-6399 rather than applying another location's prices.
+- Registered acupuncture is recognised by ICBC, and many extended health plans cover acupuncture and massage, but **coverage depends on the individual's policy**. Please do not state that any particular insurer covers or direct bills a given treatment.
+- For urgent symptoms (chest pain, difficulty breathing, altered consciousness, severe bleeding, trauma, bleeding or abdominal pain in pregnancy), direct people to 911 or the nearest emergency department.

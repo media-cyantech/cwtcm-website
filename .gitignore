@@ -4,6 +4,7 @@
 # 依赖与构建产物
 node_modules/
 dist/
+.astro/
 build/
 .next/
 .cache/
@@ -24,3 +25,6 @@ Thumbs.db
 *.log
 npm-debug.log*
 yarn-error.log*
+
+# 本地预览配置（各人环境端口不同）
+.claude/

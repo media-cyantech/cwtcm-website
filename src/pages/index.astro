@@ -1,0 +1,30 @@
+---
+// 根路径 `/` → `/Homepage.html`。
+//
+// 旧站的 index.html 与 Homepage.html **字节完全相同**（审计脚本查出来的），
+// 是重复内容。所以新站不再生成同样内容的 index.html，改成一个跳转壳：
+// noindex + canonical 指向 Homepage.html，搜索引擎不会当成第二个首页。
+//
+// ⚠️ 这是**兜底**。正解是 Nginx 层的 301：
+//     location = / { return 301 /Homepage.html; }
+// 但壳存在的意义是：Nginx 规则漏配时，访问站点根不会 404。
+import { seoFor } from '../data/seo.js';
+
+const home = seoFor('Homepage.html');
+const homeZh = seoFor('Homepage-ZH.html');
+---
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url=/Homepage.html" />
+  <link rel="canonical" href={home.canonical} />
+  <meta name="robots" content="noindex,follow" />
+  <title>Canadian Western TCM 加西中医</title>
+  <link rel="alternate" hreflang="en" href={home.canonical} />
+  <link rel="alternate" hreflang="zh-Hans" href={homeZh.canonical} />
+  <link rel="alternate" hreflang="x-default" href={home.canonical} />
+</head>
+<body>
+  <p><a href="/Homepage.html">Canadian Western TCM</a> · <a href="/Homepage-ZH.html">加西中医</a></p>
+</body>
+</html>
