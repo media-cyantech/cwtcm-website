@@ -1,9 +1,10 @@
-// 读取 -skill-rag-/seo/cwtcm/pages.json —— 165 页的 title / description /
-// canonical / hreflang / robots / sitemap。生成物不在本仓库，改数据要去那边重跑 build.py。
+// 读取 src/data/seo/ 下的 SEO 数据 —— 165 页的 title / description /
+// canonical / hreflang / robots / sitemap，构建时静态写进每页 <head>。
+// 那些 JSON 是同步进来的生成物（见 src/data/seo/README.md），不要手改。
 
-import pagesData from '../../../-skill-rag-/seo/cwtcm/pages.json';
-import orgGraph from '../../../-skill-rag-/seo/cwtcm/schema-org.json';
-import faqData from '../../../-skill-rag-/seo/cwtcm/schema-faq.json';
+import pagesData from './seo/pages.json';
+import orgGraph from './seo/schema-org.json';
+import faqData from './seo/schema-faq.json';
 
 const BY_FILE = new Map(pagesData.pages.map((p) => [p.file, p]));
 
@@ -12,7 +13,7 @@ export function seoFor(file) {
   const page = BY_FILE.get(file);
   if (!page) {
     throw new Error(
-      `seo/cwtcm/pages.json 里没有 "${file}"。URL 改了就要同步改那份数据——` +
+      `src/data/seo/pages.json 里没有 "${file}"。URL 改了就要同步改那份数据——` +
       `注意智能体知识库的外链也按同一套 .html 规则写的，是三边同步。`
     );
   }

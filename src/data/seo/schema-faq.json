@@ -1,0 +1,317 @@
+{
+  "@context": "https://schema.org",
+  "$about": "站级 FAQ 源自 STRINGS.faq；condition 的 faqs 现在只渲染 UI（condition-detail.jsx:420）未进 schema —— 这是最便宜的 FAQPage 增量。",
+  "byPage": {
+    "FAQ.html": {
+      "@type": "FAQPage",
+      "@id": "https://cwtcm.ca/FAQ.html#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need a referral?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — you can book directly. For ICBC claims, our front desk will guide you through the process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does acupuncture hurt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most people feel only a small pinch, then a heavy or warm sensation. Needles are sterile and single-use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many sessions will I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It varies by person and concern — often a short series, reviewed as you progress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it covered by insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Registered acupuncture is recognised by ICBC, and many extended-health plans include acupuncture / RMT."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you speak Chinese?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — our team offers care in English and Chinese."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the herbs safe with my medication / pregnancy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tell us your medications, and if you are or may be pregnant, so we can advise on suitability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Parking & transit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each clinic page lists parking and transit."
+          }
+        }
+      ]
+    },
+    "Conditions/pain-injury.html": {
+      "@type": "FAQPage",
+      "@id": "https://cwtcm.ca/Conditions/pain-injury.html#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does it hurt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most people feel only a small pinch from acupuncture, followed by a heavy or warm sensation. Bodywork pressure is always adjusted to your comfort — tell your practitioner what feels like too much."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many sessions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It varies. For many everyday-pain complaints, a short series works well; your practitioner reassesses and adjusts as you go."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it covered by insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acupuncture and registered massage therapy are commonly eligible under extended health benefits, and after a motor-vehicle accident under ICBC."
+          }
+        }
+      ]
+    },
+    "Conditions/icbc-recovery.html": {
+      "@type": "FAQPage",
+      "@id": "https://cwtcm.ca/Conditions/icbc-recovery.html#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is acupuncture covered by ICBC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — registered acupuncture is recognised by ICBC for treatment after a motor-vehicle accident."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a referral?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can book with us directly — for ICBC claims, contact the clinic and our front desk will guide you through the current intake process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How soon after the accident should I come in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As soon as you feel ready. Early care is commonly used to ease pain and stiffness and to support recovery."
+          }
+        }
+      ]
+    },
+    "Conditions/headaches-migraines.html": {
+      "@type": "FAQPage",
+      "@id": "https://cwtcm.ca/Conditions/headaches-migraines.html#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can acupuncture help migraines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acupuncture is commonly used to support people with migraines — many find their headaches become less frequent or less intense over a course of care. Results vary, and we work alongside any medical management of migraine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many sessions will I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It varies. For headaches, a short series is common, with the practitioner reassessing as you respond."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I keep my migraine medication?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — please continue any medication and management plan with your doctor. We complement, not replace, medical care."
+          }
+        }
+      ]
+    },
+    "Conditions/sleep-stress.html": {
+      "@type": "FAQPage",
+      "@id": "https://cwtcm.ca/Conditions/sleep-stress.html#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How soon will I sleep better?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It varies. Some people notice change quickly; for most, improvement is gradual over a short series of visits. The aim is steady improvement you keep — not just one good night."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I need herbal formulas as well?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sometimes. Herbal formulas may be tailored to your pattern and reviewed at follow-ups."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I keep my sleep medication?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — please continue any medication and management plan with your doctor. We work alongside your medical care, not in place of it."
+          }
+        }
+      ]
+    },
+    "Conditions/womens-health.html": {
+      "@type": "FAQPage",
+      "@id": "https://cwtcm.ca/Conditions/womens-health.html#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I come during my period?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally yes — many treatments are still appropriate during menstruation, and care is adjusted to the phase of your cycle. Please mention where you are in your cycle at intake."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are herbs safe with my medication?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Please tell us about any medications, supplements and conditions at intake so the practitioner can advise on what is appropriate. We coordinate with your medical care."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this only for fertility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — women's health here covers cycles, PMS, perimenopause and menopause, and general wellbeing. Fertility and pregnancy support is a separate area — see our Fertility & Pregnancy page."
+          }
+        }
+      ]
+    },
+    "Conditions/fertility-pregnancy.html": {
+      "@type": "FAQPage",
+      "@id": "https://cwtcm.ca/Conditions/fertility-pregnancy.html#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it safe in pregnancy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Certain approaches are used supportively in pregnancy; others are avoided. We take extra care and coordinate with your medical team. Please always tell us if you are or may be pregnant so we can adjust care."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will it help me conceive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We make no such promise. Acupuncture and TCM are used here as supportive, complementary care alongside your medical or fertility team — for stress, sleep, energy and overall wellbeing — not as a substitute for fertility medicine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with my fertility clinic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — we work alongside your doctor or fertility clinic and are happy to coordinate with their plan. Please bring details of any treatment, medication or timing so the practitioner can adjust care."
+          }
+        }
+      ]
+    },
+    "Conditions/skin-acne.html": {
+      "@type": "FAQPage",
+      "@id": "https://cwtcm.ca/Conditions/skin-acne.html#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long until I see a change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Skin changes gradually. Most people review progress over a course of care rather than a single visit — improvement tends to build alongside changes in digestion, sleep and stress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I keep my dermatology treatment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — please continue any treatment and follow-up with your dermatologist or doctor. We work alongside dermatological care, not in place of it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is aesthetic acupuncture the same as Botox?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Aesthetic acupuncture uses very fine acupuncture needles and is part of a whole-person TCM approach — it is not a cosmetic injection and works differently."
+          }
+        }
+      ]
+    },
+    "Conditions/digestion.html": {
+      "@type": "FAQPage",
+      "@id": "https://cwtcm.ca/Conditions/digestion.html#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I still see my doctor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. TCM works alongside medical care — please continue any tests, treatment and follow-up with your doctor. We complement, not replace, medical investigation of digestive symptoms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it involve dietary changes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often we'll talk about meal patterns, timing and a few small adjustments alongside the treatment — kept practical for everyday life."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I need herbal formulas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sometimes. A tailored herbal formula may be reviewed at follow-ups."
+          }
+        }
+      ]
+    }
+  }
+}

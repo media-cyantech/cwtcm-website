@@ -1,0 +1,237 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "MedicalOrganization",
+        "Organization"
+      ],
+      "@id": "https://cwtcm.ca/#organization",
+      "name": "Canadian Western TCM Clinic",
+      "alternateName": [
+        "加西中医",
+        "Canadian Western TCM"
+      ],
+      "url": "https://cwtcm.ca/",
+      "foundingDate": "2019",
+      "medicalSpecialty": "TraditionalChineseMedicine",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Greater Vancouver"
+      },
+      "availableLanguage": [
+        "en",
+        "zh-Hans"
+      ],
+      "department": [
+        {
+          "@id": "https://cwtcm.ca/#clinic-richmond"
+        },
+        {
+          "@id": "https://cwtcm.ca/#clinic-burnaby"
+        },
+        {
+          "@id": "https://cwtcm.ca/#clinic-vancouver"
+        },
+        {
+          "@id": "https://cwtcm.ca/#clinic-whiterock"
+        }
+      ],
+      "$comment": "首页（Homepage / Homepage-ZH / index）现在完全没有 JSON-LD —— 这是全站最大的结构化数据空白，本节补上。",
+      "$comment_aggregateRating": "刻意不做 AggregateRating —— 评价不在本站展示。"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cwtcm.ca/#website",
+      "url": "https://cwtcm.ca/",
+      "name": "Canadian Western TCM Clinic 加西中医",
+      "publisher": {
+        "@id": "https://cwtcm.ca/#organization"
+      },
+      "inLanguage": [
+        "en",
+        "zh-Hans"
+      ]
+    },
+    {
+      "@type": [
+        "MedicalClinic",
+        "LocalBusiness"
+      ],
+      "@id": "https://cwtcm.ca/#clinic-richmond",
+      "name": "Canadian Western TCM Clinic — Richmond",
+      "alternateName": "加西中医 · 列治文",
+      "url": "https://cwtcm.ca/Locations-Richmond.html",
+      "parentOrganization": {
+        "@id": "https://cwtcm.ca/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5611 Cooney Rd. #130",
+        "addressLocality": "Richmond",
+        "addressRegion": "BC",
+        "postalCode": "V6X 3J6",
+        "addressCountry": "CA"
+      },
+      "telephone": "+1-604-285-5778",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "18:30"
+        }
+      ],
+      "medicalSpecialty": "TraditionalChineseMedicine",
+      "availableLanguage": [
+        "en",
+        "zh-Hans"
+      ],
+      "$comment_price": "刻意不含价格。treatment-detail.jsx:578 注释写明 'No price, no overclaiming' 是有意为之；且白石价目客户未提供。"
+    },
+    {
+      "@type": [
+        "MedicalClinic",
+        "LocalBusiness"
+      ],
+      "@id": "https://cwtcm.ca/#clinic-burnaby",
+      "name": "Canadian Western TCM Clinic — Burnaby",
+      "alternateName": "加西中医 · 本拿比",
+      "url": "https://cwtcm.ca/Locations-Burnaby.html",
+      "parentOrganization": {
+        "@id": "https://cwtcm.ca/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5665 Kingsway #125",
+        "addressLocality": "Burnaby",
+        "addressRegion": "BC",
+        "postalCode": "V5H 2G4",
+        "addressCountry": "CA"
+      },
+      "telephone": "+1-604-423-9633",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "18:30"
+        }
+      ],
+      "medicalSpecialty": "TraditionalChineseMedicine",
+      "availableLanguage": [
+        "en",
+        "zh-Hans"
+      ],
+      "$comment_price": "刻意不含价格。treatment-detail.jsx:578 注释写明 'No price, no overclaiming' 是有意为之；且白石价目客户未提供。"
+    },
+    {
+      "@type": [
+        "MedicalClinic",
+        "LocalBusiness"
+      ],
+      "@id": "https://cwtcm.ca/#clinic-vancouver",
+      "name": "Canadian Western TCM Clinic — Vancouver",
+      "alternateName": "加西中医 · 温哥华西区",
+      "url": "https://cwtcm.ca/Locations-Vancouver.html",
+      "parentOrganization": {
+        "@id": "https://cwtcm.ca/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3652 West Broadway",
+        "addressLocality": "Vancouver",
+        "addressRegion": "BC",
+        "postalCode": "V6R 2B7",
+        "addressCountry": "CA"
+      },
+      "telephone": "+1-778-323-6356",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "18:30"
+        }
+      ],
+      "medicalSpecialty": "TraditionalChineseMedicine",
+      "availableLanguage": [
+        "en",
+        "zh-Hans"
+      ],
+      "$comment_price": "刻意不含价格。treatment-detail.jsx:578 注释写明 'No price, no overclaiming' 是有意为之；且白石价目客户未提供。"
+    },
+    {
+      "@type": [
+        "MedicalClinic",
+        "LocalBusiness"
+      ],
+      "@id": "https://cwtcm.ca/#clinic-whiterock",
+      "name": "Canadian Western TCM Clinic — White Rock",
+      "alternateName": "加西中医 · 白石",
+      "url": "https://cwtcm.ca/Locations-WhiteRock.html",
+      "parentOrganization": {
+        "@id": "https://cwtcm.ca/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1549 Johnston Rd",
+        "addressLocality": "White Rock",
+        "addressRegion": "BC",
+        "postalCode": "V4B 3Z6",
+        "addressCountry": "CA"
+      },
+      "telephone": "+1-604-560-6399",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:30",
+          "closes": "19:00"
+        }
+      ],
+      "medicalSpecialty": "TraditionalChineseMedicine",
+      "availableLanguage": [
+        "en",
+        "zh-Hans"
+      ],
+      "$comment_price": "刻意不含价格。treatment-detail.jsx:578 注释写明 'No price, no overclaiming' 是有意为之；且白石价目客户未提供。",
+      "$comment_booking": "白石使用独立预约系统与独立站 https://whiterock.cwtcm.ca，勿与主站混用",
+      "sameAs": [
+        "https://whiterock.cwtcm.ca"
+      ]
+    }
+  ]
+}
