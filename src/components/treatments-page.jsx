@@ -214,14 +214,16 @@ const TxCard = ({ card }) => {
   // ZH detail pages live alongside EN ones under /Treatments/ with a -ZH
   // suffix — matches the rest of the site's convention (Locations-Burnaby-ZH.html).
   const suffix = STRINGS.lang === 'zh' ? '-ZH' : '';
-  const href = live
-    ? `Treatments/${card.slug}${suffix}.html`
-    : '#';
+  // 没有详情页的卡片（目前只有注册按摩 RMT）不再渲染成 <a href="#">。
+  // 旧写法靠 onClick preventDefault 拦住跳转，但那是运行时的事 ——
+  // 静态站不水合这个组件，onClick 根本不进 DOM，点下去就真的跳 "#"；
+  // 而且卡片底部还写着「了解更多 →」，等于承诺了一个不存在的页面。
+  // 与 healthy-aging 同一处理：保留展示卡片，去掉链接与「了解更多」。
+  const Tag = live ? 'a' : 'div';
   return (
-    <a
-      href={href}
-      onClick={(e) => { if (!live) e.preventDefault(); }}
-      onMouseEnter={() => setHover(true)}
+    <Tag
+      {...(live ? { href: `Treatments/${card.slug}${suffix}.html` } : {})}
+      onMouseEnter={() => live && setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{
         display: 'flex', flexDirection: 'column',
@@ -262,17 +264,19 @@ const TxCard = ({ card }) => {
           color: 'var(--sepia-500)',
           textWrap: 'pretty',
         }}>{card.tagline}</div>
-        <div style={{
-          marginTop: 'auto', paddingTop: 6,
-          fontSize: 11, fontWeight: 600, letterSpacing: '0.14em',
-          textTransform: TX_IS_ZH ? 'none' : 'uppercase',
-          fontFamily: TX_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
-          color: 'var(--sepia-700)',
-          borderTop: '1px solid var(--sepia-100)',
-          paddingBlock: '14px 0',
-        }}>{STRINGS.treatments.readMore}</div>
+        {live && (
+          <div style={{
+            marginTop: 'auto', paddingTop: 6,
+            fontSize: 11, fontWeight: 600, letterSpacing: '0.14em',
+            textTransform: TX_IS_ZH ? 'none' : 'uppercase',
+            fontFamily: TX_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
+            color: 'var(--sepia-700)',
+            borderTop: '1px solid var(--sepia-100)',
+            paddingBlock: '14px 0',
+          }}>{STRINGS.treatments.readMore}</div>
+        )}
       </div>
-    </a>
+    </Tag>
   );
 };
 
