@@ -61,8 +61,48 @@ jobs:
           KEEP: 5
         run: bash scripts/deploy.sh
 
-      - name: 健康检查
+      # ── 校验 ────────────────────────────────────────────────
+      # 分两段，因为这两件事的可控性完全不同：
+      #   服务器侧 —— 发布做没做对，任何时候都该强制。
+      #   公网侧   —— 只有当域名确实指向本服务器时才有意义。DNS 没切之前
+      #               它验的是旧站（现在 cwtcm.ca 是 Wix），必然红，
+      #               而且红得毫无信息量 —— 会掩盖真正的发布失败。
+      - name: 发布校验（服务器侧）
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          REMOTE_ROOT: ${{ secrets.REMOTE_ROOT }}
         run: |
+          ssh -p "$SSH_PORT" -o StrictHostKeyChecking=accept-new -o BatchMode=yes \
+            "$SSH_USER@$SSH_HOST" bash -s <<EOF
+          set -euo pipefail
+          CUR="\$(readlink -f '$REMOTE_ROOT/current')"
+          [ -n "\$CUR" ] || { echo "❌ current 软链接不存在"; exit 1; }
+          echo "  current → \$CUR"
+          for f in Homepage.html Homepage-ZH.html 404.html robots.txt sitemap-index.xml; do
+            [ -s "\$CUR/\$f" ] || { echo "❌ 缺文件或为空：\$f"; exit 1; }
+            echo "  ✓ \$f  \$(wc -c < "\$CUR/\$f") 字节"
+          done
+          n=\$(find "\$CUR" -name '*.html' | wc -l)
+          echo "  HTML 页面数：\$n"
+          [ "\$n" -ge 160 ] || { echo "❌ 页面数 \$n 少于预期 160，构建可能不完整"; exit 1; }
+          grep -q 'app.cytoworld.com/app/widget.js' "\$CUR/Homepage-ZH.html" \
+            || { echo "❌ 中文首页没有智能体浮窗"; exit 1; }
+          echo "✅ 服务器侧校验通过"
+          EOF
+
+      - name: 线上健康检查（DNS 切到本服务器后自动开始强制）
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          ips="$(getent ahostsv4 cwtcm.ca | awk '{print $1}' | sort -u | tr '\n' ' ')"
+          echo "  cwtcm.ca 解析到：${ips:-（无）}"
+          if ! echo " $ips " | grep -q " $SSH_HOST "; then
+            echo "  ⏭  DNS 还没指向本服务器，跳过公网检查 —— 现在打到的是旧站，验不了本次发布。"
+            echo "     切完 DNS（注意保留 MX）后重跑本 workflow，这一步会自动变成强制闸门。"
+            exit 0
+          fi
           sleep 3
           for p in / /Homepage.html /Homepage-ZH.html /robots.txt /sitemap-index.xml; do
             code=$(curl -sS -o /dev/null -w '%{http_code}' -L --max-time 20 "https://cwtcm.ca$p" || echo 000)
@@ -72,3 +112,7 @@ jobs:
                 [ "$code" = "200" ] || { echo "❌ $p 返回 $code"; exit 1; } ;;
             esac
           done
+          # 加西中医不要 www —— www 应当 301 回裸域，而不是像旧站那样反过来
+          w=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 https://www.cwtcm.ca/Homepage.html || echo 000)
+          echo "  www 版本 → $w（期望 301）"
+          [ "$w" = "301" ] || echo "  ⚠️ www 没有 301 回裸域，检查 Nginx"
