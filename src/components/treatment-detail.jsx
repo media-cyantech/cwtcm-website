@@ -71,14 +71,10 @@ const TDHeroPlaceholder = ({ kind, alt }) => {
         <TxIcon kind={kind} />
       </div>
     </div>
-    <div style={{
-      position: 'absolute', bottom: 16, left: 0, right: 0,
-      textAlign: 'center',
-      fontSize: 10, fontWeight: 500, letterSpacing: '0.16em',
-      textTransform: 'uppercase', color: 'var(--sepia-400)',
-    }}>
-      {TD_IS_ZH ? '图片即将上线' : 'Photography coming soon'}
-    </div>
+    {/* 这里原本在插画底部压一行「图片即将上线 / Photography coming soon」。
+        插画本身是画好的完整设计，加这行字等于对每位访客说「这站还没做完」，
+        在诊所类站点上尤其别扭。去掉字、保留插画 —— 正式照片什么时候到都不影响，
+        换图的做法见下面 hero 槽位那段注释。 */}
   </div>
 );
 };
@@ -185,8 +181,19 @@ const TDHero = ({ d }) => {
           <div className="td-hero-image" style={{
             aspectRatio: '4/5', width: '100%',
           }}>
-            <TDHeroPlaceholder kind={d.kind}
-              alt={`${d.name} ${TD_IS_ZH ? '场景图（占位）' : '— image coming soon'}`} />
+            {/* 正式照片到位后：把文件放进 assets/treatments/，然后给
+                STRINGS.treatments.details[slug] 加一个 heroPhoto 字段指向它
+                （copy.js 与 copy-zh.js 两份都要加），这里就自动换成照片。
+                在此之前用插画顶着 —— 插画是完整设计，不是「缺图」的意思。 */}
+            {d.heroPhoto ? (
+              <img src={d.heroPhoto} alt={d.name} className="warm-image" style={{
+                width: '100%', height: '100%', objectFit: 'cover',
+                border: '1px solid var(--sepia-100)', borderRadius: 4, display: 'block',
+              }} />
+            ) : (
+              <TDHeroPlaceholder kind={d.kind}
+                alt={`${d.name} ${TD_IS_ZH ? '场景图' : '— illustration'}`} />
+            )}
           </div>
         </div>
       </div>

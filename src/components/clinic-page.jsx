@@ -134,7 +134,9 @@ const SepiaPlaceholder = ({
   alt = '',
   style = {},
   scrim = false,    // when true, dim it like a hero scrim
-  showCaption = true,
+  // 默认不显示「Photography coming soon」—— 见 condition-detail.jsx 的说明。
+  // 需要单独某处显示，传 showCaption 即可。
+  showCaption = false,
 }) => (
   <div role="img" aria-label={alt}
     style={{
