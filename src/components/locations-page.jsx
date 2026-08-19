@@ -335,7 +335,7 @@ const LocationsPage = () => {
             maxWidth: 760, marginInline: 'auto',
             textWrap: 'balance',
           }}>{c.ctaLine}</p>
-          <a className="btn btn-primary" style={{ padding: '18px 36px', fontSize: 13 }}>
+          <a href={c.ctaPrimaryHref} target="_blank" rel="noopener" className="btn btn-primary" style={{ padding: '18px 36px', fontSize: 13 }}>
             {c.ctaPrimary}
           </a>
         </div>

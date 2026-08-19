@@ -2157,6 +2157,7 @@ treatments: {
     ],
     ctaLine: 'Find the clinic nearest you and book a visit.',
     ctaPrimary: 'Book a Visit',
+    ctaPrimaryHref: 'https://canadianwesterntcmclinic.janeapp.com',
     mapTitle: 'Greater Vancouver',
     mapCaption: 'Four clinics across the region',
   },

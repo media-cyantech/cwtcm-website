@@ -48,6 +48,10 @@ const Nav = ({ theme = 'dark', active = null, bookHref = null }) => {
         @media (max-width: 980px){
           nav .nav-links { display: none !important; }
         }
+        @media (max-width: 768px){
+          nav { padding: 16px 20px !important; }
+          nav .nav-logo-img { height: 64px !important; }
+        }
       `}</style>
       <div className="nav-logo-lockup" style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
         <a href={STRINGS.lang === 'zh' ? 'Homepage-ZH.html' : 'Homepage.html'} style={{ display: 'flex', alignItems: 'center', gap: 18, color: 'inherit' }}>

@@ -1240,6 +1240,7 @@ const STRINGS = {
     ],
     ctaLine: '找到离你最近的诊所，预约到访。',
     ctaPrimary: '预约到访',
+    ctaPrimaryHref: 'https://canadianwesterntcmclinic.janeapp.com',
     mapTitle: '大温哥华',
     mapCaption: '四家诊所，遍布大温',
   },

@@ -67,10 +67,10 @@ const Treatments = () => {
           {c.cards.map((t, i) => <TreatmentCard key={i} t={t} />)}
         </div>
         <div style={{ marginTop: 56, textAlign: 'right' }}>
-          <a className="btn-ghost" style={{
+          <a href={`Treatments${STRINGS.lang === 'zh' ? '-ZH' : ''}.html`} className="btn-ghost" style={{
             fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase',
             color: 'var(--sepia-600)', borderBottom: '1px solid var(--sepia-300)',
-            paddingBottom: 6, cursor: 'pointer',
+            paddingBottom: 6,
           }}>{STRINGS.treatmentsViewAll}</a>
         </div>
       </div>
