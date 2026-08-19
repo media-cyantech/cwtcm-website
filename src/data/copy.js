@@ -166,9 +166,14 @@ export const COPY = {
   conditions: {
     eyebrow: "What We Help With",
     h2: "Care for the conditions that quietly shape daily life.",
+    // 没有详情页的卡片会显示这一句 —— 说明它不可点，而不是让访客反复点一张
+    // 看起来能点却没反应的卡片。等这两项的详情页写好、加进 conditions.live
+    // 之后，这句会自动消失，不需要改代码。
+    noPageNote: "Detail page coming soon — please ask us",
     cards: [
       { slug: "pain-injury", icon: "pain", title: "Pain & Injury", body: "Acute and chronic pain, post-collision recovery." },
-      { slug: "icbc-recovery", icon: "icbc", title: "ICBC Recovery", body: "Direct billing for whiplash and soft-tissue claims." },
+      // ⚠️ 不要写「直接结算 / direct billing」——交接文档列为医疗红线（说法未经诊所确认）。
+      { slug: "icbc-recovery", icon: "icbc", title: "ICBC Recovery", body: "Care for whiplash and soft-tissue injuries after a collision." },
       { slug: "sleep-stress", icon: "sleep", title: "Sleep & Stress", body: "Restoring rhythm in the nervous system." },
       { slug: "digestion", icon: "digestion", title: "Digestion", body: "Bloating, IBS-like patterns and chronic discomfort." },
       { slug: "womens-health", icon: "womens", title: "Women's Health", body: "Cycle, perimenopause and postpartum care." },
@@ -208,7 +213,7 @@ export const COPY = {
     h2: "Notes from the clinic.",
     cards: [
       { tag: "TCM 101", title: "Reading the Pulse: What 28 Pulse Qualities Actually Tell Us", excerpt: "A pulse, in our practice, is not one rate but a vocabulary. Floating, sunken, slippery, wiry — twenty-eight qualities that, taken together, describe an internal weather report we then learn to interpret over years of careful listening.", read: "8 min read" },
-      { tag: "Conditions", title: "ICBC and Acupuncture: A Plain-English Guide", excerpt: "If a vehicle collision left you with a soft-tissue claim, ICBC recognises registered acupuncture care — and we bill them direct. Here's exactly how that works, what to bring, and why most claims are simpler than they sound.", read: "6 min read" },
+      { tag: "Conditions", title: "ICBC and Acupuncture: A Plain-English Guide", excerpt: "If a vehicle collision left you with a soft-tissue claim, ICBC recognises registered acupuncture care. Here's exactly how that works, what to bring, and why most claims are simpler than they sound.", read: "6 min read" },
       { tag: "Wellness Rituals", title: "Sleep Rituals Borrowed from a 2,000-Year-Old Pharmacy", excerpt: "An hour before bed, the body wants warming, not stimulation. A small bowl of jujube tea, a foot soak, lights down. Three rituals from the herbal tradition that translate cleanly into a Vancouver evening.", read: "5 min read" },
     ],
   },
@@ -1114,7 +1119,7 @@ export const STRINGS = {
           { label: 'How long is a first visit?',  body: 'Allow time for a full intake and treatment.' },
           { label: 'What should I wear?',         body: 'Loose, comfortable clothing. We have gowns if needed.' },
           { label: 'What does it cost?',          body: 'Fees vary by treatment — please ask the clinic when you book.' },
-          { label: 'Do you direct-bill?',         body: 'We direct-bill ICBC; for other extended-health plans, please confirm details with the clinic.' },
+          { label: 'How does billing work?',      body: 'Billing and insurance arrangements vary by clinic and by insurer — please confirm the details with the clinic when you book.' },
         ],
       },
       cta: {

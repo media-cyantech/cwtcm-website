@@ -95,7 +95,7 @@ const Treatments = () => {
 // ============================================================
 // 6. CONDITIONS
 // ============================================================
-const ConditionCard = ({ c }) => {
+const ConditionCard = ({ c, noPageNote }) => {
   const STRINGS = useStrings();
   // 10 张卡片里有 8 张有详情页，「运动表现」「健康抗衰」没有——只给有页面的
   // 那 8 张加链接。原来整批都是纯展示 <article>，但都带着 cursor:pointer，
@@ -124,6 +124,15 @@ const ConditionCard = ({ c }) => {
       <p style={{
         fontSize: 13, lineHeight: 1.55, color: 'var(--sepia-500)', margin: 0,
       }}>{c.body}</p>
+      {!live && noPageNote && (
+        <div style={{
+          marginTop: 12, paddingTop: 10,
+          borderTop: '1px solid var(--sepia-100)',
+          fontFamily: 'var(--font-sans)',
+          fontSize: 11, letterSpacing: '0.06em',
+          color: 'var(--sepia-400)', fontStyle: 'italic',
+        }}>{noPageNote}</div>
+      )}
     </div>
   </Tag>
   );
@@ -145,7 +154,7 @@ const Conditions = () => {
         <div style={{
           display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 20,
         }}>
-          {c.cards.map((card, i) => <ConditionCard key={i} c={card} />)}
+          {c.cards.map((card, i) => <ConditionCard key={i} c={card} noPageNote={c.noPageNote} />)}
         </div>
       </div>
     </section>
