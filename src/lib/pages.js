@@ -50,6 +50,16 @@ const DETAIL = {
 };
 
 /**
+ * 全站默认零水合（没有一处挂 client:*），组件里的 onClick/useState 在浏览器里
+ * 从不执行。绝大多数页面本来就不需要——但这几个组件的交互是页面本身的功能
+ * （门店筛选会改变列表内容，不是纯装饰），所以要单独水合。
+ * 见 [...path].astro：这里给的是组件名，不是组件引用，真正的 client:visible
+ * 写在 .astro 模板里两个静态并列的 <PageShell> 标签上（Astro 编译期要求
+ * client:* 挂在写死的标签上，不能挂在运行时才决定的组件变量上）。
+ */
+export const HYDRATE = new Set(['PractitionersPage']);
+
+/**
  * 解析一条 pages.json 记录。
  * 返回 null 表示这一页不走通用路由（首页有独立路由）。
  */

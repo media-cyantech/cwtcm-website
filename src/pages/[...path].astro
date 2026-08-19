@@ -13,7 +13,7 @@ import Base from '../layouts/Base.astro';
 import PageShell from '../components/PageShell.jsx';
 import { seoFor, schemaFor } from '../data/seo.js';
 import { BUNDLES } from '../data/i18n.jsx';
-import { ROUTED } from '../lib/pages.js';
+import { ROUTED, HYDRATE } from '../lib/pages.js';
 
 export function getStaticPaths() {
   return ROUTED.map((r) => ({
@@ -25,7 +25,10 @@ export function getStaticPaths() {
 
 const { file, lang, comp, props } = Astro.props;
 const page = seoFor(file);
+const needsHydration = HYDRATE.has(comp);
 ---
 <Base page={page} schema={schemaFor(file, { bundle: BUNDLES[lang] })}>
-  <PageShell comp={comp} lang={lang} props={props} />
+  {needsHydration
+    ? <PageShell comp={comp} lang={lang} props={props} client:visible />
+    : <PageShell comp={comp} lang={lang} props={props} />}
 </Base>
