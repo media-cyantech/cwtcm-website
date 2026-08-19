@@ -314,4 +314,25 @@ button { font: inherit; cursor: pointer; }
   .section { padding: 64px 0; }
   .section-tight { padding: 48px 0; }
   :root { --gutter: 20px; }
+
+  /* Clinic location pages (RCStory / RCInfoPanel / RCPriceGrid in clinic-page.jsx):
+     stack the desktop two-up grids into one column instead of squeezing both
+     columns into the mobile viewport. */
+  .rc-story-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  /* photo above the text, matching the stacked layout used elsewhere on the site */
+  .rc-story-grid > *:first-child { order: 2; }
+  .rc-story-grid > *:last-child { order: 1; }
+
+  .rc-info-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 28px 24px 24px !important;
+  }
+
+  .rc-price-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
