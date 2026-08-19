@@ -32,14 +32,14 @@
     section[data-screen-label="01 Hero"] {
       height: auto !important; min-height: 78vh !important;
     }
-  section[data-screen-label="01 Hero"] > div:nth-child(3) {
+  section[data-screen-label="01 Hero"] .hero-title-block {
       bottom: 56px !important;
     }
   section[data-screen-label="01 Hero"] h1 { font-size: 38px !important; }
-  section[data-screen-label="01 Hero"] > div:nth-child(3) > div:nth-child(2) {
+  section[data-screen-label="01 Hero"] .hero-title-zh {
       font-size: 22px !important;
     }
-  section[data-screen-label="01 Hero"] > div:nth-child(3) > div:nth-child(3) {
+  section[data-screen-label="01 Hero"] .hero-title-sub {
       font-size: 17px !important; margin-bottom: 28px !important;
     }
   /* hide carousel side arrows on mobile (rely on dots / autoplay) */

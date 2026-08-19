@@ -166,7 +166,7 @@ const Hero = ({ heroIndex = 0 }) => {
 
       <HeroTopScrim />
 
-      <div style={{
+      <div className="hero-title-block" style={{
         position: 'absolute', left: 0, right: 0, bottom: 110,
       }}>
         <div className="container">
@@ -186,14 +186,14 @@ const Hero = ({ heroIndex = 0 }) => {
               textWrap: 'balance',
             }}><Clauses text={c.h1} /></h1>
             {c.zh && (
-              <div style={{
+              <div className="hero-title-zh" style={{
                 fontFamily: 'var(--font-serif-zh)', fontWeight: 500,
                 fontSize: 'clamp(24px, 3.2vw, 36px)',
                 letterSpacing: '0.15em', color: 'var(--cream-200)',
                 opacity: 0.78, marginBottom: 28,
               }}>{c.zh}</div>
             )}
-            <div style={{
+            <div className="hero-title-sub" style={{
               fontFamily: 'var(--font-display)', fontStyle: 'italic',
               fontSize: 22, lineHeight: 1.4, color: 'var(--cream-100)',
               opacity: 0.92, marginBottom: 44, maxWidth: 560,
