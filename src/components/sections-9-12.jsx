@@ -5,7 +5,7 @@ import React from 'react';
 import { useStrings, useCopy } from '../data/i18n.jsx';
 import { resources } from '../data/resources.js';
 import { Clauses, ArticlePlaceholder } from './atoms.jsx';
-// Sections 9–12: Testimonials, Journal, Newsletter, Footer
+// Sections 9–12: Testimonials, Journal, Footer（11 Newsletter 已移除，见下方说明）
 
 // ============================================================
 // 9. TESTIMONIALS
@@ -120,41 +120,21 @@ const Journal = () => {
 };
 
 // ============================================================
-// 11. NEWSLETTER
+// 11. NEWSLETTER —— 已移除
+//
+// 原本是首页底部「Subscribe to seasonal notes」的邮件订阅框。删掉的原因：
+//   1. 它从来没有接过任何后端。表单没有 action、输入框连 name 都没有，
+//      onSubmit 里的 preventDefault 在零水合的静态站里也不会执行 ——
+//      访客填完邮箱点订阅，页面刷新一下、输入框清空，看起来像成功了，
+//      实际上邮箱地址哪儿都没去。属于站点自查文档里最危险的那类静默失败，
+//      而且比联系表单更糟：联系表单至少写了「即将上线」。
+//   2. 文案承诺「每年四次」的季刊，但诊所并没有在做这件事。
+//   3. 真要做，应当接 Mailchimp / MailerLite 一类的服务（CASL 要求保留
+//      订阅同意记录、每封信带一键退订，不适合自己写），且名单账号必须
+//      挂在诊所自己名下 —— 那是需要诊所决策和配合的事，不是前端补个接口。
+//
+// 将来诊所确定要做季刊了，再按上面第 3 点重新加回来。
 // ============================================================
-const Newsletter = () => {
-  const COPY = useCopy();
-  const c = COPY.newsletter;
-  return (
-    <section data-screen-label="11 Newsletter" style={{
-      background: 'var(--cream-100)',
-      borderTop: '1px solid var(--sepia-100)',
-      borderBottom: '1px solid var(--sepia-100)',
-      padding: '56px 0',
-    }}>
-      <div className="container" style={{
-        display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64,
-        alignItems: 'center',
-      }}>
-        <p style={{
-          fontFamily: 'var(--font-display)', fontStyle: 'italic',
-          fontSize: 24, lineHeight: 1.4, color: 'var(--sepia-600)', margin: 0,
-        }}>{c.text}</p>
-        <form style={{ display: 'flex', gap: 12 }} onSubmit={(e) => e.preventDefault()}>
-          <input type="email" placeholder={c.placeholder} style={{
-            flex: 1, padding: '16px 20px', background: 'var(--cream-50)',
-            border: '1px solid var(--sepia-200)', borderRadius: 2,
-            fontFamily: 'var(--font-sans)', fontSize: 14,
-            color: 'var(--sepia-700)', outline: 'none',
-          }} />
-          <button className="btn btn-primary" type="submit" style={{ padding: '16px 32px' }}>
-            {c.button}
-          </button>
-        </form>
-      </div>
-    </section>
-  );
-};
 
 // ============================================================
 // 12. FOOTER
@@ -334,4 +314,4 @@ const Footer = () => {
 };
 
 
-export { Testimonials, Journal, Newsletter, Footer };
+export { Testimonials, Journal, Footer };

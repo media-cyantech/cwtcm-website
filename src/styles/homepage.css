@@ -131,15 +131,7 @@
       gap: 40px !important;
     }
   section[data-screen-label="10 Journal"] h2 { font-size: 30px !important; }
-  /* NEWSLETTER */
-    section[data-screen-label="11 Newsletter"] .container {
-      grid-template-columns: 1fr !important;
-      gap: 20px !important;
-    }
-  section[data-screen-label="11 Newsletter"] form {
-      flex-direction: column !important;
-    }
-  section[data-screen-label="11 Newsletter"] p { font-size: 19px !important; }
+  /* NEWSLETTER 段已随组件一并删除（见 sections-9-12.jsx 的说明） */
   /* FOOTER — stack columns, brand row stacks, tagline wraps */
     footer { padding: 56px 0 28px !important; }
   /* brand row */

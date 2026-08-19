@@ -9,7 +9,7 @@
 import { I18nProvider } from '../data/i18n.jsx';
 import { Hero, TrustStrip, Practitioners, Approach } from './sections-1-4.jsx';
 import { Treatments, Conditions, Locations, Heritage } from './sections-5-8.jsx';
-import { Testimonials, Journal, Newsletter, Footer } from './sections-9-12.jsx';
+import { Testimonials, Journal, Footer } from './sections-9-12.jsx';
 
 const HERO_INDEX = 0; // 原 TWEAK_DEFAULTS.hero
 
@@ -26,7 +26,6 @@ export default function HomePage({ lang }) {
       <Heritage />
       <Testimonials />
       <Journal />
-      <Newsletter />
       <Footer />
     </I18nProvider>
   );

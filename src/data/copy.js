@@ -217,11 +217,8 @@ export const COPY = {
       { tag: "Wellness Rituals", title: "Sleep Rituals Borrowed from a 2,000-Year-Old Pharmacy", excerpt: "An hour before bed, the body wants warming, not stimulation. A small bowl of jujube tea, a foot soak, lights down. Three rituals from the herbal tradition that translate cleanly into a Vancouver evening.", read: "5 min read" },
     ],
   },
-  newsletter: {
-    text: "Seasonal notes from our practitioners — four times a year, never more.",
-    placeholder: "you@email.com",
-    button: "Subscribe",
-  },
+  // newsletter 段已删除 —— 首页的邮件订阅框从未接过后端，且诊所并没有在做
+  // 「每年四期」的季刊。详见 sections-9-12.jsx 里 11. NEWSLETTER 处的说明。
 };
 
 export const STRINGS = {
