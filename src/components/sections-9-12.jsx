@@ -193,7 +193,7 @@ const Footer = () => {
     padding: '80px 0 32px',
   }}>
     <div className="container">
-      <div style={{
+      <div className="footer-brand-row" style={{
         display: 'flex', alignItems: 'center', gap: 22,
         paddingBottom: 48, marginBottom: 56,
         borderBottom: '1px solid rgba(184, 148, 96, 0.4)',
@@ -202,7 +202,7 @@ const Footer = () => {
           height: 88, width: 'auto', display: 'block',
           filter: 'brightness(0) invert(1)',
         }} />
-        <div style={{
+        <div className="footer-brand-wordmark" style={{
           fontFamily: 'var(--font-sans)', fontSize: 20, fontWeight: 800,
           letterSpacing: '0.14em', textTransform: 'uppercase',
           color: 'var(--cream-50)', lineHeight: 1.25,
@@ -211,7 +211,7 @@ const Footer = () => {
         }}>
           Canadian<br />Western TCM
         </div>
-        <div style={{
+        <div className="footer-brand-tagline" style={{
           marginLeft: 'auto',
           fontFamily: isZh ? 'var(--font-serif-zh)' : 'var(--font-display)',
           fontStyle: isZh ? 'normal' : 'italic',
@@ -221,7 +221,7 @@ const Footer = () => {
           <React.Fragment key={i}>{line}{i < f.tagline.length - 1 && <br />}</React.Fragment>
         ))}</div>
       </div>
-      <div style={{
+      <div className="footer-columns-grid" style={{
         display: 'grid', gridTemplateColumns: '1.2fr 1fr 1fr 1.2fr 1fr', gap: 48,
         marginBottom: 64,
       }}>
@@ -316,7 +316,7 @@ const Footer = () => {
         </FooterColumn>
       </div>
 
-      <div style={{
+      <div className="footer-legal-row" style={{
         paddingTop: 28,
         borderTop: '1px solid rgba(184, 148, 96, 0.4)',
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',

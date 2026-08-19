@@ -449,4 +449,42 @@ button { font: inherit; cursor: pointer; }
     align-items: flex-start !important;
     padding: 152px 20px 56px !important;
   }
+
+  /* ---- Footer (sections-9-12.jsx) — rendered on every page, but this
+     mobile treatment previously lived only in homepage.css (loaded only
+     by Homepage.astro). Every other page kept the desktop layout: a
+     no-wrap flex brand row and a 5-column grid with no minmax(0, ...),
+     both wide enough that their min-content forces the whole document
+     past the viewport width — the page doesn't scroll internally, it's
+     genuinely wider than the screen, which is why swiping reveals blank
+     space instead of clipping. Same fix as homepage.css, now global. ---- */
+  .footer-brand-row {
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+    padding-bottom: 32px !important;
+    margin-bottom: 36px !important;
+  }
+  .footer-brand-row img { height: 64px !important; }
+  .footer-brand-wordmark { font-size: 14px !important; padding-left: 14px !important; }
+  .footer-brand-tagline {
+    margin-left: 0 !important;
+    flex-basis: 100% !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    max-width: none !important;
+    padding-top: 8px !important;
+    border-top: 1px solid rgba(184,148,96,0.25) !important;
+  }
+  .footer-columns-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+    margin-bottom: 40px !important;
+  }
+  .footer-columns-grid > div:first-child { grid-column: 1 / -1; }
+  .footer-columns-grid > div:last-child { grid-column: 1 / -1; }
+  .footer-legal-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
 }
