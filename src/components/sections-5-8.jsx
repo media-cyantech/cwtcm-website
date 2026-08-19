@@ -9,8 +9,17 @@ import { Stroke, Clauses, ConditionIcon, TreatmentPlaceholder } from './atoms.js
 // ============================================================
 // 5. TREATMENTS
 // ============================================================
-const TreatmentCard = ({ t }) => (
-  <article style={{ display: 'flex', flexDirection: 'column' }}>
+const TreatmentCard = ({ t }) => {
+  const STRINGS = useStrings();
+  // 首页这批卡片一直只是展示，没有链接——但 8 项的详情页其实都存在。
+  // 跟 treatments-page.jsx 的 TxCard 同一套判断：slug 在 live 名单里才渲染
+  // 成 <a>，否则保持纯展示，不给不存在的页面留假链接。
+  const live = !!t.slug && (STRINGS.treatments.live || []).includes(t.slug);
+  const href = live ? `Treatments/${t.slug}${STRINGS.lang === 'zh' ? '-ZH' : ''}.html` : undefined;
+  const Tag = live ? 'a' : 'article';
+  return (
+  <Tag {...(live ? { href, className: 'home-tx-card' } : {})}
+    style={{ display: 'flex', flexDirection: 'column', color: 'inherit' }}>
     <div style={{ width: '100%', position: 'relative', overflow: 'hidden', marginBottom: 18 }}>
       {/* 这里原本在图片上盖一个「Photo TBD」标签 —— 设计评审期用来标记
           「这张是选配的图，等诊所给正式照片」。判断条件其实是反的：只要图片
@@ -46,8 +55,9 @@ const TreatmentCard = ({ t }) => (
       textTransform: 'uppercase', color: 'var(--sepia-400)',
       paddingTop: 12, borderTop: '1px solid var(--sepia-100)',
     }}>{t.meta}</div>
-  </article>
-);
+  </Tag>
+  );
+};
 
 const Treatments = () => {
   const COPY = useCopy();
@@ -55,6 +65,10 @@ const Treatments = () => {
   const c = COPY.treatments;
   return (
     <section data-screen-label="05 Treatments" className="section" style={{ background: 'var(--cream-200)' }}>
+      <style>{`
+        .home-tx-card img { transition: transform var(--dur-slow) var(--ease); }
+        .home-tx-card:hover img { transform: scale(1.03); }
+      `}</style>
       <div className="container">
         <div style={{ marginBottom: 64 }}>
           <div className="eyebrow" style={{ marginBottom: 20 }}>{c.eyebrow}</div>
@@ -81,17 +95,24 @@ const Treatments = () => {
 // ============================================================
 // 6. CONDITIONS
 // ============================================================
-const ConditionCard = ({ c }) => (
-  <article style={{
-    padding: '32px 28px',
-    background: 'var(--cream-50)',
-    border: '1px solid var(--sepia-100)',
-    borderRadius: 2,
-    display: 'flex', flexDirection: 'column',
-    gap: 16, transition: 'all var(--dur) var(--ease)', cursor: 'pointer',
-  }}
-  onMouseOver={(e) => { e.currentTarget.style.borderColor = 'var(--sepia-300)'; }}
-  onMouseOut={(e) => { e.currentTarget.style.borderColor = 'var(--sepia-100)'; }}>
+const ConditionCard = ({ c }) => {
+  const STRINGS = useStrings();
+  // 10 张卡片里有 8 张有详情页，「运动表现」「健康抗衰」没有——只给有页面的
+  // 那 8 张加链接。原来整批都是纯展示 <article>，但都带着 cursor:pointer，
+  // 看着能点其实点不动；没有详情页的那两张现在也不再显示成可点的样子。
+  const live = !!c.slug && (STRINGS.conditions.live || []).includes(c.slug);
+  const href = live ? `Conditions/${c.slug}${STRINGS.lang === 'zh' ? '-ZH' : ''}.html` : undefined;
+  const Tag = live ? 'a' : 'article';
+  return (
+  <Tag {...(live ? { href } : {})} className={live ? 'home-cd-card' : undefined}
+    style={{
+      padding: '32px 28px',
+      background: 'var(--cream-50)',
+      border: '1px solid var(--sepia-100)',
+      borderRadius: 2,
+      display: 'flex', flexDirection: 'column', color: 'inherit',
+      gap: 16, transition: 'all var(--dur) var(--ease)',
+    }}>
     <div style={{ color: 'var(--sepia-400)' }}>
       <ConditionIcon name={c.icon} size={32} />
     </div>
@@ -104,14 +125,18 @@ const ConditionCard = ({ c }) => (
         fontSize: 13, lineHeight: 1.55, color: 'var(--sepia-500)', margin: 0,
       }}>{c.body}</p>
     </div>
-  </article>
-);
+  </Tag>
+  );
+};
 
 const Conditions = () => {
   const COPY = useCopy();
   const c = COPY.conditions;
   return (
     <section data-screen-label="06 Conditions" className="section" style={{ background: 'var(--cream-100)' }}>
+      <style>{`
+        .home-cd-card:hover { border-color: var(--sepia-300) !important; }
+      `}</style>
       <div className="container">
         <div style={{ marginBottom: 56 }}>
           <div className="eyebrow" style={{ marginBottom: 20 }}>{c.eyebrow}</div>
