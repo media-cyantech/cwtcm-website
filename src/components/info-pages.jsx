@@ -65,6 +65,11 @@ const FAQPage = () => {
   return (
     <>
       <InfoHero {...c.hero} />
+      <style>{`
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::marker { content: ''; }
+        .faq-item[open] .faq-icon { transform: rotate(45deg); background: var(--cream-100); }
+      `}</style>
       <section data-screen-label="02 Q&A" className="section">
         <div className="container" style={{ maxWidth: 880 }}>
           {c.items.map((item, i) => (
@@ -78,63 +83,45 @@ const FAQPage = () => {
   );
 };
 
-const FAQItem = ({ item, defaultOpen }) => {
-  const [open, setOpen] = React.useState(!!defaultOpen);
-  return (
-    <div style={{
-      borderBottom: '1px solid var(--sepia-100)',
-      padding: '32px 0',
+// 原来是 button + useState 做展开/收起——全站没有一处开水合，浏览器里这段
+// React 状态从不会更新，点了没反应。改成原生 <details>/<summary>，展开/收起
+// 由浏览器原生实现，不需要一行 JS。
+const FAQItem = ({ item, defaultOpen }) => (
+  <details className="faq-item" open={!!defaultOpen} style={{
+    borderBottom: '1px solid var(--sepia-100)',
+    padding: '32px 0',
+  }}>
+    <summary style={{
+      display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+      gap: 32, color: 'var(--sepia-700)', cursor: 'pointer', listStyle: 'none',
     }}>
-      <button
-        type="button"
-        onClick={() => setOpen(o => !o)}
-        aria-expanded={open}
-        style={{
-          background: 'transparent', border: 'none', padding: 0,
-          width: '100%', textAlign: 'left', cursor: 'pointer',
-          display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
-          gap: 32, color: 'var(--sepia-700)',
-          font: 'inherit',
-        }}
-      >
-        <h3 className="h-card" style={{
-          fontSize: 'clamp(20px, 1.8vw, 26px)',
-          margin: 0, lineHeight: 1.35, flex: 1,
-          fontWeight: 600,
-        }}>{item.q}</h3>
-        <span aria-hidden style={{
-          flexShrink: 0,
-          width: 32, height: 32, marginTop: 4,
-          border: '1px solid var(--sepia-200)',
-          borderRadius: 4,
-          display: 'grid', placeItems: 'center',
-          color: 'var(--sepia-500)',
-          transition: 'transform 240ms cubic-bezier(.22,.61,.36,1), background 200ms',
-          transform: open ? 'rotate(45deg)' : 'rotate(0)',
-          background: open ? 'var(--cream-100)' : 'transparent',
-          fontSize: 18, lineHeight: 1,
-        }}>+</span>
-      </button>
-      <div style={{
-        overflow: 'hidden',
-        maxHeight: open ? 600 : 0,
-        opacity: open ? 1 : 0,
-        transition: 'max-height 320ms cubic-bezier(.22,.61,.36,1), opacity 200ms, margin-top 240ms',
-        marginTop: open ? 18 : 0,
-      }}>
-        <p
-          className="body"
-          style={{
-            fontSize: 17, lineHeight: 1.7,
-            color: 'var(--sepia-600)', maxWidth: 720,
-            margin: 0,
-          }}
-          dangerouslySetInnerHTML={{ __html: item.a }}
-        />
-      </div>
-    </div>
-  );
-};
+      <h3 className="h-card" style={{
+        fontSize: 'clamp(20px, 1.8vw, 26px)',
+        margin: 0, lineHeight: 1.35, flex: 1,
+        fontWeight: 600,
+      }}>{item.q}</h3>
+      <span aria-hidden className="faq-icon" style={{
+        flexShrink: 0,
+        width: 32, height: 32, marginTop: 4,
+        border: '1px solid var(--sepia-200)',
+        borderRadius: 4,
+        display: 'grid', placeItems: 'center',
+        color: 'var(--sepia-500)',
+        transition: 'transform 240ms cubic-bezier(.22,.61,.36,1), background 200ms',
+        fontSize: 18, lineHeight: 1,
+      }}>+</span>
+    </summary>
+    <p
+      className="body"
+      style={{
+        fontSize: 17, lineHeight: 1.7,
+        color: 'var(--sepia-600)', maxWidth: 720,
+        margin: '18px 0 0 0',
+      }}
+      dangerouslySetInnerHTML={{ __html: item.a }}
+    />
+  </details>
+);
 
 const FAQStillAsk = ({ c }) => (
   <section data-screen-label="03 Still ask" data-comment-anchor="faq-cta" style={{

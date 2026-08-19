@@ -482,11 +482,12 @@ const TDRelatedCard = ({ slug }) => {
   // baseURI is the project root — a bare "acupuncture.html" would 404.
   // ZH pages live at /Treatments/{slug}-ZH.html (site suffix convention).
   const suffix = STRINGS.lang === 'zh' ? '-ZH' : '';
-  const href = live ? `Treatments/${slug}${suffix}.html` : '#';
+  // 同 conditions-page.jsx CdCard / treatments-page.jsx TxCard：不渲染
+  // href="#" 的假链接，onClick preventDefault 在零水合的静态站里不会执行。
+  const Tag = live ? 'a' : 'div';
   return (
-    <a
-      href={href}
-      onClick={(e) => { if (!live) e.preventDefault(); }}
+    <Tag
+      {...(live ? { href: `Treatments/${slug}${suffix}.html` } : {})}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{
@@ -524,7 +525,7 @@ const TDRelatedCard = ({ slug }) => {
           color: 'var(--sepia-500)', textWrap: 'pretty',
         }}>{card.tagline}</div>
       </div>
-    </a>
+    </Tag>
   );
 };
 

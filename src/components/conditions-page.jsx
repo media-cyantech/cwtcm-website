@@ -228,11 +228,14 @@ const CdCard = ({ card }) => {
   const [hover, setHover] = useStateCD(false);
   const live = (STRINGS.conditions.live || []).includes(card.slug);
   const suffix = CD_IS_ZH ? '-ZH' : '';
-  const href = live ? `Conditions/${card.slug}${suffix}.html` : '#';
+  // 没有详情页的卡片不再渲染成 <a href="#">——跟 treatments-page.jsx 的
+  // TxCard 同一处理：onClick preventDefault 在零水合的静态站里从不执行，
+  // href="#" 点下去就是真的跳转。目前 conditions.live 覆盖了全部卡片，
+  // 这条分支是给以后新增 condition 忘记同步 live 列表时的安全网。
+  const Tag = live ? 'a' : 'div';
   return (
-    <a
-      href={href}
-      onClick={(e) => { if (!live) e.preventDefault(); }}
+    <Tag
+      {...(live ? { href: `Conditions/${card.slug}${suffix}.html` } : {})}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{
@@ -278,16 +281,18 @@ const CdCard = ({ card }) => {
           color: 'var(--sepia-500)',
           textWrap: 'pretty',
         }}>{card.desc}</div>
-        <div style={{
-          marginTop: 'auto', paddingTop: 8,
-          display: 'flex', justifyContent: 'flex-end',
-          fontSize: 18, lineHeight: 1,
-          color: hover ? 'var(--vermilion)' : 'var(--sepia-400)',
-          transition: 'color var(--dur) var(--ease), transform var(--dur) var(--ease)',
-          transform: hover ? 'translateX(4px)' : 'none',
-        }}>{STRINGS.conditions.arrow}</div>
+        {live && (
+          <div style={{
+            marginTop: 'auto', paddingTop: 8,
+            display: 'flex', justifyContent: 'flex-end',
+            fontSize: 18, lineHeight: 1,
+            color: hover ? 'var(--vermilion)' : 'var(--sepia-400)',
+            transition: 'color var(--dur) var(--ease), transform var(--dur) var(--ease)',
+            transform: hover ? 'translateX(4px)' : 'none',
+          }}>{STRINGS.conditions.arrow}</div>
+        )}
       </div>
-    </a>
+    </Tag>
   );
 };
 

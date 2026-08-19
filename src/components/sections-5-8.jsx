@@ -177,24 +177,14 @@ const LocationCard = ({ l, i }) => {
   const sfx = STRINGS.lang === 'zh' ? '-ZH' : '';
   const clinicHref = `${CLINIC_PAGE_SLUGS[i] || 'Locations'}${sfx}.html`;
   return (
-  <article style={{
+  <article className="loc-card" style={{
     background: 'var(--cream-50)',
     padding: '36px 24px 32px',
     display: 'flex', flexDirection: 'column', alignItems: 'center',
     height: '100%',
     textAlign: 'center', gap: 0,
     transition: 'all var(--dur) var(--ease)',
-    cursor: 'pointer',
     border: '1px solid var(--copper)',
-  }}
-  onClick={() => { window.location.href = clinicHref; }}
-  onMouseOver={(e) => {
-    e.currentTarget.style.transform = 'translateY(-4px)';
-    e.currentTarget.style.boxShadow = '0 8px 24px rgba(43,33,26,0.08)';
-  }}
-  onMouseOut={(e) => {
-    e.currentTarget.style.transform = 'translateY(0)';
-    e.currentTarget.style.boxShadow = 'none';
   }}>
     <img src={resources.r_brand_logo_tight_avif} alt="CWTCM" style={{
       height: 58, width: 'auto', marginBottom: 24,
@@ -220,7 +210,7 @@ const LocationCard = ({ l, i }) => {
       fontSize: 13, lineHeight: 1.6, color: 'var(--sepia-500)',
       marginBottom: 14, maxWidth: 240,
     }}>{l.address}</div>
-    <a href={`tel:${l.phone.replace(/[^0-9+]/g, '')}`} onClick={(e) => e.stopPropagation()} style={{
+    <a href={`tel:${l.phone.replace(/[^0-9+]/g, '')}`} style={{
       fontSize: 14, fontWeight: 500, color: 'var(--sepia-400)',
       letterSpacing: '0.02em', marginBottom: 18, textDecoration: 'none',
     }}>{l.phone}</a>
@@ -242,6 +232,7 @@ const Locations = () => {
       <style>{`
         .loc-cta:hover { color: var(--sepia-500); }
         .loc-cta:hover .loc-arrow { transform: translateX(4px); }
+        .loc-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(43,33,26,0.08); }
       `}</style>
       <div className="container">
         <div style={{ marginBottom: 56 }}>
