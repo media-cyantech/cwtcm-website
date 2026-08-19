@@ -133,26 +133,71 @@ const Nav = ({ theme = 'dark', active = null, bookHref = null }) => {
 // ============================================================
 // 1. HERO
 // ============================================================
+// 轮播说明 —— 为什么这里用一小段原生 JS，而不是 React 水合：
+//
+// 首页是 LCP 最关键、流量最大的一页。给它挂 client:* 会把 i18n + 两份
+// 共 400 KB 的文案数据连同全部 section 组件一起打进浏览器包（Practitioners
+// 页那次水合产出的 bundle 是 596 KB）——为一个淡入淡出轮播付这个代价不划算。
+// Practitioners 页的门店筛选是真的需要 React 状态（筛选逻辑跟数据强绑定），
+// 轮播只是「换一个当前下标」，十几行 DOM 操作就够。
+//
+// 所以：4 张幻灯片全部服务端渲染进 HTML，脚本只负责切换 opacity。
+// 关键取舍都写在下面对应位置：
+//   · 只有第 1 张的标题是 <h1>，其余用 <div> ——audit.py 会把多个 <h1>
+//     记成 P2，而且对爬虫来说一页多个 h1 本身就是噪音
+//   · 圆点和左右箭头默认 display:none，脚本跑起来后才通过 [data-ready]
+//     显示出来 —— 避免又出现「看着能点、点了没反应」那类死控件
+//   · 尊重 prefers-reduced-motion，并在标签页不可见时暂停计时器
 const Hero = ({ heroIndex = 0 }) => {
   const COPY = useCopy();
   const slides = COPY.hero.slides;
-  // 站点整体是纯静态渲染（没有任何页面挂 client:* 水合指令），浏览器里
-  // 一行组件 JS 都不会跑，之前这里的 useState/useInterval 轮播、左右箭头、
-  // 圆点全是死代码 —— 看着能交互，点了没反应，也永远不会自动切换。
-  // 改成单张静态大图，不再假装能轮播。
-  const c = slides[heroIndex] || slides[0];
+  const start = slides[heroIndex] ? heroIndex : 0;
+
+  const titleStyle = {
+    fontFamily: 'var(--font-display)', fontWeight: 500,
+    fontSize: 'clamp(44px, 5.4vw, 72px)', lineHeight: 1.05,
+    letterSpacing: '-0.015em', margin: '0 0 18px 0',
+    color: 'var(--cream-50)', maxWidth: 880, textWrap: 'balance',
+  };
 
   return (
-    <section data-screen-label="01 Hero" style={{
+    <section data-screen-label="01 Hero" className="hero-carousel" style={{
       position: 'relative', width: '100%', height: '90vh', minHeight: 640,
       overflow: 'hidden', background: 'var(--sepia-700)',
     }}>
+      <style>{`
+        /* 控件默认藏起来：没有 JS 就没有可点的假控件 */
+        .hero-carousel .hero-ctrl { display: none; }
+        .hero-carousel[data-ready] .hero-ctrl { display: grid; }
+        .hero-carousel[data-ready] .hero-dots { display: flex; }
+        .hero-carousel .hero-dots { display: none; }
+        .hero-carousel .hero-slide-img,
+        .hero-carousel .hero-slide-text { transition: opacity 1200ms ease; }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-carousel .hero-slide-img,
+          .hero-carousel .hero-slide-text { transition: none; }
+        }
+        /* 箭头在窄屏上很容易压住文字，手机端只留圆点 */
+        @media (max-width: 768px) {
+          .hero-carousel[data-ready] .hero-ctrl { display: none; }
+        }
+      `}</style>
+
       <Nav />
-      <img src={c.photo} alt="" className="warm-image" style={{
-        position: 'absolute', inset: 0, width: '100%', height: '100%',
-        objectFit: 'cover', objectPosition: c.crop || '50% 50%',
-        filter: 'saturate(0.88) contrast(1.04) brightness(0.92)',
-      }} />
+
+      {slides.map((s, i) => (
+        <img key={i} src={s.photo} alt="" className="warm-image hero-slide-img"
+          /* 第一张要参与 LCP，必须立刻加载；其余的懒加载，别拖慢首屏 */
+          loading={i === start ? 'eager' : 'lazy'}
+          fetchpriority={i === start ? 'high' : undefined}
+          style={{
+            position: 'absolute', inset: 0, width: '100%', height: '100%',
+            objectFit: 'cover', objectPosition: s.crop || '50% 50%',
+            filter: 'saturate(0.88) contrast(1.04) brightness(0.92)',
+            opacity: i === start ? 1 : 0,
+          }} />
+      ))}
+
       <div style={{
         position: 'absolute', inset: 0,
         background: 'linear-gradient(to top right, rgba(20,12,4,0.62) 0%, rgba(20,12,4,0.25) 40%, rgba(20,12,4,0) 70%)',
@@ -160,49 +205,129 @@ const Hero = ({ heroIndex = 0 }) => {
 
       <HeroTopScrim />
 
-      <div className="hero-title-block" style={{
-        position: 'absolute', left: 0, right: 0, bottom: 110,
-      }}>
-        <div className="container">
-          <div style={{
-            color: 'var(--cream-50)', maxWidth: 760,
+      {slides.map((s, i) => (
+        <div key={i} className="hero-title-block hero-slide-text"
+          aria-hidden={i === start ? undefined : 'true'}
+          style={{
+            position: 'absolute', left: 0, right: 0, bottom: 110,
+            opacity: i === start ? 1 : 0,
+            pointerEvents: i === start ? 'auto' : 'none',
           }}>
-            <div style={{
-              fontSize: 11, fontWeight: 500, letterSpacing: '0.12em',
-              textTransform: 'uppercase', opacity: 0.85, marginBottom: 28,
-            }}>{c.eyebrow}</div>
-            <h1 style={{
-              fontFamily: 'var(--font-display)', fontWeight: 500,
-              fontSize: 'clamp(44px, 5.4vw, 72px)', lineHeight: 1.05,
-              letterSpacing: '-0.015em', margin: '0 0 18px 0',
-              color: 'var(--cream-50)',
-              maxWidth: 880,
-              textWrap: 'balance',
-            }}><Clauses text={c.h1} /></h1>
-            {c.zh && (
-              <div className="hero-title-zh" style={{
-                fontFamily: 'var(--font-serif-zh)', fontWeight: 500,
-                fontSize: 'clamp(24px, 3.2vw, 36px)',
-                letterSpacing: '0.15em', color: 'var(--cream-200)',
-                opacity: 0.78, marginBottom: 28,
-              }}>{c.zh}</div>
-            )}
-            <div className="hero-title-sub" style={{
-              fontFamily: 'var(--font-display)', fontStyle: 'italic',
-              fontSize: 22, lineHeight: 1.4, color: 'var(--cream-100)',
-              opacity: 0.92, marginBottom: 44, maxWidth: 560,
-              marginTop: c.zh ? 0 : 28,
-            }}>{c.sub}</div>
-            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-              <a href={COPY.hero.primaryHref} target="_blank" rel="noopener"
-                className="btn btn-primary">{COPY.hero.primary}</a>
-              <a href={COPY.hero.secondaryHref} className="btn btn-outline" style={{
-                color: 'var(--cream-50)', borderColor: 'rgba(247,241,229,0.55)',
-              }}>{COPY.hero.secondary}</a>
+          <div className="container">
+            <div style={{ color: 'var(--cream-50)', maxWidth: 760 }}>
+              <div style={{
+                fontSize: 11, fontWeight: 500, letterSpacing: '0.12em',
+                textTransform: 'uppercase', opacity: 0.85, marginBottom: 28,
+              }}>{s.eyebrow}</div>
+              {/* 只有第一张用 <h1>，其余同样式的 <div> —— 一页只能有一个 h1 */}
+              {i === start
+                ? <h1 style={titleStyle}><Clauses text={s.h1} /></h1>
+                : <div style={titleStyle}><Clauses text={s.h1} /></div>}
+              {s.zh && (
+                <div className="hero-title-zh" style={{
+                  fontFamily: 'var(--font-serif-zh)', fontWeight: 500,
+                  fontSize: 'clamp(24px, 3.2vw, 36px)',
+                  letterSpacing: '0.15em', color: 'var(--cream-200)',
+                  opacity: 0.78, marginBottom: 28,
+                }}>{s.zh}</div>
+              )}
+              <div className="hero-title-sub" style={{
+                fontFamily: 'var(--font-display)', fontStyle: 'italic',
+                fontSize: 22, lineHeight: 1.4, color: 'var(--cream-100)',
+                opacity: 0.92, marginBottom: 44, maxWidth: 560,
+                marginTop: s.zh ? 0 : 28,
+              }}>{s.sub}</div>
+              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+                <a href={COPY.hero.primaryHref} target="_blank" rel="noopener"
+                  className="btn btn-primary">{COPY.hero.primary}</a>
+                <a href={COPY.hero.secondaryHref} className="btn btn-outline" style={{
+                  color: 'var(--cream-50)', borderColor: 'rgba(247,241,229,0.55)',
+                }}>{COPY.hero.secondary}</a>
+              </div>
             </div>
           </div>
         </div>
+      ))}
+
+      <button type="button" className="hero-ctrl hero-prev"
+        aria-label={COPY.hero.prevLabel || 'Previous slide'} style={{
+        position: 'absolute', left: 24, top: '50%', transform: 'translateY(-50%)',
+        width: 48, height: 48, borderRadius: '50%',
+        background: 'rgba(20,12,4,0.35)', border: '1px solid rgba(247,241,229,0.4)',
+        color: 'var(--cream-50)', fontSize: 20, cursor: 'pointer',
+        placeItems: 'center', zIndex: 5,
+      }}>‹</button>
+      <button type="button" className="hero-ctrl hero-next"
+        aria-label={COPY.hero.nextLabel || 'Next slide'} style={{
+        position: 'absolute', right: 24, top: '50%', transform: 'translateY(-50%)',
+        width: 48, height: 48, borderRadius: '50%',
+        background: 'rgba(20,12,4,0.35)', border: '1px solid rgba(247,241,229,0.4)',
+        color: 'var(--cream-50)', fontSize: 20, cursor: 'pointer',
+        placeItems: 'center', zIndex: 5,
+      }}>›</button>
+
+      <div className="hero-dots" style={{
+        position: 'absolute', bottom: 40, left: '50%', transform: 'translateX(-50%)',
+        gap: 12, alignItems: 'center', zIndex: 5,
+      }}>
+        {slides.map((_, i) => (
+          <button key={i} type="button" className="hero-dot" data-i={i}
+            aria-label={`${COPY.hero.slideLabel || 'Slide'} ${i + 1}`}
+            aria-current={i === start ? 'true' : 'false'}
+            style={{
+              width: i === start ? 28 : 8, height: 8, borderRadius: 4,
+              background: i === start ? 'var(--cream-50)' : 'rgba(247,241,229,0.45)',
+              border: 'none', padding: 0, cursor: 'pointer',
+              transition: 'all 300ms ease',
+            }} />
+        ))}
       </div>
+
+      <script dangerouslySetInnerHTML={{ __html: `
+(function(){
+  var root = document.currentScript && document.currentScript.parentNode;
+  if (!root) return;
+  var imgs  = root.querySelectorAll('.hero-slide-img');
+  var texts = root.querySelectorAll('.hero-slide-text');
+  var dots  = root.querySelectorAll('.hero-dot');
+  var n = imgs.length;
+  if (n < 2) return;
+  var i = ${start}, timer = null;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function show(k){
+    i = ((k % n) + n) % n;
+    for (var j = 0; j < n; j++){
+      var on = (j === i);
+      imgs[j].style.opacity = on ? 1 : 0;
+      texts[j].style.opacity = on ? 1 : 0;
+      texts[j].style.pointerEvents = on ? 'auto' : 'none';
+      if (on) texts[j].removeAttribute('aria-hidden');
+      else texts[j].setAttribute('aria-hidden','true');
+      if (dots[j]){
+        dots[j].style.width = on ? '28px' : '8px';
+        dots[j].style.background = on ? 'var(--cream-50)' : 'rgba(247,241,229,0.45)';
+        dots[j].setAttribute('aria-current', on ? 'true' : 'false');
+      }
+    }
+  }
+  function stop(){ if (timer) { clearInterval(timer); timer = null; } }
+  function play(){ stop(); if (!reduce) timer = setInterval(function(){ show(i + 1); }, 7000); }
+  function go(k){ show(k); play(); }
+  var prev = root.querySelector('.hero-prev');
+  var next = root.querySelector('.hero-next');
+  if (prev) prev.addEventListener('click', function(){ go(i - 1); });
+  if (next) next.addEventListener('click', function(){ go(i + 1); });
+  for (var d = 0; d < dots.length; d++){
+    (function(k){ dots[k].addEventListener('click', function(){ go(k); }); })(d);
+  }
+  // 标签页切走时别继续空转
+  document.addEventListener('visibilitychange', function(){
+    if (document.hidden) stop(); else play();
+  });
+  root.setAttribute('data-ready','');
+  play();
+})();
+      `.trim() }} />
     </section>
   );
 };
