@@ -59,7 +59,9 @@ const COPY = {
       },
     ],
     primary: "预约到访",
+    primaryHref: "https://canadianwesterntcmclinic.janeapp.com",
     secondary: "寻找就近诊所",
+    secondaryHref: "Locations-ZH.html",
   },
   trust: [
     "30+ 位 BC 省注册中医师",

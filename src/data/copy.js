@@ -43,7 +43,9 @@ export const COPY = {
       },
     ],
     primary: "Book a Visit",
+    primaryHref: "https://canadianwesterntcmclinic.janeapp.com",
     secondary: "Find your nearest clinic",
+    secondaryHref: "Locations.html",
   },
   trust: [
     "30+ BC-Registered TCM Practitioners",

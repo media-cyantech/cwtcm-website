@@ -132,17 +132,11 @@ const Nav = ({ theme = 'dark', active = null, bookHref = null }) => {
 const Hero = ({ heroIndex = 0 }) => {
   const COPY = useCopy();
   const slides = COPY.hero.slides;
-  const [idx, setIdx] = useState(heroIndex);
-
-  useEffect(() => { setIdx(heroIndex); }, [heroIndex]);
-
-  useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % slides.length), 7000);
-    return () => clearInterval(t);
-  }, [slides.length]);
-
-  const go = (n) => setIdx((n + slides.length) % slides.length);
-  const c = slides[idx];
+  // 站点整体是纯静态渲染（没有任何页面挂 client:* 水合指令），浏览器里
+  // 一行组件 JS 都不会跑，之前这里的 useState/useInterval 轮播、左右箭头、
+  // 圆点全是死代码 —— 看着能交互，点了没反应，也永远不会自动切换。
+  // 改成单张静态大图，不再假装能轮播。
+  const c = slides[heroIndex] || slides[0];
 
   return (
     <section data-screen-label="01 Hero" style={{
@@ -150,15 +144,11 @@ const Hero = ({ heroIndex = 0 }) => {
       overflow: 'hidden', background: 'var(--sepia-700)',
     }}>
       <Nav />
-      {slides.map((s, i) => (
-        <img key={i} src={s.photo} alt="" className="warm-image" style={{
-          position: 'absolute', inset: 0, width: '100%', height: '100%',
-          objectFit: 'cover', objectPosition: s.crop || '50% 50%',
-          filter: 'saturate(0.88) contrast(1.04) brightness(0.92)',
-          opacity: i === idx ? 1 : 0,
-          transition: 'opacity 1200ms ease',
-        }} />
-      ))}
+      <img src={c.photo} alt="" className="warm-image" style={{
+        position: 'absolute', inset: 0, width: '100%', height: '100%',
+        objectFit: 'cover', objectPosition: c.crop || '50% 50%',
+        filter: 'saturate(0.88) contrast(1.04) brightness(0.92)',
+      }} />
       <div style={{
         position: 'absolute', inset: 0,
         background: 'linear-gradient(to top right, rgba(20,12,4,0.62) 0%, rgba(20,12,4,0.25) 40%, rgba(20,12,4,0) 70%)',
@@ -200,44 +190,14 @@ const Hero = ({ heroIndex = 0 }) => {
               marginTop: c.zh ? 0 : 28,
             }}>{c.sub}</div>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-              <a className="btn btn-primary">{COPY.hero.primary}</a>
-              <a className="btn btn-outline" style={{
+              <a href={COPY.hero.primaryHref} target="_blank" rel="noopener"
+                className="btn btn-primary">{COPY.hero.primary}</a>
+              <a href={COPY.hero.secondaryHref} className="btn btn-outline" style={{
                 color: 'var(--cream-50)', borderColor: 'rgba(247,241,229,0.55)',
               }}>{COPY.hero.secondary}</a>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* carousel controls */}
-      <button onClick={() => go(idx - 1)} aria-label="Previous" style={{
-        position: 'absolute', left: 24, top: '50%', transform: 'translateY(-50%)',
-        width: 48, height: 48, borderRadius: '50%',
-        background: 'rgba(20,12,4,0.35)', border: '1px solid rgba(247,241,229,0.4)',
-        color: 'var(--cream-50)', fontSize: 20, cursor: 'pointer',
-        display: 'grid', placeItems: 'center',
-      }}>‹</button>
-      <button onClick={() => go(idx + 1)} aria-label="Next" style={{
-        position: 'absolute', right: 24, top: '50%', transform: 'translateY(-50%)',
-        width: 48, height: 48, borderRadius: '50%',
-        background: 'rgba(20,12,4,0.35)', border: '1px solid rgba(247,241,229,0.4)',
-        color: 'var(--cream-50)', fontSize: 20, cursor: 'pointer',
-        display: 'grid', placeItems: 'center',
-      }}>›</button>
-
-      {/* dots */}
-      <div style={{
-        position: 'absolute', bottom: 40, left: '50%', transform: 'translateX(-50%)',
-        display: 'flex', gap: 12, alignItems: 'center',
-      }}>
-        {slides.map((_, i) => (
-          <button key={i} onClick={() => go(i)} aria-label={`Slide ${i + 1}`} style={{
-            width: i === idx ? 28 : 8, height: 8, borderRadius: 4,
-            background: i === idx ? 'var(--cream-50)' : 'rgba(247,241,229,0.45)',
-            border: 'none', padding: 0, cursor: 'pointer',
-            transition: 'all 300ms ease',
-          }} />
-        ))}
       </div>
     </section>
   );
