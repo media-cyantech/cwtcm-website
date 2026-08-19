@@ -2073,9 +2073,12 @@ treatments: {
       resources: 'Practitioners & Resources',
       connected: 'Stay Connected',
     },
+    // 去掉了 'ICBC Insurance' —— 它指向的正是 Conditions 栏里已经列着的
+    // 「ICBC Recovery」同一个页面（Conditions/icbc-recovery.html），
+    // 同一个页脚里用两个名字指同一页，访客会以为是两篇不同的内容。
     resourceLinks: [
       'About', 'Browse the full team', 'The Journal', 'FAQ', 'First Visit Guide',
-      'ICBC Insurance', 'Contact',
+      'Contact',
     ],
     viewAll: 'View all →',
     treatmentNames: [

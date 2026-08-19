@@ -1158,9 +1158,12 @@ export const STRINGS = {
       resources: '中医师与资源',
       connected: '关注我们',
     },
+    // 去掉了 'ICBC 保险' —— 它指向的正是 Conditions 栏里已经列着的
+    // 「ICBC 车祸康复」同一个页面（Conditions/icbc-recovery-ZH.html），
+    // 同一个页脚里用两个名字指同一页，访客会以为是两篇不同的内容。
     resourceLinks: [
       '关于我们', '浏览完整团队', '资讯', '常见问题', '首次就诊指南',
-      'ICBC 保险', '联系我们',
+      '联系我们',
     ],
     viewAll: '查看全部 →',
     treatmentNames: [

@@ -362,7 +362,7 @@ button { font: inherit; cursor: pointer; }
     gap: 32px !important;
   }
   .ab-numbers-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     row-gap: 20px !important;
   }
   .ab-numbers-grid > div {
@@ -370,7 +370,7 @@ button { font: inherit; cursor: pointer; }
     text-align: left !important;
   }
   .ab-clinics-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 16px !important;
   }
 
@@ -413,16 +413,16 @@ button { font: inherit; cursor: pointer; }
   }
   .pd-link-grid,
   .pd-clinic-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
   /* ---- Locations list page ---- */
   .loc-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 16px !important;
   }
   .trust-row {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     row-gap: 20px !important;
   }
   .trust-row > div { border-left: none !important; }
@@ -486,7 +486,7 @@ button { font: inherit; cursor: pointer; }
     border-top: 1px solid rgba(184,148,96,0.25) !important;
   }
   .footer-columns-grid {
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
     gap: 32px !important;
     margin-bottom: 40px !important;
   }
