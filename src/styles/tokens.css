@@ -75,7 +75,17 @@ html, body {
   text-rendering: optimizeLegibility;
 }
 
-img { max-width: 100%; display: block; }
+/* NOT max-width: 100% — every photo on this site is an absolutely-positioned
+   cover image (position:absolute + width/height:100% + object-fit:cover)
+   filling its section edge-to-edge. A blanket max-width:100% caps a
+   replaced element's used width at its own intrinsic pixel size once the
+   containing block is wider than that — on a 2x/Retina display, a 1920px
+   source photo is only 960 CSS px "wide", so on any window wider than
+   that the image stops partway across and the rest of the section shows
+   bare page background instead. No content in this repo relies on the
+   classic shrink-to-fit img reset (nothing embeds a raw <img> in rich
+   text), so there's nothing to protect by keeping it. */
+img { display: block; }
 
 /* =============================================================
    Type primitives
