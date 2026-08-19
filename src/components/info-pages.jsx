@@ -188,7 +188,7 @@ const FirstVisitSteps = ({ steps }) => (
   <section data-screen-label="02 Steps" className="section">
     <div className="container" style={{ maxWidth: 1080 }}>
       {steps.map((s, i) => (
-        <div key={i} style={{
+        <div key={i} className="iv-step-grid" style={{
           display: 'grid', gridTemplateColumns: '120px 1fr',
           gap: 56, alignItems: 'baseline',
           padding: '40px 0',
@@ -223,7 +223,7 @@ const FirstVisitDetails = ({ c }) => (
   }}>
     <div className="container">
       <div className="eyebrow" style={{ marginBottom: 40 }}>{c.eyebrow}</div>
-      <div style={{
+      <div className="iv-details-grid" style={{
         display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 56,
       }}>
         {c.items.map((it, i) => (
@@ -268,11 +268,11 @@ const ContactNap = ({ eyebrow, clinics }) => {
   <section data-screen-label="02 NAP" className="section">
     <div className="container">
       <div className="eyebrow" style={{ marginBottom: 40 }}>{eyebrow}</div>
-      <div style={{
+      <div className="contact-nap-grid" style={{
         display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24,
       }}>
         {clinics.map((cl, i) => (
-          <div key={i} className="clinic-card" style={{
+          <div key={i} className="clinic-card contact-card-inner-grid" style={{
             background: 'var(--cream-100)',
             border: '1px solid var(--sepia-100)',
             padding: '32px 36px 28px',
@@ -361,7 +361,7 @@ const ContactFormSection = ({ c, clinics, wechat }) => (
     background: 'var(--cream-100)',
     borderTop: '1px solid var(--sepia-100)',
   }}>
-    <div className="container" style={{
+    <div className="container contact-form-grid" style={{
       display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 80,
     }}>
       <ContactForm c={c} clinics={clinics} />
@@ -408,7 +408,7 @@ const ContactForm = ({ c, clinics }) => {
           <label style={labelStyle} htmlFor="contact-name">{c.fields.name}</label>
           <input id="contact-name" type="text" required style={inputStyle} />
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
+        <div className="contact-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
           <div>
             <label style={labelStyle} htmlFor="contact-email">{c.fields.email}</label>
             <input id="contact-email" type="email" required style={inputStyle} />

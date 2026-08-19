@@ -335,4 +335,118 @@ button { font: inherit; cursor: pointer; }
   .rc-price-grid {
     grid-template-columns: 1fr !important;
   }
+
+  /* =============================================================
+     Site-wide sweep — same anti-pattern as the three above, just
+     never had ANY mobile CSS at all (only the homepage does, via
+     homepage.css). Two buckets:
+     · editorial 2-up (text+image / label+content) → 1 column
+     · compact card/badge rows (3–4 up)            → 2 columns
+     ============================================================= */
+
+  /* ---- About page ---- */
+  .ab-heritage-grid,      /* image already first in DOM, no reorder needed */
+  .ab-team-grid,
+  .ab-practice-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .ab-numbers-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    row-gap: 20px !important;
+  }
+  .ab-numbers-grid > div {
+    border-left: none !important;
+    text-align: left !important;
+  }
+  .ab-clinics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  /* ---- Conditions / Treatments list + detail pages ---- */
+  .cd-grid,               /* conditions-page.jsx */
+  .tx-grid,               /* treatments-page.jsx */
+  .cdd-treatments-grid,   /* condition-detail.jsx */
+  .td-conditions-grid,    /* treatment-detail.jsx */
+  .td-related-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .cdd-text-grid,         /* eyebrow label | body copy — condition-detail.jsx */
+  .td-text-grid {         /* same, treatment-detail.jsx */
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .cdd-hero-grid,
+  .td-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  /* photo above the text on these two hero grids (text is first in DOM) */
+  .cdd-hero-grid > *:first-child,
+  .td-hero-grid > *:first-child { order: 2; }
+  .cdd-hero-grid > *:last-child,
+  .td-hero-grid > *:last-child { order: 1; }
+
+  /* ---- Practitioners (list + detail) ---- */
+  .pr-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .pr-cta-tiles {
+    grid-template-columns: 1fr !important;
+  }
+  .pd-hero-grid {         /* photo already first in DOM, no reorder needed */
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .pd-link-grid,
+  .pd-clinic-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* ---- Locations list page ---- */
+  .loc-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+  .trust-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    row-gap: 20px !important;
+  }
+  .trust-row > div { border-left: none !important; }
+
+  /* ---- Legal (Privacy/Terms) ---- */
+  .legal-grid {            /* TOC already first in DOM, no reorder needed */
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* ---- First Visit / Contact (info-pages.jsx) ---- */
+  .iv-step-grid {
+    grid-template-columns: 60px 1fr !important;
+    gap: 24px !important;
+  }
+  .iv-details-grid,
+  .contact-nap-grid,       /* clinic cards stack, one per row */
+  .contact-card-inner-grid, /* address/phone above, map below — same as RCInfoPanel */
+  .contact-form-grid,      /* form above, WeChat block below */
+  .contact-form-row {      /* email/phone fields stack */
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* ---- About hero — heading was bottom-anchored (flex align-items:flex-end)
+     inside a 78vh section, with the absolute-positioned dark Nav on top.
+     On mobile the heading block runs taller than the space above the Nav,
+     so it rides up underneath the logo/Book Now row. Switch to a
+     top-anchored layout (matches InfoHero/LegalHero, which already clear
+     the Nav safely with a fixed paddingTop) instead of relying on the
+     hero being tall enough for bottom-anchoring to never collide. ---- */
+  .ab-hero-section { min-height: auto !important; }
+  .ab-hero-content {
+    align-items: flex-start !important;
+    padding: 152px 20px 56px !important;
+  }
 }

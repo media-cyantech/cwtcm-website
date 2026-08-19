@@ -38,7 +38,7 @@ const AboutHero = ({ c }) => {
   const photo = resources.r_brand_logo_avif; // unused, keep below
   const heritagePhoto = 'assets/heritage/hero-richmond-herbal-cabinet-baizigui.jpg';
   return (
-    <section data-screen-label="01 Hero" data-comment-anchor="about-hero" style={{
+    <section data-screen-label="01 Hero" data-comment-anchor="about-hero" className="ab-hero-section" style={{
       position: 'relative',
       minHeight: '78vh',
       display: 'flex', flexDirection: 'column',
@@ -61,7 +61,7 @@ const AboutHero = ({ c }) => {
       }} />
       <HeroTopScrim />
       <Nav theme="dark" active={STRINGS.nav.items[4]} />
-      <div style={{
+      <div className="ab-hero-content" style={{
         position: 'relative', flex: 1,
         display: 'flex', alignItems: 'flex-end',
         padding: '0 48px 96px',
@@ -119,7 +119,7 @@ const HeritageHeroImage = () => {
 
 const AboutHeritage = ({ c }) => (
   <section data-screen-label="02 Heritage" className="section" data-comment-anchor="about-heritage">
-    <div className="container" style={{
+    <div className="container ab-heritage-grid" style={{
       display: 'grid', gridTemplateColumns: '5fr 7fr', gap: 80, alignItems: 'center',
     }}>
       <div>
@@ -154,7 +154,7 @@ const AboutPractice = ({ c }) => (
         <div className="eyebrow" style={{ marginBottom: 20 }}>{c.eyebrow}</div>
         <h2 className="h-section" style={{ margin: 0 }}>{c.h2}</h2>
       </div>
-      <div style={{
+      <div className="ab-practice-grid" style={{
         display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 56,
       }}>
         {c.principles.map((p, i) => (
@@ -183,7 +183,7 @@ const AboutNumbers = ({ c }) => (
     padding: '48px 0',
     borderBottom: '1px solid var(--sepia-100)',
   }}>
-    <div className="container" style={{
+    <div className="container ab-numbers-grid" style={{
       display: 'grid', gridTemplateColumns: `repeat(${c.items.length}, 1fr)`, gap: 0,
     }}>
       {c.items.map((item, i) => (
@@ -206,7 +206,7 @@ const AboutNumbers = ({ c }) => (
 // ------------------------------------------------------------
 const AboutTeam = ({ c }) => (
   <section data-screen-label="05 Team" className="section" data-comment-anchor="about-team">
-    <div className="container" style={{
+    <div className="container ab-team-grid" style={{
       display: 'grid', gridTemplateColumns: '5fr 7fr', gap: 80, alignItems: 'start',
     }}>
       <div>
@@ -261,7 +261,7 @@ const AboutClinics = ({ c }) => (
         .about-clinic-card:hover { background: var(--cream-50) !important; border-color: #B89460 !important; transform: translateY(-3px); }
         .about-clinic-card:hover .acc-city { color: var(--vermilion); }
       `}</style>
-      <div style={{
+      <div className="ab-clinics-grid" style={{
         display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24,
       }}>
         {c.cards.map((card, i) => (
