@@ -471,7 +471,7 @@ const RCGallery = ({ c }) => {
         </div>
         <div className="rc-gallery-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(12, 1fr)',
+          gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
           gridTemplateRows: rowsCount,
           gap: 16,
         }}>

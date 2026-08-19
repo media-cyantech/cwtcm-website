@@ -40,7 +40,7 @@ const Testimonials = () => {
           <h2 className="h-section" style={{ maxWidth: 760 }}><Clauses text={c.h2} /></h2>
         </div>
         {reviews.length ? (
-          <div className="testi-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 64 }}>
+          <div className="testi-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 64 }}>
             {reviews.map((q, i) => <TestimonialCard key={i} q={q} />)}
           </div>
         ) : (
@@ -104,7 +104,7 @@ const Journal = () => {
           <div className="eyebrow" style={{ marginBottom: 20 }}>{c.eyebrow}</div>
           <h2 className="h-section">{c.h2}</h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 40 }}>
           {c.cards.map((a, i) => <ArticleCard key={i} a={a} kind={kinds[i]} />)}
         </div>
         <div style={{ marginTop: 56, textAlign: 'right' }}>
@@ -222,7 +222,7 @@ const Footer = () => {
         ))}</div>
       </div>
       <div className="footer-columns-grid" style={{
-        display: 'grid', gridTemplateColumns: '1.2fr 1fr 1fr 1.2fr 1fr', gap: 48,
+        display: 'grid', gridTemplateColumns: 'minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr)', gap: 48,
         marginBottom: 64,
       }}>
         <FooterColumn title={f.columns.locations}>

@@ -61,7 +61,7 @@ const Treatments = () => {
           <h2 className="h-section" style={{ maxWidth: 760, whiteSpace: 'pre-line' }}>{c.h2}</h2>
         </div>
         <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 32,
+          display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 32,
           rowGap: 56,
         }}>
           {c.cards.map((t, i) => <TreatmentCard key={i} t={t} />)}
@@ -118,7 +118,7 @@ const Conditions = () => {
           <h2 className="h-section" style={{ maxWidth: 760 }}>{c.h2}</h2>
         </div>
         <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20,
+          display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 20,
         }}>
           {c.cards.map((card, i) => <ConditionCard key={i} c={card} />)}
         </div>
@@ -239,7 +239,7 @@ const Locations = () => {
           <div className="eyebrow" style={{ marginBottom: 20 }}>{c.eyebrow}</div>
           <h2 className="h-section"><Clauses text={c.h2} /></h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 20 }}>
           {c.cards.map((l, i) => <LocationCard key={i} l={l} i={i} />)}
         </div>
       </div>

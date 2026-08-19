@@ -281,7 +281,7 @@ const LocationsPage = () => {
         <div className="container">
           <div className="loc-grid" style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
+            gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
             gap: 20,
           }}>
             {c.cards.map((card) => (
@@ -303,7 +303,7 @@ const LocationsPage = () => {
             {c.standardEyebrow}
           </div>
           <div className="trust-row" style={{
-            display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
+            display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
             alignItems: 'center',
           }}>
             {c.standardPoints.map((p, i) => (

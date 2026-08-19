@@ -211,7 +211,7 @@ const FirstVisitDetails = ({ c }) => (
     <div className="container">
       <div className="eyebrow" style={{ marginBottom: 40 }}>{c.eyebrow}</div>
       <div className="iv-details-grid" style={{
-        display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 56,
+        display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 56,
       }}>
         {c.items.map((it, i) => (
           <div key={i}>
@@ -256,7 +256,7 @@ const ContactNap = ({ eyebrow, clinics }) => {
     <div className="container">
       <div className="eyebrow" style={{ marginBottom: 40 }}>{eyebrow}</div>
       <div className="contact-nap-grid" style={{
-        display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24,
+        display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 24,
       }}>
         {clinics.map((cl, i) => (
           <div key={i} className="clinic-card contact-card-inner-grid" style={{

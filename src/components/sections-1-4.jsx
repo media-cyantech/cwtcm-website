@@ -220,7 +220,7 @@ const TrustStrip = () => {
     padding: '32px 0',
   }}>
     <div className="container" style={{
-      display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
+      display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
       alignItems: 'center', gap: 0,
     }}>
       {COPY.trust.map((t, i) => (
@@ -437,7 +437,7 @@ const Approach = () => {
       <div className="container">
         <h2 className="h-section" style={{ marginBottom: 40, maxWidth: 720 }}>{c.h2}</h2>
         <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 56,
+          display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 56,
         }}>
           {c.cols.map((col, i) => (
             <div key={i}>

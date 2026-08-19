@@ -155,7 +155,7 @@ const AboutPractice = ({ c }) => (
         <h2 className="h-section" style={{ margin: 0 }}>{c.h2}</h2>
       </div>
       <div className="ab-practice-grid" style={{
-        display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 56,
+        display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 56,
       }}>
         {c.principles.map((p, i) => (
           <div key={i}>
@@ -262,7 +262,7 @@ const AboutClinics = ({ c }) => (
         .about-clinic-card:hover .acc-city { color: var(--vermilion); }
       `}</style>
       <div className="ab-clinics-grid" style={{
-        display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24,
+        display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 24,
       }}>
         {c.cards.map((card, i) => (
           <a key={i} href={card.href} className="about-clinic-card" style={{
