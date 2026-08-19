@@ -225,12 +225,16 @@ const LocationCard = ({ l, i }) => {
       filter: 'brightness(0) saturate(100%) invert(48%) sepia(14%) saturate(1180%) hue-rotate(0deg) brightness(85%) contrast(80%)',
       opacity: 0.92,
     }} />
+    {/* 门店名原本是写死的 38px + nowrap：卡片一窄，这行字既不能缩也不能换行，
+        就横着捅出卡片、跟隔壁那张的店名叠在一起（「WHITE ROCK」尤其明显）。
+        改成按卡片宽度伸缩的 clamp()，并允许换行——两个词的店名在窄卡片里
+        会自然折成两行，而不是溢出去。 */}
     <h3 style={{
       fontFamily: 'var(--font-display)', fontWeight: 500,
-      fontSize: 38, lineHeight: 1,
+      fontSize: 'clamp(24px, 3.4vw, 38px)', lineHeight: 1.05,
       letterSpacing: '-0.012em', textTransform: 'uppercase',
       color: 'var(--sepia-700)', margin: '0 0 14px 0',
-      whiteSpace: 'nowrap',
+      maxWidth: '100%', textWrap: 'balance', hyphens: 'none',
     }}>{l.city}</h3>
     <div style={{
       fontFamily: 'var(--font-display)', fontStyle: 'italic',
