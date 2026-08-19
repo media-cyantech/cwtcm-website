@@ -116,7 +116,7 @@ const CustomerCareSection = ({ cards, clinicNames }) => {
             textTransform: CC_IS_ZH ? 'none' : 'uppercase', color: 'var(--sepia-400)', margin: 0,
           }}>{data.subtitle}</p>
         </div>
-        <div className="cc-grid" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 28 }}>
+        <div className="cc-grid" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', gap: 28 }}>
           {cards.map((p) => <CustomerCareCard key={p.slug} person={p} data={data} clinicNames={clinicNames} />)}
         </div>
       </div>
