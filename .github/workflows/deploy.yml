@@ -104,7 +104,7 @@ jobs:
             exit 0
           fi
           sleep 3
-          for p in / /Homepage.html /Homepage-ZH.html /robots.txt /sitemap-index.xml; do
+          for p in /Homepage.html /Homepage-ZH.html /robots.txt /sitemap-index.xml; do
             code=$(curl -sS -o /dev/null -w '%{http_code}' -L --max-time 20 "https://cwtcm.ca$p" || echo 000)
             echo "  $p → $code"
             case "$p" in
@@ -112,6 +112,13 @@ jobs:
                 [ "$code" = "200" ] || { echo "❌ $p 返回 $code"; exit 1; } ;;
             esac
           done
+          # 根路径必须在 Nginx 层直接 301 到 /Homepage.html（-L 会自动跟着跳，
+          # 跳完落地也是 200，测不出来），所以这里不跟随重定向，直接看首个响应码。
+          # 没配上这条规则时，src/pages/index.astro 生成的 meta-refresh 兜底页会
+          # 顶上来直接返回 200，访客能看到一帧空白页闪一下。
+          root_code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 "https://cwtcm.ca/" || echo 000)
+          echo "  / → $root_code（期望 301，不是兜底页的 200）"
+          [ "$root_code" = "301" ] || { echo "❌ 根路径没有直接 301，Nginx 里加：location = / { return 301 /Homepage.html; }"; exit 1; }
           # 加西中医不要 www —— www 应当 301 回裸域，而不是像旧站那样反过来
           w=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 https://www.cwtcm.ca/Homepage.html || echo 000)
           echo "  www 版本 → $w（期望 301）"
