@@ -28,3 +28,6 @@ yarn-error.log*
 
 # 本地预览配置（各人环境端口不同）
 .claude/
+
+# 联系表单接收端的真实凭据 —— 只在服务器上存在，绝不进仓库
+server/contact-config.php
