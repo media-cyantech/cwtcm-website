@@ -123,7 +123,7 @@ const PdBreadcrumb = ({ name }) => {
   return (
     <nav aria-label="Breadcrumb" style={{ background: 'var(--cream-100)', borderBottom: '1px solid var(--sepia-100)' }}>
       <div className="container" style={{
-        padding: '18px 0', fontFamily: pdFont(PD_IS_ZH), fontSize: PD_IS_ZH ? 13 : 11, fontWeight: 600,
+        padding: '18px var(--gutter)', fontFamily: pdFont(PD_IS_ZH), fontSize: PD_IS_ZH ? 13 : 11, fontWeight: 600,
         letterSpacing: PD_IS_ZH ? '0.04em' : '0.14em', textTransform: PD_IS_ZH ? 'none' : 'uppercase',
         color: 'var(--sepia-500)', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap',
       }}>
@@ -148,7 +148,7 @@ const PdHero = ({ person, d, first, bookHref }) => {
   const lede = PD_IS_ZH ? d.ledeZh : d.ledeEn;
   return (
     <section data-screen-label="01 Hero" style={{ position: 'relative', background: 'var(--cream-100)', overflow: 'hidden' }}>
-      <div className="container" style={{ position: 'relative', zIndex: 2, padding: '72px 0 104px' }}>
+      <div className="container" style={{ position: 'relative', zIndex: 2, padding: '72px var(--gutter) 104px' }}>
         <div className="pd-hero-grid" style={{ display: 'grid', gridTemplateColumns: '300px 1fr', gap: 64, alignItems: 'center' }}>
           <PdHeroPortrait person={person} caption={chrome.photoComingSoon} />
           <div style={{ position: 'relative' }}>

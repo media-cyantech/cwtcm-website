@@ -86,7 +86,7 @@ const CDDBreadcrumb = ({ name }) => {
       borderBottom: '1px solid var(--sepia-100)',
     }}>
       <div className="container" style={{
-        padding: '18px 0',
+        padding: '18px var(--gutter)',
         fontFamily: CDD_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
         fontSize: CDD_IS_ZH ? 13 : 11, fontWeight: 600,
         letterSpacing: CDD_IS_ZH ? '0.04em' : '0.14em',
@@ -590,7 +590,7 @@ const ConditionDetailPage = ({ slug }) => {
     return (
       <>
         <Nav theme="light" active={STRINGS.nav.items[1]} />
-        <div className="container" style={{ padding: '120px 0' }}>
+        <div className="container" style={{ padding: '120px var(--gutter)' }}>
           <h1>Missing condition data for "{slug}".</h1>
         </div>
         <Footer />
