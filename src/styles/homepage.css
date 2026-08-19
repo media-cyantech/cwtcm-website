@@ -28,19 +28,34 @@
   nav > div:last-child > a {
       padding: 10px 16px !important; font-size: 11px !important;
     }
-  /* HERO */
+  /* HERO
+     文字块是「底部对齐」的：它的高度由内容决定，块越高、顶边越往上，
+     一旦超过导航栏就会压到 logo 上。四张幻灯片文案长短不一，所以必须
+     保证「最高的那张」也放得下：可用高度 = hero 高 − 导航高 − 底部留白。
+     min-height 给一个绝对下限，避免在矮屏（比如 660px 高的手机）上
+     78vh 只有 515px、装不下最高的那张。 */
     section[data-screen-label="01 Hero"] {
-      height: auto !important; min-height: 78vh !important;
+      height: auto !important;
+      min-height: max(78vh, 600px) !important;
     }
   section[data-screen-label="01 Hero"] .hero-title-block {
-      bottom: 56px !important;
+      bottom: 44px !important;
     }
-  section[data-screen-label="01 Hero"] h1 { font-size: 38px !important; }
+  /* ⚠️ 按类名写，不要写成 `h1 { }` —— 轮播里只有第一张是 <h1>，
+     其余三张是同样式的 <div>（一页只能有一个 h1）。按标签名写的话
+     只有第一张会缩小，2/4 张仍是桌面字号、块更高，就会顶到 logo。 */
+  section[data-screen-label="01 Hero"] .hero-title-h {
+      font-size: 38px !important;
+    }
+  section[data-screen-label="01 Hero"] .hero-title-block .eyebrow,
+  section[data-screen-label="01 Hero"] .hero-title-block > .container > div > div:first-child {
+      margin-bottom: 16px !important;
+    }
   section[data-screen-label="01 Hero"] .hero-title-zh {
-      font-size: 22px !important;
+      font-size: 22px !important; margin-bottom: 18px !important;
     }
   section[data-screen-label="01 Hero"] .hero-title-sub {
-      font-size: 17px !important; margin-bottom: 28px !important;
+      font-size: 17px !important; margin-bottom: 24px !important;
     }
   /* hide carousel side arrows on mobile (rely on dots / autoplay) */
     section[data-screen-label="01 Hero"] > button { display: none !important; }

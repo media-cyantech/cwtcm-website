@@ -219,10 +219,13 @@ const Hero = ({ heroIndex = 0 }) => {
                 fontSize: 11, fontWeight: 500, letterSpacing: '0.12em',
                 textTransform: 'uppercase', opacity: 0.85, marginBottom: 28,
               }}>{s.eyebrow}</div>
-              {/* 只有第一张用 <h1>，其余同样式的 <div> —— 一页只能有一个 h1 */}
+              {/* 只有第一张用 <h1>，其余同样式的 <div> —— 一页只能有一个 h1。
+                  ⚠️ 手机端字号必须靠 .hero-title-h 这个类来覆盖，不能按标签名写
+                  `h1 { }` —— 那样只有第一张会变小，2/4 张仍是桌面字号、块更高，
+                  底部对齐时就会把眉标顶到 logo 上（这个坑真踩过）。 */}
               {i === start
-                ? <h1 style={titleStyle}><Clauses text={s.h1} /></h1>
-                : <div style={titleStyle}><Clauses text={s.h1} /></div>}
+                ? <h1 className="hero-title-h" style={titleStyle}><Clauses text={s.h1} /></h1>
+                : <div className="hero-title-h" style={titleStyle}><Clauses text={s.h1} /></div>}
               {s.zh && (
                 <div className="hero-title-zh" style={{
                   fontFamily: 'var(--font-serif-zh)', fontWeight: 500,
