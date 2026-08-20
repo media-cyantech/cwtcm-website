@@ -2739,6 +2739,7 @@ STRINGS.customerCare = {
     { slug: 'mani-tan', name: 'Mani Tan', clinics: ['Richmond', 'Burnaby'], photo: 'reception-rmd-bby-mani-tan.jpg' },
     { slug: 'jessica-zhu', name: 'Jessica Zhu', clinics: ['White Rock'], photo: 'reception-wr-jessica-zhu.jpg' },
     { slug: 'nika-lin', name: 'Nika Lin', clinics: ['White Rock'], photo: 'reception-wr-nika-lin.jpg' },
+    { slug: 'ivy-huang', name: 'Ivy Huang', clinics: ['Richmond'], photo: 'reception-rmd-ivy-huang.jpg' },
   ],
 };
 
