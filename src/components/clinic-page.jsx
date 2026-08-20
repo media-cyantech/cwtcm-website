@@ -176,7 +176,7 @@ const RCHero = ({ c, directionsHref }) => {
   const STRINGS = useStrings();
   const usePlaceholder = !c.photo;
   return (
-  <section data-screen-label="01 Hero" style={{
+  <section data-screen-label="01 Hero" className="rc-hero-section" style={{
     position: 'relative', width: '100%', height: '78vh', minHeight: 580,
     overflow: 'hidden',
     background: usePlaceholder ? 'var(--cream-200)' : 'var(--sepia-700)',
@@ -214,7 +214,7 @@ const RCHero = ({ c, directionsHref }) => {
         <HeroTopScrim />
       </>
     )}
-    <div style={{
+    <div className="rc-hero-content" style={{
       position: 'absolute', left: 0, right: 0, bottom: 88,
     }}>
       <div className="container">
@@ -222,18 +222,22 @@ const RCHero = ({ c, directionsHref }) => {
           color: usePlaceholder ? 'var(--sepia-700)' : 'var(--cream-50)',
           maxWidth: 820,
         }}>
-          <div style={{
+          <div className="rc-hero-eyebrow" style={{
             fontSize: 11, fontWeight: 500, letterSpacing: '0.16em',
             textTransform: 'uppercase', opacity: usePlaceholder ? 0.7 : 0.85,
             marginBottom: 26,
           }}>{c.eyebrow}</div>
-          <h1 style={{
+          {/* ⚠️ clamp(72px, 9vw, 132px) 的下限是 72px —— 在手机宽度上 9vw
+              永远够不到 72px，所以这个 clamp 在窄屏上恒等于 72px，跟首页轮播
+              那次一样，会把这块（底部对齐）撑得比导航还高，压到 logo 上。
+              手机端专门用 .rc-hero-title 类把下限收到 44px。 */}
+          <h1 className="rc-hero-title" style={{
             fontFamily: 'var(--font-display)', fontWeight: 500,
             fontSize: 'clamp(72px, 9vw, 132px)', lineHeight: 1,
             letterSpacing: '-0.015em', margin: '0 0 18px 0',
             color: usePlaceholder ? 'var(--sepia-700)' : 'var(--cream-50)',
           }}>{c.h1}</h1>
-          <div style={{
+          <div className="rc-hero-sub" style={{
             fontFamily: 'var(--font-display)', fontStyle: 'italic',
             fontSize: 24, lineHeight: 1.4,
             color: usePlaceholder ? 'var(--sepia-500)' : 'var(--cream-100)',

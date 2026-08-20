@@ -144,7 +144,6 @@ const PdHero = ({ person, d, first, bookHref }) => {
   const chrome = STRINGS.practitioners.detailChrome;
   const creds = d.creds || person.creds;
   const clinicName = (c) => (chrome.clinicNames && chrome.clinicNames[c]) || (STRINGS.practitioners[STRINGS.lang]?.clinicNames?.[c]) || c;
-  const chip = person.clinics.length > 1 ? person.clinics.map(clinicName).join(' + ') : clinicName(person.clinics[0]);
   const lede = PD_IS_ZH ? d.ledeZh : d.ledeEn;
   return (
     <section data-screen-label="01 Hero" style={{ position: 'relative', background: 'var(--cream-100)', overflow: 'hidden' }}>
@@ -161,8 +160,12 @@ const PdHero = ({ person, d, first, bookHref }) => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 26 }}>
               {creds.map((c, i) => <PdCred key={i} cred={c} large />)}
             </div>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 26 }}>
-              <PdChip label={chip} />
+            {/* 之前是把多家门店拼成一个 "Richmond + Burnaby + ..." 的单条
+                标签，whiteSpace:nowrap 不能换行，四家门店的医师在手机上
+                这一条直接冲出屏幕右边。改成每家门店各自一个标签；手机端
+                (tokens.css) 再覆盖成固定两列、整体居中。 */}
+            <div className="pd-hero-clinics" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 26 }}>
+              {person.clinics.map((cl, i) => <PdChip key={i} label={clinicName(cl)} />)}
             </div>
             {lede && (
               <p className="lede" style={{ maxWidth: 560, margin: '0 0 34px' }}>{lede}</p>

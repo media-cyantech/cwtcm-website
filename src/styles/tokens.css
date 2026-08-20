@@ -497,4 +497,32 @@ button { font: inherit; cursor: pointer; }
     align-items: flex-start !important;
     gap: 12px !important;
   }
+
+  /* ---- Clinic location page hero (RCHero, clinic-page.jsx) ----
+     Same failure as the homepage carousel: h1 is clamp(72px, 9vw, 132px),
+     but 9vw never reaches 72px below ~800px wide, so the clamp is stuck at
+     its 72px floor on every phone. That's rendered inside a bottom-anchored
+     block (position:absolute, bottom offset) — a taller block pushes its
+     top edge further up, past the nav, onto the logo. This section has no
+     homepage.css equivalent (that file only loads on Homepage.astro), so
+     it never got any mobile treatment at all until now. */
+  .rc-hero-section { min-height: max(78vh, 560px) !important; }
+  .rc-hero-content { bottom: 40px !important; }
+  .rc-hero-eyebrow { margin-bottom: 14px !important; }
+  .rc-hero-title { font-size: 44px !important; margin-bottom: 12px !important; }
+  .rc-hero-sub { font-size: 18px !important; margin-bottom: 22px !important; }
+
+  /* ---- Practitioner hero clinic tags (practitioner-detail.jsx PdHero) ----
+     Fixed 2-column grid, not flex-wrap — flex-wrap would fit 3 short chips
+     ("Richmond"/"Burnaby") on one row and only 1 long one ("White Rock")
+     on the next, which reads as uneven. A 2-col grid keeps every row to
+     exactly 2 regardless of label length. width:fit-content + margin:auto
+     centers the whole block instead of stretching tags edge-to-edge. */
+  .pd-hero-clinics {
+    display: grid !important;
+    grid-template-columns: repeat(2, max-content) !important;
+    justify-content: center !important;
+    width: fit-content !important;
+    margin: 0 auto 26px !important;
+  }
 }
