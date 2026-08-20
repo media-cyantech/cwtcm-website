@@ -377,7 +377,7 @@ const PractitionersPage = () => {
     comingSoon: data.viewProfileComingSoon || 'Profile coming soon',
   };
 
-  const ccList = (STRINGS.customerCare && STRINGS.customerCare.list) || [];
+  const ccList = ((STRINGS.customerCare && STRINGS.customerCare.list) || []).filter(inClinic);
   const isWhiteRock = clinic === 'White Rock';
   const clinicName = (data.clinicNames && data.clinicNames[clinic]) || clinic;
   const empty = clinic !== 'All' && !isWhiteRock && founders.length === 0 && others.length === 0 && rmt.length === 0;
@@ -434,8 +434,8 @@ const PractitionersPage = () => {
           {isWhiteRock && <WhiteRockTeamPanel />}
       </>
 
-      {/* Customer Care Team — shown on the full view */}
-      {clinic === 'All' && ccList.length > 0 && typeof CustomerCareSection !== 'undefined' && (
+      {/* Customer Care Team — filtered by clinic like the sections above, not just shown on "All" */}
+      {ccList.length > 0 && typeof CustomerCareSection !== 'undefined' && (
         <CustomerCareSection cards={ccList} clinicNames={data.clinicNames} />
       )}
 
