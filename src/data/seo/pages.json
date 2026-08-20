@@ -1377,34 +1377,6 @@
       "sitemap": true
     },
     {
-      "file": "Practitioners/shawn-feng-ZH.html",
-      "lang": "zh-Hans",
-      "canonical": "https://cwtcm.ca/Practitioners/shawn-feng-ZH.html",
-      "hreflang": {
-        "en": "https://cwtcm.ca/Practitioners/shawn-feng.html",
-        "zh-Hans": "https://cwtcm.ca/Practitioners/shawn-feng-ZH.html",
-        "x-default": "https://cwtcm.ca/Practitioners/shawn-feng.html"
-      },
-      "title": "Shawn Feng — BC省注册针灸师 | 加西中医",
-      "description": "拥有丰富中医临床经验的康复治疗师与注册针灸师，擅长针灸、艾灸、推拿及拔罐治疗颈肩腰腿痛、肌肉劳损及关节疼痛。",
-      "robots": "index,follow",
-      "sitemap": true
-    },
-    {
-      "file": "Practitioners/shawn-feng.html",
-      "lang": "en",
-      "canonical": "https://cwtcm.ca/Practitioners/shawn-feng.html",
-      "hreflang": {
-        "en": "https://cwtcm.ca/Practitioners/shawn-feng.html",
-        "zh-Hans": "https://cwtcm.ca/Practitioners/shawn-feng-ZH.html",
-        "x-default": "https://cwtcm.ca/Practitioners/shawn-feng.html"
-      },
-      "title": "Shawn Feng | Canadian Western TCM",
-      "description": "Shawn Feng, registered acupuncturist and rehabilitation therapist at Canadian Western TCM Vancouver — acupuncture, moxibustion, Tuina and cupping for pain care.",
-      "robots": "index,follow",
-      "sitemap": true
-    },
-    {
       "file": "Practitioners/shirley-zhu-ZH.html",
       "lang": "zh-Hans",
       "canonical": "https://cwtcm.ca/Practitioners/shirley-zhu-ZH.html",
