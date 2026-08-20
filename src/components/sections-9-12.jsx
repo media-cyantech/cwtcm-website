@@ -272,7 +272,7 @@ const Footer = () => {
           <div style={{ display: 'flex', gap: 14, marginTop: 4, flexWrap: 'wrap' }}>
             {[
               { src: resources.r_brand_wechat_qr_png, label: isZh ? '微信' : 'WeChat' },
-              { src: resources.r_brand_xiaohongshu_qr_png, label: '小红书' },
+              { src: resources.r_brand_xiaohongshu_qr_png, label: isZh ? '小红书' : 'RedNote' },
               { src: resources.r_brand_instagram_qr_png, label: 'Instagram' },
             ].map((q, i) => (
               <div key={i} style={{ textAlign: 'center' }}>

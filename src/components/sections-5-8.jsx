@@ -212,6 +212,7 @@ const LocationCard = ({ l, i }) => {
   const clinicHref = `${CLINIC_PAGE_SLUGS[i] || 'Locations'}${sfx}.html`;
   return (
   <article className="loc-card" style={{
+    position: 'relative',
     background: 'var(--cream-50)',
     padding: '36px 24px 32px',
     display: 'flex', flexDirection: 'column', alignItems: 'center',
@@ -249,14 +250,21 @@ const LocationCard = ({ l, i }) => {
       marginBottom: 14, maxWidth: 240,
     }}>{l.address}</div>
     <a href={`tel:${l.phone.replace(/[^0-9+]/g, '')}`} style={{
+      position: 'relative', zIndex: 1,
       fontSize: 14, fontWeight: 500, color: 'var(--sepia-400)',
       letterSpacing: '0.02em', marginBottom: 18, textDecoration: 'none',
     }}>{l.phone}</a>
-    <a className="loc-cta" href={clinicHref} style={{
-      marginTop: 'auto',
+    {/* 整卡可点：这个链接铺满卡片（position:absolute + inset:0），
+        电话号码用 position:relative + z-index 盖在它上面，保持独立可点。
+        没用 ::after 伪元素放 content:''——JSX 把 <style> 当文本子节点，
+        引号会被转义成 &#x27;，content 值就成了非法 CSS，伪元素不生成。 */}
+    <a className="loc-cta loc-cta-stretched" href={clinicHref} style={{
+      position: 'absolute', inset: 0,
+      display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
+      paddingBottom: 32,
       fontSize: 11, fontWeight: 600, letterSpacing: '0.14em',
       textTransform: 'uppercase', color: 'var(--sepia-700)', textDecoration: 'none',
-      cursor: 'pointer', display: 'inline-flex', gap: 8, alignItems: 'center',
+      cursor: 'pointer', gap: 8,
     }}>{STRINGS.bookAtClinic} <span className="loc-arrow" style={{ transition: 'all 200ms ease' }}>→</span></a>
   </article>
   );
