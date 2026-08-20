@@ -1897,8 +1897,12 @@ COPY.contact = {
         message: '请告诉我们怎样帮助你？',
       },
       submit: '发送留言',
+      askAgent: '有问题？先问问小卫',
+      successTitle: '感谢您的留言。',
+      successBody: '我们已收到您的信息，也感谢您抽时间联系我们。如有需要尽快处理的事项，请直接致电您首选的诊所。',
+      successAgain: '再发一条留言',
       helper: '请勿在此填写敏感的医疗或财务信息。',
-      disabled: '在线表单即将开通——请先致电或邮件联系我们。',
+      disabled: '如需尽快回复，请直接致电您首选的诊所。',
     },
     wechat: {
       eyebrow: '微信联系',

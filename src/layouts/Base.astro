@@ -96,5 +96,19 @@ const depth = (page.file.match(/\//g) || []).length;
     data-lang={isZh ? 'zh' : 'en'}
     data-color="#B23A2E"
     data-position="bottom-right"></script>
+  <script is:inline>
+    // Page-level links marked with data-open-ai-agent open the existing widget.
+    // Their href remains a direct-chat fallback if the widget script fails.
+    document.addEventListener('click', function (event) {
+      var trigger = event.target.closest('[data-open-ai-agent]');
+      if (!trigger) return;
+
+      var widgetButton = document.querySelector('.ai-agent-widget-button');
+      if (!widgetButton) return;
+
+      event.preventDefault();
+      widgetButton.click();
+    });
+  </script>
 </body>
 </html>

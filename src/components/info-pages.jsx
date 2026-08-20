@@ -359,6 +359,11 @@ const ContactFormSection = ({ c, clinics, wechat }) => (
 
 const ContactForm = ({ c, clinics }) => {
   const STRINGS = useStrings();
+  const isZh = STRINGS.lang === 'zh';
+  const agentLang = isZh ? 'zh' : 'en';
+  const agentHref = `https://app.cytoworld.com/app/widget-chat?universe_id=39&lang=${agentLang}`;
+  const contactFile = `Contact${isZh ? '-ZH' : ''}.html`;
+  const contactUrl = `https://cwtcm.ca/${contactFile}`;
   const inputStyle = {
     width: '100%',
     background: 'var(--cream-50)',
@@ -378,36 +383,113 @@ const ContactForm = ({ c, clinics }) => {
     textTransform: 'uppercase', color: 'var(--sepia-500)',
     marginBottom: 8,
   };
-  const onSubmit = (e) => {
-    e.preventDefault();
-    // [Form submission endpoint TBC]
-    const msg = STRINGS.lang === 'zh'
-      ? '表单提交端点待确认——请暂时致电诊所。'
-      : 'Form submission endpoint TBC — please call the clinic for now.';
-    alert(msg);
-  };
   return (
     <div>
       <div className="eyebrow" style={{ marginBottom: 18 }}>{c.eyebrow}</div>
       <h2 className="h-section" style={{ margin: '0 0 32px' }}><Clauses text={c.h2} /></h2>
-      <form onSubmit={onSubmit} style={{ display: 'grid', gap: 22, maxWidth: 560 }}>
+      <style>{`
+        #message-sent:target { display: block !important; }
+        #message-sent:target ~ form { display: none !important; }
+      `}</style>
+      <div
+        id="message-sent"
+        role="status"
+        tabIndex="-1"
+        style={{
+          display: 'none',
+          margin: '0 0 28px',
+          padding: '30px 32px',
+          background: 'var(--cream-50)',
+          border: '1px solid var(--sepia-200)',
+          borderLeft: '4px solid var(--vermilion)',
+          borderRadius: 4,
+          color: 'var(--sepia-700)',
+          boxShadow: '0 12px 32px rgba(72, 48, 32, 0.07)',
+        }}
+      >
+        <div style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+          <span aria-hidden style={{
+            width: 42, height: 42, flex: '0 0 42px',
+            display: 'grid', placeItems: 'center',
+            borderRadius: '50%',
+            background: 'var(--vermilion)', color: 'var(--cream-50)',
+          }}>
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12.5 9.2 17 19 7" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+          <div>
+            <strong style={{
+              display: 'block', marginBottom: 8,
+              fontFamily: 'var(--font-display)', fontSize: 25, lineHeight: 1.2,
+            }}>{c.successTitle}</strong>
+            <p className="body" style={{ fontSize: 15, lineHeight: 1.65, margin: '0 0 18px' }}>{c.successBody}</p>
+            <a href={contactFile} style={{
+              color: 'var(--sepia-600)', fontSize: 12, fontWeight: 600,
+              letterSpacing: '0.06em', textTransform: 'uppercase',
+              borderBottom: '1px solid var(--sepia-300)', paddingBottom: 3,
+            }}>{c.successAgain}</a>
+          </div>
+        </div>
+      </div>
+      <form
+        action="https://formsubmit.co/media@cyantech.com"
+        method="POST"
+        acceptCharset="UTF-8"
+        style={{ display: 'grid', gap: 22, maxWidth: 560 }}
+      >
+        {/* FormSubmit: keep the default reCAPTCHA enabled and use a hidden
+            honeypot for low-friction bot filtering. The visible fields stay
+            deliberately limited to non-clinical contact information. */}
+        <input type="hidden" name="_subject" value="New CWTCM website enquiry" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_url" value={contactUrl} />
+        <input type="hidden" name="_next" value={`${contactUrl}#message-sent`} />
+        <input
+          type="text"
+          name="_honey"
+          tabIndex="-1"
+          autoComplete="off"
+          aria-hidden="true"
+          style={{ display: 'none' }}
+        />
         <div>
           <label style={labelStyle} htmlFor="contact-name">{c.fields.name}</label>
-          <input id="contact-name" type="text" required style={inputStyle} />
+          <input
+            id="contact-name"
+            name="name"
+            type="text"
+            autoComplete="name"
+            required
+            style={inputStyle}
+          />
         </div>
         <div className="contact-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
           <div>
             <label style={labelStyle} htmlFor="contact-email">{c.fields.email}</label>
-            <input id="contact-email" type="email" required style={inputStyle} />
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              required
+              style={inputStyle}
+            />
           </div>
           <div>
             <label style={labelStyle} htmlFor="contact-phone">{c.fields.phone}</label>
-            <input id="contact-phone" type="tel" style={inputStyle} />
+            <input
+              id="contact-phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              style={inputStyle}
+            />
           </div>
         </div>
         <div>
           <label style={labelStyle} htmlFor="contact-clinic">{c.fields.clinic}</label>
-          <select id="contact-clinic" style={inputStyle} defaultValue="">
+          <select id="contact-clinic" name="preferred_clinic" style={inputStyle} defaultValue="">
             <option value="" disabled>{c.fields.clinicDefault}</option>
             {clinics.map((cl, i) => (
               <option key={i} value={cl.city}>{cl.city}</option>
@@ -416,7 +498,7 @@ const ContactForm = ({ c, clinics }) => {
         </div>
         <div>
           <label style={labelStyle} htmlFor="contact-message">{c.fields.message}</label>
-          <textarea id="contact-message" rows="5" required style={{
+          <textarea id="contact-message" name="message" rows="5" required style={{
             ...inputStyle, resize: 'vertical', minHeight: 130,
           }} />
         </div>
@@ -431,6 +513,14 @@ const ContactForm = ({ c, clinics }) => {
           <button type="submit" className="btn btn-primary" style={{
             padding: '14px 28px', fontSize: 13, cursor: 'pointer', border: 'none',
           }}>{c.submit}</button>
+          <a
+            href={agentHref}
+            target="_blank"
+            rel="noopener"
+            data-open-ai-agent
+            className="btn btn-outline"
+            style={{ padding: '13px 24px', fontSize: 13 }}
+          >{c.askAgent}</a>
           <span
             style={{ fontSize: 12, color: 'var(--sepia-400)', fontStyle: 'italic' }}
             dangerouslySetInnerHTML={{ __html: c.disabled }}

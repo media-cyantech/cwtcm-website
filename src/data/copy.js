@@ -1189,8 +1189,12 @@ export const STRINGS = {
           message: 'How can we help?',
         },
         submit: 'Send message',
+        askAgent: 'Questions? Ask Way',
+        successTitle: 'Thank you for reaching out.',
+        successBody: 'We’ve received your message and appreciate you taking the time to contact us. For anything time-sensitive, please call your preferred clinic.',
+        successAgain: 'Send another message',
         helper: 'Please don’t include sensitive medical or financial details here.',
-        disabled: 'Online form coming soon — please call or email us.',
+        disabled: 'For time-sensitive requests, please call your preferred clinic.',
       },
       wechat: {
         eyebrow: 'Find us on WeChat',
