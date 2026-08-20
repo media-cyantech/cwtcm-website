@@ -339,5 +339,20 @@ const Clauses = ({ text }) => {
 // ====================================================================
 const HeroTopScrim = () => <div aria-hidden className="hero-top-scrim" />;
 
+// A plain `▶` is emoji-presenting on iOS and can become a blue play-button
+// glyph. Use a deterministic monochrome SVG for credential rows instead.
+const CredentialArrow = ({ size = 9, color = 'currentColor', style = {} }) => (
+  <svg
+    aria-hidden="true"
+    width={size}
+    height={size}
+    viewBox="0 0 10 10"
+    focusable="false"
+    style={{ display: 'block', flexShrink: 0, color, ...style }}
+  >
+    <path d="M2 1.25 8.25 5 2 8.75Z" fill="currentColor" />
+  </svg>
+);
 
-export { Stroke, HeroTopScrim, Clauses, ConditionIcon, TreatmentPlaceholder, LocationPlaceholder, ArticlePlaceholder, ApproachMacro };
+
+export { Stroke, HeroTopScrim, CredentialArrow, Clauses, ConditionIcon, TreatmentPlaceholder, LocationPlaceholder, ArticlePlaceholder, ApproachMacro };

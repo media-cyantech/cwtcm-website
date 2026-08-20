@@ -4,7 +4,7 @@
 import React from 'react';
 import { useState as usePr } from 'react';
 import { useStrings, useIsZh } from '../data/i18n.jsx';
-import { Clauses } from './atoms.jsx';
+import { CredentialArrow, Clauses } from './atoms.jsx';
 import { CustomerCareSection } from './customer-care-card.jsx';
 import { Nav } from './sections-1-4.jsx';
 import { Footer } from './sections-9-12.jsx';
@@ -110,13 +110,13 @@ const PractitionerPhoto = ({ p, caption, large }) => {
 };
 
 // ---- credential row ----
-// EN page: ▶ English abbreviation only.  ZH page: ▶ 中文 primary + EN abbr beneath.
+// EN page: SVG marker + English abbreviation only. ZH page: marker + 中文 primary + EN abbr beneath.
 const CredRow = ({ cred }) => {
   const PR_IS_ZH = useIsZh();   // 原为模块顶层常量，会导致中英串台
   const en = prStdAbbr(cred.en);
   return (
     <div style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
-      <span aria-hidden="true" style={{ color: PR_RING, fontSize: 9, lineHeight: '20px', flexShrink: 0 }}>▶</span>
+      <CredentialArrow size={9} color={PR_RING} style={{ marginTop: 5.5 }} />
       {PR_IS_ZH ? (
         <div>
           <div style={{

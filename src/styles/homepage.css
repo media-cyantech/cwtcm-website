@@ -13,7 +13,10 @@
      Real mobile breakpoint — applies to actual phones / narrow viewports
      Mirrors the .mobile-frame preview rules at the document level.
      =========================================================== */
-  @media (max-width: 768px) {
+  /* iPhone Chrome's page zoom / Request Desktop Site can expose a virtual
+     viewport up to 980px. Keep that range in the compact layout so the page
+     does not become a scaled-down desktop canvas with unusable touch targets. */
+  @media (max-width: 980px) {
   body { font-size: 15px; }
   .container { padding: 0 20px !important; }
   /* NAV — collapse desktop ul, shrink logo + brand mark */

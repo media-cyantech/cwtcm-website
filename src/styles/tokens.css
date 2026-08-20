@@ -207,7 +207,7 @@ h1, h2, h3, .h-display, .h-section, .h-card,
     transparent 100%);
   pointer-events: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 980px) {
   .hero-top-scrim { height: 120px; }
 }
 
@@ -319,8 +319,9 @@ ul { list-style: none; padding: 0; margin: 0; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 
-/* mobile */
-@media (max-width: 768px) {
+/* Compact layout. The 980px ceiling also covers the virtual viewport used by
+   iPhone Chrome page zoom / Request Desktop Site. */
+@media (max-width: 980px) {
   .section { padding: 64px 0; }
   .section-tight { padding: 48px 0; }
   :root { --gutter: 20px; }

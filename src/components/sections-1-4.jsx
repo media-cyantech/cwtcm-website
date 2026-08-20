@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import { useStrings, useCopy, useIsZh } from '../data/i18n.jsx';
 import { resources } from '../data/resources.js';
-import { HeroTopScrim, Clauses, ApproachMacro } from './atoms.jsx';
+import { HeroTopScrim, CredentialArrow, Clauses, ApproachMacro } from './atoms.jsx';
 // Top-level sections: Hero, Trust, Practitioners, Approach
 // Reads COPY + atoms
 
@@ -48,7 +48,7 @@ const Nav = ({ theme = 'dark', active = null, bookHref = null }) => {
         @media (max-width: 980px){
           nav .nav-links { display: none !important; }
         }
-        @media (max-width: 768px){
+        @media (max-width: 980px){
           nav { padding: 16px 20px !important; }
           nav .nav-logo-img { height: 64px !important; }
         }
@@ -163,7 +163,7 @@ const Hero = ({ heroIndex = 0 }) => {
   return (
     <section data-screen-label="01 Hero" className="hero-carousel" style={{
       position: 'relative', width: '100%', height: '90vh', minHeight: 640,
-      overflow: 'hidden', background: 'var(--sepia-700)',
+      overflow: 'hidden', background: 'var(--sepia-700)', touchAction: 'pan-y',
     }}>
       <style>{`
         /* 控件默认藏起来：没有 JS 就没有可点的假控件 */
@@ -178,8 +178,9 @@ const Hero = ({ heroIndex = 0 }) => {
           .hero-carousel .hero-slide-text { transition: none; }
         }
         /* 箭头在窄屏上很容易压住文字，手机端只留圆点 */
-        @media (max-width: 768px) {
+        @media (max-width: 980px) {
           .hero-carousel[data-ready] .hero-ctrl { display: none; }
+          .hero-carousel .hero-dots { bottom: 0 !important; }
         }
       `}</style>
 
@@ -259,7 +260,11 @@ const Hero = ({ heroIndex = 0 }) => {
         background: 'rgba(20,12,4,0.35)', border: '1px solid rgba(247,241,229,0.4)',
         color: 'var(--cream-50)', fontSize: 20, cursor: 'pointer',
         placeItems: 'center', zIndex: 5,
-      }}>‹</button>
+      }}>
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M12.5 4 6.5 10l6 6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
       <button type="button" className="hero-ctrl hero-next"
         aria-label={COPY.hero.nextLabel || 'Next slide'} style={{
         position: 'absolute', right: 24, top: '50%', transform: 'translateY(-50%)',
@@ -267,22 +272,33 @@ const Hero = ({ heroIndex = 0 }) => {
         background: 'rgba(20,12,4,0.35)', border: '1px solid rgba(247,241,229,0.4)',
         color: 'var(--cream-50)', fontSize: 20, cursor: 'pointer',
         placeItems: 'center', zIndex: 5,
-      }}>›</button>
+      }}>
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="m7.5 4 6 6-6 6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
 
       <div className="hero-dots" style={{
         position: 'absolute', bottom: 40, left: '50%', transform: 'translateX(-50%)',
-        gap: 12, alignItems: 'center', zIndex: 5,
+        gap: 0, alignItems: 'center', zIndex: 6,
       }}>
         {slides.map((_, i) => (
           <button key={i} type="button" className="hero-dot" data-i={i}
             aria-label={`${COPY.hero.slideLabel || 'Slide'} ${i + 1}`}
             aria-current={i === start ? 'true' : 'false'}
             style={{
-              width: i === start ? 28 : 8, height: 8, borderRadius: 4,
+              width: 44, height: 44, border: 'none', padding: 0,
+              display: 'grid', placeItems: 'center', cursor: 'pointer',
+              background: 'transparent', touchAction: 'manipulation',
+            }}>
+            <span className="hero-dot-mark" style={{
+              display: 'block', width: i === start ? 28 : 8, height: 8,
+              borderRadius: 4,
               background: i === start ? 'var(--cream-50)' : 'rgba(247,241,229,0.45)',
-              border: 'none', padding: 0, cursor: 'pointer',
-              transition: 'all 300ms ease',
+              transition: 'width 300ms ease, background 300ms ease',
+              pointerEvents: 'none',
             }} />
+          </button>
         ))}
       </div>
 
@@ -293,6 +309,7 @@ const Hero = ({ heroIndex = 0 }) => {
   var imgs  = root.querySelectorAll('.hero-slide-img');
   var texts = root.querySelectorAll('.hero-slide-text');
   var dots  = root.querySelectorAll('.hero-dot');
+  var marks = root.querySelectorAll('.hero-dot-mark');
   var n = imgs.length;
   if (n < 2) return;
   var i = ${start}, timer = null;
@@ -307,9 +324,11 @@ const Hero = ({ heroIndex = 0 }) => {
       if (on) texts[j].removeAttribute('aria-hidden');
       else texts[j].setAttribute('aria-hidden','true');
       if (dots[j]){
-        dots[j].style.width = on ? '28px' : '8px';
-        dots[j].style.background = on ? 'var(--cream-50)' : 'rgba(247,241,229,0.45)';
         dots[j].setAttribute('aria-current', on ? 'true' : 'false');
+      }
+      if (marks[j]){
+        marks[j].style.width = on ? '28px' : '8px';
+        marks[j].style.background = on ? 'var(--cream-50)' : 'rgba(247,241,229,0.45)';
       }
     }
   }
@@ -322,6 +341,31 @@ const Hero = ({ heroIndex = 0 }) => {
   if (next) next.addEventListener('click', function(){ go(i + 1); });
   for (var d = 0; d < dots.length; d++){
     (function(k){ dots[k].addEventListener('click', function(){ go(k); }); })(d);
+  }
+  // Horizontal swipe while preserving the page's vertical scroll. Pointer
+  // Events cover current iOS Chrome; Touch Events remain the older fallback.
+  var swipeX = null, swipeY = null;
+  function swipeStart(x, y){ swipeX = x; swipeY = y; }
+  function swipeEnd(x, y){
+    if (swipeX === null || swipeY === null) return;
+    var dx = x - swipeX, dy = y - swipeY;
+    swipeX = swipeY = null;
+    if (Math.abs(dx) >= 44 && Math.abs(dx) > Math.abs(dy) * 1.2) go(i + (dx < 0 ? 1 : -1));
+  }
+  if (window.PointerEvent){
+    root.addEventListener('pointerdown', function(e){
+      if (e.button !== undefined && e.button !== 0) return;
+      swipeStart(e.clientX, e.clientY);
+    }, { passive: true });
+    root.addEventListener('pointerup', function(e){ swipeEnd(e.clientX, e.clientY); }, { passive: true });
+    root.addEventListener('pointercancel', function(){ swipeX = swipeY = null; }, { passive: true });
+  } else {
+    root.addEventListener('touchstart', function(e){
+      if (e.touches && e.touches.length === 1) swipeStart(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+    root.addEventListener('touchend', function(e){
+      if (e.changedTouches && e.changedTouches.length) swipeEnd(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+    }, { passive: true });
   }
   // 标签页切走时别继续空转
   document.addEventListener('visibilitychange', function(){
@@ -445,7 +489,7 @@ const PractitionerCard = ({ p }) => {
         )}
       </div>
 
-      {/* ▶ credential row */}
+      {/* credential row */}
       <div style={{
         marginTop: 16, display: 'flex', flexWrap: 'wrap', justifyContent: 'center',
         gap: '5px 12px', maxWidth: 252,
@@ -456,7 +500,7 @@ const PractitionerCard = ({ p }) => {
             fontFamily: HOME_PR_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
             fontSize: 12, fontWeight: 700, color: 'var(--sepia-600)', lineHeight: 1.3,
           }}>
-            <span aria-hidden="true" style={{ color: HOME_PR_RING, fontSize: 8 }}>▶</span>{c}
+            <CredentialArrow size={8} color={HOME_PR_RING} />{c}
           </span>
         ))}
       </div>
