@@ -196,7 +196,7 @@
         "x-default": "https://cwtcm.ca/Conditions/pain-injury.html"
       },
       "title": "Pain & Injury — Traditional Chinese Medicine | Canadian Western TCM",
-      "description": "Pain and injury at Canadian Western TCM — acupuncture, tui na, cupping, manual bone setting, floating needle and moxibustion to release muscle and fascia tension, calm the pain response and restore movement and circulation. Educational guide and what to expect.",
+      "description": "Pain and injury at Canadian Western TCM — acupuncture, tui na, cupping, manual bone setting, FSN and moxibustion to release muscle and fascia tension, calm the pain response and restore movement and circulation. Educational guide and what to expect.",
       "robots": "index,follow",
       "sitemap": true
     },
@@ -559,7 +559,7 @@
         "zh-Hans": "https://cwtcm.ca/Locations-WhiteRock-ZH.html",
         "x-default": "https://cwtcm.ca/Locations-WhiteRock.html"
       },
-      "title": "White Rock TCM Clinic — Floating Needle, Acupuncture & Herbal Medicine | Canadian Western TCM",
+      "title": "White Rock TCM Clinic — FSN, Acupuncture & Herbal Medicine | Canadian Western TCM",
       "description": "Canada",
       "robots": "index,follow",
       "sitemap": true
@@ -784,7 +784,7 @@
         "x-default": "https://cwtcm.ca/Practitioners/di-wu.html"
       },
       "title": "Di Wu — Senior Acupuncturist · R.TCM.P · White Rock Founder | Canadian Western TCM",
-      "description": "Senior acupuncturist with 30 years of clinical experience in China and Canada — President of the BC Association of TCM & Acupuncture Practitioners (ATCMA) and of the Canada Floating Needle Medicine Association.",
+      "description": "Senior acupuncturist with 30 years of clinical experience in China and Canada — President of the BC Association of TCM & Acupuncture Practitioners (ATCMA) and of the Canada FSN Medicine Association.",
       "robots": "index,follow",
       "sitemap": true
     },
@@ -1162,7 +1162,7 @@
         "x-default": "https://cwtcm.ca/Practitioners/lynn-liu.html"
       },
       "title": "Lynn Liu — BC省注册中医师 | 加西中医",
-      "description": "近二十年康复临床的注册中医师，融合针灸、推拿与中草药。",
+      "description": "拥有20年以上康复临床经验的注册中医师，融合针灸、推拿与中草药。",
       "robots": "index,follow",
       "sitemap": true
     },
@@ -1176,7 +1176,7 @@
         "x-default": "https://cwtcm.ca/Practitioners/lynn-liu.html"
       },
       "title": "Lynn Liu | Canadian Western TCM",
-      "description": "Lynn Liu, registered TCM practitioner at Canadian Western TCM — nearly 20 years of clinical rehabilitation, Master",
+      "description": "Lynn Liu, registered TCM practitioner at Canadian Western TCM — 20+ years of clinical rehabilitation, Master",
       "robots": "index,follow",
       "sitemap": true
     },
@@ -1400,7 +1400,7 @@
         "x-default": "https://cwtcm.ca/Practitioners/shirley-zhu.html"
       },
       "title": "Shirley Zhu — Registered TCM Practitioner · R.TCM.P, R.Ac | Canadian Western TCM",
-      "description": "Shirley Zhu, registered TCM practitioner and aromatherapist at Canadian Western TCM — gentle manual alignment, floating needle and acupuncture, in Vancouver.",
+      "description": "Shirley Zhu, registered TCM practitioner and aromatherapist at Canadian Western TCM — gentle manual alignment, FSN and acupuncture, in Vancouver.",
       "robots": "index,follow",
       "sitemap": true
     },
@@ -1791,8 +1791,8 @@
         "zh-Hans": "https://cwtcm.ca/Treatments-ZH.html",
         "x-default": "https://cwtcm.ca/Treatments.html"
       },
-      "title": "TCM Treatments — Acupuncture, Herbal Medicine, Tui Na, Floating Needle | Canadian Western TCM",
-      "description": "Acupuncture, tui na, moxibustion, cupping, manual bone setting, head therapy, herbal medicine, floating needle, aesthetic acupuncture and registered massage therapy — traditional TCM, practised to a modern standard, across four Greater Vancouver clinics.",
+      "title": "TCM Treatments — Acupuncture, Herbal Medicine, Tui Na, FSN | Canadian Western TCM",
+      "description": "Acupuncture, tui na, moxibustion, cupping, manual bone setting, head therapy, herbal medicine, FSN, aesthetic acupuncture and registered massage therapy — traditional TCM, practised to a modern standard, across four Greater Vancouver clinics.",
       "robots": "index,follow",
       "sitemap": true
     },
@@ -1987,8 +1987,8 @@
         "zh-Hans": "https://cwtcm.ca/Treatments/floating-needle-ZH.html",
         "x-default": "https://cwtcm.ca/Treatments/floating-needle.html"
       },
-      "title": "Floating Needle (FSN) — what it is, what to expect | Canadian Western TCM",
-      "description": "Floating Needle (Fu",
+      "title": "FSN — what it is, what to expect | Canadian Western TCM",
+      "description": "Fu's Subcutaneous Needling (FSN) at Canadian Western TCM — a modern, near-painless technique for muscular and myofascial pain. Our White Rock clinic is Canada's first dedicated FSN demonstration clinic.",
       "robots": "index,follow",
       "sitemap": true
     },

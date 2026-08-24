@@ -17,11 +17,12 @@ import { Footer } from './sections-9-12.jsx';
 // ---------- helper: warm filter applied to ALL clinic photos
 const WARM_FILTER = 'sepia(8%) saturate(92%) brightness(1.01)';
 
-const WarmImage = ({ src, alt, style }) => (
+const WarmImage = ({ src, alt, style, objectPosition = 'center center' }) => (
   <div style={{ position: 'relative', overflow: 'hidden', ...style }}>
     <img src={src} alt={alt}
       style={{
         width: '100%', height: '100%', objectFit: 'cover',
+        objectPosition,
         display: 'block', filter: WARM_FILTER,
       }} />
     <div style={{
@@ -40,7 +41,7 @@ const SepiaMotif = ({ kind = 'pier' }) => {
   const stroke = 'var(--sepia-400)';
   const stroke2 = 'var(--sepia-300)';
   if (kind === 'needle') {
-    // Floating needle: long fine needle + soft cloud halos
+    // FSN: long fine needle + soft cloud halos
     return (
       <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true"
         style={{ width: '70%', height: '70%' }}>
@@ -301,7 +302,8 @@ const RCStory = ({ c }) => (
           }}>{c.body}</p>
         </div>
         {c.photo ? (
-          <WarmImage src={c.photo} alt={c.alt} style={{ aspectRatio: '4/3' }} />
+          <WarmImage src={c.photo} alt={c.alt} objectPosition={c.objectPosition}
+            style={{ aspectRatio: '4/3' }} />
         ) : (
           <div style={{ aspectRatio: '4/3', border: '1px solid var(--sepia-100)' }}>
             <SepiaPlaceholder kind={c.placeholderKind || 'needle'}
@@ -513,7 +515,8 @@ const GalleryItem = ({ c }) => {
         boxShadow: hover ? '0 8px 24px rgba(43,33,26,0.08)' : 'none',
       }}>
       {c.photo ? (
-        <WarmImage src={c.photo} alt={c.alt} style={{ width: '100%', height: '100%' }} />
+        <WarmImage src={c.photo} alt={c.alt} objectPosition={c.objectPosition}
+          style={{ width: '100%', height: '100%' }} />
       ) : (
         <div style={{
           width: '100%', height: '100%',
@@ -922,28 +925,10 @@ const RCPriceGrid = ({ items }) => (
   </div>
 );
 
-const RCPriceList = ({ c }) => {
-  const RC_IS_ZH = useIsZh();   // 原为模块顶层常量，会导致中英串台
+const RCPriceTables = ({ c }) => {
+  const RC_IS_ZH = useIsZh();
   return (
-  <section data-screen-label="05b Pricing" style={{
-    background: 'var(--cream-50)',
-    padding: '96px 0',
-  }}>
-    <div className="container">
-      <div className="eyebrow" style={{ marginBottom: 16 }}>{c.eyebrow}</div>
-      <h2 style={{
-        fontFamily: 'var(--font-display)', fontWeight: 500,
-        fontSize: 'clamp(28px, 3vw, 40px)', lineHeight: 1.25,
-        color: 'var(--sepia-700)', margin: '0 0 14px 0', textWrap: 'balance',
-      }}>{c.h2}</h2>
-      {c.lede && (
-        <p style={{
-          fontFamily: RC_IS_ZH ? 'var(--font-serif-zh)' : 'var(--font-display)',
-          fontStyle: RC_IS_ZH ? 'normal' : 'italic',
-          fontSize: 17, lineHeight: 1.65, color: 'var(--sepia-500)',
-          maxWidth: 680, margin: '0 0 44px 0',
-        }}>{c.lede}</p>
-      )}
+    <>
       {c.items && <RCPriceGrid items={c.items} />}
       {(c.groups || []).map((g, gi) => (
         <div key={gi} style={{ marginTop: gi === 0 ? 24 : 52 }}>
@@ -970,6 +955,72 @@ const RCPriceList = ({ c }) => {
           fontSize: 12, lineHeight: 1.6, color: 'var(--sepia-400)',
           margin: '26px 0 0 0',
         }}>{c.footnote}</p>
+      )}
+    </>
+  );
+};
+
+const RCPriceList = ({ c }) => {
+  const RC_IS_ZH = useIsZh();   // 原为模块顶层常量，会导致中英串台
+  const hasSheets = Boolean(c.sheets && c.sheets.length);
+  return (
+  <section data-screen-label="05b Pricing" style={{
+    background: 'var(--cream-50)',
+    padding: '96px 0',
+  }}>
+    <div className="container">
+      <div className="eyebrow" style={{ marginBottom: 16 }}>{c.eyebrow}</div>
+      <h2 style={{
+        fontFamily: 'var(--font-display)', fontWeight: 500,
+        fontSize: 'clamp(28px, 3vw, 40px)', lineHeight: 1.25,
+        color: 'var(--sepia-700)', margin: '0 0 14px 0', textWrap: 'balance',
+      }}>{c.h2}</h2>
+      {c.lede && (
+        <p style={{
+          fontFamily: RC_IS_ZH ? 'var(--font-serif-zh)' : 'var(--font-display)',
+          fontStyle: RC_IS_ZH ? 'normal' : 'italic',
+          fontSize: 17, lineHeight: 1.65, color: 'var(--sepia-500)',
+          maxWidth: 680, margin: '0 0 44px 0',
+        }}>{c.lede}</p>
+      )}
+      {hasSheets && (
+        <div style={{ display: 'grid', gap: 32, marginTop: 36 }}>
+          {c.sheets.map((sheet, i) => (
+            <figure key={i} style={{ width: 'min(100%, 940px)', margin: '0 auto' }}>
+              <a href={sheet.src} target="_blank" rel="noopener"
+                aria-label={`${sheet.alt} — ${c.viewFullLabel}`}>
+                <img src={sheet.src} alt={sheet.alt} loading="lazy" style={{
+                  display: 'block', width: '100%', height: 'auto',
+                  border: '1px solid var(--sepia-100)', background: '#fff',
+                  boxShadow: '0 8px 28px rgba(43,33,26,0.06)',
+                }} />
+              </a>
+              <figcaption style={{
+                marginTop: 10, textAlign: 'center',
+                fontFamily: RC_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
+                fontSize: 12, lineHeight: 1.5, color: 'var(--sepia-500)',
+              }}>{sheet.caption} · {c.viewFullLabel}</figcaption>
+            </figure>
+          ))}
+        </div>
+      )}
+      {hasSheets ? (
+        <details style={{
+          width: 'min(100%, 940px)', margin: '36px auto 0',
+          borderTop: '1px solid var(--sepia-200)',
+          borderBottom: '1px solid var(--sepia-200)',
+          padding: '18px 0',
+        }}>
+          <summary style={{
+            cursor: 'pointer',
+            fontFamily: RC_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
+            fontSize: 13, fontWeight: 600, letterSpacing: '0.04em',
+            color: 'var(--sepia-600)',
+          }}>{c.textVersionLabel}</summary>
+          <div style={{ paddingTop: 22 }}><RCPriceTables c={c} /></div>
+        </details>
+      ) : (
+        <RCPriceTables c={c} />
       )}
     </div>
   </section>

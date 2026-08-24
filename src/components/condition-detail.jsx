@@ -558,6 +558,9 @@ const CDDBookCTA = ({ d }) => {
 // ============================================================
 const CDDJsonLd = ({ d }) => {
   const CDD_IS_ZH = useIsZh();   // 原为模块顶层常量，会导致中英串台
+  const therapySchemaNames = {
+    'floating-needle': CDD_IS_ZH ? '浮针（符氏皮下针法，FSN）' : "Fu's Subcutaneous Needling (FSN)",
+  };
   const json = {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',
@@ -571,7 +574,7 @@ const CDDJsonLd = ({ d }) => {
     },
     mentions: (d.treatments || []).map((slug) => ({
       '@type': 'MedicalTherapy',
-      name: slug.replace(/-/g, ' '),
+      name: therapySchemaNames[slug] || slug.replace(/-/g, ' '),
     })),
   };
   return (

@@ -140,7 +140,7 @@ const WhiteRockPlaceholder = ({ caption }) => (
 const ClinicCard = ({ c, viewClinicLabel }) => {
   const [hover, setHover] = useStateLoc(false);
   return (
-    <a href={c.href} style={{
+    <a className="loc-clinic-card" href={c.href} style={{
       display: 'flex', flexDirection: 'column',
       background: 'var(--cream-50)',
       border: '1px solid var(--sepia-100)',
@@ -161,6 +161,7 @@ const ClinicCard = ({ c, viewClinicLabel }) => {
             <img src={c.photo} alt={c.alt}
               style={{
                 width: '100%', height: '100%', objectFit: 'cover',
+                objectPosition: c.objectPosition || 'center center',
                 display: 'block',
                 filter: 'sepia(8%) saturate(92%) brightness(1.01)',
               }} />
@@ -178,11 +179,11 @@ const ClinicCard = ({ c, viewClinicLabel }) => {
       </div>
 
       {/* text block */}
-      <div style={{
+      <div className="loc-clinic-card-copy" style={{
         padding: '28px 24px 26px',
         display: 'flex', flexDirection: 'column', gap: 0, flex: 1,
       }}>
-        <h3 style={{
+        <h3 className="loc-clinic-card-title" style={{
           fontFamily: 'var(--font-display)', fontWeight: 500,
           fontSize: 34, lineHeight: 1.05,
           letterSpacing: '-0.012em',
@@ -196,7 +197,7 @@ const ClinicCard = ({ c, viewClinicLabel }) => {
           marginBottom: 20,
         }}>{c.caption}</div>
 
-        <div style={{
+        <div className="loc-clinic-card-divider" style={{
           width: 28, height: 1, background: 'var(--copper)', marginBottom: 18,
         }} />
 
@@ -210,7 +211,7 @@ const ClinicCard = ({ c, viewClinicLabel }) => {
           letterSpacing: '0.02em', marginBottom: 22,
         }}>{c.phone}</div>
 
-        <div style={{
+        <div className="loc-clinic-card-cta" style={{
           marginTop: 'auto', paddingTop: 18,
           borderTop: '1px solid var(--sepia-100)',
           fontSize: 11, fontWeight: 600, letterSpacing: '0.14em',

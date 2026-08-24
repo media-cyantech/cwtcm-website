@@ -99,7 +99,7 @@ const TxIcon = ({ kind }) => {
         </>
       );
       break;
-    case 'fsn': // horizontal floating needle + 3 insertion dots below
+    case 'fsn': // horizontal FSN needle + 3 insertion dots below
       art = (
         <>
           <circle cx="6.5" cy="14" r="1.5" {...s} fill="var(--cream-50)" />

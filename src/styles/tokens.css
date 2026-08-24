@@ -433,6 +433,13 @@ button { font: inherit; cursor: pointer; }
     grid-template-columns: 1fr !important;
     gap: 32px !important;
   }
+  /* The desktop table of contents is sticky in the left rail. Once the
+     layout stacks on phones it becomes normal page content; leaving it
+     sticky makes the links follow the scroll and cover the policy text. */
+  .legal-toc {
+    position: static !important;
+    top: auto !important;
+  }
 
   /* ---- First Visit / Contact (info-pages.jsx) ---- */
   .iv-step-grid {
@@ -525,5 +532,37 @@ button { font: inherit; cursor: pointer; }
     justify-content: center !important;
     width: fit-content !important;
     margin: 0 auto 26px !important;
+  }
+}
+
+/* Phone layout: clinic names such as Richmond, Vancouver and White Rock do
+   not fit in the compact two-column tablet cards. Give each clinic the full
+   row and centre the card copy so Safari never clips a city name at either
+   edge. */
+@media (max-width: 640px) {
+  .loc-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+  .ab-clinics-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+  .loc-clinic-card-copy {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .loc-clinic-card-title {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .loc-clinic-card-divider {
+    margin-inline: auto !important;
+  }
+  .loc-clinic-card-cta {
+    width: 100%;
+    justify-content: center !important;
   }
 }
