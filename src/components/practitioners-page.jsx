@@ -166,6 +166,8 @@ const PractitionerCard = ({ p, viewProfile, chrome, large }) => {
   const cardHref = p.profileHref || (isLive ? `Practitioners/${p.slug}${suffix}.html` : undefined);
   return (
     <a
+      className="pr-card"
+      role="listitem"
       href={cardHref}
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noopener' : undefined}
@@ -272,7 +274,7 @@ const PrSectionHeader = ({ title, sub }) => {
 const PrGrid = ({ cards, viewProfile, chrome, large }) => {
   const PR_IS_ZH = useIsZh();   // 原为模块顶层常量，会导致中英串台
   return (
-  <div className="pr-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 28 }}>
+  <div className="pr-grid" role="list" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 28 }}>
     {cards.map(p => (
       <PractitionerCard key={p.slug} p={p} viewProfile={viewProfile} chrome={chrome} large={large} />
     ))}

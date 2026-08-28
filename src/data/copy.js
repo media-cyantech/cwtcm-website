@@ -154,11 +154,11 @@ export const COPY = {
     h2: "Eight signature treatments,\nrefined over generations.",
     cards: [
       { slug: "acupuncture", photo: resources.r_treatments_04_acupuncture_session_jpg, name: "Acupuncture", zh: "", body: "Fine sterile needles at precisely chosen points to settle pain, sleep and stress.", meta: "50 min · from CAD $120" },
-      { slug: "tui-na", photo: resources.r_treatments_01_tuina_massage_jpg, name: "Tui Na", zh: "", body: "Hands-on therapy along the meridians for muscular tension, headaches and circulation.", meta: "50 min · from CAD $100" },
-      { slug: "manual-bone-setting", photo: resources.r_treatments_05_bone_setting_jpg, name: "Manual Bone Setting", zh: "", body: "Skilled realignment of joints and soft tissue for chronic and acute musculoskeletal pain.", meta: "50 min · from CAD $100" },
-      { slug: "moxibustion", photo: resources.r_treatments_02_moxibustion_jpg, name: "Moxibustion", zh: "", body: "Slow-burning mugwort warms specific points to nourish circulation and the immune system.", meta: "50 min · from CAD $100" },
-      { slug: "cupping-gua-sha", photo: resources.r_treatments_06_cupping_jpg, name: "Cupping & Gua Sha", zh: "", body: "Glass cups and bone tools to release tension, refresh blood flow and reset stagnant qi.", meta: "25–50 min · from CAD $50" },
-      { slug: "head-therapy", photo: resources.r_treatments_07_head_therapy_jpg, name: "Head & Scalp Therapy", zh: "", body: "Traditional or aromatic scalp work for tension, fatigue and the modern screen-strained head.", meta: "50 min · from CAD $75" },
+      { slug: "tui-na", photo: resources.r_treatments_01_tuina_massage_jpg, name: "Tui Na", zh: "", body: "Hands-on therapy along the meridians for muscular tension, headaches and circulation.", meta: "50 min · from CAD $120" },
+      { slug: "manual-bone-setting", photo: resources.r_treatments_05_bone_setting_jpg, name: "Manual Bone Setting", zh: "", body: "Skilled realignment of joints and soft tissue for chronic and acute musculoskeletal pain.", meta: "50 min · from CAD $120" },
+      { slug: "moxibustion", photo: resources.r_treatments_02_moxibustion_jpg, name: "Moxibustion", zh: "", body: "Slow-burning mugwort warms specific points to nourish circulation and the immune system.", meta: "50 min · from CAD $120" },
+      { slug: "cupping-gua-sha", photo: resources.r_treatments_06_cupping_jpg, name: "Cupping & Gua Sha", zh: "", body: "Glass cups and bone tools to release tension, refresh blood flow and reset stagnant qi.", meta: "25–50 min · from CAD $60" },
+      { slug: "head-therapy", photo: resources.r_treatments_07_head_therapy_jpg, name: "Head & Scalp Therapy", zh: "", body: "Traditional or aromatic scalp work for tension, fatigue and the modern screen-strained head.", meta: "50 min · from CAD $120" },
       { slug: "herbal-medicine", photo: resources.r_treatments_03_herbal_medicine_jpg, name: "Herbal Consultation", zh: "", body: "Custom formulas decocted on site, written by registered herbalists after pulse and tongue diagnosis.", meta: "20–30 min consult" },
       { slug: "aesthetic-acupuncture", photo: resources.r_treatments_08_acupuncture_facial_jpg, name: "Aesthetic Acupuncture", zh: "", body: "Whole-system facial work — collagen response, complexion, definition — without injectables.", meta: "75 min · from CAD $200" },
     ],
@@ -2412,20 +2412,6 @@ treatments: {
     priceList: {
       eyebrow: 'Services & Rates',
       h2: 'Vancouver services & pricing.',
-      viewFullLabel: 'Open full-size image',
-      textVersionLabel: 'View accessible text version',
-      sheets: [
-        {
-          src: 'assets/prices/vancouver-price-list.png',
-          alt: 'Vancouver clinic price list for traditional wellness and registered treatments',
-          caption: 'Traditional wellness & registered treatments',
-        },
-        {
-          src: 'assets/prices/vancouver-specials-prepaid.png',
-          alt: 'Vancouver clinic price list for special treatments and prepaid packages',
-          caption: 'Special treatments & prepaid packages',
-        },
-      ],
       groups: [
         { title: 'Traditional Wellness Treatments',
           note: 'Prices before tax — 5% GST applies.',
@@ -2778,20 +2764,6 @@ STRINGS.legalPage = { en: {"hero": {"eyebrow": "Legal", "h1": "Policies & Terms"
 
 STRINGS.burnaby.priceList = Object.assign({}, STRINGS.richmond.priceList, {
   h2: 'Burnaby services & pricing.',
-  viewFullLabel: 'Open full-size image',
-  textVersionLabel: 'View accessible text version',
-  sheets: [
-    {
-      src: 'assets/prices/burnaby-price-list-en.png',
-      alt: 'Burnaby clinic price list for wellness and registered treatments',
-      caption: 'Treatment price list',
-    },
-    {
-      src: 'assets/prices/burnaby-prepaid-packages.jpg',
-      alt: 'Burnaby clinic prepaid package price list',
-      caption: 'Prepaid package list',
-    },
-  ],
   groups: [
     ...STRINGS.richmond.priceList.groups,
     {

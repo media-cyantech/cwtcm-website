@@ -154,11 +154,11 @@ export const COPY = {
     h2: "历经世代打磨的\n八项招牌疗法。",
     cards: [
       { slug: "acupuncture", photo: resources.r_treatments_04_acupuncture_session_jpg, name: "针灸", zh: "", body: "以纤细无菌针具，精准取穴，安定疼痛、睡眠与压力。", meta: "50 分钟 · CAD $120 起" },
-      { slug: "tui-na", photo: resources.r_treatments_01_tuina_massage_jpg, name: "推拿", zh: "", body: "沿经络手法施治，缓解肌肉紧张、头痛，促进气血循环。", meta: "50 分钟 · CAD $100 起" },
-      { slug: "manual-bone-setting", photo: resources.r_treatments_05_bone_setting_jpg, name: "正骨", zh: "", body: "以娴熟手法调整关节与软组织，应对慢性与急性骨骼肌肉疼痛。", meta: "50 分钟 · CAD $100 起" },
-      { slug: "moxibustion", photo: resources.r_treatments_02_moxibustion_jpg, name: "艾灸", zh: "", body: "艾草缓燃温灸特定穴位，温养气血、扶助免疫。", meta: "50 分钟 · CAD $100 起" },
-      { slug: "cupping-gua-sha", photo: resources.r_treatments_06_cupping_jpg, name: "拔罐与刮痧", zh: "", body: "以玻璃罐与刮痧板舒缓紧张、活血行气、疏通瘀滞。", meta: "25–50 分钟 · CAD $50 起" },
-      { slug: "head-therapy", photo: resources.r_treatments_07_head_therapy_jpg, name: "头疗", zh: "", body: "传统或香薰头部手法，舒缓紧张、疲劳与久对屏幕的头部不适。", meta: "50 分钟 · CAD $75 起" },
+      { slug: "tui-na", photo: resources.r_treatments_01_tuina_massage_jpg, name: "推拿", zh: "", body: "沿经络手法施治，缓解肌肉紧张、头痛，促进气血循环。", meta: "50 分钟 · CAD $120 起" },
+      { slug: "manual-bone-setting", photo: resources.r_treatments_05_bone_setting_jpg, name: "正骨", zh: "", body: "以娴熟手法调整关节与软组织，应对慢性与急性骨骼肌肉疼痛。", meta: "50 分钟 · CAD $120 起" },
+      { slug: "moxibustion", photo: resources.r_treatments_02_moxibustion_jpg, name: "艾灸", zh: "", body: "艾草缓燃温灸特定穴位，温养气血、扶助免疫。", meta: "50 分钟 · CAD $120 起" },
+      { slug: "cupping-gua-sha", photo: resources.r_treatments_06_cupping_jpg, name: "拔罐与刮痧", zh: "", body: "以玻璃罐与刮痧板舒缓紧张、活血行气、疏通瘀滞。", meta: "25–50 分钟 · CAD $60 起" },
+      { slug: "head-therapy", photo: resources.r_treatments_07_head_therapy_jpg, name: "头疗", zh: "", body: "传统或香薰头部手法，舒缓紧张、疲劳与久对屏幕的头部不适。", meta: "50 分钟 · CAD $120 起" },
       { slug: "herbal-medicine", photo: resources.r_treatments_03_herbal_medicine_jpg, name: "中药调理", zh: "", body: "注册中医师经脉诊、舌诊后开具个性化配方，本地煎制。", meta: "20–30 分钟咨询" },
       { slug: "aesthetic-acupuncture", photo: resources.r_treatments_08_acupuncture_facial_jpg, name: "美容针", zh: "", body: "整体面部美容针——激发胶原、改善气色与轮廓，无需注射。", meta: "75 分钟 · CAD $200 起" },
     ],
@@ -1500,20 +1500,6 @@ export const STRINGS = {
     priceList: {
       eyebrow: '服务项目与价格',
       h2: '温西店服务项目一览。',
-      viewFullLabel: '点击查看原尺寸图片',
-      textVersionLabel: '查看无障碍文字版价格',
-      sheets: [
-        {
-          src: 'assets/prices/vancouver-price-list.png',
-          alt: '温西店传统养生与注册治疗价目表',
-          caption: '传统养生与注册治疗价目表',
-        },
-        {
-          src: 'assets/prices/vancouver-specials-prepaid.png',
-          alt: '温西店特色治疗与优惠充值价目表',
-          caption: '特色治疗与优惠充值价目表',
-        },
-      ],
       groups: [
         { title: '传统养生治疗',
           note: '以上价格均未含税，另加 5% GST。',
@@ -2671,20 +2657,6 @@ STRINGS.journalPage = {
 
 STRINGS.burnaby.priceList = Object.assign({}, STRINGS.richmond.priceList, {
   h2: '本拿比店服务项目一览。',
-  viewFullLabel: '点击查看原尺寸图片',
-  textVersionLabel: '查看无障碍文字版价格',
-  sheets: [
-    {
-      src: 'assets/prices/burnaby-price-list-zh.png',
-      alt: '本拿比店传统养生与注册治疗价目表',
-      caption: '治疗项目价目表',
-    },
-    {
-      src: 'assets/prices/burnaby-prepaid-packages.jpg',
-      alt: '本拿比店优惠充值套餐价目表',
-      caption: '优惠充值套餐价目表',
-    },
-  ],
   groups: [
     ...STRINGS.richmond.priceList.groups,
     {
