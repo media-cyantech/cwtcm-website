@@ -58,6 +58,40 @@
   --dur-slow: 420ms;
 }
 
+/* Some iPhone Chrome configurations (page zoom / "desktop site") report a
+   virtual CSS viewport wider than the phone itself. At those widths the
+   ordinary mobile breakpoint later in this file no longer matches, even though input is
+   still touch-only, leaving the practitioner cards as a non-scrollable grid.
+   Keep this small fallback separate from the main compact-layout query so it
+   does not turn the rest of the site into a tablet layout. */
+@media (min-width: 981px) and (max-width: 1100px), (hover: none) and (pointer: coarse) {
+  .pr-grid {
+    display: flex !important;
+    gap: 24px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-inline: calc(-1 * var(--gutter));
+    padding: 2px var(--gutter) 18px;
+    scroll-padding-inline: var(--gutter);
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .pr-grid::-webkit-scrollbar { display: none; }
+  .pr-grid > .pr-card {
+    flex: 0 0 min(86vw, 380px);
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+  .pr-grid .pr-card img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+}
+
 /* =============================================================
    Base
    ============================================================= */

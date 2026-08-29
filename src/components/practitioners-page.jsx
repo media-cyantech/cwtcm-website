@@ -91,6 +91,7 @@ const PractitionerPhoto = ({ p, caption, large }) => {
           <img
             src={`assets/practitioners/${p.photo}`}
             alt={`Portrait of ${p.name}`}
+            draggable={false}
             onError={() => setErr(true)}
             className="warm-image"
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: p.crop || '50% 20%', display: 'block' }}
