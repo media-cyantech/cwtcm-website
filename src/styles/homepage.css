@@ -88,15 +88,31 @@
   section[data-screen-label="03 Practitioners"] > div:first-child p {
       font-size: 17px !important;
     }
-  section[data-screen-label="03 Practitioners"] > div:last-child {
-      padding: 0 20px !important; gap: 16px !important;
-      scroll-snap-type: x mandatory !important;
-      -webkit-overflow-scrolling: touch !important;
+  section[data-screen-label="03 Practitioners"] .home-practitioner-rail {
+      padding: 0 20px 16px !important;
+      gap: 16px !important;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      scroll-snap-type: x proximity !important;
+      scroll-padding-inline: 20px;
+      overscroll-behavior-x: contain;
+      touch-action: pan-x pan-y;
+      scrollbar-width: none;
     }
-  section[data-screen-label="03 Practitioners"] article {
-      flex: 0 0 78% !important;
+  section[data-screen-label="03 Practitioners"] .home-practitioner-rail::-webkit-scrollbar {
+      display: none;
+    }
+  section[data-screen-label="03 Practitioners"] .home-practitioner-card {
+      flex: 0 0 min(78vw, 280px) !important;
       max-width: 280px !important;
       scroll-snap-align: start !important;
+      -webkit-user-drag: none;
+      user-select: none;
+    }
+  section[data-screen-label="03 Practitioners"] .home-practitioner-card img {
+      pointer-events: none;
+      -webkit-user-drag: none;
+      user-select: none;
     }
   /* APPROACH */
     section[data-screen-label="04 Approach"] {

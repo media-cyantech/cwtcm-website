@@ -441,7 +441,9 @@ const PractitionerCard = ({ p }) => {
   const profileHref = _live ? `Practitioners/${_m.slug}${_sfx}.html` : undefined;
   return (
     <a
+      className="home-practitioner-card"
       href={profileHref}
+      draggable={false}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{
@@ -466,7 +468,7 @@ const PractitionerCard = ({ p }) => {
         boxShadow: '0 0 0 6px var(--cream-100), inset 0 0 0 1px rgba(184,148,96,0.25)',
         background: 'var(--cream-300)',
       }}>
-        <img src={`assets/practitioners/${p.photo}`} alt={`Portrait of ${p.name}`} className="warm-image" style={{
+        <img src={`assets/practitioners/${p.photo}`} alt={`Portrait of ${p.name}`} className="warm-image" draggable={false} style={{
           width: '100%', height: '100%', objectFit: 'cover',
           objectPosition: p.crop || '50% 25%', display: 'block',
         }} />
@@ -536,7 +538,7 @@ const PractitionerCTACard = () => {
   const ctaHref = (STRINGS.practitionerCTA && STRINGS.practitionerCTA.href)
     || (STRINGS.lang === 'zh' ? 'Practitioners-ZH.html' : 'Practitioners.html');
   return (
-  <a href={ctaHref} style={{
+  <a className="home-practitioner-card" href={ctaHref} draggable={false} style={{
     flex: '0 0 280px', aspectRatio: '4/5',
     background: 'var(--cream-100)',
     border: '1px solid var(--sepia-200)',
@@ -582,13 +584,14 @@ const Practitioners = () => {
         </div>
       </div>
 
-      <div style={{
+      <div className="home-practitioner-rail" style={{
         display: 'flex', gap: 28, padding: '0 64px', overflowX: 'auto',
-        alignItems: 'stretch',
+        overflowY: 'hidden', alignItems: 'stretch',
+        overscrollBehaviorX: 'contain', touchAction: 'pan-x pan-y',
         scrollbarWidth: 'none', paddingBottom: 16,
       }}>
         <style>{`
-          section[data-screen-label="03 Practitioners"] > div:last-child::-webkit-scrollbar { display: none; }
+          .home-practitioner-rail::-webkit-scrollbar { display: none; }
         `}</style>
         {c.cards.map((p, i) => <PractitionerCard key={i} p={p} />)}
         <PractitionerCTACard />
