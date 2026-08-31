@@ -9,6 +9,60 @@
     border-bottom: 1px solid var(--sepia-200);
   }
 
+  .home-practitioner-rail-shell {
+    position: relative;
+  }
+  .home-practitioner-rail {
+    cursor: grab;
+  }
+  .home-practitioner-rail.is-dragging {
+    cursor: grabbing;
+    scroll-snap-type: none !important;
+  }
+  .home-practitioner-nav {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid rgba(184, 148, 96, 0.62);
+    border-radius: 50%;
+    background: rgba(247, 241, 229, 0.94);
+    color: var(--sepia-600);
+    box-shadow: 0 8px 24px rgba(58, 44, 24, 0.14);
+    display: none;
+    place-items: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: opacity var(--dur) var(--ease), background var(--dur) var(--ease);
+  }
+  .home-practitioner-rail-shell[data-ready] .home-practitioner-nav {
+    display: grid;
+  }
+  .home-practitioner-nav:hover:not(:disabled) {
+    background: var(--cream-50);
+  }
+  .home-practitioner-nav:focus-visible {
+    outline: 2px solid var(--vermilion);
+    outline-offset: 3px;
+  }
+  .home-practitioner-nav:disabled {
+    opacity: 0.28;
+    cursor: default;
+  }
+  .home-practitioner-nav svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .home-practitioner-nav--prev { left: 16px; }
+  .home-practitioner-nav--next { right: 16px; }
+
 /* ===========================================================
      Real mobile breakpoint — applies to actual phones / narrow viewports
      Mirrors the .mobile-frame preview rules at the document level.
@@ -114,6 +168,12 @@
       -webkit-user-drag: none;
       user-select: none;
     }
+  section[data-screen-label="03 Practitioners"] .home-practitioner-nav {
+      width: 44px;
+      height: 44px;
+    }
+  section[data-screen-label="03 Practitioners"] .home-practitioner-nav--prev { left: 6px; }
+  section[data-screen-label="03 Practitioners"] .home-practitioner-nav--next { right: 6px; }
   /* APPROACH */
     section[data-screen-label="04 Approach"] {
       padding: 56px 0 64px !important;

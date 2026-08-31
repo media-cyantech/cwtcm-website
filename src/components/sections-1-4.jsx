@@ -564,7 +564,12 @@ const PractitionerCTACard = () => {
 
 const Practitioners = () => {
   const COPY = useCopy();
+  const isZh = useIsZh();
   const c = COPY.practitioners;
+  const navLabel = isZh
+    ? { prev: '查看上一位医师', next: '查看更多医师' }
+    : { prev: 'Previous practitioners', next: 'More practitioners' };
+
   return (
     <section data-screen-label="03 Practitioners" style={{ padding: '120px 0 96px', background: 'var(--cream-200)' }}>
       <div className="container">
@@ -584,17 +589,114 @@ const Practitioners = () => {
         </div>
       </div>
 
-      <div className="home-practitioner-rail" style={{
-        display: 'flex', gap: 28, padding: '0 64px', overflowX: 'auto',
-        overflowY: 'hidden', alignItems: 'stretch',
-        overscrollBehaviorX: 'contain', touchAction: 'pan-x pan-y',
-        scrollbarWidth: 'none', paddingBottom: 16,
-      }}>
+      <div className="home-practitioner-rail-shell">
+        <button
+          type="button"
+          className="home-practitioner-nav home-practitioner-nav--prev"
+          aria-label={navLabel.prev}
+          disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 5-7 7 7 7" /></svg>
+        </button>
+
+        <div
+          className="home-practitioner-rail"
+          style={{
+            display: 'flex', gap: 28, padding: '0 64px', overflowX: 'auto',
+            overflowY: 'hidden', alignItems: 'stretch',
+            overscrollBehaviorX: 'contain', touchAction: 'pan-x pan-y',
+            scrollbarWidth: 'none', paddingBottom: 16,
+          }}>
         <style>{`
           .home-practitioner-rail::-webkit-scrollbar { display: none; }
         `}</style>
         {c.cards.map((p, i) => <PractitionerCard key={i} p={p} />)}
         <PractitionerCTACard />
+        </div>
+
+        <button
+          type="button"
+          className="home-practitioner-nav home-practitioner-nav--next"
+          aria-label={navLabel.next}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 5 7 7-7 7" /></svg>
+        </button>
+
+        <script dangerouslySetInnerHTML={{ __html: `
+(function(){
+  var shell = document.currentScript && document.currentScript.parentNode;
+  if (!shell) return;
+  var rail = shell.querySelector('.home-practitioner-rail');
+  var prev = shell.querySelector('.home-practitioner-nav--prev');
+  var next = shell.querySelector('.home-practitioner-nav--next');
+  if (!rail || !prev || !next) return;
+
+  function update(){
+    var max = Math.max(0, rail.scrollWidth - rail.clientWidth);
+    prev.disabled = rail.scrollLeft <= 2;
+    next.disabled = rail.scrollLeft >= max - 2;
+  }
+  function step(direction){
+    rail.scrollBy({ left: direction * Math.max(280, rail.clientWidth * 0.72), behavior: 'smooth' });
+  }
+  prev.addEventListener('click', function(){ step(-1); });
+  next.addEventListener('click', function(){ step(1); });
+  rail.addEventListener('scroll', update, { passive: true });
+
+  // Ordinary mouse wheels report vertical movement. Convert it to horizontal
+  // movement only while the rail can still travel in that direction; at the
+  // two ends, normal page scrolling resumes.
+  rail.addEventListener('wheel', function(event){
+    if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+    var max = Math.max(0, rail.scrollWidth - rail.clientWidth);
+    var canMove = event.deltaY > 0 ? rail.scrollLeft < max - 2 : rail.scrollLeft > 2;
+    if (!canMove) return;
+    event.preventDefault();
+    rail.scrollLeft += event.deltaY;
+  }, { passive: false });
+
+  // Native scrolling remains in charge for touch/pen, including iOS momentum.
+  // Mouse users additionally get grab-to-drag without accidentally opening a
+  // profile when the pointer is released after a drag.
+  var drag = { active: false, startX: 0, startLeft: 0, moved: false };
+  var suppressClick = false;
+  rail.addEventListener('pointerdown', function(event){
+    if (event.pointerType !== 'mouse' || event.button !== 0) return;
+    drag = { active: true, startX: event.clientX, startLeft: rail.scrollLeft, moved: false };
+    if (rail.setPointerCapture) rail.setPointerCapture(event.pointerId);
+    rail.classList.add('is-dragging');
+  });
+  rail.addEventListener('pointermove', function(event){
+    if (!drag.active) return;
+    var distance = event.clientX - drag.startX;
+    if (Math.abs(distance) > 4) drag.moved = true;
+    if (!drag.moved) return;
+    event.preventDefault();
+    rail.scrollLeft = drag.startLeft - distance;
+  });
+  function finish(event){
+    if (!drag.active) return;
+    suppressClick = drag.moved;
+    drag.active = false;
+    if (rail.releasePointerCapture && rail.hasPointerCapture && rail.hasPointerCapture(event.pointerId)) {
+      rail.releasePointerCapture(event.pointerId);
+    }
+    rail.classList.remove('is-dragging');
+    window.setTimeout(function(){ suppressClick = false; }, 0);
+  }
+  rail.addEventListener('pointerup', finish);
+  rail.addEventListener('pointercancel', finish);
+  rail.addEventListener('click', function(event){
+    if (!suppressClick) return;
+    suppressClick = false;
+    event.preventDefault();
+    event.stopPropagation();
+  }, true);
+
+  window.addEventListener('resize', update, { passive: true });
+  if (window.ResizeObserver) new ResizeObserver(update).observe(rail);
+  update();
+  shell.setAttribute('data-ready', '');
+})();
+        `.trim() }} />
       </div>
     </section>
   );
