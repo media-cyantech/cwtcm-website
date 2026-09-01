@@ -1912,7 +1912,7 @@ COPY.contact = {
       fields: {
         name: '姓名',
         email: '邮箱',
-        phone: '电话（选填）',
+        phone: '电话',
         clinic: '首选诊所',
         clinicDefault: '请选择一家诊所',
         message: '请告诉我们怎样帮助你？',

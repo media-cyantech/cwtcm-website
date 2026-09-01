@@ -357,6 +357,17 @@ const ContactFormSection = ({ c, clinics, wechat }) => (
   </section>
 );
 
+const CONTACT_FORM_RECIPIENTS = {
+  Richmond: 'richmond@cwtcm.ca',
+  Burnaby: 'Burnaby@cwtcm.ca',
+  Vancouver: 'vancouver@cwtcm.ca',
+  'White Rock': 'whiterock@cwtcm.ca',
+  '列治文': 'richmond@cwtcm.ca',
+  '本拿比': 'Burnaby@cwtcm.ca',
+  '温哥华': 'vancouver@cwtcm.ca',
+  '白石': 'whiterock@cwtcm.ca',
+};
+
 const ContactForm = ({ c, clinics }) => {
   const STRINGS = useStrings();
   const isZh = STRINGS.lang === 'zh';
@@ -433,6 +444,7 @@ const ContactForm = ({ c, clinics }) => {
         </div>
       </div>
       <form
+        id="cwtcm-contact-form"
         action="https://formsubmit.co/media@cyantech.com"
         method="POST"
         acceptCharset="UTF-8"
@@ -443,6 +455,7 @@ const ContactForm = ({ c, clinics }) => {
             deliberately limited to non-clinical contact information. */}
         <input type="hidden" name="_subject" value="New CWTCM website enquiry" />
         <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_cc" value="admin@cwtcm.ca" />
         <input type="hidden" name="_url" value={contactUrl} />
         <input type="hidden" name="_next" value={`${contactUrl}#message-sent`} />
         <input
@@ -483,16 +496,17 @@ const ContactForm = ({ c, clinics }) => {
               name="phone"
               type="tel"
               autoComplete="tel"
+              required
               style={inputStyle}
             />
           </div>
         </div>
         <div>
           <label style={labelStyle} htmlFor="contact-clinic">{c.fields.clinic}</label>
-          <select id="contact-clinic" name="preferred_clinic" style={inputStyle} defaultValue="">
+          <select id="contact-clinic" name="preferred_clinic" style={inputStyle} defaultValue="" required>
             <option value="" disabled>{c.fields.clinicDefault}</option>
             {clinics.map((cl, i) => (
-              <option key={i} value={cl.city}>{cl.city}</option>
+              <option key={i} value={cl.city} data-recipient={CONTACT_FORM_RECIPIENTS[cl.city]}>{cl.city}</option>
             ))}
           </select>
         </div>
@@ -527,6 +541,24 @@ const ContactForm = ({ c, clinics }) => {
           />
         </div>
       </form>
+      <script dangerouslySetInnerHTML={{ __html: `
+(function(){
+  var script = document.currentScript;
+  var form = script && script.previousElementSibling;
+  if (!form || form.id !== 'cwtcm-contact-form') return;
+  var clinic = form.querySelector('#contact-clinic');
+  if (!clinic) return;
+  var fallback = 'https://formsubmit.co/media@cyantech.com';
+  function route(){
+    var option = clinic.options[clinic.selectedIndex];
+    var recipient = option && option.getAttribute('data-recipient');
+    form.setAttribute('action', recipient ? 'https://formsubmit.co/' + recipient : fallback);
+  }
+  clinic.addEventListener('change', route);
+  form.addEventListener('submit', route);
+  route();
+})();
+      `.trim() }} />
     </div>
   );
 };

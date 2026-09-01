@@ -1183,7 +1183,7 @@ export const STRINGS = {
         fields: {
           name: 'Your name',
           email: 'Email',
-          phone: 'Phone (optional)',
+          phone: 'Phone',
           clinic: 'Preferred clinic',
           clinicDefault: 'Select a clinic',
           message: 'How can we help?',
