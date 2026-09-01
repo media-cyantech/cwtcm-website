@@ -2627,15 +2627,15 @@ COPY.practitionersArchive = {
 STRINGS.practitioners = COPY.practitionersArchive;
 
 STRINGS.customerCare = {
-  en: { title: 'Customer Care Team', subtitle: 'Front-of-house · Bilingual care from your first call', roleLine: 'Customer Care', photoComingSoon: 'Photo coming soon' },
-  zh: { title: '客服团队', subtitle: '前台 · 中英双语接待', roleLine: '客服团队 · Customer Care', photoComingSoon: '照片即将上线' },
+  en: { title: 'Customer Service Team', subtitle: 'Front-of-house · Bilingual care from your first call', roleLine: 'Customer Service Representative', photoComingSoon: 'Photo coming soon' },
+  zh: { title: '客服团队', subtitle: '前台 · 中英双语接待', roleLine: '客服代表 · Customer Service Representative', photoComingSoon: '照片即将上线' },
   photosReady: true, // all 5 reception portraits uploaded
   availablePhotos: [],
   list: [
-    { slug: 'angel-lai', name: 'Angel Lai', clinics: ['Richmond'], role: '前台主管 · Front Desk Supervisor', photo: 'reception-rmd-angel-lai.jpg' },
-    { slug: 'serena-chen', name: 'Serena Chen', clinics: ['Burnaby'], role: '前台主管 · Front Desk Supervisor', photo: 'reception-bby-serena-chen.jpg' },
-    { slug: 'ivy-chen', name: 'Ivy Chen', clinics: ['Vancouver'], role: '前台主管 · Front Desk Supervisor', photo: 'reception-van-ivy-chen.jpg' },
-    { slug: 'eunice-zhang', name: 'Eunice Zhang', clinics: ['White Rock'], role: '前台主管 · Front Desk Supervisor', photo: 'reception-wr-eunice-zhang.jpg' },
+    { slug: 'angel-lai', name: 'Angel Lai', clinics: ['Richmond'], role: '客服主管 · Customer Service Supervisor', photo: 'reception-rmd-angel-lai.jpg' },
+    { slug: 'serena-chen', name: 'Serena Chen', clinics: ['Burnaby'], role: '客服主管 · Customer Service Supervisor', photo: 'reception-bby-serena-chen.jpg' },
+    { slug: 'ivy-chen', name: 'Ivy Chen', clinics: ['Vancouver'], role: '客服主管 · Customer Service Supervisor', photo: 'reception-van-ivy-chen.jpg' },
+    { slug: 'eunice-zhang', name: 'Eunice Zhang', clinics: ['White Rock'], role: '客服主管 · Customer Service Supervisor', photo: 'reception-wr-eunice-zhang.jpg' },
     { slug: 'stephanie-yan', name: 'Stephanie Yan', clinics: ['Burnaby'], photo: 'reception-bby-stephanie-yan.jpg' },
     { slug: 'shasha-wang', name: 'Sasha Wang', clinics: ['Vancouver'], photo: 'reception-van-shasha-wang.jpg' },
     { slug: 'lizzie-ma', name: 'Lizzie Ma', clinics: ['Burnaby'], photo: 'reception-rmd-bby-lizzie-ma.jpg' },
