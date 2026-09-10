@@ -554,7 +554,7 @@ const RCBirds = () => (
 );
 
 // New anchor-style card (circular portrait + ring + birds + badge +
-// Cormorant name + ▶ credentials + italic subtitle). Used when a
+// Cormorant name + neutral credential markers + italic subtitle). Used when a
 // practitioner entry carries a creds[] array.
 const RCAnchorCard = ({ p }) => {
   const STRINGS = useStrings();
@@ -621,7 +621,7 @@ const RCAnchorCard = ({ p }) => {
             fontFamily: RC_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
             fontSize: 12, fontWeight: 700, color: 'var(--sepia-600)', lineHeight: 1.3,
           }}>
-            <span aria-hidden="true" style={{ color: RC_RING, fontSize: 8 }}>▶</span>{cr}
+            <span aria-hidden="true" style={{ width: 5, height: 5, borderRadius: '50%', background: RC_RING, flexShrink: 0 }} />{cr}
           </span>
         ))}
       </div>

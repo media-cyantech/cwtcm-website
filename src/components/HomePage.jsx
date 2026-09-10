@@ -13,9 +13,9 @@ import { Testimonials, Journal, Footer } from './sections-9-12.jsx';
 
 const HERO_INDEX = 0; // 原 TWEAK_DEFAULTS.hero
 
-export default function HomePage({ lang }) {
+export default function HomePage({ lang, otherLangHref }) {
   return (
-    <I18nProvider lang={lang}>
+    <I18nProvider lang={lang} otherLangHref={otherLangHref}>
       <Hero heroIndex={HERO_INDEX} />
       <TrustStrip />
       <Practitioners />

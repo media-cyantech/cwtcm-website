@@ -5,5 +5,5 @@ import { seoFor, schemaFor } from '../data/seo.js';
 import '../styles/homepage.css';
 ---
 <Base page={seoFor('Homepage-ZH.html')} schema={schemaFor('Homepage-ZH.html', { withOrgGraph: true })}>
-  <HomePage lang="zh" />
+  <HomePage lang="zh" otherLangHref="/Homepage.html" />
 </Base>

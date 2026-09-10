@@ -423,6 +423,10 @@ button { font: inherit; cursor: pointer; }
     grid-template-columns: 1fr !important;
     gap: 16px !important;
   }
+  .td-feature-grid {      /* editorial video / lineage blocks */
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
   .cdd-hero-grid,
   .td-hero-grid {
     grid-template-columns: 1fr !important;

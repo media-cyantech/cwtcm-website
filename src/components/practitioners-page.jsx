@@ -15,8 +15,8 @@ import { Footer } from './sections-9-12.jsx';
 //   2) All Practitioners (remaining 21, alphabetical by first name)
 //   3) Registered Massage Therapists (own section, sepia divider)
 //   4) Customer Care Team (existing simplified cards)
-// EN page  → ▶ rows show English abbreviations ONLY (no Chinese).
-// ZH page  → ▶ rows show Chinese primary + standardized English abbr.
+// EN page  → credential rows show English abbreviations ONLY (no Chinese).
+// ZH page  → credential rows show Chinese primary + standardized English abbr.
 // Clinic line → borderless small-caps (EN) / 中文 · 分隔 (ZH). No chips.
 // Cream + sepia-gold · NO vermilion in cards · ≤1 vermilion in CTA band.
 // ============================================================

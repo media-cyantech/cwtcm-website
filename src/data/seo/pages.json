@@ -2273,6 +2273,62 @@
       "sitemap": true
     },
     {
+      "file": "Practitioners/bill-wang-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Practitioners/bill-wang-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/bill-wang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/bill-wang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/bill-wang.html"
+      },
+      "title": "Bill Wang（王旭彪）R.Ac. · 贺氏针灸三通法 | 加西中医",
+      "description": "认识加西中医本拿比诊所的BC省注册针灸师 Bill Wang（王旭彪）：2017年起系统研习贺氏针灸三通法。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Practitioners/bill-wang.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Practitioners/bill-wang.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Practitioners/bill-wang.html",
+        "zh-Hans": "https://cwtcm.ca/Practitioners/bill-wang-ZH.html",
+        "x-default": "https://cwtcm.ca/Practitioners/bill-wang.html"
+      },
+      "title": "Bill Wang (王旭彪), R.Ac. — He’s Three-Method Acupuncture | Canadian Western TCM",
+      "description": "Meet Bill Wang (王旭彪), a BC registered acupuncturist at Canadian Western TCM Burnaby who has studied He Puren’s Three-Method Acupuncture system since 2017.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/he-puren-three-method-acupuncture-ZH.html",
+      "lang": "zh-Hans",
+      "canonical": "https://cwtcm.ca/Treatments/he-puren-three-method-acupuncture-ZH.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/he-puren-three-method-acupuncture.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/he-puren-three-method-acupuncture-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/he-puren-three-method-acupuncture.html"
+      },
+      "title": "本拿比贺氏针灸三通法 | Bill Wang（王旭彪）R.Ac.",
+      "description": "了解加西中医本拿比诊所 Bill Wang（王旭彪）R.Ac. 所运用的贺氏针灸三通法，包括学术传承、三种方法、安全规范与就诊流程。",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
+      "file": "Treatments/he-puren-three-method-acupuncture.html",
+      "lang": "en",
+      "canonical": "https://cwtcm.ca/Treatments/he-puren-three-method-acupuncture.html",
+      "hreflang": {
+        "en": "https://cwtcm.ca/Treatments/he-puren-three-method-acupuncture.html",
+        "zh-Hans": "https://cwtcm.ca/Treatments/he-puren-three-method-acupuncture-ZH.html",
+        "x-default": "https://cwtcm.ca/Treatments/he-puren-three-method-acupuncture.html"
+      },
+      "title": "He Puren’s Three-Method Acupuncture in Burnaby | Bill Wang, R.Ac.",
+      "description": "Learn about He Puren’s Three-Method Acupuncture at Canadian Western TCM Burnaby with Bill Wang, R.Ac.—the system’s lineage, three methods, safety and what to expect.",
+      "robots": "index,follow",
+      "sitemap": true
+    },
+    {
       "file": "index.html",
       "lang": "en",
       "canonical": "https://cwtcm.ca/Homepage.html",

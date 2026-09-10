@@ -24,10 +24,19 @@ export const BUNDLES = { en: EN, zh: ZH };
 
 const I18nContext = createContext(EN);
 
-export function I18nProvider({ lang, children }) {
+export function I18nProvider({ lang, otherLangHref, children }) {
   const bundle = BUNDLES[lang];
   if (!bundle) throw new Error(`未知语言 "${lang}"，可选：${Object.keys(BUNDLES).join(' / ')}`);
-  return <I18nContext.Provider value={bundle}>{children}</I18nContext.Provider>;
+  const value = otherLangHref
+    ? {
+        ...bundle,
+        STRINGS: {
+          ...bundle.STRINGS,
+          otherLang: { ...bundle.STRINGS.otherLang, href: otherLangHref },
+        },
+      }
+    : bundle;
+  return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
 
 export const useBundle = () => useContext(I18nContext);

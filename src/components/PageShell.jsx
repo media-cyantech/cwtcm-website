@@ -30,7 +30,7 @@ const COMPONENTS = {
   PractitionersPage, TreatmentDetailPage, TreatmentsPage,
 };
 
-export default function PageShell({ comp, lang, props = {} }) {
+export default function PageShell({ comp, lang, otherLangHref, props = {} }) {
   const Page = COMPONENTS[comp];
   if (!Page) {
     throw new Error(
@@ -39,7 +39,7 @@ export default function PageShell({ comp, lang, props = {} }) {
     );
   }
   return (
-    <I18nProvider lang={lang}>
+    <I18nProvider lang={lang} otherLangHref={otherLangHref}>
       <Page {...props} />
     </I18nProvider>
   );

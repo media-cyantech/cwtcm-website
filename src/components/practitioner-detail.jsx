@@ -81,12 +81,12 @@ const PdHeroPortrait = ({ person, caption }) => {
   );
 };
 
-// ---- ▶ credential row (EN abbr bold over ZH full) ----
+// ---- neutral credential marker (EN abbr bold over ZH full) ----
 const PdCred = ({ cred, large }) => {
   const PD_IS_ZH = useIsZh();   // 原为模块顶层常量，会导致中英串台
   return (
   <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-    <span aria-hidden="true" style={{ color: PD_RING, fontSize: large ? 11 : 9, lineHeight: large ? '24px' : '20px', flexShrink: 0 }}>▶</span>
+    <span aria-hidden="true" style={{ width: large ? 6 : 5, height: large ? 6 : 5, marginTop: large ? 9 : 7, borderRadius: '50%', background: PD_RING, flexShrink: 0 }} />
     <div>
       <div style={{ fontFamily: 'var(--font-sans)', fontSize: large ? 15 : 13, fontWeight: 700, color: 'var(--sepia-600)', lineHeight: 1.4 }}>{cred.en}</div>
       {PD_IS_ZH && cred.zh && <div style={{ fontFamily: 'var(--font-serif-zh)', fontSize: large ? 13 : 12, fontWeight: 500, color: 'var(--sepia-400)', letterSpacing: '0.04em', lineHeight: 1.4 }}>{cred.zh}</div>}
@@ -208,7 +208,7 @@ const PdBio = ({ d }) => {
           <p className="body" style={{ fontSize: 17, lineHeight: 1.75, color: 'var(--sepia-500)', margin: 0, maxWidth: 760 }}>{d.bioEn}</p>
         )}
         {d.moreHref && (
-          <a href={d.moreHref} target="_blank" rel="noopener" style={{
+          <a href={d.moreHref} style={{
             display: 'inline-block', marginTop: 26,
             fontFamily: 'var(--font-sans)', fontSize: 12, fontWeight: 600,
             letterSpacing: '0.08em', textTransform: 'uppercase',
@@ -322,7 +322,7 @@ const PdEducation = ({ d }) => {
               display: 'flex', gap: 16, alignItems: 'flex-start',
               padding: '18px 0', borderBottom: i < items.length - 1 ? '1px solid var(--sepia-100)' : 'none',
             }}>
-              <span aria-hidden="true" style={{ color: PD_RING, fontSize: 10, lineHeight: '26px', flexShrink: 0 }}>▶</span>
+              <span aria-hidden="true" style={{ width: 6, height: 6, marginTop: 10, borderRadius: '50%', background: PD_RING, flexShrink: 0 }} />
               <span style={{ fontFamily: pdFont(PD_IS_ZH, 'var(--font-serif-zh)'), fontSize: 16, lineHeight: 1.6, color: 'var(--sepia-600)' }}>{it}</span>
             </li>
           ))}

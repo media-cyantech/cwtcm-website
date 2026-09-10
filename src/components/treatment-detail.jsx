@@ -216,7 +216,11 @@ const TDWhatIs = ({ d }) => {
     }}>
       <div className="container">
         <div className="td-text-grid" style={{
-          display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 80,
+          display: 'grid',
+          gridTemplateColumns: d.compactTextGrid
+            ? 'minmax(150px, 0.3fr) minmax(0, 1.7fr)'
+            : '0.85fr 1.15fr',
+          gap: d.compactTextGrid ? 48 : 80,
         }}>
           <div>
             <div style={{
@@ -294,7 +298,11 @@ const TDWhatToExpect = ({ d }) => {
     }}>
       <div className="container">
         <div className="td-text-grid" style={{
-          display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 80,
+          display: 'grid',
+          gridTemplateColumns: d.compactTextGrid
+            ? 'minmax(150px, 0.3fr) minmax(0, 1.7fr)'
+            : '0.85fr 1.15fr',
+          gap: d.compactTextGrid ? 48 : 80,
         }}>
           <div>
             <div style={{
@@ -415,7 +423,11 @@ const TDPractitioners = ({ d }) => {
     }}>
       <div className="container">
         <div className="td-text-grid" style={{
-          display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 80,
+          display: 'grid',
+          gridTemplateColumns: d.compactTextGrid
+            ? 'minmax(150px, 0.3fr) minmax(0, 1.7fr)'
+            : '0.85fr 1.15fr',
+          gap: d.compactTextGrid ? 48 : 80,
           alignItems: 'baseline',
         }}>
           <div>
@@ -444,14 +456,14 @@ const TDPractitioners = ({ d }) => {
               margin: '0 0 26px 0', maxWidth: 640, textWrap: 'pretty',
             }}>{chrome.practitionersBody}</p>
             )}
-            <a href={chrome.practitionersHref} style={{
+            <a href={d.practitionerHref || chrome.practitionersHref} style={{
               fontFamily: TD_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
               fontSize: TD_IS_ZH ? 14 : 12, fontWeight: 600,
               letterSpacing: '0.14em',
               textTransform: TD_IS_ZH ? 'none' : 'uppercase',
               color: 'var(--sepia-700)',
               borderBottom: '1px solid var(--sepia-300)', paddingBottom: 4,
-            }}>{chrome.practitionersLink}</a>
+            }}>{d.practitionerLabel || chrome.practitionersLink}</a>
           </div>
         </div>
       </div>
@@ -627,8 +639,106 @@ const TDJsonLd = ({ d }) => {
     description: d.seoDescription,
   };
   return (
-    <script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }} />
+    <>
+      <script type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }} />
+      {d.featureMedia?.video && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'VideoObject',
+          name: d.featureMedia.schemaName || d.featureMedia.title,
+          description: d.featureMedia.schemaDescription || d.featureMedia.body,
+          thumbnailUrl: [`https://cwtcm.ca/${d.featureMedia.poster}`],
+          contentUrl: `https://cwtcm.ca/${d.featureMedia.video}`,
+          uploadDate: d.featureMedia.uploadDate || '2026-09-10',
+          duration: d.featureMedia.duration || 'PT38S',
+        }) }} />
+      )}
+    </>
+  );
+};
+
+// Optional editorial media block. The video is click-to-play (never autoplay),
+// so a clinical procedure does not surprise visitors or consume mobile data.
+const TDFeatureMedia = ({ d }) => {
+  const TD_IS_ZH = useIsZh();
+  const m = d.featureMedia;
+  if (!m) return null;
+  return (
+    <section data-screen-label="Feature media" className="section" style={{
+      background: 'var(--cream-200)', borderTop: '1px solid var(--sepia-100)',
+    }}>
+      <div className="container td-feature-grid" style={{
+        display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 64, alignItems: 'center',
+      }}>
+        <div>
+          <div className="eyebrow" style={{ marginBottom: 16 }}>{m.eyebrow}</div>
+          <h2 style={{
+            fontFamily: TD_IS_ZH ? 'var(--font-serif-zh)' : 'var(--font-display)',
+            fontWeight: 500, fontSize: 'clamp(34px, 4vw, 54px)', lineHeight: 1.12,
+            color: 'var(--sepia-700)', margin: '0 0 22px', textWrap: 'balance',
+          }}>{m.title}</h2>
+          <p style={{
+            fontFamily: TD_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
+            fontSize: 16, lineHeight: 1.8, color: 'var(--sepia-600)', margin: '0 0 18px',
+          }}>{m.body}</p>
+          {m.note && <p style={{
+            fontFamily: TD_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
+            fontSize: 13, lineHeight: 1.7, color: 'var(--sepia-500)', margin: 0,
+          }}>{m.note}</p>}
+        </div>
+        <figure style={{ margin: 0 }}>
+          <video controls playsInline preload="metadata" poster={m.poster} style={{
+            width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block',
+            border: '1px solid var(--sepia-100)', borderRadius: 4,
+            background: 'var(--sepia-700)',
+          }}>
+            <source src={m.video} type="video/mp4" />
+          </video>
+          <figcaption style={{
+            fontFamily: TD_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
+            fontSize: 12, lineHeight: 1.6, color: 'var(--sepia-500)', marginTop: 12,
+          }}>{m.caption}</figcaption>
+        </figure>
+      </div>
+    </section>
+  );
+};
+
+const TDLineageSpotlight = ({ d }) => {
+  const TD_IS_ZH = useIsZh();
+  const s = d.lineageSpotlight;
+  if (!s) return null;
+  return (
+    <section data-screen-label="Lineage" className="section" style={{
+      background: 'var(--cream-50)', borderTop: '1px solid var(--sepia-100)',
+    }}>
+      <div className="container td-feature-grid" style={{
+        display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 64, alignItems: 'center',
+      }}>
+        <img src={s.photo} alt={s.alt} style={{
+          width: '100%', aspectRatio: '4/3', objectFit: 'cover', objectPosition: '50% 18%',
+          border: '1px solid var(--sepia-100)', borderRadius: 4, display: 'block',
+        }} />
+        <div>
+          <div className="eyebrow" style={{ marginBottom: 16 }}>{s.eyebrow}</div>
+          <h2 style={{
+            fontFamily: TD_IS_ZH ? 'var(--font-serif-zh)' : 'var(--font-display)',
+            fontWeight: 500, fontSize: 'clamp(34px, 4vw, 54px)', lineHeight: 1.12,
+            color: 'var(--sepia-700)', margin: '0 0 22px',
+          }}>{s.title}</h2>
+          <p style={{
+            fontFamily: TD_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
+            fontSize: 16, lineHeight: 1.9, color: 'var(--sepia-600)', margin: '0 0 20px',
+          }}>{s.body}</p>
+          {s.href && <a href={s.href} target="_blank" rel="noopener" style={{
+            fontFamily: TD_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
+            fontSize: 13, fontWeight: 600, color: 'var(--sepia-600)',
+            borderBottom: '1px solid var(--sepia-300)',
+          }}>{s.link}</a>}
+        </div>
+      </div>
+    </section>
   );
 };
 
@@ -655,7 +765,7 @@ const TDRichSections = ({ d }) => {
               fontWeight: 500, fontSize: TD_IS_ZH ? 28 : 30,
               color: 'var(--sepia-700)', margin: '0 0 26px',
             }}>{sec.title}</h2>
-            <RichP html={sec.html} style={{
+            <div dangerouslySetInnerHTML={{ __html: sec.html }} style={{
               fontFamily: TD_IS_ZH ? 'var(--font-sans-zh)' : 'var(--font-sans)',
               fontSize: 16, lineHeight: 2.0, color: 'var(--sepia-600)',
               margin: 0, maxWidth: 800,
@@ -689,7 +799,9 @@ const TreatmentDetailPage = ({ slug }) => {
       <TDHero d={d} />
       <TDWhatIs d={d} />
       <TDWhatToExpect d={d} />
+      <TDFeatureMedia d={d} />
       <TDRichSections d={d} />
+      <TDLineageSpotlight d={d} />
       <TDConditions d={d} />
       <TDPractitioners d={d} />
       <TDRelated d={d} />
@@ -700,4 +812,4 @@ const TreatmentDetailPage = ({ slug }) => {
 };
 
 
-export { RichSpan, RichP, TDHeroPlaceholder, TDBreadcrumb, TDHero, TDWhatIs, TDWhatToExpect, TDConditionCard, TDConditions, TDPractitioners, TDRelatedCard, TDRelated, TDBookCTA, TDJsonLd, TDRichSections, TreatmentDetailPage };
+export { RichSpan, RichP, TDHeroPlaceholder, TDBreadcrumb, TDHero, TDWhatIs, TDWhatToExpect, TDFeatureMedia, TDLineageSpotlight, TDConditionCard, TDConditions, TDPractitioners, TDRelatedCard, TDRelated, TDBookCTA, TDJsonLd, TDRichSections, TreatmentDetailPage };

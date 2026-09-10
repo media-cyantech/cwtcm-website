@@ -312,6 +312,7 @@ export const STRINGS = {
       'rmd-bby-bin-li.jpg',
       'rmd-bby-rosa-shu.jpg',
       'rmd-bby-van-helen-he.jpg',
+      'bby-bill-wang.webp',
       'bby-wing-ho-chan.jpg',
       'bby-feng-kang.jpg',
       'bby-li-gao.jpg',
@@ -331,7 +332,7 @@ export const STRINGS = {
 
     // Profiles that exist on disk. Archive "View profile →" links only navigate
     // for slugs in this list; others show "Profile coming soon".
-    live: ['taylor-wang', 'xianyi-hu', 'jack-bai', 'kalen-shen', 'wingho-chan', 'jiabin-nan', 'jim-yi', 'gemmie-lam', 'helen-he', 'rosa-shu', 'pearson-zhang', 'lynn-liu', 'simon-zhang', 'william-wang', 'mengli-song', 'jasmine-zhang', 'monica-liu', 'david-leung', 'angel-yu', 'hong-guan', 'bin-li', 'feng-kang', 'li-gao', 'nikka-wu', 'shirley-zhu', 'emmett-zhang', 'lihong-zhou', 'tony-liang', 'vickie-xu', 'sunny-wei', 'di-wu', 'su-zhang', 'vivian-chen', 'cathy-luo', 'dongwei-li', 'sean-zhou', 'winnie-yang', 'dave-gifford', 'qin-pei', 'william-zhou', 'vivi-zhao'],
+    live: ['taylor-wang', 'xianyi-hu', 'jack-bai', 'kalen-shen', 'bill-wang', 'wingho-chan', 'jiabin-nan', 'jim-yi', 'gemmie-lam', 'helen-he', 'rosa-shu', 'pearson-zhang', 'lynn-liu', 'simon-zhang', 'william-wang', 'mengli-song', 'jasmine-zhang', 'monica-liu', 'david-leung', 'angel-yu', 'hong-guan', 'bin-li', 'feng-kang', 'li-gao', 'nikka-wu', 'shirley-zhu', 'emmett-zhang', 'lihong-zhou', 'tony-liang', 'vickie-xu', 'sunny-wei', 'di-wu', 'su-zhang', 'vivian-chen', 'cathy-luo', 'dongwei-li', 'sean-zhou', 'winnie-yang', 'dave-gifford', 'qin-pei', 'william-zhou', 'vivi-zhao'],
 
     // ---- Shared chrome for individual profile pages (Practitioners/{slug}.html) ----
     detailChrome: {
@@ -363,6 +364,48 @@ export const STRINGS = {
     // ---- Profile-specific data, keyed by slug. The shared component also
     //      reads list[slug] for the photo + base clinic data. ----
     details: {
+      'bill-wang': {
+        seoTitle: 'Bill Wang (王旭彪), R.Ac. — He’s Three-Method Acupuncture | Canadian Western TCM',
+        seoDescription: 'Meet Bill Wang (王旭彪), a BC registered acupuncturist at Canadian Western TCM Burnaby who has studied He Puren’s Three-Method Acupuncture system since 2017.',
+        creds: [{ en: 'R.Ac.', zh: 'BC省注册针灸师' }],
+        ledeEn: 'BC registered acupuncturist practising He Puren’s Three-Method Acupuncture system at our Burnaby clinic.',
+        ledeZh: '在加西中医本拿比诊所运用贺氏针灸三通法的BC省注册针灸师。',
+        bioEn: 'Bill Wang (王旭彪) is a Registered Acupuncturist in British Columbia. Since 2017, he has studied He Puren’s Three-Method Acupuncture system under Professor He Xi, the son of Professor He Puren and a representative lineage practitioner of the system. The clinic identifies Bill as an officially authorized lineage practitioner for Canada. His work combines the system’s three approaches with TCM pattern differentiation, meridian theory and individualized point selection. Each treatment plan is determined after an assessment; not every method is appropriate for every patient.',
+        bioZh: 'Bill Wang（王旭彪）是BC省注册针灸师。自2017年起，他系统研习贺氏针灸三通法，长期接受贺普仁教授之子、贺氏针灸代表性传承人贺喜教授的理论、临床与实践指导。诊所资料显示，Bill为贺氏针灸三通法加拿大地区官方授权传承人。他以三通法为核心，结合中医辨证、经络理论与个体化取穴制定治疗方案；具体方法须经面诊评估，并非每位患者都适用全部三种方法。',
+        specialties: [
+          { en: 'He’s Three-Method Acupuncture', zh: '贺氏针灸三通法' },
+          { en: 'Acupuncture', zh: '针灸' },
+          { en: 'Pain & Musculoskeletal Care', zh: '疼痛与肌肉骨骼调理' },
+          { en: 'Neurological Rehabilitation Support', zh: '神经功能康复支持' },
+          { en: 'Sleep & Constitutional Wellness', zh: '睡眠与体质调理' },
+        ],
+        conditions: [
+          { slug: 'pain-injury', en: 'Pain & Injury', zh: '疼痛与损伤' },
+          { slug: 'headaches-migraines', en: 'Headaches & Migraines', zh: '头痛与偏头痛' },
+          { slug: 'sleep-stress', en: 'Sleep & Stress', zh: '睡眠与压力' },
+          { slug: 'digestion', en: 'Digestion', zh: '消化调理' },
+          { slug: 'womens-health', en: "Women’s Health", zh: '妇科健康' },
+          { slug: 'skin-acne', en: 'Skin & Acne', zh: '皮肤与痤疮' },
+        ],
+        treatments: [
+          { slug: 'he-puren-three-method-acupuncture', en: 'He’s Three-Method Acupuncture', zh: '贺氏针灸三通法' },
+          { slug: 'acupuncture', en: 'Acupuncture', zh: '针灸' },
+          { slug: 'moxibustion', en: 'Moxibustion', zh: '艾灸' },
+        ],
+        educationEn: [
+          'He Puren’s Three-Method Acupuncture — systematic study since 2017',
+          'Long-term theory and clinical practice guidance from Professor He Xi',
+          'Official Canada-region authorization reported by the clinic; call Burnaby for documentation details',
+        ],
+        educationZh: [
+          '2017年起系统研习贺氏针灸三通法',
+          '长期接受贺喜教授的理论与临床实践指导',
+          '诊所称获加拿大地区官方授权；授权资料详情请致电本拿比门店',
+        ],
+        languages: [{ en: 'Mandarin', zh: '普通话' }, { en: 'English', zh: '英语' }],
+        moreHref: 'Treatments/he-puren-three-method-acupuncture.html',
+        moreLabel: 'Learn about He’s Three-Method Acupuncture →',
+      },
       "jiabin-nan": {"seoTitle": "Jiabin Nan — Acupuncturist · R.Ac | Canadian Western TCM", "seoDescription": "Jiabin Nan, registered acupuncturist at Canadian Western TCM — over 30 years of clinical experience across Europe and North America, graduate of Beijing University of Chinese Medicine, practising in Richmond.", "creds": [{"en": "R.Ac", "zh": "BC省注册针灸师"}], "ledeEn": "Registered acupuncturist with over 30 years of clinical experience across Europe and North America.", "ledeZh": "三十余年欧洲与北美临床经验的注册针灸师。", "bioEn": "Jiabin Nan graduated from Beijing University of Chinese Medicine and has practised and taught in several countries across Europe and North America. With over 30 years of clinical experience in TCM, he has developed extensive expertise in pain-related conditions such as sports injuries, headaches, frozen shoulder and lumbar strain. He also has strong clinical results with facial paralysis, post-stroke hemiplegia, menstrual irregularities and insomnia, as well as paediatric concerns including enuresis, growth delays and digestive issues.", "bioZh": "毕业于北京中医学院（今北京中医药大学），曾在欧洲及北美多国行医与教学。三十余年中医临床经验，擅长运动损伤、头痛、五十肩、腰肌劳损等各类痛症，并在面瘫、中风后偏瘫、月经不调与失眠方面临床疗效显著；对小儿遗尿、生长迟缓及消化不良亦有独到调理。", "specialties": [{"en": "Acupuncture", "zh": "针灸"}, {"en": "Tuina", "zh": "推拿"}, {"en": "Pain Management", "zh": "痛症调理"}, {"en": "Paediatric TCM", "zh": "小儿调理"}], "conditions": [{"slug": "pain-injury", "en": "Pain & Injury", "zh": "疼痛与损伤"}, {"slug": "headaches-migraines", "en": "Headaches & Migraines", "zh": "头痛与偏头痛"}, {"slug": "womens-health", "en": "Women's Health", "zh": "妇科健康"}, {"slug": "sleep-stress", "en": "Sleep & Stress", "zh": "睡眠与压力"}], "treatments": [{"slug": "acupuncture", "en": "Acupuncture", "zh": "针灸"}, {"slug": "tui-na", "en": "Tui Na", "zh": "推拿"}], "educationEn": ["Beijing University of Chinese Medicine (Beijing College of TCM)", "30+ years of clinical practice across Europe & North America", "Clinical practice and teaching in multiple countries"], "educationZh": ["北京中医学院（今北京中医药大学）", "欧洲与北美 30+ 年临床", "多国行医与教学"], "languages": [{"en": "Mandarin", "zh": "普通话"}, {"en": "English", "zh": "英语"}]},
       "jim-yi": {"seoTitle": "Jim Yi — TCM Orthopedics · R.TCM.P, R.Ac | Canadian Western TCM", "seoDescription": "Jim Yi, registered TCM practitioner and acupuncturist at Canadian Western TCM — Master of TCM Orthopedics from the China Academy of Chinese Medical Sciences, specialising in musculoskeletal and spinal care in Vancouver.", "creds": [{"en": "R.TCM.P", "zh": "BC省注册中医师"}, {"en": "R.Ac", "zh": "BC省注册针灸师"}, {"en": "Master of TCM Orthopedics", "zh": "中医骨伤科硕士"}, {"en": "Associate Chief Physician (China)", "zh": "中医骨伤科副主任医师"}], "ledeEn": "Registered TCM practitioner and acupuncturist with over 30 years of experience, specialising in Chinese orthopedics.", "ledeZh": "三十余年临床经验、专精中医骨伤的注册中医师与针灸师。", "bioEn": "Jim Yi graduated from Shanghai University of Traditional Chinese Medicine and earned a Master's degree in Traditional Chinese Orthopedics from the China Academy of Chinese Medical Sciences in Beijing. He integrates Tuina, orthopedic manipulation, acupuncture, moxibustion, cupping and Chinese herbal medicine to treat acute and chronic musculoskeletal pain, spinal disorders such as cervical spondylosis and lumbar disc herniation, and joint injuries of the knee and ankle. He also brings rich clinical experience in internal-medicine and skin conditions.", "bioZh": "毕业于上海中医药大学，并获北京中国中医科学院中医骨伤科硕士学位。擅长综合运用推拿、整骨、针刺、艾灸、拔罐及中药，治疗头颈肩腰腿疼痛、颈椎病、腰椎间盘突出、膝痛及足踝损伤等急慢性骨关节与肌肉筋膜疾病，并对内科杂病及皮肤病有丰富临床经验。", "specialties": [{"en": "Tuina", "zh": "推拿"}, {"en": "Orthopedic Manipulation", "zh": "整骨"}, {"en": "Acupuncture", "zh": "针灸"}, {"en": "Moxibustion", "zh": "艾灸"}, {"en": "Cupping", "zh": "拔罐"}, {"en": "Chinese Herbal Medicine", "zh": "中药"}], "conditions": [{"slug": "pain-injury", "en": "Pain & Injury", "zh": "疼痛与损伤"}, {"slug": "icbc-recovery", "en": "ICBC Recovery", "zh": "车祸康复"}, {"slug": "skin-acne", "en": "Skin & Acne", "zh": "皮肤与痤疮"}], "treatments": [{"slug": "tui-na", "en": "Tui Na", "zh": "推拿"}, {"slug": "manual-bone-setting", "en": "Manual Bone Setting", "zh": "正骨"}, {"slug": "acupuncture", "en": "Acupuncture", "zh": "针灸"}, {"slug": "moxibustion", "en": "Moxibustion", "zh": "艾灸"}, {"slug": "cupping-gua-sha", "en": "Cupping & Gua Sha", "zh": "拔罐刮痧"}, {"slug": "herbal-medicine", "en": "Herbal Medicine", "zh": "中药调理"}], "educationEn": ["30+ years of clinical experience", "Shanghai University of Traditional Chinese Medicine — Bachelor of TCM", "China Academy of Chinese Medical Sciences, Beijing — Master of TCM Orthopedics", "Associate Chief Physician of Traditional Chinese Orthopedics"], "educationZh": ["30+ 年临床经验", "上海中医药大学 — 中医学学士", "北京中国中医科学院 — 中医骨伤科硕士", "中医骨伤科副主任医师"], "languages": [{"en": "Mandarin", "zh": "普通话"}, {"en": "English", "zh": "英语"}]},
       "gemmie-lam": {"seoTitle": "Gemmie Lam — Registered TCM Practitioner · R.TCM.P | Canadian Western TCM", "seoDescription": "Gemmie Lam, registered TCM practitioner at Canadian Western TCM — Master's in Acupuncture from the University of Hong Kong, blending Tuina, moxibustion and aromatherapy in Vancouver.", "creds": [{"en": "R.TCM.P", "zh": "BC省注册中医师"}, {"en": "Registered CMP (Hong Kong)", "zh": "香港注册中医师"}, {"en": "Master of TCM (Acupuncture)", "zh": "针灸学硕士"}], "ledeEn": "Registered TCM practitioner with a Master's in Acupuncture from the University of Hong Kong, blending Tuina, moxibustion and aromatherapy.", "ledeZh": "香港大学针灸学硕士的注册中医师，融合推拿、艾灸与精油按摩。", "bioEn": "Gemmie Lam holds a Bachelor of Chinese Medicine and a Master's degree in Acupuncture from The University of Hong Kong. She combines Tuina therapy, moxibustion, cupping, exercise rehabilitation and aromatherapy massage to relieve musculoskeletal pain, restore mobility and improve circulation, and to support sleep, digestion and emotional wellbeing.", "bioZh": "毕业于香港大学，获中医全科学士及针灸学硕士学位。擅长结合中医推拿、艾灸、拔罐、运动治疗及精油按摩，处理颈肩腰腿痛、肌肉劳损与软组织粘连，恢复活动度、促进循环，并改善睡眠、消化及情绪问题。", "specialties": [{"en": "Acupuncture", "zh": "针灸"}, {"en": "Tuina", "zh": "推拿"}, {"en": "Moxibustion", "zh": "艾灸"}, {"en": "Cupping", "zh": "拔罐"}, {"en": "Exercise Rehabilitation", "zh": "运动康复"}, {"en": "Aromatherapy Massage", "zh": "精油按摩"}], "conditions": [{"slug": "pain-injury", "en": "Pain & Injury", "zh": "疼痛与损伤"}, {"slug": "sleep-stress", "en": "Sleep & Stress", "zh": "睡眠与压力"}, {"slug": "digestion", "en": "Digestion", "zh": "消化调理"}], "treatments": [{"slug": "acupuncture", "en": "Acupuncture", "zh": "针灸"}, {"slug": "tui-na", "en": "Tui Na", "zh": "推拿"}, {"slug": "moxibustion", "en": "Moxibustion", "zh": "艾灸"}, {"slug": "cupping-gua-sha", "en": "Cupping & Gua Sha", "zh": "拔罐刮痧"}], "educationEn": ["University of Hong Kong — Bachelor of Chinese Medicine", "University of Hong Kong — Master's in Acupuncture", "Registered Chinese Medicine Practitioner (Hong Kong)"], "educationZh": ["香港大学 — 中医全科学士", "香港大学 — 针灸学硕士", "香港注册中医师"], "languages": [{"en": "Cantonese", "zh": "粤语"}, {"en": "Mandarin", "zh": "普通话"}, {"en": "English", "zh": "英语"}]},
@@ -888,6 +931,8 @@ export const STRINGS = {
       { slug: 'helen-he', name: 'Helen He', clinics: ['Richmond', 'Burnaby', 'Vancouver'], roles: ['Rehabilitation Therapist'], photo: 'rmd-bby-van-helen-he.jpg',
         creds: [{ en: 'Associate Chief Obstetrician (China)', zh: '中国产科副主任医师' }, { en: 'Rehabilitation Therapist', zh: '康复治疗师' }] },
       // ---- BURNABY-based ----
+      { slug: 'bill-wang', name: 'Bill Wang', clinics: ['Burnaby'], roles: ['Acupuncturist'], photo: 'bby-bill-wang.webp', badge: 'He’s Three-Method Acupuncture',
+        creds: [{ en: 'R.Ac.', zh: 'BC省注册针灸师' }] },
       { slug: 'wingho-chan', name: 'Wingho Chan', clinics: ['Burnaby'], roles: ['TCM Doctor'], photo: 'bby-wing-ho-chan.jpg',
         creds: [{ en: 'R.TCM.P', zh: 'BC省注册中医师' }] },
       { slug: 'feng-kang', name: 'Feng Kang', clinics: ['Burnaby'], roles: ['Rehabilitation Therapist'], photo: 'bby-feng-kang.jpg',
@@ -1215,6 +1260,7 @@ treatments: {
     'acupuncture', 'tui-na', 'moxibustion', 'cupping-gua-sha',
     'manual-bone-setting', 'head-therapy', 'herbal-medicine',
     'floating-needle', 'aesthetic-acupuncture',
+    'he-puren-three-method-acupuncture',
     'fuyang-moxibustion', 'fire-dragon-moxibustion', 'thread-embedding',
     'xiaoyan-facial', 'facial-bojin', 'tcm-acne',
     'manual-osteopathy', 'counselling',
@@ -1246,6 +1292,7 @@ treatments: {
         zh: '加西特色',
         cards: [
           { slug: 'floating-needle',    name: 'FSN',  sub: '浮针',     tagline: 'A modern, near-painless technique for muscular and myofascial pain.', kind: 'fsn'    },
+          { slug: 'he-puren-three-method-acupuncture', name: 'He’s Three-Method Acupuncture', sub: '贺氏针灸三通法', tagline: 'A lineage-based system of fine-needle, warming and strong-unblocking methods.', kind: 'needle' },
           { slug: 'aesthetic-acupuncture', name: 'Aesthetic Acupuncture', sub: '美容针', tagline: 'Acupuncture for facial tone and rejuvenation.',                       kind: 'facial' },
           { slug: 'fuyang-moxibustion',      name: 'Fu Yang Moxibustion',      sub: '扶阳灸',       tagline: 'Deep, layered moxa warmth to nourish yang and dispel cold.',            kind: 'moxa'   },
           { slug: 'fire-dragon-moxibustion', name: 'Fire Dragon Moxibustion',  sub: '火龙灸',       tagline: 'Spinal moxibustion — penetrating warmth along the back.',     kind: 'moxa'   },
@@ -1302,6 +1349,71 @@ treatments: {
     // and including the slug in `live` above publishes the page.
     // ============================================================
     details: {
+      'he-puren-three-method-acupuncture': {
+        slug: 'he-puren-three-method-acupuncture',
+        heroPhoto: 'assets/treatments/he-three-method-hero.webp',
+        name: 'He’s Three-Method Acupuncture', nameZh: '贺氏针灸三通法',
+        category: 'Lineage acupuncture · Burnaby',
+        kind: 'needle',
+        compactTextGrid: true,
+        lede: 'A structured acupuncture system developed by Professor He Puren, bringing fine-needle, warming and strong-unblocking methods together through individual assessment.',
+        seoTitle: 'He Puren’s Three-Method Acupuncture in Burnaby | Bill Wang, R.Ac.',
+        seoDescription: 'Learn about He Puren’s Three-Method Acupuncture at Canadian Western TCM Burnaby with Bill Wang, R.Ac.—the system’s lineage, three methods, safety and what to expect.',
+        whatIsIt: [
+          'He Puren’s Three-Method Acupuncture is a lineage-based clinical system developed by Professor He Puren. It organizes treatment through three complementary approaches known as Weitong, Wentong and Qiangtong.',
+          'Professor He Puren was recognized as a first-batch representative inheritor of China’s national intangible cultural heritage project “Acupuncture.” The national designation applies to the project Acupuncture; He’s Three-Method system is his clinical and academic contribution within that tradition.',
+          'At Canadian Western TCM Burnaby, Bill Wang, R.Ac. applies this framework together with TCM pattern differentiation, meridian theory and individualized point selection.',
+        ],
+        whatIsItFootnote: 'The choice of method depends on the person, presentation and clinical assessment. A named technique does not guarantee a particular result.',
+        whatToExpect: [
+          'Your visit begins with a health history and an acupuncture assessment. Bill explains which approach is being considered and obtains consent before treatment.',
+          'Depending on suitability, care may use fine needles, a warming method that can include fire needle, or a stronger unblocking method that can include controlled bloodletting. Not every visit uses all three.',
+          'Needles and lancets are sterile and single-use. Fire-needle and bloodletting techniques are used only when clinically appropriate and after risks, alternatives and aftercare have been discussed.',
+        ],
+        featureMedia: {
+          eyebrow: 'Clinical demonstration',
+          title: 'A brief look at the warming method.',
+          body: 'This short clip demonstrates a fire-needle step used within the warming approach. It is shown for education only; technique selection and treatment are individualized.',
+          note: 'Clinical procedure shown. Viewer discretion is advised. No outcome is implied by this demonstration.',
+          caption: 'Fire-needle demonstration at Canadian Western TCM. 38 seconds.',
+          video: 'assets/treatments/he-three-method-fire-needle.mp4',
+          poster: 'assets/treatments/he-three-method-fire-needle-poster.webp',
+          schemaName: 'Fire-needle demonstration — He Puren’s Three-Method Acupuncture',
+          schemaDescription: 'A short educational demonstration of a fire-needle step used within the warming method at Canadian Western TCM.',
+          duration: 'PT38S',
+          uploadDate: '2026-09-10',
+        },
+        richSections: [
+          {
+            title: 'The three methods',
+            html: '<h3>Weitong · fine-needle method</h3><p>Uses fine needles and meridian-based point selection to support regulation and function.</p><h3>Wentong · warming method</h3><p>Uses warming techniques, which may include fire needle, when warmth is clinically appropriate.</p><h3>Qiangtong · strong-unblocking method</h3><p>May include controlled bloodletting for selected presentations. It is not appropriate for every person and requires specific assessment and consent.</p>',
+          },
+          {
+            title: 'Clinical focus',
+            html: '<p>Bill’s clinical focus includes supportive care for neurological and functional rehabilitation; acute and chronic pain; spine, joint and soft-tissue concerns; headaches; sleep and stress; digestive function; women’s health; selected skin concerns; and constitutional wellness.</p><p>Acupuncture is complementary care. New, severe or worsening symptoms should be assessed by an appropriate medical professional, and emergencies require 911 or the nearest emergency department.</p>',
+          },
+          {
+            title: 'Authorization & suitability',
+            html: '<p>For further information about Bill Wang’s authorization and lineage background, call Canadian Western TCM Burnaby at <a href="tel:+16044239633">(604) 423-9633</a>.</p><p>To ask whether He’s Three-Method Acupuncture may be suitable for you, speak with a registered acupuncturist. The actual treatment plan is determined only after an individual assessment.</p>',
+          },
+        ],
+        lineageSpotlight: {
+          photo: 'assets/heritage/he-xi.webp',
+          alt: 'Professor He Xi, lineage teacher of He Puren’s Three-Method Acupuncture',
+          eyebrow: 'Lineage',
+          title: 'Guided by Professor He Xi.',
+          body: 'Since 2017, Bill has received ongoing theoretical, clinical and practical guidance from Professor He Xi, the son of Professor He Puren and a representative lineage practitioner of the system.',
+          link: 'View the official national ICH record for Professor He Puren →',
+          href: 'https://www.ihchina.cn/ccr_detail/3505/',
+        },
+        conditions: ['pain-injury', 'headaches-migraines', 'sleep-stress', 'digestion', 'womens-health', 'skin-acne'],
+        practitionersNote: 'At our Burnaby clinic, Bill Wang, R.Ac. offers this approach following an individual assessment.',
+        practitionerHref: 'Practitioners/bill-wang.html',
+        practitionerLabel: 'Meet Bill Wang →',
+        related: ['acupuncture', 'moxibustion', 'cupping-gua-sha'],
+        bookHeadline: 'Ask whether this approach fits your needs.',
+        bookSub: 'Book with our Burnaby clinic or call (604) 423-9633 for more information.',
+      },
       acupuncture: {
         slug: 'acupuncture',
         heroPhoto: 'assets/treatments/acupuncture-hero.jpg',
@@ -2349,6 +2461,14 @@ treatments: {
       practitionersTitle: 'Practitioners at our Burnaby clinic',
       practitioners: [
         {
+          name: 'Bill Wang',
+          photo: 'bby-bill-wang.webp',
+          crop: '50% 20%',
+          creds: ['R.Ac.'],
+          badge: 'He’s Three-Method Acupuncture',
+          subtitle: 'Lineage-based acupuncture · practising the three-method system since 2017',
+        },
+        {
           name: 'Wingho Chan',
           photo: 'bby-wing-ho-chan.jpg',
           crop: '50% 22%',
@@ -2380,6 +2500,7 @@ treatments: {
       ],
       teamCta: { label: 'View all practitioners on our Team page →', href: 'Practitioners.html' },
       services: [
+        { name: 'He’s Three-Method Acupuncture', href: 'Treatments/he-puren-three-method-acupuncture.html' },
         { name: 'Acupuncture', href: 'Treatments/acupuncture.html' },
         { name: 'Tui Na', href: 'Treatments/tui-na.html' },
         { name: 'Moxibustion', href: 'Treatments/moxibustion.html' },

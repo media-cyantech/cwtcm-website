@@ -26,9 +26,15 @@ export function getStaticPaths() {
 const { file, lang, comp, props } = Astro.props;
 const page = seoFor(file);
 const needsHydration = HYDRATE.has(comp);
+// Use the same-language-pair URL already declared in hreflang, but keep it
+// root-relative so the switch also stays inside localhost during previews.
+const otherLangKey = lang === 'zh' ? 'en' : 'zh-Hans';
+const otherLangHref = page.hreflang?.[otherLangKey]
+  ? new URL(page.hreflang[otherLangKey]).pathname
+  : (lang === 'zh' ? '/Homepage.html' : '/Homepage-ZH.html');
 ---
 <Base page={page} schema={schemaFor(file, { bundle: BUNDLES[lang] })}>
   {needsHydration
-    ? <PageShell comp={comp} lang={lang} props={props} client:visible />
-    : <PageShell comp={comp} lang={lang} props={props} />}
+    ? <PageShell comp={comp} lang={lang} otherLangHref={otherLangHref} props={props} client:visible />
+    : <PageShell comp={comp} lang={lang} otherLangHref={otherLangHref} props={props} />}
 </Base>
