@@ -594,6 +594,13 @@ button { font: inherit; cursor: pointer; }
    row and centre the card copy so Safari never clips a city name at either
    edge. */
 @media (max-width: 640px) {
+  /* Keep the compact two-column layout, but centre the non-interactive copy
+     within each practitioner detail link card on phones. */
+  .pd-link-card {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
   .loc-grid {
     grid-template-columns: minmax(0, 1fr) !important;
     max-width: 420px;

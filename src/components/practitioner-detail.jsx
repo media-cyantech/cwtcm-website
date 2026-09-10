@@ -245,7 +245,7 @@ const PdLinkCard = ({ href, label, zh }) => {
   const PD_IS_ZH = useIsZh();   // 原为模块顶层常量，会导致中英串台
   const [hover, setHover] = usePdState(false);
   return (
-    <a href={href}
+    <a href={href} className="pd-link-card"
       onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
       style={{
         display: 'flex', flexDirection: 'column', gap: 6,
