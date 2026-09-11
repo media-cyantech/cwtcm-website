@@ -1240,6 +1240,7 @@ export const STRINGS = {
     ],
     legal: ['隐私政策', '服务条款', '取消政策', 'Cookie 政策'],
     copyright: '© 2026 Canadian Western TCM Clinic · 加西中医',
+    creditLabel: 'Designed & Developed by',
   },
   locator: {
     eyebrow: '我们的诊所',

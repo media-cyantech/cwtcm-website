@@ -2200,6 +2200,7 @@ treatments: {
     ],
     legal: ['Privacy Policy', 'Terms of Service', 'Cancellation Policy', 'Cookie Policy'],
     copyright: '© 2026 Canadian Western TCM Clinic',
+    creditLabel: 'Designed & Developed by',
   },
   locator: {
     eyebrow: 'Our Clinics',

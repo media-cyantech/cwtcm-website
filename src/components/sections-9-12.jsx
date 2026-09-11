@@ -303,7 +303,20 @@ const Footer = () => {
         fontSize: 11, color: 'var(--cream-400)', letterSpacing: '0.04em',
         flexWrap: 'wrap', gap: 16,
       }}>
-        <div>{f.copyright}</div>
+        <div className="footer-copyright" style={{
+          display: 'flex', flexWrap: 'wrap', alignItems: 'center',
+          columnGap: 6, rowGap: 4, maxWidth: '100%',
+        }}>
+          <span>{f.copyright} ·</span>
+          <span style={{ maxWidth: '100%' }}>{f.creditLabel}{' '}
+            <a
+              href="https://focusmediainc.ca/"
+              target="_blank"
+              rel="noopener"
+              style={{ color: 'var(--cream-300)', textDecoration: 'underline', textUnderlineOffset: 3 }}
+            >Focus Media</a>
+          </span>
+        </div>
         <div style={{ display: 'flex', gap: 28, flexWrap: 'wrap' }}>
           {f.legal.map((n, i) => <a key={i} href={`Legal${sfx}.html#${LEGAL_ANCHORS[i]}`}>{n}</a>)}
         </div>
