@@ -353,11 +353,12 @@ ul { list-style: none; padding: 0; margin: 0; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 
-/* Online booking is temporarily disabled at the clinic's request. Targeting
-   the Jane destinations in one shared rule keeps every current (and future)
-   booking entry point hidden without affecting phone, directions, contact
-   forms, or internal clinic-detail links. Remove this rule to re-enable them. */
-a[href*="janeapp.com"] {
+/* Online booking is temporarily disabled for Richmond, Burnaby and Vancouver.
+   White Rock uses its own cwtcm.janeapp.com account and keeps its booking
+   controls. Target the shared three-clinic Jane domain so homepage/general
+   booking links remain hidden without affecting White Rock, phone, directions,
+   contact forms, or internal clinic-detail links. */
+a[href*="canadianwesterntcmclinic.janeapp.com"] {
   display: none !important;
 }
 
