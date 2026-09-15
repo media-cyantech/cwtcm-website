@@ -326,8 +326,8 @@ const WhiteRockTeamPanel = () => {
       <div className="eyebrow" style={{ marginBottom: 16 }}>{PR_IS_ZH ? '白石 · 浮针专科' : 'White Rock · FSN'}</div>
       <h2 className="h-section" style={{ margin: '0 0 18px' }}>{PR_IS_ZH ? '白石团队在其专属网站。' : 'The White Rock team has its own site.'}</h2>
       <p className="body" style={{ margin: '0 auto 30px', maxWidth: 560 }}>{PR_IS_ZH
-        ? '白石诊所是加拿大首家浮针示范基地，拥有独立的浮针专科团队、服务与在线预约。'
-        : "Canada's first FSN demonstration clinic, with its own specialist team, services and online booking."}</p>
+        ? '白石诊所是加拿大首家浮针示范基地，拥有独立的浮针专科团队、服务与诊所信息。'
+        : "Canada's first FSN demonstration clinic, with its own specialist team, services and clinic information."}</p>
       <a href="https://whiterock.cwtcm.ca/" target="_blank" rel="noopener" className="btn btn-primary" style={{ padding: '16px 30px' }}>
         {PR_IS_ZH ? '访问白石站 →' : 'Visit the White Rock site →'}</a>
     </div>

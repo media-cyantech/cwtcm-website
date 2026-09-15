@@ -904,7 +904,7 @@ export const STRINGS = {
         creds: [{ en: 'Dr. TCM', zh: 'BC省注册高级中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }] },
       { slug: 'jack-bai', name: 'Jake Bai', clinics: ['Richmond'], roles: ['TCM Doctor', 'Acupuncturist'], photo: 'rmd-jack-bai.jpg', badge: '36 years',
         creds: [{ en: 'R.TCM.P', zh: 'BC省注册中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }] },
-      { slug: 'kalen-shen', name: 'Kalen Shen', clinics: ['Richmond', 'Burnaby', 'Vancouver'], roles: ['Acupuncturist', 'Aesthetician'], photo: 'rmd-van-kalen-shen.jpg',
+      { slug: 'kalen-shen', name: 'Kalen Shen', clinics: ['Richmond', 'Vancouver'], roles: ['Acupuncturist', 'Aesthetician'], photo: 'rmd-van-kalen-shen.jpg',
         creds: [{ en: 'R.Ac', zh: 'BC省注册针灸师' }, { en: 'Korean Certified Aesthetician', zh: '韩国认证美容师' }] },
       // ---- RICHMOND-based ----
       { slug: 'jiabin-nan', name: 'Jiabin Nan', clinics: ['Richmond'], roles: ['Acupuncturist'], photo: 'rmd-jiabin-nan.jpg', badge: '30+ years',
@@ -1096,7 +1096,7 @@ export const STRINGS = {
         },
         {
           q: 'How do I book?',
-          a: 'Call your nearest clinic, or book online where available — our front desk is happy to help.',
+          a: 'Call your nearest clinic, or send us a message through the Contact page — our front desk is happy to help.',
           schema: false,
         },
         {
@@ -1795,7 +1795,7 @@ treatments: {
           'Formulas are commonly used to support digestion, sleep, women\u2019s health, skin and recovery — adjusted over time as you change. Our practitioners prescribe and, where offered, prepare formulas on site.',
         ],
         whatIsItFootnote: '<em>Tell us about medications or pregnancy so we can advise on suitability.</em>',
-        practitionersNote: '<strong>Richmond</strong> — raw herbs &amp; patent formulas: <a href="Practitioners/xianyi-hu.html">Xianyi Hu</a>, <a href="Practitioners/jack-bai.html">Jake Bai</a>, <a href="Practitioners/lynn-liu.html">Lynn Liu</a>, <a href="Practitioners/taylor-wang.html">Taylor Wang</a><br/><strong>Burnaby</strong> — raw herbs &amp; patent formulas: <a href="Practitioners/wingho-chan.html">Wingho Chan</a>, <a href="Practitioners/taylor-wang.html">Taylor Wang</a><br/><strong>Vancouver</strong> — scientific (granule) herbs: <a href="Practitioners/lynn-liu.html">Lynn Liu</a>, <a href="Practitioners/jim-yi.html">Jim Yi</a>, <a href="Practitioners/shirley-zhu.html">Shirley Zhu</a>, <a href="Practitioners/taylor-wang.html">Taylor Wang</a><br/><strong>White Rock</strong> — scientific herbs: <a href="https://cwtcm.janeapp.com/#/chinese-herbal-medicine" target="_blank" rel="noopener">book online →</a>',
+        practitionersNote: '<strong>Richmond</strong> — raw herbs &amp; patent formulas: <a href="Practitioners/xianyi-hu.html">Xianyi Hu</a>, <a href="Practitioners/jack-bai.html">Jake Bai</a>, <a href="Practitioners/lynn-liu.html">Lynn Liu</a>, <a href="Practitioners/taylor-wang.html">Taylor Wang</a><br/><strong>Burnaby</strong> — raw herbs &amp; patent formulas: <a href="Practitioners/wingho-chan.html">Wingho Chan</a>, <a href="Practitioners/taylor-wang.html">Taylor Wang</a><br/><strong>Vancouver</strong> — scientific (granule) herbs: <a href="Practitioners/lynn-liu.html">Lynn Liu</a>, <a href="Practitioners/jim-yi.html">Jim Yi</a>, <a href="Practitioners/shirley-zhu.html">Shirley Zhu</a>, <a href="Practitioners/taylor-wang.html">Taylor Wang</a><br/><strong>White Rock</strong> — scientific herbs: call <a href="tel:+16045606399">(604) 560-6399</a>',
         richSections: [
           { title: 'Three forms of herbal medicine', html: '<strong>🌿 Raw Chinese Herbs（中草药）</strong><br/>Best for: personalised prescriptions, classic formulas with modifications, chronic-condition care, and concerns such as women\u2019s health, digestion, sleep and pain.<br/>✔ Prescribed after pattern diagnosis&nbsp;&nbsp;✔ Flexibly adjusted as your condition changes&nbsp;&nbsp;✔ The classic form of TCM treatment<br/><br/><strong>💊 Patent Herbal Medicine（中成药）</strong><br/>Best for: everyday support, common complaints, portability and simple dosing. We carry patent formulas from reputable manufacturers, recommended by your registered practitioner.<br/><br/><strong>🍵 Concentrated Herbal Granules（科学中药）</strong><br/>More and more Canadian patients choose granules:&nbsp;✔ dissolve and drink&nbsp;&nbsp;✔ no decoction needed&nbsp;&nbsp;✔ precise dosing&nbsp;&nbsp;✔ easier to keep up. Ideal for busy schedules, travel and students.' },
           { title: 'Herbal decoction service（代煎）', html: 'For patients who need traditional raw herbs, we offer:&nbsp;✔ professional dispensing&nbsp;&nbsp;✔ on-site decoction&nbsp;&nbsp;✔ sealed liquid pouches&nbsp;&nbsp;✔ portable, ready to drink. It saves you the time of preparing herbs at home — and makes staying consistent much easier.' },
@@ -2170,7 +2170,7 @@ treatments: {
       },
     },
   },
-  bookAtClinic: 'Book at this clinic',
+  bookAtClinic: 'View this clinic',
   journalViewAll: 'View all articles →',
   scanWechat: 'Scan to add us on WeChat',
   footer: {
@@ -2707,7 +2707,7 @@ treatments: {
     },
     story: {
       eyebrow: 'The flagship of FSN',
-      body: "Our White Rock clinic sits by the pier on Johnston Road \u2014 and it\u2019s a place apart. It is Canada\u2019s first dedicated FSN (\u6d6e\u9488) demonstration clinic, a modern, near-painless technique for muscular and myofascial pain. It has its own home online, too: a dedicated White Rock site with the full team, services and online booking.",
+      body: "Our White Rock clinic sits by the pier on Johnston Road \u2014 and it\u2019s a place apart. It is Canada\u2019s first dedicated FSN (\u6d6e\u9488) demonstration clinic, a modern, near-painless technique for muscular and myofascial pain. It has its own home online, too: a dedicated White Rock site with the full team, services and clinic information.",
       photo: 'assets/locations/whiterock/gallery-whiterock-emblem-fsn-cert.jpg',
       alt: 'FSN demonstration base certificate and brand emblem at Canadian Western TCM White Rock clinic',
       objectPosition: 'left top',
@@ -2839,7 +2839,7 @@ treatments: {
     featureBand: {
       eyebrow: 'Dedicated site',
       headline: 'White Rock has its own home online.',
-      body: 'A complete site for the White Rock team — FSN specialty, full roster, services and online booking.',
+      body: 'A complete site for the White Rock team — FSN specialty, full roster, services and clinic information.',
       cta: 'Visit our White Rock site →',
       ctaHref: 'https://whiterock.cwtcm.ca/',
       ctaTarget: '_blank',

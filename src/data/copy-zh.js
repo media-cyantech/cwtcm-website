@@ -841,7 +841,7 @@ export const STRINGS = {
           '方剂常用于调理消化、睡眠、妇科、皮肤与康复，并随身体变化适时调整。我们的医师开方，并在提供该服务的门店现场配制。',
         ],
         whatIsItFootnote: '<em>请告知正在服用的药物或孕产情况，以便评估适用性。</em>',
-        practitionersNote: '<strong>列治文</strong> — 中草药＋中成药：<a href="Practitioners/xianyi-hu-ZH.html">Xianyi Hu</a>、<a href="Practitioners/jack-bai-ZH.html">Jake Bai</a>、<a href="Practitioners/lynn-liu-ZH.html">Lynn Liu</a>、<a href="Practitioners/taylor-wang-ZH.html">Taylor Wang</a><br/><strong>本拿比</strong> — 中草药＋中成药：<a href="Practitioners/wingho-chan-ZH.html">Wingho Chan</a>、<a href="Practitioners/taylor-wang-ZH.html">Taylor Wang</a><br/><strong>温哥华</strong> — 科学中药：<a href="Practitioners/lynn-liu-ZH.html">Lynn Liu</a>、<a href="Practitioners/jim-yi-ZH.html">Jim Yi</a>、<a href="Practitioners/shirley-zhu-ZH.html">Shirley Zhu</a>、<a href="Practitioners/taylor-wang-ZH.html">Taylor Wang</a><br/><strong>白石</strong> — 科学中药：<a href="https://cwtcm.janeapp.com/#/chinese-herbal-medicine" target="_blank" rel="noopener">在线预约 →</a>',
+        practitionersNote: '<strong>列治文</strong> — 中草药＋中成药：<a href="Practitioners/xianyi-hu-ZH.html">Xianyi Hu</a>、<a href="Practitioners/jack-bai-ZH.html">Jake Bai</a>、<a href="Practitioners/lynn-liu-ZH.html">Lynn Liu</a>、<a href="Practitioners/taylor-wang-ZH.html">Taylor Wang</a><br/><strong>本拿比</strong> — 中草药＋中成药：<a href="Practitioners/wingho-chan-ZH.html">Wingho Chan</a>、<a href="Practitioners/taylor-wang-ZH.html">Taylor Wang</a><br/><strong>温哥华</strong> — 科学中药：<a href="Practitioners/lynn-liu-ZH.html">Lynn Liu</a>、<a href="Practitioners/jim-yi-ZH.html">Jim Yi</a>、<a href="Practitioners/shirley-zhu-ZH.html">Shirley Zhu</a>、<a href="Practitioners/taylor-wang-ZH.html">Taylor Wang</a><br/><strong>白石</strong> — 科学中药：请致电 <a href="tel:+16045606399">(604) 560-6399</a>',
         richSections: [
           { title: '我们提供三种中药形式', html: '<strong>🌿 中草药（Raw Chinese Herbs）</strong><br/>适合：个性化处方、临床经典方加减、慢性疾病调理，以及妇科、脾胃、失眠、疼痛等。<br/>✔ 医师辨证开方&nbsp;&nbsp;✔ 根据病情灵活调整&nbsp;&nbsp;✔ 传统中医经典治疗方式<br/><br/><strong>💊 中成药（Patent Herbal Medicine）</strong><br/>适合：日常调理、常见疾病辅助治疗、方便携带、服用简单。我们提供多种正规厂家生产的中成药，并由注册中医师根据您的情况推荐。<br/><br/><strong>🍵 科学中药（Concentrated Herbal Granules）</strong><br/>越来越多加拿大患者选择科学中药：✔ 即冲即饮&nbsp;&nbsp;✔ 无需煎煮&nbsp;&nbsp;✔ 剂量精准&nbsp;&nbsp;✔ 更容易坚持服用。适合工作繁忙、出差、学生及不方便煎药的人群。' },
           { title: '中草药代煎服务', html: '对于需要传统中草药的患者，我们提供：✔ 专业配药&nbsp;&nbsp;✔ 中药代煎&nbsp;&nbsp;✔ 中药液袋装包装&nbsp;&nbsp;✔ 方便携带、开袋即可饮用。节省煎药时间，让坚持治疗更轻松。' },
@@ -1210,7 +1210,7 @@ export const STRINGS = {
 
   practitionerCTA: { title: '认识全部中医师', link: '浏览完整团队 →' },
   treatmentsViewAll: '查看全部诊疗项目 →',
-  bookAtClinic: '预约该诊所',
+  bookAtClinic: '查看该诊所',
   journalViewAll: '查看全部文章 →',
   scanWechat: '扫码添加微信',
   footer: {
@@ -1751,7 +1751,7 @@ export const STRINGS = {
     },
     story: {
       eyebrow: '浮针的旗舰',
-      body: '我们的白石诊所坐落在 Johnston Road 的海滨栈桥旁，与众不同。这里是全加拿大首家专设的浮针（FSN）示范诊所——一种现代、近乎无痛的疗法，专治肌肉与肌筋膜疼痛。它还拥有自己的线上家园：一个独立的白石网站，载有完整团队、服务与在线预约。',
+      body: '我们的白石诊所坐落在 Johnston Road 的海滨栈桥旁，与众不同。这里是全加拿大首家专设的浮针（FSN）示范诊所——一种现代、近乎无痛的疗法，专治肌肉与肌筋膜疼痛。它还拥有自己的线上家园：一个独立的白石网站，载有完整团队、服务与诊所信息。',
       photo: 'assets/locations/whiterock/gallery-whiterock-emblem-fsn-cert.jpg',
       alt: '加西中医白石店浮针教学示范基地证书与品牌标识墙',
       objectPosition: 'left top',
@@ -1883,7 +1883,7 @@ export const STRINGS = {
     featureBand: {
       eyebrow: '专属网站',
       headline: '白石拥有自己的线上家园。',
-      body: '一个属于白石团队的完整网站——浮针专科、完整阵容、服务介绍与在线预约。',
+      body: '一个属于白石团队的完整网站——浮针专科、完整阵容、服务介绍与诊所信息。',
       cta: '访问白石网站 →',
       ctaHref: 'https://whiterock.cwtcm.ca/',
       ctaTarget: '_blank',
@@ -1918,7 +1918,7 @@ COPY.faq = {
       { q: '保险能报销吗？', a: '注册针灸获 ICBC 认可，许多附加健康保险也涵盖针灸／按摩。', schema: false },
       { q: '你们会说中文吗？', a: '可以——我们提供中英双语服务。', schema: true },
       { q: '中药与我的药物或孕期会冲突吗？', a: '请告知正在服用的药物，以及是否（可能）怀孕，以便我们评估适用性。', schema: true },
-      { q: '如何预约？', a: '致电就近诊所，或在提供在线预约的门店直接在线预约——前台乐意为你协助。', schema: false },
+      { q: '如何预约？', a: '请致电就近诊所，或通过“联系我们”页面留言——前台乐意为你协助。', schema: false },
       { q: '停车与交通？', a: '各门店页均列有停车与交通。<a href="Locations-ZH.html">查看全部诊所 →</a>', schema: true, plainAnswer: '各门店页均列有停车与交通。' },
     ],
     stillAsk: {
@@ -2680,7 +2680,7 @@ COPY.practitionersArchive = {
         creds: [{ en: 'Dr. TCM', zh: 'BC省注册高级中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }] },
       { slug: 'jack-bai', name: 'Jake Bai', clinics: ['Richmond'], roles: ['TCM Doctor', 'Acupuncturist'], photo: 'rmd-jack-bai.jpg', badge: '36 years',
         creds: [{ en: 'R.TCM.P', zh: 'BC省注册中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }] },
-      { slug: 'kalen-shen', name: 'Kalen Shen', clinics: ['Richmond', 'Burnaby', 'Vancouver'], roles: ['Acupuncturist', 'Aesthetician'], photo: 'rmd-van-kalen-shen.jpg',
+      { slug: 'kalen-shen', name: 'Kalen Shen', clinics: ['Richmond', 'Vancouver'], roles: ['Acupuncturist', 'Aesthetician'], photo: 'rmd-van-kalen-shen.jpg',
         creds: [{ en: 'R.Ac', zh: 'BC省注册针灸师' }, { en: 'Korean Certified Aesthetician', zh: '韩国认证美容师' }] },
       // ---- RICHMOND-based ----
       { slug: 'jiabin-nan', name: 'Jiabin Nan', clinics: ['Richmond'], roles: ['Acupuncturist'], photo: 'rmd-jiabin-nan.jpg', badge: '30+ years',

@@ -654,20 +654,25 @@ const Practitioners = () => {
   }, { passive: false });
 
   // Native scrolling remains in charge for touch/pen, including iOS momentum.
-  // Mouse users additionally get grab-to-drag without accidentally opening a
-  // profile when the pointer is released after a drag.
-  var drag = { active: false, startX: 0, startLeft: 0, moved: false };
+  // Mouse users additionally get grab-to-drag. Do not capture the pointer on
+  // pointerdown: Chrome/Safari can then treat an ordinary card click as a drag
+  // owned by the rail, making its View profile link appear inert. Capture only
+  // after deliberate horizontal movement has been detected.
+  var drag = { active: false, startX: 0, startY: 0, startLeft: 0, moved: false };
   var suppressClick = false;
   rail.addEventListener('pointerdown', function(event){
     if (event.pointerType !== 'mouse' || event.button !== 0) return;
-    drag = { active: true, startX: event.clientX, startLeft: rail.scrollLeft, moved: false };
-    if (rail.setPointerCapture) rail.setPointerCapture(event.pointerId);
-    rail.classList.add('is-dragging');
+    drag = { active: true, startX: event.clientX, startY: event.clientY, startLeft: rail.scrollLeft, moved: false };
   });
   rail.addEventListener('pointermove', function(event){
     if (!drag.active) return;
     var distance = event.clientX - drag.startX;
-    if (Math.abs(distance) > 4) drag.moved = true;
+    var verticalDistance = event.clientY - drag.startY;
+    if (!drag.moved && Math.abs(distance) > 8 && Math.abs(distance) > Math.abs(verticalDistance)) {
+      drag.moved = true;
+      if (rail.setPointerCapture) rail.setPointerCapture(event.pointerId);
+      rail.classList.add('is-dragging');
+    }
     if (!drag.moved) return;
     event.preventDefault();
     rail.scrollLeft = drag.startLeft - distance;

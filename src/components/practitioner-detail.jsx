@@ -12,7 +12,7 @@ import { Footer } from './sections-9-12.jsx';
 //   • STRINGS.practitioners.list  → photo + base clinic data (find by slug)
 //   • STRINGS.practitioners.details[slug] → profile-specific content
 //   • STRINGS.practitioners.detailChrome → labels / eyebrows / hrefs
-// Cream + sepia-gold palette · vermilion only on the 2 Book CTAs · 4px.
+// Cream + sepia-gold palette · 4px.
 // ============================================================
 
 const PD_GOLD = 'var(--sepia-300)';
@@ -95,17 +95,18 @@ const PdCred = ({ cred, large }) => {
 );
 };
 
-const PdChip = ({ label, zh }) => {
+const PdChip = ({ label, zh, href }) => {
   const PD_IS_ZH = useIsZh();   // 原为模块顶层常量，会导致中英串台
+  const Chip = href ? 'a' : 'span';
   return (
-  <span style={{
-    display: 'inline-flex', alignItems: 'baseline', gap: 7,
+  <Chip href={href} className={href ? 'pd-location-chip' : undefined} style={{
+    display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 7,
     border: '1px solid var(--sepia-200)', borderRadius: 4,
-    padding: '8px 14px', whiteSpace: 'nowrap',
+    padding: '8px 14px', whiteSpace: 'nowrap', textAlign: 'center',
   }}>
     <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, color: 'var(--sepia-600)' }}>{label}</span>
     {zh && PD_IS_ZH && <span style={{ fontFamily: 'var(--font-serif-zh)', fontSize: 12, color: 'var(--sepia-400)' }}>{zh}</span>}
-  </span>
+  </Chip>
 );
 };
 
@@ -138,12 +139,13 @@ const PdBreadcrumb = ({ name }) => {
 // ============================================================
 // 1. HERO
 // ============================================================
-const PdHero = ({ person, d, first, bookHref }) => {
+const PdHero = ({ person, d }) => {
   const STRINGS = useStrings();
   const PD_IS_ZH = useIsZh();   // 原为模块顶层常量，会导致中英串台
   const chrome = STRINGS.practitioners.detailChrome;
   const creds = d.creds || person.creds;
   const clinicName = (c) => (chrome.clinicNames && chrome.clinicNames[c]) || (STRINGS.practitioners[STRINGS.lang]?.clinicNames?.[c]) || c;
+  const clinicHref = (c) => `${chrome.locationPrefix}${c.replace(/\s+/g, '')}${chrome.locationSuffix}`;
   const lede = PD_IS_ZH ? d.ledeZh : d.ledeEn;
   return (
     <section data-screen-label="01 Hero" style={{ position: 'relative', background: 'var(--cream-100)', overflow: 'hidden' }}>
@@ -163,16 +165,14 @@ const PdHero = ({ person, d, first, bookHref }) => {
             {/* 之前是把多家门店拼成一个 "Richmond + Burnaby + ..." 的单条
                 标签，whiteSpace:nowrap 不能换行，四家门店的医师在手机上
                 这一条直接冲出屏幕右边。改成每家门店各自一个标签；手机端
-                (tokens.css) 再覆盖成固定两列、整体居中。 */}
+                (tokens.css) 再覆盖成固定两列、整体居中。每个标签直接链接
+                到对应语言的门店详情页。 */}
             <div className="pd-hero-clinics" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 26 }}>
-              {person.clinics.map((cl, i) => <PdChip key={i} label={clinicName(cl)} />)}
+              {person.clinics.map((cl, i) => <PdChip key={i} label={clinicName(cl)} href={clinicHref(cl)} />)}
             </div>
             {lede && (
               <p className="lede" style={{ maxWidth: 560, margin: '0 0 34px' }}>{lede}</p>
             )}
-            <a href={bookHref || chrome.bookHref} className="btn btn-primary" style={{ padding: '17px 30px' }}>
-              {chrome.bookWith(first)}
-            </a>
           </div>
         </div>
       </div>
@@ -374,28 +374,6 @@ const PdTestimonials = () => {
 };
 
 // ============================================================
-// 10. BOOKING CTA band
-// ============================================================
-const PdBookCta = ({ first, bookHref }) => {
-  const STRINGS = useStrings();
-  const chrome = STRINGS.practitioners.detailChrome;
-  return (
-    <section data-screen-label="10 Book" style={{ background: 'var(--sepia-700)', color: 'var(--cream-50)', padding: '96px 0' }}>
-      <div className="container" style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto' }}>
-        <h2 className="h-section" style={{ color: 'var(--cream-50)', margin: '0 0 40px' }}>{chrome.bookHeadline(first)}</h2>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
-          <a href={bookHref || chrome.bookHref} className="btn btn-primary" style={{ padding: '18px 32px' }}>{chrome.bookPrimary}</a>
-          <a href={chrome.browseTeamHref} style={{
-            color: 'var(--cream-300)', fontSize: 13, fontWeight: 600, letterSpacing: '0.06em',
-            textTransform: 'uppercase', borderBottom: '1px solid rgba(247,241,229,0.4)', paddingBottom: 4,
-          }}>{chrome.browseTeam}</a>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// ============================================================
 // Page
 // ============================================================
 const PractitionerDetailPage = ({ slug }) => {
@@ -404,13 +382,11 @@ const PractitionerDetailPage = ({ slug }) => {
   const d = STRINGS.practitioners.details[slug];
   const chrome = STRINGS.practitioners.detailChrome;
   const first = person.name.split(' ')[0];
-  // per-clinic booking: send patients to the Jane instance of this person's clinic
-  const bookHref = (STRINGS.bookingByClinic && STRINGS.bookingByClinic[person.clinics[0]]) || chrome.bookHref;
   return (
     <>
-      <Nav theme="light" active={STRINGS.nav.items[2]} bookHref={bookHref} />
+      <Nav theme="light" active={STRINGS.nav.items[2]} />
       <PdBreadcrumb name={person.name} />
-      <PdHero person={person} d={d} first={first} bookHref={bookHref} />
+      <PdHero person={person} d={d} />
       <PdBio d={d} />
       <PdSpecialties d={d} />
       <PdLinkGrid eyebrow={chrome.eyebrows.conditions} items={d.conditions} hrefBase="Conditions/" cols={4} />
@@ -420,7 +396,6 @@ const PractitionerDetailPage = ({ slug }) => {
       <PdEducation d={d} />
       <PdLanguages d={d} />
       <PdTestimonials />
-      <PdBookCta first={first} bookHref={bookHref} />
       <Footer />
     </>
   );

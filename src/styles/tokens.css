@@ -353,6 +353,26 @@ ul { list-style: none; padding: 0; margin: 0; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 
+/* Online booking is temporarily disabled at the clinic's request. Targeting
+   the Jane destinations in one shared rule keeps every current (and future)
+   booking entry point hidden without affecting phone, directions, contact
+   forms, or internal clinic-detail links. Remove this rule to re-enable them. */
+a[href*="janeapp.com"] {
+  display: none !important;
+}
+
+.pd-location-chip {
+  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.pd-location-chip:hover {
+  background: var(--cream-300);
+  border-color: var(--sepia-300) !important;
+}
+.pd-location-chip:focus-visible {
+  outline: 2px solid var(--vermilion);
+  outline-offset: 3px;
+}
+
 /* Compact layout. The 980px ceiling also covers the virtual viewport used by
    iPhone Chrome page zoom / Request Desktop Site. */
 @media (max-width: 980px) {
