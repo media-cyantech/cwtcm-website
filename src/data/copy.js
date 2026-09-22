@@ -63,7 +63,7 @@ export const COPY = {
         crop: "50% 25%",
         name: "Taylor Wang",
         badge: "FOUNDER",
-        creds: ["Dr. TCM", "R.Ac", "R.Esthetician", "Founder"],
+        creds: ["Dr. TCM. P", "R.Ac", "R.Esthetician", "Founder"],
         subtitle: "Jiangxi University of TCM · Bone-Setting · University Lecturer (7 years)",
         clinic: "RICHMOND · BURNABY · VANCOUVER · WHITE ROCK",
       },
@@ -97,7 +97,7 @@ export const COPY = {
         crop: "50% 20%",
         name: "Xianyi Hu",
         badge: "50+ YEARS",
-        creds: ["Dr. TCM", "R.Ac", "Renowned TCM Doctor (China)"],
+        creds: ["Dr. TCM. P", "R.Ac", "Renowned TCM Doctor (China)"],
         subtitle: "Chengdu University of TCM · Immune disorders · Women's health",
         clinic: "RICHMOND",
       },
@@ -443,11 +443,11 @@ export const STRINGS = {
       "william-zhou": {"seoTitle": "William Zhou (Jianwei Zhou) — Registered Massage Therapist · R.M.T. | Canadian Western TCM", "seoDescription": "Registered massage therapist helping people return to the activities they love — sports recovery, pain relief and stress management.", "creds": [{"en": "R.M.T.", "zh": "BC省注册按摩师"}], "ledeEn": "Registered massage therapist helping people return to the activities they love — sports recovery, pain relief and stress management.", "ledeZh": "帮助人们重返所爱活动的注册按摩师——运动恢复、疼痛缓解与压力管理。", "bioEn": "William (Jianwei) Zhou is a registered massage therapist dedicated to helping people live happy, active lifestyles — assisting every patient in returning to the activities they love while improving overall health and wellness. A sports enthusiast who embraces BC's outdoor lifestyle, he understands movement and recovery first-hand, and provides personalised, attentive care to relieve pain, reduce stress and enhance wellbeing through professional massage therapy.", "bioZh": "充满热忱的注册按摩治疗师，致力于帮助人们拥有健康、积极、快乐的生活方式，协助每一位客人重返所热爱的活动。作为热爱运动、享受BC省户外生活的人，他深知活动与恢复的重要性，以个性化、细致的护理，通过专业按摩帮助缓解疼痛、减轻压力、提升整体身心健康。", "specialties": [{"en": "Sports Massage", "zh": "运动 / 体育按摩"}, {"en": "Deep Tissue Release", "zh": "肌筋膜放松"}, {"en": "Rehabilitation Massage Care", "zh": "康复性按摩护理"}], "conditions": [{"slug": "pain-injury", "en": "Pain & Injury", "zh": "疼痛与损伤"}], "treatments": [{"slug": "tui-na", "en": "Tui Na", "zh": "推拿"}], "educationEn": ["Registered Massage Therapist (BC)", "TCM Tuina combined with modern massage techniques", "Sports recovery, chronic pain & stress management"], "educationZh": ["BC省注册按摩师", "中医推拿结合现代按摩技术", "运动恢复、慢性疼痛与压力管理"], "moreHref": "https://whiterock.cwtcm.ca/Our-team", "moreLabel": "Also on our White Rock clinic site →"},
       "vivi-zhao": {"seoTitle": "Vivi Zhao (Weiwei Zhao) — Registered Massage Therapist · R.M.T. | Canadian Western TCM", "seoDescription": "Registered massage therapist offering client-centred, personalised care for muscle tension and chronic pain.", "creds": [{"en": "R.M.T.", "zh": "BC省注册按摩师"}], "ledeEn": "Registered massage therapist offering client-centred, personalised care for muscle tension and chronic pain.", "ledeZh": "以客户为中心、定制个性化方案的注册按摩师，缓解肌肉紧张与慢性疼痛。", "bioEn": "Weiwei (Vivi) Zhao is a registered massage therapist whose goal is to empower clients to prioritise their body's health through targeted massage therapy. Proficient in Swedish massage, myofascial release, trigger-point therapy and joint mobilization for muscle tension and chronic pain, she takes a client-centred approach — tailoring each session to individual needs for optimal comfort and tangible results, in a calm, welcoming environment that promotes physical healing, stress relief and holistic wellness.", "bioZh": "注册按摩治疗师，目标是通过针对性的按摩疗法帮助客户重视并维护身体健康。熟练掌握瑞典式按摩、肌筋膜放松、触发点疗法及关节松动术，有效缓解肌肉紧张与慢性疼痛；坚持以客户为中心，按个人需求定制每次理疗方案，在宁静友好的环境中助力身体康复、舒缓压力、实现身心整体健康。", "specialties": [{"en": "Swedish Massage", "zh": "瑞典式按摩"}, {"en": "Trigger Point Therapy", "zh": "触发点疗法"}, {"en": "Deep Tissue Release", "zh": "肌筋膜放松"}, {"en": "Joint Mobilization", "zh": "关节松动术"}], "conditions": [{"slug": "pain-injury", "en": "Pain & Injury", "zh": "疼痛与损伤"}], "treatments": [{"slug": "tui-na", "en": "Tui Na", "zh": "推拿"}], "educationEn": ["Registered Massage Therapist (BC)", "Swedish massage, myofascial release, trigger-point therapy & joint mobilization"], "educationZh": ["BC省注册按摩师", "瑞典式按摩、肌筋膜放松、触发点疗法与关节松动术"], "moreHref": "https://whiterock.cwtcm.ca/Our-team", "moreLabel": "Also on our White Rock clinic site →"},
       'taylor-wang': {
-        seoTitle: 'Taylor Wang — Founder · Dr. TCM | Canadian Western TCM',
-        seoDescription: 'Taylor Wang, founder of Canadian Western TCM — Dr. TCM and registered acupuncturist trained at Jiangxi University of Traditional Chinese Medicine (orthopedics), blending heritage Chinese orthopedics with attentive modern care across Richmond, Burnaby, Vancouver and White Rock.',
+        seoTitle: 'Taylor Wang — Founder · Dr. TCM. P | Canadian Western TCM',
+        seoDescription: 'Taylor Wang, founder of Canadian Western TCM — Dr. TCM. P and registered acupuncturist trained at Jiangxi University of Traditional Chinese Medicine (orthopedics), blending heritage Chinese orthopedics with attentive modern care across Richmond, Burnaby, Vancouver and White Rock.',
         // Full hero credentials (4 rows) — fuller than the archive card.
         creds: [
-          { en: 'Dr. TCM', zh: 'BC省注册高级中医师' },
+          { en: 'Dr. TCM. P', zh: 'BC省注册高级中医师' },
           { en: 'R.Ac', zh: 'BC省注册针灸师' },
           { en: 'R.Esthetician', zh: 'BC省注册美容师' },
           { en: 'Founder', zh: '加西中医 创始人' },
@@ -499,7 +499,7 @@ export const STRINGS = {
         ],
       },
       'xianyi-hu': {
-        "seoTitle": "Xianyi Hu — Senior · Dr. TCM | Canadian Western TCM",
+        "seoTitle": "Xianyi Hu — Senior · Dr. TCM. P | Canadian Western TCM",
         "seoDescription": "Xianyi Hu, senior physician at Canadian Western TCM — over 50 years of clinical Traditional Chinese Medicine, Master’s from Chengdu University of TCM, with a focus on immune system disorders, internal medicine and women’s health in Richmond.",
         "ledeEn": "Senior physician with over 50 years in clinical TCM, recognised as one of China’s Famous Doctors.",
         "ledeZh": "五十余年中医临床的资深医师，曾荣获『中国名医』称号。",
@@ -874,7 +874,7 @@ export const STRINGS = {
     list: [
       // ---- FOUNDER ----
       { slug: 'taylor-wang', name: 'Taylor Wang', clinics: ['Richmond', 'Burnaby', 'Vancouver', 'White Rock'], roles: ['TCM Doctor'], photo: 'rmd-bby-van-taylor-wang.jpg', badge: 'Founder',
-        creds: [{ en: 'Dr. TCM', zh: 'BC省注册高级中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }, { en: 'R.Esthetician', zh: 'BC省注册美容师' }, { en: 'Founder', zh: '加西中医 创始人' }] },
+        creds: [{ en: 'Dr. TCM. P', zh: 'BC省注册高级中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }, { en: 'R.Esthetician', zh: 'BC省注册美容师' }, { en: 'Founder', zh: '加西中医 创始人' }] },
       // ---- WHITE ROCK LEAD (FSN) — full team lives on the White Rock subsite ----
       { slug: 'di-wu', name: 'Di Wu', clinics: ['White Rock'], roles: ['TCM Doctor', 'Acupuncturist'], photo: 'wr-di-wu.jpg', badge: 'White Rock Founder',
         creds: [{ en: 'R.TCM.P.', zh: 'BC省注册中医师' }, { en: 'President of FSNAC', zh: '加拿大浮针医学会（FSNAC）会长' }, { en: 'Acupuncture Instructor, Kwantlen Polytechnic University', zh: '昆特兰理工大学针灸讲师' }] },
@@ -901,7 +901,7 @@ export const STRINGS = {
         creds: [{ en: 'R.M.T.', zh: 'BC省注册按摩师' }] },
       // ---- SENIOR ----
       { slug: 'xianyi-hu', name: 'Xianyi Hu', clinics: ['Richmond'], roles: ['TCM Doctor', 'Acupuncturist'], photo: 'rmd-xianyi-hu.jpg', badge: '50+ years',
-        creds: [{ en: 'Dr. TCM', zh: 'BC省注册高级中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }] },
+        creds: [{ en: 'Dr. TCM. P', zh: 'BC省注册高级中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }] },
       { slug: 'jack-bai', name: 'Jake Bai', clinics: ['Richmond'], roles: ['TCM Doctor', 'Acupuncturist'], photo: 'rmd-jack-bai.jpg', badge: '36 years',
         creds: [{ en: 'R.TCM.P', zh: 'BC省注册中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }] },
       { slug: 'kalen-shen', name: 'Kalen Shen', clinics: ['Richmond', 'Vancouver'], roles: ['Acupuncturist', 'Aesthetician'], photo: 'rmd-van-kalen-shen.jpg',
@@ -2350,7 +2350,7 @@ treatments: {
           badge: 'FOUNDER',
           photo: 'rmd-bby-van-taylor-wang.jpg',
           crop: '50% 25%',
-          creds: ['Dr. TCM', 'R.Ac', 'R.Esthetician', 'Founder'],
+          creds: ['Dr. TCM. P', 'R.Ac', 'R.Esthetician', 'Founder'],
           subtitle: 'Jiangxi University of TCM · Founder of CWTCM · University Lecturer',
         },
         {
@@ -2358,7 +2358,7 @@ treatments: {
           badge: '50+ YEARS',
           photo: 'rmd-xianyi-hu.jpg',
           crop: '50% 20%',
-          creds: ['Dr. TCM', 'R.Ac'],
+          creds: ['Dr. TCM. P', 'R.Ac'],
           subtitle: 'Chengdu University of TCM · Immune disorders · Women\u2019s health',
         },
         {
@@ -2632,7 +2632,7 @@ treatments: {
           badge: 'FOUNDER',
           photo: 'rmd-bby-van-taylor-wang.jpg',
           crop: '50% 25%',
-          creds: ['Dr. TCM', 'R.Ac', 'R.Esthetician', 'Founder'],
+          creds: ['Dr. TCM. P', 'R.Ac', 'R.Esthetician', 'Founder'],
           subtitle: 'Jiangxi University of TCM · Founder of CWTCM · Visits Vancouver',
         },
         {
@@ -2779,7 +2779,7 @@ treatments: {
           badge: 'FOUNDER',
           photo: 'rmd-bby-van-taylor-wang.jpg',
           crop: '50% 25%',
-          creds: ['Dr. TCM', 'R.Ac', 'R.Esthetician', 'Founder'],
+          creds: ['Dr. TCM. P', 'R.Ac', 'R.Esthetician', 'Founder'],
           subtitle: 'Jiangxi University of TCM · Founder of CWTCM',
         },
         {

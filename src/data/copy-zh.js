@@ -63,7 +63,7 @@ export const COPY = {
         crop: "50% 25%",
         name: "Taylor Wang",
         badge: "创始人",
-        creds: ["Dr. TCM", "R.Ac", "R.Esthetician", "加西中医创始人"],
+        creds: ["Dr. TCM. P", "R.Ac", "R.Esthetician", "加西中医创始人"],
         subtitle: "江西中医药大学骨伤方向 · 任教 7 年 · 加西中医创始人",
         clinic: "列治文 · 本拿比 · 温哥华 · 白石",
       },
@@ -97,7 +97,7 @@ export const COPY = {
         crop: "50% 20%",
         name: "Xianyi Hu",
         badge: "50+ 年",
-        creds: ["Dr. TCM", "R.Ac", "中国名医"],
+        creds: ["Dr. TCM. P", "R.Ac", "中国名医"],
         subtitle: "成都中医药大学 · 免疫系统疾病 · 妇科",
         clinic: "列治文",
       },
@@ -1391,7 +1391,7 @@ export const STRINGS = {
           badge: '创始人',
           photo: 'rmd-bby-van-taylor-wang.jpg',
           crop: '50% 25%',
-          creds: ['Dr. TCM', 'R.Ac', 'R.Esthetician', '加西中医创始人'],
+          creds: ['Dr. TCM. P', 'R.Ac', 'R.Esthetician', '加西中医创始人'],
           subtitle: '江西中医药大学 · 加西中医创始人 · 中医学院讲师',
         },
         {
@@ -1399,7 +1399,7 @@ export const STRINGS = {
           badge: '50+ 年',
           photo: 'rmd-xianyi-hu.jpg',
           crop: '50% 20%',
-          creds: ['Dr. TCM', 'R.Ac'],
+          creds: ['Dr. TCM. P', 'R.Ac'],
           subtitle: '成都中医药大学 · 免疫系统疾病 · 妇科',
         },
         {
@@ -1675,7 +1675,7 @@ export const STRINGS = {
           badge: '创始人',
           photo: 'rmd-bby-van-taylor-wang.jpg',
           crop: '50% 25%',
-          creds: ['Dr. TCM', 'R.Ac', 'R.Esthetician', '加西中医创始人'],
+          creds: ['Dr. TCM. P', 'R.Ac', 'R.Esthetician', '加西中医创始人'],
           subtitle: '江西中医药大学 · 加西中医创始人 · 温哥华店应诊',
         },
         {
@@ -1823,7 +1823,7 @@ export const STRINGS = {
           badge: '创始人',
           photo: 'rmd-bby-van-taylor-wang.jpg',
           crop: '50% 25%',
-          creds: ['Dr. TCM', 'R.Ac', 'R.Esthetician', '加西中医创始人'],
+          creds: ['Dr. TCM. P', 'R.Ac', 'R.Esthetician', '加西中医创始人'],
           subtitle: '江西中医药大学 · 加西中医创始人',
         },
         {
@@ -2223,7 +2223,7 @@ COPY.practitionersArchive = {
       seoTitle: 'Taylor Wang — 创始人 · 高级中医师 | 加西中医',
       seoDescription: '加西中医创始人 Taylor Wang——BC 省注册高级中医师与针灸师，毕业于江西中医药大学（骨伤方向），融合中医骨伤传承与现代细致照护，出诊于列治文、本拿比与温哥华。',
       creds: [
-        { en: 'Dr. TCM', zh: 'BC省注册高级中医师' },
+        { en: 'Dr. TCM. P', zh: 'BC省注册高级中医师' },
         { en: 'R.Ac', zh: 'BC省注册针灸师' },
         { en: 'R.Esthetician', zh: 'BC省注册美容师' },
         { en: 'Founder', zh: '加西中医 创始人' },
@@ -2275,7 +2275,7 @@ COPY.practitionersArchive = {
       ],
     },
     'xianyi-hu': {
-      "seoTitle": "Xianyi Hu — Senior · Dr. TCM | Canadian Western TCM",
+      "seoTitle": "Xianyi Hu — Senior · Dr. TCM. P | Canadian Western TCM",
       "seoDescription": "Xianyi Hu, senior physician at Canadian Western TCM — over 50 years of clinical Traditional Chinese Medicine, Master’s from Chengdu University of TCM, with a focus on immune system disorders, internal medicine and women’s health in Richmond.",
       "ledeEn": "Senior physician with over 50 years in clinical TCM, recognised as one of China’s Famous Doctors.",
       "ledeZh": "五十余年中医临床的资深医师，曾荣获『中国名医』称号。",
@@ -2650,7 +2650,7 @@ COPY.practitionersArchive = {
   list: [
     // ---- FOUNDER ----
       { slug: 'taylor-wang', name: 'Taylor Wang', clinics: ['Richmond', 'Burnaby', 'Vancouver', 'White Rock'], roles: ['TCM Doctor'], photo: 'rmd-bby-van-taylor-wang.jpg', badge: 'Founder',
-        creds: [{ en: 'Dr. TCM', zh: 'BC省注册高级中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }, { en: 'R.Esthetician', zh: 'BC省注册美容师' }, { en: 'Founder', zh: '加西中医 创始人' }] },
+        creds: [{ en: 'Dr. TCM. P', zh: 'BC省注册高级中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }, { en: 'R.Esthetician', zh: 'BC省注册美容师' }, { en: 'Founder', zh: '加西中医 创始人' }] },
       // ---- WHITE ROCK LEAD (FSN) — full team lives on the White Rock subsite ----
       { slug: 'di-wu', name: 'Di Wu', clinics: ['White Rock'], roles: ['TCM Doctor', 'Acupuncturist'], photo: 'wr-di-wu.jpg', badge: 'White Rock Founder',
         creds: [{ en: 'R.TCM.P.', zh: 'BC省注册中医师' }, { en: 'President of FSNAC', zh: '加拿大浮针医学会（FSNAC）会长' }, { en: 'Acupuncture Instructor, Kwantlen Polytechnic University', zh: '昆特兰理工大学针灸讲师' }] },
@@ -2677,7 +2677,7 @@ COPY.practitionersArchive = {
         creds: [{ en: 'R.M.T.', zh: 'BC省注册按摩师' }] },
       // ---- SENIOR ----
       { slug: 'xianyi-hu', name: 'Xianyi Hu', clinics: ['Richmond'], roles: ['TCM Doctor', 'Acupuncturist'], photo: 'rmd-xianyi-hu.jpg', badge: '50+ years',
-        creds: [{ en: 'Dr. TCM', zh: 'BC省注册高级中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }] },
+        creds: [{ en: 'Dr. TCM. P', zh: 'BC省注册高级中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }] },
       { slug: 'jack-bai', name: 'Jake Bai', clinics: ['Richmond'], roles: ['TCM Doctor', 'Acupuncturist'], photo: 'rmd-jack-bai.jpg', badge: '36 years',
         creds: [{ en: 'R.TCM.P', zh: 'BC省注册中医师' }, { en: 'R.Ac', zh: 'BC省注册针灸师' }] },
       { slug: 'kalen-shen', name: 'Kalen Shen', clinics: ['Richmond', 'Vancouver'], roles: ['Acupuncturist', 'Aesthetician'], photo: 'rmd-van-kalen-shen.jpg',
