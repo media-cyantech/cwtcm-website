@@ -523,6 +523,16 @@ const ContactForm = ({ c, clinics }) => {
             fontStyle: 'italic',
           }}
         >{c.helper}</p>
+        <p
+          id="contact-form-error"
+          role="alert"
+          hidden
+          style={{
+            fontSize: 14, color: 'var(--vermilion)', margin: 0, lineHeight: 1.6,
+          }}
+        >{isZh
+          ? '暂时无法发送您的留言。请稍后重试，或直接致电您首选的诊所。'
+          : 'We could not send your message just now. Please try again, or call your preferred clinic.'}</p>
         <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginTop: 4, flexWrap: 'wrap' }}>
           <button type="submit" className="btn btn-primary" style={{
             padding: '14px 28px', fontSize: 13, cursor: 'pointer', border: 'none',
@@ -549,13 +559,56 @@ const ContactForm = ({ c, clinics }) => {
   var clinic = form.querySelector('#contact-clinic');
   if (!clinic) return;
   var fallback = 'https://formsubmit.co/media@cyantech.com';
+  var subject = form.querySelector('input[name="_subject"]');
+  var error = form.querySelector('#contact-form-error');
+  var submit = form.querySelector('button[type="submit"]');
   function route(){
     var option = clinic.options[clinic.selectedIndex];
     var recipient = option && option.getAttribute('data-recipient');
     form.setAttribute('action', recipient ? 'https://formsubmit.co/' + recipient : fallback);
+    if (subject) {
+      subject.value = option && option.value
+        ? 'New CWTCM website enquiry - ' + option.value
+        : 'New CWTCM website enquiry';
+    }
   }
   clinic.addEventListener('change', route);
-  form.addEventListener('submit', route);
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+    route();
+    if (error) error.hidden = true;
+    if (submit) {
+      submit.disabled = true;
+      submit.setAttribute('aria-busy', 'true');
+    }
+
+    var endpoint = form.action.replace('https://formsubmit.co/', 'https://formsubmit.co/ajax/');
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function(response){
+        if (!response.ok) throw new Error('Form submission failed');
+        return response.json();
+      })
+      .then(function(result){
+        if (!(result && (result.success === true || result.success === 'true'))) {
+          throw new Error('Form submission was not accepted');
+        }
+        window.location.hash = 'message-sent';
+        var success = document.getElementById('message-sent');
+        if (success) success.focus();
+      })
+      .catch(function(){
+        if (error) error.hidden = false;
+        if (submit) {
+          submit.disabled = false;
+          submit.removeAttribute('aria-busy');
+          submit.focus();
+        }
+      });
+  });
   route();
 })();
       `.trim() }} />
