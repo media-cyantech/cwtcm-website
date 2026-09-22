@@ -361,11 +361,11 @@ const CONTACT_FORM_RECIPIENTS = {
   Richmond: 'richmond@cwtcm.ca',
   Burnaby: 'Burnaby@cwtcm.ca',
   Vancouver: 'vancouver@cwtcm.ca',
-  'White Rock': 'media@cyantech.com',
+  'White Rock': 'whiterock@cwtcm.ca',
   '列治文': 'richmond@cwtcm.ca',
   '本拿比': 'Burnaby@cwtcm.ca',
   '温哥华': 'vancouver@cwtcm.ca',
-  '白石': 'media@cyantech.com',
+  '白石': 'whiterock@cwtcm.ca',
 };
 
 const ContactForm = ({ c, clinics }) => {
