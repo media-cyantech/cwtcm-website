@@ -2565,13 +2565,6 @@ treatments: {
             { name: 'Aesthetic Acupuncture', price: '$200', dur: '75 min', pkg: 'Package $540 / 3' },
             { name: 'Facial Aromatherapy with Gua Sha', price: '$180', dur: '75 min', pkg: 'Packages $450 / 3 · $840 / 6 · $1200 / 9' },
           ] },
-        { title: 'Valued Prepaid Packages',
-          note: 'Prepaid credit may be used only for Traditional Wellness Treatments and single-session CWTCM Special Treatments.',
-          items: [
-            { name: 'Prepay $1,000', price: '$1,000', pkg: 'Receive $100 bonus credit' },
-            { name: 'Prepay $3,000', price: '$3,000', pkg: 'Receive $450 bonus credit' },
-            { name: 'Prepay $8,000', price: '$8,000', pkg: 'Receive $1,500 bonus credit' },
-          ] },
       ],
       footnote: 'Rates apply to the Vancouver (West Broadway) clinic and are subject to change. For insurance and direct-billing questions, please ask our front desk.',
     },
@@ -2886,17 +2879,4 @@ STRINGS.legalPage = { en: {"hero": {"eyebrow": "Legal", "h1": "Policies & Terms"
 
 STRINGS.burnaby.priceList = Object.assign({}, STRINGS.richmond.priceList, {
   h2: 'Burnaby services & pricing.',
-  groups: [
-    ...STRINGS.richmond.priceList.groups,
-    {
-      title: 'Valued Prepaid Packages',
-      note: 'Packages do not expire and may be shared by family members, but not friends. Insurance claims must be submitted by the patient.',
-      items: [
-        { name: 'Wellness Package', price: '$960', pkg: '10 sessions' },
-        { name: 'Wellness Package', price: '$1,800', pkg: '20 sessions' },
-        { name: 'VIP Package', price: '$4,800', pkg: '50 sessions + 5 complimentary sessions' },
-        { name: 'VIP Package', price: '$7,800', pkg: '80 sessions + 10 complimentary sessions' },
-      ],
-    },
-  ],
 });

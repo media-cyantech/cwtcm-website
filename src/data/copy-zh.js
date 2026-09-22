@@ -1608,13 +1608,6 @@ export const STRINGS = {
             { name: '针灸美容', sub: 'Aesthetic Acupuncture', price: '$200', dur: '75分钟', pkg: '套餐 $540/3次' },
             { name: '精油面部刮痧', sub: 'Facial Aromatherapy with Gua Sha', price: '$180', dur: '75分钟', pkg: '套餐 $450/3次 · $840/6次 · $1200/9次' },
           ] },
-        { title: '优惠充值项目',
-          note: '充值金额仅适用于传统养生治疗及单次加西中医特色治疗。',
-          items: [
-            { name: '充值 $1,000', price: '$1,000', pkg: '赠送 $100' },
-            { name: '充值 $3,000', price: '$3,000', pkg: '赠送 $450' },
-            { name: '充值 $8,000', price: '$8,000', pkg: '赠送 $1,500' },
-          ] },
       ],
       footnote: '以上价格适用于温哥华（West Broadway）门店，如有调整以门店现场为准；保险直付事宜请咨询前台。',
     },
@@ -2779,17 +2772,4 @@ STRINGS.journalPage = {
 
 STRINGS.burnaby.priceList = Object.assign({}, STRINGS.richmond.priceList, {
   h2: '本拿比店服务项目一览。',
-  groups: [
-    ...STRINGS.richmond.priceList.groups,
-    {
-      title: '优惠充值项目',
-      note: '套餐没有时间限制，可与家人共享，不可与朋友共享；保险理赔需由本人使用。',
-      items: [
-        { name: '养生套餐', price: '$960', pkg: '10节' },
-        { name: '养生套餐', price: '$1,800', pkg: '20节' },
-        { name: 'VIP 套餐', price: '$4,800', pkg: '50节赠送5节' },
-        { name: 'VIP 套餐', price: '$7,800', pkg: '80节赠送10节' },
-      ],
-    },
-  ],
 });
